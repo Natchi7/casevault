@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beeper</fullName>
+                <default>true</default>
+                <label>Beeper</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Cell</fullName>
+                <default>false</default>
+                <label>Cell</label>
+            </value>
+            <value>
+                <fullName>URL</fullName>
+                <default>false</default>
+                <label>URL</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Message</fullName>
+                <default>false</default>
+                <label>Message</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pager</fullName>
+                <default>false</default>
+                <label>Pager</label>
+            </value>
+            <value>
+                <fullName>E-mail</fullName>
+                <default>false</default>
+                <label>E-mail</label>
+            </value>
+            <value>
+                <fullName>Work</fullName>
+                <default>false</default>
+                <label>Work</label>
+            </value>
+            <value>
+                <fullName>Civil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Civil</label>
+            </value>
+            <value>
+                <fullName>Criminal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Criminal</label>
+            </value>
+            <value>
+                <fullName>Divorce</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Divorce</label>
+            </value>
+            <value>
+                <fullName>Doc Hard Copy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Doc Hard Copy</label>
+            </value>
+            <value>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Face to Face</label>
+            </value>
+            <value>
+                <fullName>File Cabinet Case</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>File Cabinet Case</label>
+            </value>
+            <value>
+                <fullName>File Cabinet Client</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>File Cabinet Client</label>
+            </value>
+            <value>
+                <fullName>Hand Delivered</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hand Delivered</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Postal Mail</label>
+            </value>
+            <value>
+                <fullName>ROA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ROA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

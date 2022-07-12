@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Decision_Approved_By</fullName>
+        <field>Decision_Approved_By__c</field>
+        <formula>Supervisor_Approver__r.FirstName+&quot; &quot;+Supervisor_Approver__r.LastName</formula>
+        <name>Decision Approved By</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Decision_Submitted_By</fullName>
+        <field>Decision_Submitted_By__c</field>
+        <formula>$User.FirstName + &quot; &quot; +$User.LastName</formula>
+        <name>Decision Submitted By</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected</fullName>
+        <field>Intake_Approval_Status__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Decision_Approval_Date</fullName>
+        <field>Decision_Approved_DateTime__c</field>
+        <formula>NOW()</formula>
+        <name>Update Decision Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Decision_Status_Approved</fullName>
+        <field>Decision_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Decision Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Decision_Status_Submitted</fullName>
+        <field>Decision_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update Decision Status Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Decision_Status_as_Rejected</fullName>
+        <field>Decision_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Decision Status as Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Approved</fullName>
+        <field>Intake_Approval_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Update Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Approved</fullName>
+        <field>Subsidy_Agreement_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Status as Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Close</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Update Status as Close</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Rejected</fullName>
+        <field>Subsidy_Agreement_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status as Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Submitted</fullName>
+        <field>Subsidy_Agreement_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update Status as Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_submitted_for_approval</fullName>
+        <field>Intake_Approval_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Update status submitted for approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

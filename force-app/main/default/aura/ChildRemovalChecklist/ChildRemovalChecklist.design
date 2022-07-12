@@ -1,0 +1,6 @@
+<design:component>
+	<design:attribute name="legalCustodyCheck" />
+    <design:attribute name="childDateCheck"/>
+    <design:attribute name="childAgeCheck" />
+    <design:attribute name="primaryCitizenCheck"/>
+</design:component>

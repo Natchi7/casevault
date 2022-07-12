@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Medical_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Medical Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Abdominal Pain, Chronic/Frequent</fullName>
+                <default>false</default>
+                <label>Abdominal Pain, Chronic/Frequent</label>
+            </value>
+            <value>
+                <fullName>Acne</fullName>
+                <default>false</default>
+                <label>Acne</label>
+            </value>
+            <value>
+                <fullName>Alcohol Use Disorder (details under Behav. Health ta</fullName>
+                <default>false</default>
+                <label>Alcohol Use Disorder (details under Behav. Health ta</label>
+            </value>
+            <value>
+                <fullName>Allergic Rhinitis/Conjunctivitis (Hay Fever, Nose/Eye F</fullName>
+                <default>false</default>
+                <label>Allergic Rhinitis/Conjunctivitis (Hay Fever, Nose/Eye F</label>
+            </value>
+            <value>
+                <fullName>Anemia/Blood Disorder (specify)</fullName>
+                <default>false</default>
+                <label>Anemia/Blood Disorder (specify)</label>
+            </value>
+            <value>
+                <fullName>Arthritis (specify)</fullName>
+                <default>false</default>
+                <label>Arthritis (specify)</label>
+            </value>
+            <value>
+                <fullName>Asthma (specify if current attack/exacerbation)</fullName>
+                <default>false</default>
+                <label>Asthma (specify if current attack/exacerbation)</label>
+            </value>
+            <value>
+                <fullName>Bed-wetting/Enuresis (after 5 years old)</fullName>
+                <default>false</default>
+                <label>Bed-wetting/Enuresis (after 5 years old)</label>
+            </value>
+            <value>
+                <fullName>Bronchiolitis</fullName>
+                <default>false</default>
+                <label>Bronchiolitis</label>
+            </value>
+            <value>
+                <fullName>Burn/Thermal Injury (specify)</fullName>
+                <default>false</default>
+                <label>Burn/Thermal Injury (specify)</label>
+            </value>
+            <value>
+                <fullName>Cancer/Leukemia/Malignancy (Specify)</fullName>
+                <default>false</default>
+                <label>Cancer/Leukemia/Malignancy (Specify)</label>
+            </value>
+            <value>
+                <fullName>Cellulitis/Abscess (Skin Infection)</fullName>
+                <default>false</default>
+                <label>Cellulitis/Abscess (Skin Infection)</label>
+            </value>
+            <value>
+                <fullName>Cerebral Palsy (details under Disability tab)</fullName>
+                <default>false</default>
+                <label>Cerebral Palsy (details under Disability tab)</label>
+            </value>
+            <value>
+                <fullName>Chronic/Recurrent Skin Disease, other (specify)</fullName>
+                <default>false</default>
+                <label>Chronic/Recurrent Skin Disease, other (specify)</label>
+            </value>
+            <value>
+                <fullName>Concussion/Head Injury</fullName>
+                <default>false</default>
+                <label>Concussion/Head Injury</label>
+            </value>
+            <value>
+                <fullName>Congenital cataracts/retinoblastoma</fullName>
+                <default>false</default>
+                <label>Congenital cataracts/retinoblastoma</label>
+            </value>
+            <value>
+                <fullName>Constipation requiring medical care</fullName>
+                <default>false</default>
+                <label>Constipation requiring medical care</label>
+            </value>
+            <value>
+                <fullName>Convulsions or other neurologic problems</fullName>
+                <default>false</default>
+                <label>Convulsions or other neurologic problems</label>
+            </value>
+            <value>
+                <fullName>Croup</fullName>
+                <default>false</default>
+                <label>Croup</label>
+            </value>
+            <value>
+                <fullName>Cystic Fibrosis</fullName>
+                <default>false</default>
+                <label>Cystic Fibrosis</label>
+            </value>
+            <value>
+                <fullName>Dementia</fullName>
+                <default>false</default>
+                <label>Dementia</label>
+            </value>
+            <value>
+                <fullName>Dental Decay</fullName>
+                <default>false</default>
+                <label>Dental Decay</label>
+            </value>
+            <value>
+                <fullName>Dental Pain/Infection</fullName>
+                <default>false</default>
+                <label>Dental Pain/Infection</label>
+            </value>
+            <value>
+                <fullName>Developmental Delay</fullName>
+                <default>false</default>
+                <label>Developmental Delay</label>
+            </value>
+            <value>
+                <fullName>Diabetes (specify Type 1 or 2)</fullName>
+                <default>false</default>
+                <label>Diabetes (specify Type 1 or 2)</label>
+            </value>
+            <value>
+                <fullName>Down Syndrome (Trisomy 21)</fullName>
+                <default>false</default>
+                <label>Down Syndrome (Trisomy 21)</label>
+            </value>
+            <value>
+                <fullName>Ear Infection/Otitis Media (specify if frequent, recurrent)</fullName>
+                <default>false</default>
+                <label>Ear Infection/Otitis Media (specify if frequent, recurrent)</label>
+            </value>
+            <value>
+                <fullName>Eczema/Atopic Dermatitis</fullName>
+                <default>false</default>
+                <label>Eczema/Atopic Dermatitis</label>
+            </value>
+            <value>
+                <fullName>Encopresis/Solling</fullName>
+                <default>false</default>
+                <label>Encopresis/Solling</label>
+            </value>
+            <value>
+                <fullName>Failure to Thrive</fullName>
+                <default>false</default>
+                <label>Failure to Thrive</label>
+            </value>
+            <value>
+                <fullName>Fetal Alcohol Spectrum/FASD</fullName>
+                <default>false</default>
+                <label>Fetal Alcohol Spectrum/FASD</label>
+            </value>
+            <value>
+                <fullName>Food Allergies (details under Allergies section)</fullName>
+                <default>false</default>
+                <label>Food Allergies (details under Allergies section)</label>
+            </value>
+            <value>
+                <fullName>Fracture(s) (specify)</fullName>
+                <default>false</default>
+                <label>Fracture(s) (specify)</label>
+            </value>
+            <value>
+                <fullName>Gastroesophageal Reflux/GERD</fullName>
+                <default>false</default>
+                <label>Gastroesophageal Reflux/GERD</label>
+            </value>
+            <value>
+                <fullName>Gastrointestinal Disease (specify)</fullName>
+                <default>false</default>
+                <label>Gastrointestinal Disease (specify)</label>
+            </value>
+            <value>
+                <fullName>Gland/Endocrine Disorder, Other (specify)</fullName>
+                <default>false</default>
+                <label>Gland/Endocrine Disorder, Other (specify)</label>
+            </value>
+            <value>
+                <fullName>Headaches (recurrent frequent)</fullName>
+                <default>false</default>
+                <label>Headaches (recurrent frequent)</label>
+            </value>
+            <value>
+                <fullName>Hearing Problems (details under Disability tab)</fullName>
+                <default>false</default>
+                <label>Hearing Problems (details under Disability tab)</label>
+            </value>
+            <value>
+                <fullName>Heart Condition/Defect (specify y)</fullName>
+                <default>false</default>
+                <label>Heart Condition/Defect (specify y)</label>
+            </value>
+            <value>
+                <fullName>Hepatitis (specify)</fullName>
+                <default>false</default>
+                <label>Hepatitis (specify)</label>
+            </value>
+            <value>
+                <fullName>Hemia (specify)</fullName>
+                <default>false</default>
+                <label>Hemia (specify)</label>
+            </value>
+            <value>
+                <fullName>High blood pressure</fullName>
+                <default>false</default>
+                <label>High blood pressure</label>
+            </value>
+            <value>
+                <fullName>HIV/AIDS</fullName>
+                <default>false</default>
+                <label>HIV/AIDS</label>
+            </value>
+            <value>
+                <fullName>Kidney Disease (specify)</fullName>
+                <default>false</default>
+                <label>Kidney Disease (specify)</label>
+            </value>
+            <value>
+                <fullName>Lead Poisoning/Elevated Lead Level</fullName>
+                <default>false</default>
+                <label>Lead Poisoning/Elevated Lead Level</label>
+            </value>
+            <value>
+                <fullName>Lung Disease (specify)</fullName>
+                <default>false</default>
+                <label>Lung Disease (specify)</label>
+            </value>
+            <value>
+                <fullName>Lupus/SLE</fullName>
+                <default>false</default>
+                <label>Lupus/SLE</label>
+            </value>
+            <value>
+                <fullName>Memory Problems</fullName>
+                <default>false</default>
+                <label>Memory Problems</label>
+            </value>
+            <value>
+                <fullName>Menstrual Problems (specify)</fullName>
+                <default>false</default>
+                <label>Menstrual Problems (specify)</label>
+            </value>
+            <value>
+                <fullName>Mental Health Disorder (details under Behav. Health tab )</fullName>
+                <default>false</default>
+                <label>Mental Health Disorder (details under Behav. Health tab )</label>
+            </value>
+            <value>
+                <fullName>Metabolic/Genetic Disorder (specify)</fullName>
+                <default>false</default>
+                <label>Metabolic/Genetic Disorder (specify)</label>
+            </value>
+            <value>
+                <fullName>Nosebleeds/Epistaxis</fullName>
+                <default>false</default>
+                <label>Nosebleeds/Epistaxis</label>
+            </value>
+            <value>
+                <fullName>Organ transplant</fullName>
+                <default>false</default>
+                <label>Organ transplant</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <label>Other (Specify)</label>
+            </value>
+            <value>
+                <fullName>Pediculosis/Lice</fullName>
+                <default>false</default>
+                <label>Pediculosis/Lice</label>
+            </value>
+            <value>
+                <fullName>Pharyngitis</fullName>
+                <default>false</default>
+                <label>Pharyngitis</label>
+            </value>
+            <value>
+                <fullName>Pneumonia</fullName>
+                <default>false</default>
+                <label>Pneumonia</label>
+            </value>
+            <value>
+                <fullName>Pregnancy (details under Reproductive Health tab)</fullName>
+                <default>false</default>
+                <label>Pregnancy (details under Reproductive Health tab)</label>
+            </value>
+            <value>
+                <fullName>Scabies</fullName>
+                <default>false</default>
+                <label>Scabies</label>
+            </value>
+            <value>
+                <fullName>Seizure Disorder/Epilepsy</fullName>
+                <default>false</default>
+                <label>Seizure Disorder/Epilepsy</label>
+            </value>
+            <value>
+                <fullName>Sepsis/Blood Infection</fullName>
+                <default>false</default>
+                <label>Sepsis/Blood Infection</label>
+            </value>
+            <value>
+                <fullName>Serious injury/fracture/concussion (specify)</fullName>
+                <default>false</default>
+                <label>Serious injury/fracture/concussion (specify)</label>
+            </value>
+            <value>
+                <fullName>Sexually transmitted infection (details under Reproductive Health tab)</fullName>
+                <default>false</default>
+                <label>Sexually transmitted infection (details under Reproductive Health tab)</label>
+            </value>
+            <value>
+                <fullName>Sickle Cell Disease (specify if crisis, other complication)</fullName>
+                <default>false</default>
+                <label>Sickle Cell Disease (specify if crisis, other complication)</label>
+            </value>
+            <value>
+                <fullName>Sinusitis (specify acute, chronic)</fullName>
+                <default>false</default>
+                <label>Sinusitis (specify acute, chronic)</label>
+            </value>
+            <value>
+                <fullName>Sleep problems; snoring</fullName>
+                <default>false</default>
+                <label>Sleep problems; snoring</label>
+            </value>
+            <value>
+                <fullName>Sprain/Strain (injury to joint/muscle)</fullName>
+                <default>false</default>
+                <label>Sprain/Strain (injury to joint/muscle)</label>
+            </value>
+            <value>
+                <fullName>Substance Use Disorder (details under Behav. Health tab)</fullName>
+                <default>false</default>
+                <label>Substance Use Disorder (details under Behav. Health tab)</label>
+            </value>
+            <value>
+                <fullName>Thyroid Disorder (specify)</fullName>
+                <default>false</default>
+                <label>Thyroid Disorder (specify)</label>
+            </value>
+            <value>
+                <fullName>Tinea Ringworm (scalp/skin)</fullName>
+                <default>false</default>
+                <label>Tinea Ringworm (scalp/skin)</label>
+            </value>
+            <value>
+                <fullName>Tobacco use (details under Behav, Health tab)</fullName>
+                <default>false</default>
+                <label>Tobacco use (details under Behav, Health tab)</label>
+            </value>
+            <value>
+                <fullName>Tuberculosis (specify latent or other)</fullName>
+                <default>false</default>
+                <label>Tuberculosis (specify latent or other)</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>URI/&quot;Cold&quot;</fullName>
+                <default>false</default>
+                <label>URI/&quot;Cold&quot;</label>
+            </value>
+            <value>
+                <fullName>Urinary Tract Infection (specify if recurrent)</fullName>
+                <default>false</default>
+                <label>Urinary Tract Infection (specify if recurrent)</label>
+            </value>
+            <value>
+                <fullName>Viral Syndrome</fullName>
+                <default>false</default>
+                <label>Viral Syndrome</label>
+            </value>
+            <value>
+                <fullName>Vision Problems (details under Disability tab)</fullName>
+                <default>false</default>
+                <label>Vision Problems (details under Disability tab)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

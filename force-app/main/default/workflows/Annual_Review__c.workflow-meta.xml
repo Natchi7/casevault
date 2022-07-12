@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Status_as_Approved</fullName>
+        <field>Annual_Review_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Status as Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Rejected</fullName>
+        <field>Annual_Review_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status as Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Submitted</fullName>
+        <field>Annual_Review_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update Status as Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Update Status into Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Update Status into Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Submitted_fr_Approval</fullName>
+        <field>Approval_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Update Status into Submitted fr Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_s_ability_to_meet_child_s_need__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>4b. Kinship Care Issues (for restrictive or relative placements): Family&apos;s ability to meet child&apos;s needs.</inlineHelpText>
+    <label>4b.Family&apos;s ability to meet child&apos;s need</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

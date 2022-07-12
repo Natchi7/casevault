@@ -1,0 +1,107 @@
+<template>
+
+    <lightning-card title="Person Search">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </template>
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="First Name" name="firstName" onchange={handleChange} value={searchInput.firstName}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="Last Name" name="lastName" onchange={handleChange} value={searchInput.lastName}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="Date" label="DOB" name="dob" onchange={handleChange} value={searchInput.dob} date-style="short"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="SSN" name="ssn" onchange={handleChange} value={searchInput.ssn}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="Casevault PID" name="casevaultPid" onchange={handleChange} value={searchInput.casevaultPid}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="DL.No" name="dlNo" onchange={handleChange} value={searchInput.dlNo}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        
+        <div class="AlignPaddingTop">
+            <lightning-button label="Clear"  onclick={handleClearSearch} class="slds-m-left_small"></lightning-button>
+            <lightning-button  variant="brand" label="Search" onclick={handleSearch} class="slds-p-around_small"></lightning-button>
+        </div>
+        
+        <template if:true={showContactTable}>
+            <lightning-card title={numberOfPersonRecord}>
+                <lightning-datatable 
+                        key-field="Id" 
+                        data={visibleDataContact} 
+                        columns={personColumn} selected-rows={setSelectedRows}
+                        max-row-selection="1"  onrowselection={handleRowSelection}
+                        onrowaction={handleRowAction}>
+                </lightning-datatable>
+                <div class="slds-p-top_small">
+                    <c-pagination-l-w-c total-list={contactList} onupdate={paginationHandlerContact}></c-pagination-l-w-c>  
+                </div>
+            </lightning-card>
+        </template>
+
+        <lightning-accordion  allow-multiple-sections-open>
+
+            <template if:true={showIntake}>
+                <lightning-accordion-section label="Intake">
+                    <lightning-card>
+                        <lightning-datatable 
+                            key-field="Id" 
+                            data={visibleDataIntake}
+                            columns={intakeColumn} 
+                            hide-checkbox-column 
+                            onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                        <div class="slds-p-top_small">
+                            <c-pagination-l-w-c total-list={intakeList} onupdate={paginationHandlerIntake}></c-pagination-l-w-c>  
+                        </div>
+                    </lightning-card>
+                </lightning-accordion-section>
+            </template>
+
+            <template if:true={showCPSIntake}>
+                <lightning-accordion-section label="Investigation">
+                    <lightning-card>
+                        <lightning-datatable 
+                            key-field="Id" 
+                            data={visibleDataCPSIntake}
+                            columns={cpsIntakecolumn} 
+                            hide-checkbox-column 
+                            onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                        <div class="slds-p-top_small">
+                            <c-pagination-l-w-c total-list={cpsIntakeList} onupdate={paginationHandlerCPSIntake}></c-pagination-l-w-c>  
+                        </div>
+                    </lightning-card>
+                </lightning-accordion-section>
+            </template>
+
+            <template if:true={showServiceCase}>
+                <lightning-accordion-section label="Service Case">
+                    <lightning-card >
+                        <lightning-datatable 
+                            key-field="Id" 
+                            data={visibleDataServiceCase}
+                            columns={serviceCasecolumn} 
+                            hide-checkbox-column 
+                            onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                        <div class="slds-p-top_small">
+                            <c-pagination-l-w-c total-list={servicecaseList} onupdate={paginationHandlerServiceCase}></c-pagination-l-w-c>  
+                        </div>
+                    </lightning-card>
+                </lightning-accordion-section>
+            </template>
+        </lightning-accordion>
+
+    </lightning-card>
+</template>

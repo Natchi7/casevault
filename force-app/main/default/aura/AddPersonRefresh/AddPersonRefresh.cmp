@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="public">
+    <aura:attribute name="sObjectName" type="String"/>
+    <c:addPersonLwc onhandleRefresh="{!c.refresh}" recordId="{!v.recordId}" objectApiName="{!v.sObjectName}"/>
+</aura:component>

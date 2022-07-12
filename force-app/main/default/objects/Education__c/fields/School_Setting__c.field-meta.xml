@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Setting__c</fullName>
+    <externalId>false</externalId>
+    <label>School Setting</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Home</fullName>
+                <default>true</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+            <value>
+                <fullName>College / University</fullName>
+                <default>false</default>
+                <label>College / University</label>
+            </value>
+            <value>
+                <fullName>Private</fullName>
+                <default>false</default>
+                <label>Private</label>
+            </value>
+            <value>
+                <fullName>Parochial</fullName>
+                <default>false</default>
+                <label>Parochial</label>
+            </value>
+            <value>
+                <fullName>Vocational</fullName>
+                <default>false</default>
+                <label>Vocational</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

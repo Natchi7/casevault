@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Compelling_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>IF YES,STATE COMPELLING REASON NOT TO FILE TPR PETITION</inlineHelpText>
+    <label>State Compelling Reason</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

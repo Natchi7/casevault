@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_s_feeling_regarding_adoption__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>6. Child&apos;s feeling regarding adoption and/or foster care.</inlineHelpText>
+    <label>6. Child&apos;s feeling regarding adoption</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

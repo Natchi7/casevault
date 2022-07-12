@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Structure__c</fullName>
+    <externalId>false</externalId>
+    <label>Family Structure</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Divorced Female</fullName>
+                <default>false</default>
+                <label>Divorced Female</label>
+            </value>
+            <value>
+                <fullName>Divorced Male</fullName>
+                <default>false</default>
+                <label>Divorced Male</label>
+            </value>
+            <value>
+                <fullName>Married Couple</fullName>
+                <default>false</default>
+                <label>Married Couple</label>
+            </value>
+            <value>
+                <fullName>Separated Female</fullName>
+                <default>false</default>
+                <label>Separated Female</label>
+            </value>
+            <value>
+                <fullName>Separated Male</fullName>
+                <default>false</default>
+                <label>Separated Male</label>
+            </value>
+            <value>
+                <fullName>Single Female</fullName>
+                <default>false</default>
+                <label>Single Female</label>
+            </value>
+            <value>
+                <fullName>Single Female - Cohabitating with Father</fullName>
+                <default>false</default>
+                <label>Single Female - Cohabitating with Father</label>
+            </value>
+            <value>
+                <fullName>Single Male</fullName>
+                <default>false</default>
+                <label>Single Male</label>
+            </value>
+            <value>
+                <fullName>Single Male - Cohabitating with Mother</fullName>
+                <default>false</default>
+                <label>Single Male - Cohabitating with Mother</label>
+            </value>
+            <value>
+                <fullName>Unable to Determine</fullName>
+                <default>false</default>
+                <label>Unable to Determine</label>
+            </value>
+            <value>
+                <fullName>Unmarried Couple</fullName>
+                <default>false</default>
+                <label>Unmarried Couple</label>
+            </value>
+            <value>
+                <fullName>Unmarried Couple - One Parent Present</fullName>
+                <default>false</default>
+                <label>Unmarried Couple - One Parent Present</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

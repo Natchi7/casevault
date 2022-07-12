@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Basics_for_Special_Needs__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary Basics for Special Needs</inlineHelpText>
+    <label>Primary Basics for Special Needs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Age</fullName>
+                <default>false</default>
+                <label>Age</label>
+            </value>
+            <value>
+                <fullName>Child with a high risk of physical or mental disease</fullName>
+                <default>false</default>
+                <label>Child with a high risk of physical or mental disease</label>
+            </value>
+            <value>
+                <fullName>Medical/Mental/Physical/Emotional Disabilities</fullName>
+                <default>false</default>
+                <label>Medical/Mental/Physical/Emotional Disabilities</label>
+            </value>
+            <value>
+                <fullName>Membership in a sibling Group</fullName>
+                <default>false</default>
+                <label>Membership in a sibling Group</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Racial/Original Background</fullName>
+                <default>false</default>
+                <label>Racial/Original Background</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

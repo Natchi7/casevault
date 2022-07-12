@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Sub_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Program Sub Area</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Program_Area__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Investigative Response</fullName>
+                <default>false</default>
+                <label>Investigative Response</label>
+            </value>
+            <value>
+                <fullName>Alternative Response</fullName>
+                <default>false</default>
+                <label>Alternative Response</label>
+            </value>
+            <value>
+                <fullName>ISP (Investigation Services Provided)</fullName>
+                <default>false</default>
+                <label>ISP (Investigation Services Provided)</label>
+            </value>
+            <value>
+                <fullName>Continuing Protective Services</fullName>
+                <default>false</default>
+                <label>Continuing Protective Services</label>
+            </value>
+            <value>
+                <fullName>SFC/Assessment</fullName>
+                <default>false</default>
+                <label>SFC/Assessment</label>
+            </value>
+            <value>
+                <fullName>Services to Families with Children - Continuing</fullName>
+                <default>false</default>
+                <label>Services to Families with Children - Continuing</label>
+            </value>
+            <value>
+                <fullName>Family Preservation Services</fullName>
+                <default>false</default>
+                <label>Family Preservation Services</label>
+            </value>
+            <value>
+                <fullName>Interagency Family Preservation Services</fullName>
+                <default>false</default>
+                <label>Interagency Family Preservation Services</label>
+            </value>
+            <value>
+                <fullName>Services to Families with Children - Intake</fullName>
+                <default>false</default>
+                <label>Services to Families with Children - Intake</label>
+            </value>
+            <value>
+                <fullName>Consolidated Services</fullName>
+                <default>false</default>
+                <label>Consolidated Services</label>
+            </value>
+            <value>
+                <fullName>Intensive Family Services</fullName>
+                <default>false</default>
+                <label>Intensive Family Services</label>
+            </value>
+            <value>
+                <fullName>Voluntary Placement (Request) Services</fullName>
+                <default>false</default>
+                <label>Voluntary Placement (Request) Services</label>
+            </value>
+            <value>
+                <fullName>Families Now</fullName>
+                <default>false</default>
+                <label>Families Now</label>
+            </value>
+            <value>
+                <fullName>Families Now - Level I</fullName>
+                <default>false</default>
+                <label>Families Now - Level I</label>
+            </value>
+            <value>
+                <fullName>Families Now - Level II</fullName>
+                <default>false</default>
+                <label>Families Now - Level II</label>
+            </value>
+            <value>
+                <fullName>Families Now - Level III</fullName>
+                <default>false</default>
+                <label>Families Now - Level III</label>
+            </value>
+            <value>
+                <fullName>Families Now - Level IV</fullName>
+                <default>false</default>
+                <label>Families Now - Level IV</label>
+            </value>
+            <value>
+                <fullName>ROA</fullName>
+                <default>false</default>
+                <label>ROA</label>
+            </value>
+            <value>
+                <fullName>ICPC Incoming</fullName>
+                <default>false</default>
+                <label>ICPC Incoming</label>
+            </value>
+            <value>
+                <fullName>Parent/Guardian of a Child in Out of Home</fullName>
+                <default>false</default>
+                <label>Parent/Guardian of a Child in Out of Home</label>
+            </value>
+            <value>
+                <fullName>Child of Minor Parent</fullName>
+                <default>false</default>
+                <label>Child of Minor Parent</label>
+            </value>
+            <value>
+                <fullName>Post Adoption Services</fullName>
+                <default>false</default>
+                <label>Post Adoption Services</label>
+            </value>
+            <value>
+                <fullName>Enhanced Aftercare VPA Request</fullName>
+                <default>false</default>
+                <label>Enhanced Aftercare VPA Request</label>
+            </value>
+            <value>
+                <fullName>Sibling of a Child in OOH Care</fullName>
+                <default>false</default>
+                <label>Sibling of a Child in OOH Care</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <valueName>Continuing Protective Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <valueName>Services to Families with Children - Continuing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <valueName>Family Preservation Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Interagency Family Preservation Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <valueName>Services to Families with Children - Intake</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <valueName>Consolidated Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home Services/Family Preservation</controllingFieldValue>
+            <valueName>Intensive Family Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>ISP (Investigation Services Provided)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Voluntary Placement (Request) Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>ROA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>ICPC Incoming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Parent/Guardian of a Child in Out of Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Child of Minor Parent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Post Adoption Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Enhanced Aftercare VPA Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auxiliary Living</controllingFieldValue>
+            <valueName>Sibling of a Child in OOH Care</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

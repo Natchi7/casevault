@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Medical_Insurance_Provider__c</fullName>
+    <externalId>false</externalId>
+    <label>Medical Insurance Provider</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aetna</fullName>
+                <default>false</default>
+                <label>Aetna</label>
+            </value>
+            <value>
+                <fullName>Amerigroup Mariland, Inc</fullName>
+                <default>false</default>
+                <label>Amerigroup Mariland, Inc</label>
+            </value>
+            <value>
+                <fullName>Blue Cross/Blue Shield</fullName>
+                <default>false</default>
+                <label>Blue Cross/Blue Shield</label>
+            </value>
+            <value>
+                <fullName>Care First</fullName>
+                <default>false</default>
+                <label>Care First</label>
+            </value>
+            <value>
+                <fullName>Diamond Plan(Coventry)</fullName>
+                <default>false</default>
+                <label>Diamond Plan(Coventry)</label>
+            </value>
+            <value>
+                <fullName>Helix Family Choice</fullName>
+                <default>false</default>
+                <label>Helix Family Choice</label>
+            </value>
+            <value>
+                <fullName>JAI Medical System, Inc.</fullName>
+                <default>false</default>
+                <label>JAI Medical System, Inc.</label>
+            </value>
+            <value>
+                <fullName>Kaiser permanente</fullName>
+                <default>false</default>
+                <label>Kaiser permanente</label>
+            </value>
+            <value>
+                <fullName>Magellan</fullName>
+                <default>false</default>
+                <label>Magellan</label>
+            </value>
+            <value>
+                <fullName>Maryland Physicians Care</fullName>
+                <default>false</default>
+                <label>Maryland Physicians Care</label>
+            </value>
+            <value>
+                <fullName>Priority Partners</fullName>
+                <default>false</default>
+                <label>Priority Partners</label>
+            </value>
+            <value>
+                <fullName>Tri Care</fullName>
+                <default>false</default>
+                <label>Tri Care</label>
+            </value>
+            <value>
+                <fullName>United Health Care</fullName>
+                <default>false</default>
+                <label>United Health Care</label>
+            </value>
+            <value>
+                <fullName>US Family Health Plan</fullName>
+                <default>false</default>
+                <label>US Family Health Plan</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

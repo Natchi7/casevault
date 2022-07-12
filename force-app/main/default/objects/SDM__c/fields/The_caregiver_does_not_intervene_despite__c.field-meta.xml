@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_caregiver_does_not_intervene_despite__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>The caregiver does not intervene despite knowledge (or reasonable expectation that the caregiver should have knowledge) that the child is being harmed (includes physical or sexual abuse, neglect or mental injury) by another person.</inlineHelpText>
+    <label>The caregiver does not intervene despite</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

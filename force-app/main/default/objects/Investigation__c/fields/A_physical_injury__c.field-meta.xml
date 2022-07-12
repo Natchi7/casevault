@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_physical_injury__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>A physical injury (brefly describe the current or prior injury)</inlineHelpText>
+    <label>A physical injury</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

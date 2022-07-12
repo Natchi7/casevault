@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Address_Update</fullName>
+        <field>Address__c</field>
+        <formula>License_Site__r.Address__c</formula>
+        <name>Address Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Ext_Update</fullName>
+        <field>Ext__c</field>
+        <formula>License_Site__r.Ext__c</formula>
+        <name>Ext Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Home_Phone</fullName>
+        <field>Home_Phone__c</field>
+        <formula>License_Site__r.Phone</formula>
+        <name>Home Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Update_Approved</fullName>
+        <field>License_Site_Approval_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Status Update Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Update_Submit_for_Approval</fullName>
+        <field>License_Site_Approval_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Status Update Submit for Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Provider_Id</fullName>
+        <field>MD_Chessie_Provider_Id__c</field>
+        <formula>License_Site__r.MD_CHESSIE_Provider_ID__c</formula>
+        <name>Update Provider Id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Readonly_RecordType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>License_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Readonly RecordType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Rejected</fullName>
+        <field>License_Site_Approval_Status__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Update Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_relice_Submit</fullName>
+        <field>License_Site_Approval_Status__c</field>
+        <formula>&apos;Relicensure-Submitted for Approval&apos;</formula>
+        <name>Update Status into relice-Submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_relice_appro</fullName>
+        <field>License_Site_Approval_Status__c</field>
+        <formula>&apos;Relicensure-Approved&apos;</formula>
+        <name>Update Status relice-appro</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_initial</fullName>
+        <field>Initial_Relicensure__c</field>
+        <literalValue>Initial</literalValue>
+        <name>Update initial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_relicensure</fullName>
+        <field>Initial_Relicensure__c</field>
+        <literalValue>Relicensure</literalValue>
+        <name>Update relicensure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Work_Phone_Update</fullName>
+        <field>Work_Phone__c</field>
+        <formula>License_Site__r.Work_Phone__c</formula>
+        <name>Work Phone Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Assign Readonly License</fullName>
+        <actions>
+            <name>Update_Readonly_RecordType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>License__c.License_Site_Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Initial Value</fullName>
+        <actions>
+            <name>Update_initial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISBLANK(Existing_License__c)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Provider Id In License</fullName>
+        <actions>
+            <name>Update_Provider_Id</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK(License_Site__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update relicensure value</fullName>
+        <actions>
+            <name>Update_relicensure</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( Existing_License__c ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elimination_Current_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Current Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cathrization</fullName>
+                <default>false</default>
+                <label>Cathrization</label>
+            </value>
+            <value>
+                <fullName>Cloth diapers</fullName>
+                <default>false</default>
+                <label>Cloth diapers</label>
+            </value>
+            <value>
+                <fullName>Colostomy</fullName>
+                <default>false</default>
+                <label>Colostomy</label>
+            </value>
+            <value>
+                <fullName>Disposable diapers</fullName>
+                <default>false</default>
+                <label>Disposable diapers</label>
+            </value>
+            <value>
+                <fullName>Disposable Undergraments</fullName>
+                <default>false</default>
+                <label>Disposable Undergraments</label>
+            </value>
+            <value>
+                <fullName>Either cloth or disposable diapers</fullName>
+                <default>false</default>
+                <label>Either cloth or disposable diapers</label>
+            </value>
+            <value>
+                <fullName>Encopresis</fullName>
+                <default>false</default>
+                <label>Encopresis</label>
+            </value>
+            <value>
+                <fullName>Enema</fullName>
+                <default>false</default>
+                <label>Enema</label>
+            </value>
+            <value>
+                <fullName>Enuresis</fullName>
+                <default>false</default>
+                <label>Enuresis</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pull-Ups diapers</fullName>
+                <default>false</default>
+                <label>Pull-Ups diapers</label>
+            </value>
+            <value>
+                <fullName>Rubber pants</fullName>
+                <default>false</default>
+                <label>Rubber pants</label>
+            </value>
+            <value>
+                <fullName>Toilet trained</fullName>
+                <default>false</default>
+                <label>Toilet trained</label>
+            </value>
+            <value>
+                <fullName>Training pants</fullName>
+                <default>false</default>
+                <label>Training pants</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

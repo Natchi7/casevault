@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Case Planning FIM</fullName>
+                <default>false</default>
+                <label>Case Planning FIM</label>
+            </value>
+            <value>
+                <fullName>Change in Permanency Plan FIM</fullName>
+                <default>false</default>
+                <label>Change in Permanency Plan FIM</label>
+            </value>
+            <value>
+                <fullName>Change in Placement FIM</fullName>
+                <default>false</default>
+                <label>Change in Placement FIM</label>
+            </value>
+            <value>
+                <fullName>Considered Removal/Removal FIM</fullName>
+                <default>false</default>
+                <label>Considered Removal/Removal FIM</label>
+            </value>
+            <value>
+                <fullName>Voluntary Placement Agreement (VPA) FIM</fullName>
+                <default>false</default>
+                <label>Voluntary Placement Agreement (VPA) FIM</label>
+            </value>
+            <value>
+                <fullName>Youth Transition FIM</fullName>
+                <default>false</default>
+                <label>Youth Transition FIM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

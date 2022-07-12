@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_last_Progress_Report__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Date of last Progress Report from purchase of Care / Treatment Foster Care Facility?</inlineHelpText>
+    <label>Date of last Progress Report</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Social_Security_child_support_benefits__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Relative Caregiver(s)  agrees to apply for social security and child support benefits that the child may be eligible for and to report the guardianship subsidy as income to the social security Administration.</inlineHelpText>
+    <label>Social Security&amp;child support benefits</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

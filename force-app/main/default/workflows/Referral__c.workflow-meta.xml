@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Assign_Read_Only_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Referral_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Assign Read Only Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Tax_Id_Blank</fullName>
+        <field>Tax_Id__c</field>
+        <name>Tax Id Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Convert_Field</fullName>
+        <field>Convert_Account_Contact__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Convert Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Converted_Field</fullName>
+        <field>Convert_Account_Contact__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Converted Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Converted</fullName>
+        <field>Referal_status__c</field>
+        <literalValue>Referral Converted</literalValue>
+        <name>Update Status Converted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_field_approval_submit</fullName>
+        <field>Referal_status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Update Status field approval submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_field_approval_submitted</fullName>
+        <field>Referal_status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Update Status field approval submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_reopened_field</fullName>
+        <field>Reopen_Provider__c</field>
+        <literalValue>1</literalValue>
+        <name>Update reopened field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Not Allow To Edit Referral Once Referral Is Approved</fullName>
+        <actions>
+            <name>Assign_Read_Only_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Referral__c.Referal_status__c</field>
+            <operation>equals</operation>
+            <value>Referral Converted</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

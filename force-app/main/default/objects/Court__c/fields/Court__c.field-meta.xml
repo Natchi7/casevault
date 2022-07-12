@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Court__c</fullName>
+    <externalId>false</externalId>
+    <label>Court</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No further involvement with court</fullName>
+                <default>false</default>
+                <label>No further involvement with court</label>
+            </value>
+            <value>
+                <fullName>Exception/Appeal Filed</fullName>
+                <default>false</default>
+                <label>Exception/Appeal Filed</label>
+            </value>
+            <value>
+                <fullName>Is there another court hearing Scheduled?</fullName>
+                <default>false</default>
+                <label>Is there another court hearing Scheduled?</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

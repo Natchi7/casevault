@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verification__c</fullName>
+    <externalId>false</externalId>
+    <label>Verification</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Benefits Statement</fullName>
+                <default>false</default>
+                <label>Benefits Statement</label>
+            </value>
+            <value>
+                <fullName>CARES Not Verified</fullName>
+                <default>false</default>
+                <label>CARES Not Verified</label>
+            </value>
+            <value>
+                <fullName>CARES Verified - Other</fullName>
+                <default>false</default>
+                <label>CARES Verified - Other</label>
+            </value>
+            <value>
+                <fullName>Client Reported</fullName>
+                <default>false</default>
+                <label>Client Reported</label>
+            </value>
+            <value>
+                <fullName>CSEA (Child Support)</fullName>
+                <default>false</default>
+                <label>CSEA (Child Support)</label>
+            </value>
+            <value>
+                <fullName>Federal Tax Form</fullName>
+                <default>false</default>
+                <label>Federal Tax Form</label>
+            </value>
+            <value>
+                <fullName>Lease/ Rental Agreement</fullName>
+                <default>false</default>
+                <label>Lease/ Rental Agreement</label>
+            </value>
+            <value>
+                <fullName>MD Automated Benefit System (MABS)</fullName>
+                <default>false</default>
+                <label>MD Automated Benefit System (MABS)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pay Stub</fullName>
+                <default>false</default>
+                <label>Pay Stub</label>
+            </value>
+            <value>
+                <fullName>Receipt Book</fullName>
+                <default>false</default>
+                <label>Receipt Book</label>
+            </value>
+            <value>
+                <fullName>Rental Receipts</fullName>
+                <default>false</default>
+                <label>Rental Receipts</label>
+            </value>
+            <value>
+                <fullName>SVES Verified</fullName>
+                <default>false</default>
+                <label>SVES Verified</label>
+            </value>
+            <value>
+                <fullName>Unable to Verify Income</fullName>
+                <default>false</default>
+                <label>Unable to Verify Income</label>
+            </value>
+            <value>
+                <fullName>W-2</fullName>
+                <default>false</default>
+                <label>W-2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

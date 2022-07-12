@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition_of_the_Home__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Condition of the Home : (ex., sleeping arrangements, sanitation, food supply, safety, etc, : attach records or picture if available)</inlineHelpText>
+    <label>Condition of the Home</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

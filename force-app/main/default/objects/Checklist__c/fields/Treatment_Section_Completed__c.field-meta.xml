@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treatment_Section_Completed__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR( Treatment_24_hours_Cancel__c , Treatment_Available_24_hours_Remove__c , Treatment_Check_20_hours_Cancel__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Section Completed?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

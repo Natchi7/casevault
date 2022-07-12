@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scheduled_Hearing_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Scheduled Hearing Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adjudication/Disposition</fullName>
+                <default>false</default>
+                <label>Adjudication/Disposition</label>
+            </value>
+            <value>
+                <fullName>Adoption</fullName>
+                <default>false</default>
+                <label>Adoption</label>
+            </value>
+            <value>
+                <fullName>Appeal Hearing</fullName>
+                <default>false</default>
+                <label>Appeal Hearing</label>
+            </value>
+            <value>
+                <fullName>Child Review</fullName>
+                <default>false</default>
+                <label>Child Review</label>
+            </value>
+            <value>
+                <fullName>CINA</fullName>
+                <default>false</default>
+                <label>CINA</label>
+            </value>
+            <value>
+                <fullName>Contested Adoption</fullName>
+                <default>false</default>
+                <label>Contested Adoption</label>
+            </value>
+            <value>
+                <fullName>Contested CINA</fullName>
+                <default>false</default>
+                <label>Contested CINA</label>
+            </value>
+            <value>
+                <fullName>Exception Hearing</fullName>
+                <default>false</default>
+                <label>Exception Hearing</label>
+            </value>
+            <value>
+                <fullName>Guardianship Motions</fullName>
+                <default>false</default>
+                <label>Guardianship Motions</label>
+            </value>
+            <value>
+                <fullName>Guardianship Review</fullName>
+                <default>false</default>
+                <label>Guardianship Review</label>
+            </value>
+            <value>
+                <fullName>Motion Hearing(CINA)</fullName>
+                <default>false</default>
+                <label>Motion Hearing(CINA)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Permanency Planning</fullName>
+                <default>false</default>
+                <label>Permanency Planning</label>
+            </value>
+            <value>
+                <fullName>Permanency Plan Review</fullName>
+                <default>false</default>
+                <label>Permanency Plan Review</label>
+            </value>
+            <value>
+                <fullName>Preliminary/Arraignment</fullName>
+                <default>false</default>
+                <label>Preliminary/Arraignment</label>
+            </value>
+            <value>
+                <fullName>QRTP Review</fullName>
+                <default>false</default>
+                <label>QRTP Review</label>
+            </value>
+            <value>
+                <fullName>Reasonable Efforts Hearing</fullName>
+                <default>false</default>
+                <label>Reasonable Efforts Hearing</label>
+            </value>
+            <value>
+                <fullName>Reunification Services Wavier</fullName>
+                <default>false</default>
+                <label>Reunification Services Wavier</label>
+            </value>
+            <value>
+                <fullName>Settlement Conference</fullName>
+                <default>false</default>
+                <label>Settlement Conference</label>
+            </value>
+            <value>
+                <fullName>Shelter Care</fullName>
+                <default>false</default>
+                <label>Shelter Care</label>
+            </value>
+            <value>
+                <fullName>Status Conference</fullName>
+                <default>false</default>
+                <label>Status Conference</label>
+            </value>
+            <value>
+                <fullName>TPR/Guardianship- Contested</fullName>
+                <default>false</default>
+                <label>TPR/Guardianship- Contested</label>
+            </value>
+            <value>
+                <fullName>TPR/Guardianship- Uncontested</fullName>
+                <default>false</default>
+                <label>TPR/Guardianship- Uncontested</label>
+            </value>
+            <value>
+                <fullName>Voluntary Placement Hearing</fullName>
+                <default>false</default>
+                <label>Voluntary Placement Hearing</label>
+            </value>
+            <value>
+                <fullName>Writ</fullName>
+                <default>false</default>
+                <label>Writ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

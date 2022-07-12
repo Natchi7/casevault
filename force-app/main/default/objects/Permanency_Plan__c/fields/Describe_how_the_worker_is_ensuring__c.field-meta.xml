@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Describe_how_the_worker_is_ensuring__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe how the worker is ensuring that the child receives safe and appropriate care. Discuss specific outcomes of ongoing/past services that have been offered to the child during the assessment period?</inlineHelpText>
+    <label>Describe how the worker is ensuring</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

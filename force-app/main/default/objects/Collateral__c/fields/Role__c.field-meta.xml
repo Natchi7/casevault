@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administrative Staff</fullName>
+                <default>false</default>
+                <label>Administrative Staff</label>
+            </value>
+            <value>
+                <fullName>Alleged Maltreator</fullName>
+                <default>false</default>
+                <label>Alleged Maltreator</label>
+            </value>
+            <value>
+                <fullName>APGRB Attorney</fullName>
+                <default>false</default>
+                <label>APGRB Attorney</label>
+            </value>
+            <value>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+                <label>Attorney</label>
+            </value>
+            <value>
+                <fullName>Attorney General</fullName>
+                <default>false</default>
+                <label>Attorney General</label>
+            </value>
+            <value>
+                <fullName>Caretaker-Caregiver</fullName>
+                <default>false</default>
+                <label>Caretaker-Caregiver</label>
+            </value>
+            <value>
+                <fullName>Child Advocate - CASA</fullName>
+                <default>false</default>
+                <label>Child Advocate - CASA</label>
+            </value>
+            <value>
+                <fullName>Child Welfare Staff</fullName>
+                <default>false</default>
+                <label>Child Welfare Staff</label>
+            </value>
+            <value>
+                <fullName>Clergy</fullName>
+                <default>false</default>
+                <label>Clergy</label>
+            </value>
+            <value>
+                <fullName>Client Attorney</fullName>
+                <default>false</default>
+                <label>Client Attorney</label>
+            </value>
+            <value>
+                <fullName>Counselor-Therapist</fullName>
+                <default>false</default>
+                <label>Counselor-Therapist</label>
+            </value>
+            <value>
+                <fullName>Day Care Staff</fullName>
+                <default>false</default>
+                <label>Day Care Staff</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Detention Center</fullName>
+                <default>false</default>
+                <label>Detention Center</label>
+            </value>
+            <value>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+                <label>Doctor</label>
+            </value>
+            <value>
+                <fullName>Emergency Shelter</fullName>
+                <default>false</default>
+                <label>Emergency Shelter</label>
+            </value>
+            <value>
+                <fullName>Ex-Spouse</fullName>
+                <default>false</default>
+                <label>Ex-Spouse</label>
+            </value>
+            <value>
+                <fullName>FIM-Assigned Caseworker/Supervisor</fullName>
+                <default>false</default>
+                <label>FIM-Assigned Caseworker/Supervisor</label>
+            </value>
+            <value>
+                <fullName>FIM-Facilitator</fullName>
+                <default>false</default>
+                <label>FIM-Facilitator</label>
+            </value>
+            <value>
+                <fullName>FIM-Non-assigned casewoker/supervisor</fullName>
+                <default>false</default>
+                <label>FIM-Non-assigned casewoker/supervisor</label>
+            </value>
+            <value>
+                <fullName>Foster Parent</fullName>
+                <default>false</default>
+                <label>Foster Parent</label>
+            </value>
+            <value>
+                <fullName>Foster Sibling</fullName>
+                <default>false</default>
+                <label>Foster Sibling</label>
+            </value>
+            <value>
+                <fullName>Friend</fullName>
+                <default>false</default>
+                <label>Friend</label>
+            </value>
+            <value>
+                <fullName>Godparent</fullName>
+                <default>false</default>
+                <label>Godparent</label>
+            </value>
+            <value>
+                <fullName>Government Agency</fullName>
+                <default>false</default>
+                <label>Government Agency</label>
+            </value>
+            <value>
+                <fullName>Grandfather</fullName>
+                <default>false</default>
+                <label>Grandfather</label>
+            </value>
+            <value>
+                <fullName>Grandmother</fullName>
+                <default>false</default>
+                <label>Grandmother</label>
+            </value>
+            <value>
+                <fullName>Guardian Ad Litem</fullName>
+                <default>false</default>
+                <label>Guardian Ad Litem</label>
+            </value>
+            <value>
+                <fullName>Guardian of Person</fullName>
+                <default>false</default>
+                <label>Guardian of Person</label>
+            </value>
+            <value>
+                <fullName>Guardian of Property</fullName>
+                <default>false</default>
+                <label>Guardian of Property</label>
+            </value>
+            <value>
+                <fullName>Guardianship Petitioner</fullName>
+                <default>false</default>
+                <label>Guardianship Petitioner</label>
+            </value>
+            <value>
+                <fullName>Hospital Ethics Committee Member</fullName>
+                <default>false</default>
+                <label>Hospital Ethics Committee Member</label>
+            </value>
+            <value>
+                <fullName>Law Enforcement</fullName>
+                <default>false</default>
+                <label>Law Enforcement</label>
+            </value>
+            <value>
+                <fullName>Legal Representative</fullName>
+                <default>false</default>
+                <label>Legal Representative</label>
+            </value>
+            <value>
+                <fullName>Licensing Worker</fullName>
+                <default>false</default>
+                <label>Licensing Worker</label>
+            </value>
+            <value>
+                <fullName>Medical Consultant</fullName>
+                <default>false</default>
+                <label>Medical Consultant</label>
+            </value>
+            <value>
+                <fullName>Medical Professional</fullName>
+                <default>false</default>
+                <label>Medical Professional</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Neighbor</fullName>
+                <default>false</default>
+                <label>Neighbor</label>
+            </value>
+            <value>
+                <fullName>No Relation</fullName>
+                <default>false</default>
+                <label>No Relation</label>
+            </value>
+            <value>
+                <fullName>Other Relation</fullName>
+                <default>false</default>
+                <label>Other Relation</label>
+            </value>
+            <value>
+                <fullName>Parent Surrogate</fullName>
+                <default>false</default>
+                <label>Parent Surrogate</label>
+            </value>
+            <value>
+                <fullName>Parole Officer</fullName>
+                <default>false</default>
+                <label>Parole Officer</label>
+            </value>
+            <value>
+                <fullName>Probation Officer</fullName>
+                <default>false</default>
+                <label>Probation Officer</label>
+            </value>
+            <value>
+                <fullName>Prosecuting Attorney</fullName>
+                <default>false</default>
+                <label>Prosecuting Attorney</label>
+            </value>
+            <value>
+                <fullName>Provider of Service</fullName>
+                <default>false</default>
+                <label>Provider of Service</label>
+            </value>
+            <value>
+                <fullName>Relative(other than grandparent)</fullName>
+                <default>false</default>
+                <label>Relative(other than grandparent)</label>
+            </value>
+            <value>
+                <fullName>Rep Payee</fullName>
+                <default>false</default>
+                <label>Rep Payee</label>
+            </value>
+            <value>
+                <fullName>School Staff</fullName>
+                <default>false</default>
+                <label>School Staff</label>
+            </value>
+            <value>
+                <fullName>Social Worker</fullName>
+                <default>false</default>
+                <label>Social Worker</label>
+            </value>
+            <value>
+                <fullName>Teacher</fullName>
+                <default>false</default>
+                <label>Teacher</label>
+            </value>
+            <value>
+                <fullName>Third Party Reviewer</fullName>
+                <default>false</default>
+                <label>Third Party Reviewer</label>
+            </value>
+            <value>
+                <fullName>Truancy Officer</fullName>
+                <default>false</default>
+                <label>Truancy Officer</label>
+            </value>
+            <value>
+                <fullName>Witness</fullName>
+                <default>false</default>
+                <label>Witness</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

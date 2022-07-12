@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIRA_Housing__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Housing(Select all that apply)</inlineHelpText>
+    <label>Housing</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Current housing physically unsafe</fullName>
+                <default>false</default>
+                <label>Current housing physically unsafe</label>
+            </value>
+            <value>
+                <fullName>Homeless at time CPS response began</fullName>
+                <default>false</default>
+                <label>Homeless at time CPS response began</label>
+            </value>
+            <value>
+                <fullName>Family has housing that physicallly safe</fullName>
+                <default>false</default>
+                <label>Family has housing that physicallly safe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,257 @@
+<template>
+
+    <div class="spinner">
+        <template if:true={loading}>
+             <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+        </template>
+    </div>
+    <lightning-card title={meetingTitle}>
+        <lightning-button label="Add New" slot="actions" variant="brand" onclick={openMeetingModal} icon-name="utility:add"></lightning-button>
+    <!--<div class="slds-text-align_right slds-p-bottom_small">
+        <lightning-button label="ADD NEW" variant="brand" onclick={openMeetingModal} icon-name="utility:add"></lightning-button>
+    </div>-->
+        <lightning-datatable
+            key-field="Id"
+            columns={columns}
+            data={meetingList}
+            hide-checkbox-column show-row-number-column="true"
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+    </lightning-card>
+    
+    <template if:true={showMeetingModal}>
+        <div class="slds-modal slds-fade-in-open slds-backdrop">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close"
+                        onclick={closeMeetingModal}
+                        alternative-text="close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"></lightning-button-icon> 
+                        <h2>Add Meeting</h2> 
+                </div>
+            
+            <div class="slds-modal__content slds-p-around_medium">
+                <div class="spinner">
+                    <template if:true={loading}>
+                         <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+                    </template>
+                </div>
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-input type="date" label="Date of Meeting" name="Date_of_Meeting__c" value={meetingRec.Date_of_Meeting__c} date-style="short" onchange={handleChange} required="true" disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-radio-group name="Name_of_the_person_completing_the_report__c"
+                                            label="Name of the Person Completing this report"
+                                            options={nameOfThePerson} onchange={handleChange}
+                                            value={meetingRec.Name_of_the_person_completing_the_report__c} disabled={readOnly}
+                                            type="radio">
+                        </lightning-radio-group>
+                    </lightning-layout-item>
+                </lightning-layout>
+        
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-dual-listbox name="Select_Child_Family_Member__c"
+                                            label="Select Child/Family Members"
+                                            source-label="Available"
+                                            selected-label="Selected"
+                                            options={childFamilyMembers} disabled={readOnly}
+                                            onchange={handleChange} required="true"
+                                            value={selectedValuechildFamilyMembers}>
+                        </lightning-dual-listbox> 
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-input type="text" label="Name of Person" name="Name_of_the_person__c" value={meetingRec.Name_of_the_person__c} onchange={handleChange} disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>                            
+                </lightning-layout>
+        
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-combobox class="slds-p-left_x-small" name="Type_of_the_Meeting__c" label="Type of the  Meeting" options={meetingType} value={meetingRec.Type_of_the_Meeting__c} onchange={handleChange} required="true" disabled={readOnly}></lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-radio-group name="Meeting_Status__c"
+                                            label="Meeting Status" disabled={readOnly}
+                                            options={meetingStatus} onchange={handleChange}
+                                            value={meetingRec.Meeting_Status__c}
+                                            type="radio">
+                        </lightning-radio-group>
+                    </lightning-layout-item>                            
+                </lightning-layout>
+        
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <template if:true={showType}>
+                            <lightning-dual-listbox name="Type__c"
+                                            label="Type"
+                                            source-label="Available"
+                                            selected-label="Selected"
+                                            options={typeOptions}
+                                            onchange={handleChange} disabled={readOnly}
+                                            value={selectedValuetypeOptions}>
+                            </lightning-dual-listbox> 
+                        </template>   
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <lightning-dual-listbox name="Participants__c"
+                                            label=" Participants"
+                                            source-label="Available"
+                                            selected-label="Selected"
+                                            options={participantsOptions} disable-reordering="true"
+                                            onchange={handleChange} disabled={readOnly}
+                                            value={selectedValueparticipantsOptions}>                              
+                        </lightning-dual-listbox> 
+                    </lightning-layout-item>                            
+                </lightning-layout>
+        
+                <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-scrollable" scope="col">
+                                <div title="PARTICIPANT TYPE">PARTICIPANT TYPE</div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title="FIRST NAME">FIRST NAME</div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title="LAST NAME">LAST NAME</div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title=" "> </div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title=" "> </div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title="ACCEPTANCE AGREEMENT">ACCEPTANCE AGREEMENT</div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title="ELECTRONIC SIGNATURE">ELECTRONIC SIGNATURE</div>
+                            </th>
+                            <th class="slds-scrollable" scope="col">
+                                <div title=" "> </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={participantList} for:index="index" for:item="row">  
+                                <tr key={row.index} >
+                                    <td >
+                                        <div id={index} accesskey={index} title={row.Type__c}>                     
+                                            <lightning-combobox type="string" name="Type__c" data-id={row.Id}  variant="label-hidden" value={row.Type__c} placeholder="-Select-" options={participantTypeOptions} onchange={handleParticipantChange} disabled={readOnly}> </lightning-combobox>
+                                        </div>
+                                    </td>
+                                    <td>{row.First_Name__c}</td>
+                                    <td>{row.Last_Name__c}</td>
+                                    <td>
+                                        <div id={index} accesskey={index} title={row.Invited__c}>
+                                            <lightning-input type="checkbox" label="Invited" name="Invited__c" data-id={row.Id} checked={row.Invited__c} onchange={handleParticipantChange} disabled={readOnly}></lightning-input>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id={index} accesskey={index} title={row.Attended__c}>
+                                            <lightning-input type="checkbox" label="Attended" name="Attended__c"  data-id={row.Id} checked={row.Attended__c} onchange={handleParticipantChange} disabled={readOnly}></lightning-input>
+                                        </div>                                    
+                                    </td>
+                                    <td>
+                                        <div id={index} accesskey={index} title={row.Acceptance_Agreement__c}>
+                                            <lightning-combobox label="Acceptance Agreement" name="Acceptance_Agreement__c" data-id={row.Id} value={row.Acceptance_Agreement__c} options={acceptanceAgreementOptions} onchange={handleParticipantChange} variant="label-hidden" disabled={readOnly}></lightning-combobox>
+                                        </div>  
+                                    </td>
+                                    <td>
+                                        <span class="slds-p-around_small">
+                                            <img  if:true={row.Electronic_Signature__c} src={row.sourceUrlParent1}   class="slds-p-right_x-small img"></img>
+                                            <lightning-button-icon data-id={row.Id}  name="electronicSignature" icon-name="utility:edit" onclick={handleSignModal}  disabled={readOnly}></lightning-button-icon>
+                                        </span> 
+                                    </td>
+                                    <td>
+                                        <div id={index}> 
+                                            <lightning-button-icon icon-name="utility:delete" data-id={row.Id} data-contact={row.Participants__c} alternative-text="Delete" class="slds-m-left_xx-small" title="Delete" onclick={handleDelete} disabled={readOnly}></lightning-button-icon>
+                                       </div>
+                                    </td>
+                                </tr>
+                        </template>
+                    </tbody>
+                </table>
+                
+        
+                <lightning-layout>
+                    <lightning-layout-item size="6" padding="around-small">
+                        <lightning-textarea label="Meeting notes" name="Meeting_Notes__c" value={meetingRec.Meeting_Notes__c} onchange={handleChange} disabled={readOnly}></lightning-textarea>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" padding="around-small">
+                        <lightning-textarea label="Additional Comments" name="Additional_Comments__c" value={meetingRec.Additional_Comments__c} onchange={handleChange} disabled={readOnly}></lightning-textarea>
+                    </lightning-layout-item>
+                </lightning-layout>
+        
+                <lightning-layout>
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-radio-group label="Follow-up Meeting" name="Follow_up_Meeting__c" value={meetingRec.Follow_up_Meeting__c} onchange={handleChange} options={followupMeetingValues} disabled={readOnly}></lightning-radio-group>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" padding="around-small">
+                        <template if:true={showdate}>
+                            <lightning-input type="date" label="Start Date" name="Follow_up_meeting_Start_date__c" value={meetingRec.Follow_up_meeting_Start_date__c} onchange={handleChange} disabled={readOnly}></lightning-input>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+        
+                <lightning-layout>
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-radio-group label="Meeting Decision" name="Meeting_Decision__c" value={meetingRec.Meeting_Decision__c} options={meetingDecisionValue} onchange={handleChange} disabled={readOnly}></lightning-radio-group>
+                    </lightning-layout-item>
+                </lightning-layout>
+        
+                <div class="slds-text-align_right slds-p-bottom_small">
+                    <lightning-button label="PRINT" variant="brand" icon-name="utility:print"></lightning-button>
+                </div>
+                <div><b>DOCUMENTS</b></div>
+                <lightning-layout>
+                    <lightning-datatable key-field={id} data={documentList} columns={documentColumn} hide-checkbox-column onrowaction={handleFileRowAction}></lightning-datatable>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-input type="file" 
+                            accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf, .jpeg" disabled={readOnly}
+                            label="Documents" onchange={openfileUpload} variant="label-hidden" name="insertFile">
+                        </lightning-input>
+                        <template if:true={fileData}>
+                            <p class="slds-p-left_large slds-p-top_small">{fileData.filename}</p>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <div class="slds-modal__footer"> 
+                <lightning-button label="Cancel" variant="destructive" onclick={closeMeetingModal} icon-name="utility:close" class="slds-p-right_small"></lightning-button>
+                 <lightning-button label="Save" variant="brand" onclick={handleSave} icon-name="utility:save" disabled={readOnly}></lightning-button>
+            </div> 
+        </div>
+        </div>
+    </template>
+
+    <div class="eventModal" if:true={showSignModal}>
+        <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+            <span slot="modalClose">
+                        <lightning-button-icon icon-name="utility:close"
+                                                    alternative-text="close"
+                                                    onclick={closeSignModal}
+                                                    variant="bare-inverse"
+                                                    class="slds-modal__close"></lightning-button-icon>
+                        <h2 id="modal-heading-06" class="slds-text-heading_medium slds-hyphenate">Signature</h2>
+                    </span>
+            <span slot="modalBody">
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_small">
+                        <c-signature-lwc onhandlesign ={handleSignature}></c-signature-lwc>
+                    </lightning-layout-item>
+                    </lightning-layout>
+            </span>
+            <span slot="modalFooter">
+                <div class="slds-p-left_x-small">
+                    <lightning-button label="SAVE" title="Save"  icon-name="utility:save" variant="brand" class= "slds-var-p-around_x-small"  onclick={closeSignModal}></lightning-button>
+                </div>
+            </span>
+        </c-modal-component> 
+    </div>
+</template>

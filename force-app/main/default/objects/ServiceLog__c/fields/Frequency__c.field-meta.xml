@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency__c</fullName>
+    <externalId>false</externalId>
+    <label>Frequency</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annually</fullName>
+                <default>false</default>
+                <label>Annually</label>
+            </value>
+            <value>
+                <fullName>As Necessary</fullName>
+                <default>false</default>
+                <label>As Necessary</label>
+            </value>
+            <value>
+                <fullName>Bi-annually</fullName>
+                <default>false</default>
+                <label>Bi-annually</label>
+            </value>
+            <value>
+                <fullName>Daily</fullName>
+                <default>false</default>
+                <label>Daily</label>
+            </value>
+            <value>
+                <fullName>Every other day</fullName>
+                <default>false</default>
+                <label>Every other day</label>
+            </value>
+            <value>
+                <fullName>Every other month</fullName>
+                <default>false</default>
+                <label>Every other month</label>
+            </value>
+            <value>
+                <fullName>Every other week</fullName>
+                <default>false</default>
+                <label>Every other week</label>
+            </value>
+            <value>
+                <fullName>Five times weekly</fullName>
+                <default>false</default>
+                <label>Five times weekly</label>
+            </value>
+            <value>
+                <fullName>Four times weekly</fullName>
+                <default>false</default>
+                <label>Four times weekly</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+                <label>Monthly</label>
+            </value>
+            <value>
+                <fullName>One time occurence</fullName>
+                <default>false</default>
+                <label>One time occurence</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Three times monthly</fullName>
+                <default>false</default>
+                <label>Three times monthly</label>
+            </value>
+            <value>
+                <fullName>Three times weekly</fullName>
+                <default>false</default>
+                <label>Three times weekly</label>
+            </value>
+            <value>
+                <fullName>Twice monthly</fullName>
+                <default>false</default>
+                <label>Twice monthly</label>
+            </value>
+            <value>
+                <fullName>Twice weekly</fullName>
+                <default>false</default>
+                <label>Twice weekly</label>
+            </value>
+            <value>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+                <label>Weekly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

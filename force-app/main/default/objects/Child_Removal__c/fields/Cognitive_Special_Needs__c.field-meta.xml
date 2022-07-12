@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cognitive_Special_Needs__c</fullName>
+    <externalId>false</externalId>
+    <label>Cognitive Special Needs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Age is &gt; 6</fullName>
+                <default>false</default>
+                <label>Age is &gt; 6</label>
+            </value>
+            <value>
+                <fullName>Emotional Disability</fullName>
+                <default>false</default>
+                <label>Emotional Disability</label>
+            </value>
+            <value>
+                <fullName>High Risk of Physical or Mental Disease</fullName>
+                <default>false</default>
+                <label>High Risk of Physical or Mental Disease</label>
+            </value>
+            <value>
+                <fullName>Mentally Retarded</fullName>
+                <default>false</default>
+                <label>Mentally Retarded</label>
+            </value>
+            <value>
+                <fullName>Other Disability</fullName>
+                <default>false</default>
+                <label>Other Disability</label>
+            </value>
+            <value>
+                <fullName>Physical Disability</fullName>
+                <default>false</default>
+                <label>Physical Disability</label>
+            </value>
+            <value>
+                <fullName>Racial or Ethnic Factor</fullName>
+                <default>false</default>
+                <label>Racial or Ethnic Factor</label>
+            </value>
+            <value>
+                <fullName>Sibling Group</fullName>
+                <default>false</default>
+                <label>Sibling Group</label>
+            </value>
+            <value>
+                <fullName>Feeding Tube</fullName>
+                <default>false</default>
+                <label>Feeding Tube</label>
+            </value>
+            <value>
+                <fullName>Hearing Disability</fullName>
+                <default>false</default>
+                <label>Hearing Disability</label>
+            </value>
+            <value>
+                <fullName>Learning Disability</fullName>
+                <default>false</default>
+                <label>Learning Disability</label>
+            </value>
+            <value>
+                <fullName>Visual Disability</fullName>
+                <default>false</default>
+                <label>Visual Disability</label>
+            </value>
+            <value>
+                <fullName>Developmentally Delayed</fullName>
+                <default>false</default>
+                <label>Developmentally Delayed</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <label>Other (Specify)</label>
+            </value>
+            <value>
+                <fullName>Apnea Monitor</fullName>
+                <default>false</default>
+                <label>Apnea Monitor</label>
+            </value>
+            <value>
+                <fullName>Car Safety Seat</fullName>
+                <default>false</default>
+                <label>Car Safety Seat</label>
+            </value>
+            <value>
+                <fullName>Crutches / Cane / Walker</fullName>
+                <default>false</default>
+                <label>Crutches / Cane / Walker</label>
+            </value>
+            <value>
+                <fullName>Deaf</fullName>
+                <default>false</default>
+                <label>Deaf</label>
+            </value>
+            <value>
+                <fullName>Language Interpreter Required</fullName>
+                <default>false</default>
+                <label>Language Interpreter Required</label>
+            </value>
+            <value>
+                <fullName>Hearing Disability / Hearing Aid (Left)</fullName>
+                <default>false</default>
+                <label>Hearing Disability / Hearing Aid (Left)</label>
+            </value>
+            <value>
+                <fullName>Hearing Disability / Hearing Aid (Right)</fullName>
+                <default>false</default>
+                <label>Hearing Disability / Hearing Aid (Right)</label>
+            </value>
+            <value>
+                <fullName>Glasses / Contacts</fullName>
+                <default>false</default>
+                <label>Glasses / Contacts</label>
+            </value>
+            <value>
+                <fullName>Nightmares</fullName>
+                <default>false</default>
+                <label>Nightmares</label>
+            </value>
+            <value>
+                <fullName>Orthopedic Appliance</fullName>
+                <default>false</default>
+                <label>Orthopedic Appliance</label>
+            </value>
+            <value>
+                <fullName>Physical Disability / Requires Wheelchair</fullName>
+                <default>false</default>
+                <label>Physical Disability / Requires Wheelchair</label>
+            </value>
+            <value>
+                <fullName>Special Diet (Specify)</fullName>
+                <default>false</default>
+                <label>Special Diet (Specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

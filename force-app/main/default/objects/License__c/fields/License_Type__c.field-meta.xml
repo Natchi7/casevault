@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>License Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CPA: Adoption</fullName>
+                <default>false</default>
+                <label>CPA: Adoption</label>
+            </value>
+            <value>
+                <fullName>CPA: Independent Living</fullName>
+                <default>false</default>
+                <label>CPA: Independent Living</label>
+            </value>
+            <value>
+                <fullName>CPA: TFC Medically Fragile</fullName>
+                <default>false</default>
+                <label>CPA: TFC Medically Fragile</label>
+            </value>
+            <value>
+                <fullName>CPA: Treatment Foster Care</fullName>
+                <default>false</default>
+                <label>CPA: Treatment Foster Care</label>
+            </value>
+            <value>
+                <fullName>RCC: Small Group Home</fullName>
+                <default>false</default>
+                <label>RCC: Small Group Home</label>
+            </value>
+            <value>
+                <fullName>RCC Medically Fragile</fullName>
+                <default>false</default>
+                <label>RCC Medically Fragile</label>
+            </value>
+            <value>
+                <fullName>RCC Shelter Home</fullName>
+                <default>false</default>
+                <label>RCC Shelter Home</label>
+            </value>
+            <value>
+                <fullName>RCC: Large Group Home</fullName>
+                <default>false</default>
+                <label>RCC: Large Group Home</label>
+            </value>
+            <value>
+                <fullName>RCC: Teen Mothers Program</fullName>
+                <default>false</default>
+                <label>RCC: Teen Mothers Program</label>
+            </value>
+            <value>
+                <fullName>RCC: Respite</fullName>
+                <default>false</default>
+                <label>RCC: Respite</label>
+            </value>
+            <value>
+                <fullName>Residential Treatment Center</fullName>
+                <default>false</default>
+                <label>Residential Treatment Center</label>
+            </value>
+            <value>
+                <fullName>Alternative Living Unit</fullName>
+                <default>false</default>
+                <label>Alternative Living Unit</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Group Home</fullName>
+                <default>false</default>
+                <label>Therapeutic Group Home</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

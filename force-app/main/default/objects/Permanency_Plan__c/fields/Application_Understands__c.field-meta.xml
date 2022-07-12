@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Understands__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Relative Caregiver(s) Understands that they are a relative for the purposes of custody and guardianship as defined by COMAR 07.02.02(11)(a)(b)(i-iv)</inlineHelpText>
+    <label>Purposes of Custody and Guardianship</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

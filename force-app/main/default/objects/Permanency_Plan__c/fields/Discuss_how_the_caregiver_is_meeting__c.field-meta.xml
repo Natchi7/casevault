@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discuss_how_the_caregiver_is_meeting__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Discuss how the caregiver is meeting the safety needs of the child as well as the appropriateness and the restrictiveness of the present placement, the child&apos;s adjustment to the placement, and how the placement approve meets the best interest</inlineHelpText>
+    <label>Discuss how the caregiver is meeting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

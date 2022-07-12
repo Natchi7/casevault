@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assessment_Visit</fullName>
+    <active>false</active>
+    <label>Assessment Visit</label>
+    <picklistValues>
+        <picklist>Activity_Type__c</picklist>
+        <values>
+            <fullName>Application Received%2C Not Yet Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Assessment Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Assessment Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recon Home Visit Performed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

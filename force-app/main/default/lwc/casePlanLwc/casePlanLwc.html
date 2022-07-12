@@ -1,0 +1,137 @@
+<template>
+    <div class="spinner">
+        <template if:true={loading}>
+             <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+        </template>
+    </div>
+    <lightning-card>
+    <div class="slds-text-align_right slds-p-top_large"><lightning-button variant="brand" label="CREATE CASE PLAN" icon-name="utility:add" onclick={handleModal}></lightning-button></div>
+   <div class="slds-p-top_large"><lightning-datatable
+        key-field="Id"
+        data={casePlanRecordList}
+        columns={casePlanTable}
+        max-row-selection="1"
+        onrowselection={navigateClick}>
+    </lightning-datatable></div>
+    <div if:true={showMsg} class="slds-text-align_center slds-p-top_large slds-text-heading_medium">
+        No Records Found.
+    </div>
+
+    <div if:true={showCasePlanFilterModal} class="slds-modal slds-fade-in-open slds-backdrop">  
+        <div class="slds-modal__container">  
+          <div class="slds-modal__header">
+            <lightning-button-icon icon-name="utility:close"
+                                                      onclick={closeCasePlanFilterModal}
+                                                      alternative-text="close"
+                                                      variant="bare-inverse"
+                                                      class="slds-modal__close"></lightning-button-icon>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Case Plan Version Generation Filters</h2> 
+          </div>
+        <div class="slds-modal__content slds-p-around_medium viewDateOutModal">
+            <lightning-radio-group variant="label-hidden" options={options} onchange={handleCasePlaneFilter} value={filterTable}></lightning-radio-group>
+                        <h4 class="slds-p-top_medium slds-p-bottom_medium">Child Removal Date : {removaldate}</h4>
+                        <template if:false={showFilterTable}>
+                            <div class="height">
+                                <lightning-datatable
+                                key-field="Id"
+                                data={casePlanFilterList}
+                                columns={casePlanVersionFilterColumns}
+                                max-row-selection="1"
+                                onrowselection={handleCasePlanFilterRowAction}>
+                            </lightning-datatable>
+                            </div>
+                            
+                        </template>
+                        <template if:true={showFilterTable}>
+                            <div class="viewDateOutModal">
+                                <lightning-layout>
+                                    <lightning-layout-item size="6" class="slds-p-around_small">
+                                        <lightning-input date-style="short" type="date" label="From Date" required></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6" class="slds-p-around_small">
+                                        <lightning-input date-style="short" type="date" label="To Date" required></lightning-input>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </div>
+                            
+                        </template>
+        </div>
+        
+        <div class="slds-modal__footer">
+            <lightning-button class="slds-p-right_small" label="CREATE" variant="brand" onclick={openConfirmationModal}></lightning-button>
+            <lightning-button class="slds-text-align_right slds-p-right_small" label="CANCEL" variant="destructive" onclick={closeCasePlanFilterModal}></lightning-button>
+        </div>
+        </div>
+    </div>
+    <!--<div class="eventModal" if:true={showCasePlanFilterModal}>
+            <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_medium' modal-view='viewDateOutModal'>
+                <span slot="modalClose">
+                            <lightning-button-icon icon-name="utility:close"
+                                                      onclick={closeCasePlanFilterModal}
+                                                      alternative-text="close"
+                                                      variant="bare-inverse"
+                                                      class="slds-modal__close"></lightning-button-icon>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Case Plan Version Generation Filters</h2>
+                </span>
+                
+                <span slot="modalBody">
+                    
+
+                        <lightning-radio-group variant="label-hidden" options={options} onchange={handleCasePlaneFilter} value={filterTable}></lightning-radio-group>
+                        <h4 class="slds-p-top_medium slds-p-bottom_medium">Child Removal Date : {removaldate}</h4>
+                        <template if:false={showFilterTable}>
+                            <lightning-datatable
+                                key-field="Id"
+                                data={casePlanFilterList}
+                                columns={casePlanVersionFilterColumns}
+                                max-row-selection="1"
+                                onrowselection={handleCasePlanFilterRowAction}>
+                            </lightning-datatable>
+                        </template>
+                        <template if:true={showFilterTable}>
+                            <div class="viewDateOutModal">
+                                <lightning-layout>
+                                    <lightning-layout-item size="6" class="slds-p-around_small">
+                                        <lightning-input type="date" label="From Date" required></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6" class="slds-p-around_small">
+                                        <lightning-input type="date" label="To Date" required></lightning-input>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </div>
+                            
+                        </template>
+
+                    
+                </span>
+                
+                <span slot="modalFooter">
+                            <lightning-button class="slds-p-right_small" label="CREATE" variant="brand" onclick={openConfirmationModal}></lightning-button>
+                            <lightning-button class="slds-text-align_right slds-p-right_small" label="CANCEL" variant="destructive" onclick={closeCasePlanFilterModal}></lightning-button>
+                </span>
+            </c-modal-component>
+        </div>-->
+
+        <div class="eventModal" if:true={showConfirmationModal}>
+            <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+                <span slot="modalClose">
+                            <lightning-button-icon icon-name="utility:close"
+                                                      onclick={closeConfirmationModal}
+                                                      alternative-text="close"
+                                                      variant="bare-inverse"
+                                                      class="slds-modal__close"></lightning-button-icon>
+                            <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Confirmation</h2>
+                </span>
+        
+                <span slot="modalBody">
+                    <p>This will pull information from the entire case relevant for the child. A preview version will be generated for the selected review period. You will have the opportunity to edit and answer some additional questions that are needed. Once ready you can submit the finalized version for review. Please click <b>Yes</b> to confirm and proceed.</p>
+                </span>
+                <span slot="modalFooter">
+                            <lightning-button class="slds-p-right_small" label="CANCEL" variant="destructive" onclick={closeConfirmationModal}></lightning-button>
+                            <lightning-button class="slds-p-right_small" label="YES" variant="brand" onclick={handleCasePlanRecord}></lightning-button>
+
+                        </span>
+            </c-modal-component>
+        </div>
+        </lightning-card>
+</template>

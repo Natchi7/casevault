@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public">
+	 	<aura:handler event="c:servicecaseRefreshEvent" action="{!c.refreshPage}"/>
+</aura:component>

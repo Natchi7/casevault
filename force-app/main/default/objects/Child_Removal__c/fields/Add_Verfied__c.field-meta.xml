@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Verfied__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(LEN(Address_Of_Primary_Caregiver__c) = 5,FALSE,TRUE)</formula>
+    <label>Add Verified</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

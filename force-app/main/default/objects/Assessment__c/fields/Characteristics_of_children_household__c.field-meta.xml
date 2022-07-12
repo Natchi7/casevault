@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Characteristics_of_children_household__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Characteristics of children in the household(select all that apply)</inlineHelpText>
+    <label>Characteristics of children household</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medically fragile/failure to thrive (1)</fullName>
+                <default>true</default>
+                <label>Medically fragile/failure to thrive (1)</label>
+            </value>
+            <value>
+                <fullName>Physical disability (1)</fullName>
+                <default>false</default>
+                <label>Physical disability (1)</label>
+            </value>
+            <value>
+                <fullName>Developmental disability (1)</fullName>
+                <default>false</default>
+                <label>Developmental disability (1)</label>
+            </value>
+            <value>
+                <fullName>Learning disability (1)</fullName>
+                <default>false</default>
+                <label>Learning disability (1)</label>
+            </value>
+            <value>
+                <fullName>None of the above (0)</fullName>
+                <default>false</default>
+                <label>None of the above (0)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

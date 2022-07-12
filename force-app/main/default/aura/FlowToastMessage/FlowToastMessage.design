@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="type" default="success" />
+    <design:attribute name="messageText" />
+</design:component>

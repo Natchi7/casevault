@@ -1,0 +1,412 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="InvestigationFindingsController">
+    
+    <aura:attribute name="activeSections" type="List" default="[]" />
+    <aura:attribute name="selectedFindingId" type="String" />
+    <aura:attribute name="victimName" type="String" />
+    <aura:attribute name="maltreator" type="String" />
+    <aura:attribute name="victimRole" type="String" />
+    <aura:attribute name="openModal" type="Boolean"/>
+    <aura:attribute name="saveButton" type="Boolean" default="true"/>
+    <aura:attribute name="FindingsList" type="List" default="[{'sobjectType':'Investigation_Findings__c'}]" />
+    <aura:attribute name="FindingsOptionsList" type="List" />
+    <aura:attribute name="ContributingFactorOptionsList" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="childErrorMessage" type="boolean" default="false" />
+    <aura:attribute name="spinner" type="boolean" default="FALSE" />
+    <aura:attribute name="readOnly" type="boolean" default="FALSE" />
+    <aura:attribute name="showApprovalBtn" type="boolean" default="false"></aura:attribute>
+ 	<aura:handler event="c:RefreshEvent" action="{!c.refreshPage}"/>
+    <c:UtilityBaseCmp aura:id="utils" />
+    
+    <aura:if isTrue="{!v.spinner}">
+
+        <lightning:spinner alternativeText="Loading" size="small" />
+
+    </aura:if>
+    
+    
+    <!--<div style="text-align:right;">
+        <lightning:button variant="brand" label="Refresh" iconName="utility:refresh" title="Refresh" onclick="{! c.refreshPage }" />
+    </div>-->    <!-- ERROR MESSAGE IF NOT RECORDS FOUND-->
+    <aura:if isTrue="{!v.childErrorMessage}">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">There is no maltreament allegation completed record(s)</h2>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections}">
+        <aura:iteration items="{!v.FindingsList}" var="findingIns" indexVar="count">
+            <div class="margin15px slds-theme_shade">
+                <lightning:accordionSection aura:id="accSection" name="{!findingIns.Id}"  label="{!findingIns.accordionLabel__c}">
+                       <aura:set attribute="body">
+                        <div class="blackFont">
+                            <lightning:card title="">
+                                <table class="slds-table slds-table_bordered slds-table_cell-buffer wrapText">
+                                    <thead>
+                                        <tr class="slds-text-title_caps">
+                                            <th scope="col">
+                                                <div class="wrapText" title="Victim Name">Victim Name</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="wrapText" title="Maltreatment Type">Maltreatment Type</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="wrapText" title="Alleged Maltreator">Alleged Maltreator</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="wrapText" title="Relationship to Maltreator">Relationship to Maltreator</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="wrapText" title="Findings">Findings</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="wrapText" title="Contributing Factor in the Fatality">Contributing Factor in the Fatality</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="wrapText" title="Action">Action</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="wrapText">{!findingIns.Contact__r.Name}</div>
+                                            </td>
+                                            <td>
+                                                <div class="wrapText">{!findingIns.Abuse_Types__c}</div>
+                                            </td>
+                                            <td>
+                                                <div class="wrapText">{!findingIns.Alleged_Maltreators__r.Name}</div>
+                                            </td>
+                                            <td>
+                                                <div class="wrapText">{!findingIns.relationshipValue}</div>
+                                            </td>
+                                            <td>
+                                                <lightning:combobox aura:id="requiredFields" name="{!findingIns.Id}" placeholder="--Select--" value="{!findingIns.Findings__c}" options="{!v.FindingsOptionsList}" onchange="{! c.handleChange }" />
+                                                
+                                            </td>
+                                            <td>
+                                                <lightning:combobox placeholder="--Select--" value="{!findingIns.Contributing_factor_in_the_family__c}" options="{!v.ContributingFactorOptionsList}" onchange="{! c.handleChange }" />
+                                            </td>
+                                            <td>
+                                                <lightning:buttonIcon   value="{!findingIns.Id}" iconName ="utility:preview" title="View" onclick="{!c.openViewModal}"/>
+                                                <lightning:buttonIcon   value="{!findingIns.Id}" iconName ="utility:edit" title="Edit" onclick="{!c.openEditModal}"/>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </lightning:card>
+                            
+                            <!-- Indicated Modal -->
+                            <aura:if isTrue="{!and(findingIns.Id == v.selectedFindingId, findingIns.Findings__c == 'Indicated')}">
+                                <c:ModalCmp>
+                                    <aura:set attribute="header">
+                                        <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!findingIns.Abuse_Types__c} Indicated</h2>
+                                    </aura:set>
+                                    <aura:set attribute="body">
+                                        <p class="slds-p-horizontal_small">
+                                            <h2 id="modal-heading-01" class="slds-text-heading_medium"> {!findingIns.Abuse_Types__c} INDICATED</h2>
+                                            <p> Physical Abuse of {!findingIns.Contact__r.Name} is "INDICATED" in accordance with the provisions of Maryland code Ann..,Fam..,Law $ 5-701(b)(1),(m) and COMAR 07.02.07.12A(1).It is the Professional assessment of this worker that
+                                                physical abuse occurred because the evidence supports all of the following elements.</p>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p>1) A physical injury (brefly describe the current or prior injury)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.A_Physical_injury__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 2) The injury was caused by a parent, caregiver, authority figure, or household or family member ( insert name and whether the person is a parent, OR caregiver, OR authority figure, OR household OR family
+                                                        member)
+                                                    </p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.The_injury_was_caused__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 3) The victim was a child (child's DOB)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="date" varient="label-hidden" value="{!findingIns.The_victim_was_a_child__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 4) Circumstances including the nature, extent, and location of the injury indicate (describe either OR both using a bulleted formate or short narrative)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="checkbox" label="Harm to a child" checked="{!findingIns.Harm_to_a_child__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="checkbox" label="During the incident, a substantial risk of harm to a child" checked="{!findingIns.During_the_incident__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 5) The injury was not caused by accidental means (provide details supporting either an intentional act or reckless disregard for the child's health or welfare causing the</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.The_injury_was_not_caused_by_accidental__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                        </p>
+                                    </aura:set>
+                                    <aura:set attribute="footer">
+                                        <aura:if isTrue="{!v.saveButton}">
+                                            <lightning:button class="slds-m-top_small" variant="destructive"  label="Cancel" iconName="utility:close" onclick="{!c.closeModel}"/>
+                                            <lightning:button class="slds-m-top_small" variant="brand" value="{!findingIns}" label="Save" iconName="utility:save" onclick="{!c.onSave}" disabled="{!v.readOnly}" />
+                                        </aura:if>
+                                    </aura:set>
+                                </c:ModalCmp>
+                            </aura:if>
+                            
+                            <!-- Ruled Out Modal -->
+                            
+                            <aura:if isTrue="{!and(findingIns.Id == v.selectedFindingId, findingIns.Findings__c == 'Ruled out')}">
+                                <c:ModalCmp>
+                                    <aura:set attribute="header">
+                                        <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> {!findingIns.Abuse_Types__c} Ruled Out</h2>
+                                    </aura:set>
+                                    <aura:set attribute="body">
+                                        <p class="slds-p-horizontal_small">
+                                            <h2 id="modal-heading-01" class="slds-text-heading_medium"> {!findingIns.Abuse_Types__c} Ruled Out</h2>
+                                            <p> Physical Abuse of {!findingIns.Contact__r.Name} is "RULED OUT" in accordance with the provisions of Maryland code Ann..,Fam..,Law $ 5-701(b)(1),(m) and COMAR 07.02.07.12A(1).It is the Professional assessment of this worker that
+                                                physical abuse occurred because the evidence supports all of the following elements.</p>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p>1) A physical injury (brefly describe the current or prior injury)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.A_Physical_injury__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 2) The injury was caused by a parent, caregiver, authority figure, or household or family member ( insert name and whether the person is a parent, OR caregiver, OR authority figure, OR household OR family
+                                                        member)
+                                                    </p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.The_injury_was_caused__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 3) The victim was a child (child's DOB)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="date" varient="label-hidden" value="{!findingIns.The_victim_was_a_child__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 4) Circumstances including the nature, extent, and location of the injury indicate (describe either OR both using a bulleted formate or short narrative)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="checkbox" label="Harm to a child" checked="{!findingIns.Harm_to_a_child__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="checkbox" label="During the incident, a substantial risk of harm to a child" checked="{!findingIns.During_the_incident__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 5) The injury was not caused by accidental means (provide details supporting either an intentional act or reckless disregard for the child's health or welfare causing the</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.The_injury_was_not_caused_by_accidental__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                        </p>
+                                    </aura:set>
+                                    <aura:set attribute="footer">
+                                        <aura:if isTrue="{!v.saveButton}">
+                                            <lightning:button class="slds-m-top_small" variant="destructive"  label="Cancel" iconName="utility:close" onclick="{!c.closeModel}"/>
+                                            <lightning:button class="slds-m-top_small" variant="brand" value="{!findingIns}" label="Save" iconName="utility:save" onclick="{!c.onSave}" disabled="{!v.readOnly}"/>
+                                        </aura:if>
+                                    </aura:set>
+                                </c:ModalCmp>
+                            </aura:if>
+                            
+                            <!--UNSUBSTANTIATED Modal -->
+                            <aura:if isTrue="{!and(findingIns.Id == v.selectedFindingId, findingIns.Findings__c == 'Unsubstantiated')}">
+                                
+                                <c:ModalCmp>
+                                    <aura:set attribute="header">
+                                        <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> {!findingIns.Abuse_Types__c} UNSUBSTANTIATED</h2>
+                                    </aura:set>
+                                    <aura:set attribute="body">
+                                        <p class="slds-p-horizontal_small">
+                                            <h2 id="modal-heading-01" class="slds-text-heading_medium"> {!findingIns.Abuse_Types__c} UNSUBSTANTIATED</h2>
+                                            <p> Physical Abuse of {!findingIns.Contact__r.Name} is "UNSUBSTANTIATED" in accordance with the provisions of Maryland code Ann..,Fam..,Law $ 5-701(b)(1),(m) and COMAR 07.02.07.12A(1).It is the Professional assessment of this worker that
+                                                physical abuse occurred because the evidence supports all of the following elements.</p>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p>1) A physical injury (brefly describe the current or prior injury)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.A_Physical_injury__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 2) The injury was caused by a parent, caregiver, authority figure, or household or family member ( insert name and whether the person is a parent, OR caregiver, OR authority figure, OR household OR family
+                                                        member)
+                                                    </p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.The_injury_was_caused__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 3) The victim was a child (child's DOB)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="date" varient="label-hidden" value="{!findingIns.The_victim_was_a_child__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 4) Circumstances including the nature, extent, and location of the injury indicate (describe either OR both using a bulleted formate or short narrative)</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="checkbox" label="Harm to a child" checked="{!findingIns.Harm_to_a_child__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:input type="checkbox" label="During the incident, a substantial risk of harm to a child" checked="{!findingIns.During_the_incident__c}" disabled="{!v.readOnly}" />
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                            <lightning:layout>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <p> 5) The injury was not caused by accidental means (provide details supporting either an intentional act or reckless disregard for the child's health or welfare causing the</p>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem size="6" padding="around-small">
+                                                    <lightning:textarea name="input2" varient="label-hidden" value="{!findingIns.The_injury_was_not_caused_by_accidental__c}" disabled="{!v.readOnly}"/>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                        </p>
+                                    </aura:set>
+                                    <aura:set attribute="footer">
+                                        <aura:if isTrue="{!v.saveButton}">
+                                            <lightning:button class="slds-m-top_small" variant="destructive"  label="Cancel" iconName="utility:close" onclick="{!c.closeModel}"/>
+                                            <lightning:button class="slds-m-top_small" variant="brand" value="{!findingIns}" label="Save" iconName="utility:save" onclick="{!c.onSave}" disabled="{!v.readOnly}" />
+                                        </aura:if>
+                                    </aura:set>
+                                </c:ModalCmp>
+                            </aura:if>
+                            
+                            <lightning:card title="">
+                                <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input1" label="Alleged Victim(s) Explanation (account of what occurred)" value="{!findingIns.Alleged_Victim_s_Explanation__c}" />
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input2" label="Sibling(s) Explanation (account of what occurred)" value="{!findingIns.Sibling_s_Explanation__c}" />
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input3" label="Parent/ Legal Guardian(s) Explanation: (account of what occurred)" value="{!findingIns.Parent_Legal_Guardian_s_Explanation__c}" />
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input4" label="Alleged Maltreator's Explanation (account of what occurred)" value="{!findingIns.Alleged_Maltreator_s_Explanation__c}" />
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input5" label="Physician or Other Medical Assessment(s): (attach records if available in document tab)(account of what occurred)" value="{!findingIns.Physician_or_other_medical_Assessment_s__c}" />
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input6" label="Other Proffessional or Expert Assessment(s) (attach records if available in document tab)" value="{!findingIns.Other_Professional_or_Expert_Assessments__c}" />
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="12" padding="around-small">
+                                        <lightning:textarea name="input7" label="Collateral Interviews (CPS interview w/referent, school personnel, child care provider, provider, family, relatives, friemds, other individuals who witnessed the incident or to whom the victim states he/she disclosed the incident. All interviews must be documented in Contacts)"
+                                                            value="{!findingIns.Collateral_Interviews_CPS_Interview__c}" />
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input8" label="Law Enforcement Involvement: (attach records if available in document tab)(account of what occurred)" value="{!findingIns.Law_Enforcement_Involvement__c}" />
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:textarea name="input9" label="Relevant Criminal History (of any involved persons)" value="{!findingIns.Relevant_Criminal_History__c}" />
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="12" padding="around-small">
+                                        <lightning:textarea name="input10" label="Condition of the Home: (ex., sleeping arrangements, sanitation, food supply, safety, etc.; attach records or pictures if available)" value="{!findingIns.Condition_of_the_Home__c}" />
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <aura:set attribute="footer">
+                                    <aura:if isTrue="{!v.saveButton}">                                        
+                                        <lightning:button class="slds-m-top_small" variant="brand" label="Save" value="{!findingIns}" iconName="utility:save" onclick="{!c.onSave}"/>
+                                    </aura:if>
+                                </aura:set>
+                            </lightning:card>
+                        </div>
+                    </aura:set>
+                </lightning:accordionSection>
+                <div class="slds-text-align_right">
+                <aura:if isTrue="{!findingIns.enableCompleteInvestigation}">
+                    <aura:if isTrue="{!v.showApprovalBtn}">
+                        <lightning:button class="slds-m-top_small" variant="brand" label="COMPLETE INVESTIGATION" onclick="{!c.onSubmitForApporval}" name="{!findingIns.Id}"/>
+                    </aura:if>
+                </aura:if>
+                </div>
+            </div>
+        </aura:iteration>
+        <aura:if isTrue="{!v.openModal}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+                <div class="slds-modal__container">
+                    
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeApprovalModel}" iconName="utility:close"  variant="bare" alternativeText="Close" />
+                        
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Investigation Findings</h2>
+                        
+                    </header>
+                    
+                    <div class="slds-modal__content">
+                        <p class="slds-p-horizontal_small">
+                            <lightning:card title="">
+                                <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                            </lightning:card>
+                        </p>
+                        
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+    </lightning:accordion>
+</aura:component>

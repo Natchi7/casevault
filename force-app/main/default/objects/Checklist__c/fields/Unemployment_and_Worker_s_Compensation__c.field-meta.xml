@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unemployment_and_Worker_s_Compensation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>01.08 Unemployment and Worker&apos;s Compensation</inlineHelpText>
+    <label>01.08 Unemployment&amp;Worker&apos;s Compensation</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

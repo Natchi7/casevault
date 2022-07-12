@@ -1,0 +1,9 @@
+<design:component>
+    
+    <design:attribute	name="noClients"/>
+    <design:attribute	name="allServiceLog"/>
+    <design:attribute	name="allAdoptionSubsidy"/>
+    <design:attribute	name="allProviderPayemnt"/>
+    <design:attribute	name="allIVE"/>
+	
+</design:component>

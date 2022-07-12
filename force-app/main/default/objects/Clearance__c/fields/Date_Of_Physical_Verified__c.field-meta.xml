@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Of_Physical_Verified__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(Date_of_Physical__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Verified, If filled the date of physical.</inlineHelpText>
+    <label>Verified(Filled date of physical)</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,23 @@
+<aura:component implements="lightning:availableForFlowScreens" access="public" >
+    <aura:attribute name="LegalCustodyEndDateCheck" type="Boolean"/>
+    <aura:attribute name="SAFECheck" type="Boolean" default="true"/>
+    <aura:attribute name="removalandplacementCheck" type="Boolean"/>
+    <aura:attribute name="programAssignmentCheck" type="Boolean"  />
+    <aura:attribute name="MFRACheck" type="Boolean" default="true"/>
+    <aura:attribute name="PersonConfirmedCheck" type="Boolean" default="true"/>
+    
+    <lightning:input type="checkbox" label="No Clients have an open Legal Custody record of committed or
+                                            Co-Committed to Dss. Guardianship to Dss. Shelter case or Committed to Another State." name="input3" checked="{!v.LegalCustodyEndDateCheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="A SAFE Or SAFE OHP has been Completed for all applicable children and the assessement has Supervisory " name="input3" checked="{!v.SAFECheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="There are no incomplete MFRA's or MFIRA's pending Supervisory approval " name="input3" checked="{!v.MFRACheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="All Person are Confirmed" name="input3" checked="{!v.PersonConfirmedCheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="Removal and placement are ended" name="input3" checked="{!v.removalandplacementCheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="Program Assignment disclosure end date." name="input3" checked="{!v.programAssignmentCheck}" disabled="true"/>
+    <lightning:card title="">
+        <aura:set attribute="actions">
+        <lightning:button aura:id="NEXT" variant="brand"  label="CONFIRM CLOSURE" onclick="{!c.onButtonPressed}"/>
+        <!--<lightning:button aura:id="FINISHED" variant="brand" label="Cancel" title="Cancel" onclick="{!c.onButtonPressed}"/>-->
+        </aura:set>
+    </lightning:card>
+    
+</aura:component>

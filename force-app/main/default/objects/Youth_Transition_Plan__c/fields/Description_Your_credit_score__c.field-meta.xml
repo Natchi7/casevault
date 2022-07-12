@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_Your_credit_score__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - Your credit score?</inlineHelpText>
+    <label>Description - Your credit score?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

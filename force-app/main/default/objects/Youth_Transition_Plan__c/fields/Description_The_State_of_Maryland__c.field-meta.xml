@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_The_State_of_Maryland__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - The State of Maryland has a benchmark policy that outlines all the information &amp; tools you should receive by age 14,15,16,17 and 18?(Ask your social worker for a copy of the Benchmark policy)</inlineHelpText>
+    <label>Description - The State of Maryland</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

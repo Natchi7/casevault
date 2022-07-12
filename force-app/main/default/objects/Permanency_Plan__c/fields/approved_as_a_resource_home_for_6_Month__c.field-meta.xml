@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>approved_as_a_resource_home_for_6_Month__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Relative Caregiver(s) Understandard that they must be fully approved as a resource home for six consecutive months during which the child has resided with the relative caregiver without interruption.</inlineHelpText>
+    <label>approved as a resource home for 6 Month</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

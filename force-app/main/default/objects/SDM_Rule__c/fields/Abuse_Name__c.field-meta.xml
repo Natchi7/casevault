@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Abuse_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Abuse Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Abuse_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Suspicious death of a child due to abuse</fullName>
+                <default>false</default>
+                <label>Suspicious death of a child due to abuse</label>
+            </value>
+            <value>
+                <fullName>Non-accidental physical injury</fullName>
+                <default>false</default>
+                <label>Non-accidental physical injury</label>
+            </value>
+            <value>
+                <fullName>Injury inconsistent with explanation</fullName>
+                <default>false</default>
+                <label>Injury inconsistent with explanation</label>
+            </value>
+            <value>
+                <fullName>Injury that appears suspicious</fullName>
+                <default>false</default>
+                <label>Injury that appears suspicious</label>
+            </value>
+            <value>
+                <fullName>Giving child toxic chemicals,alcohol</fullName>
+                <default>false</default>
+                <label>Giving child toxic chemicals,alcohol</label>
+            </value>
+            <value>
+                <fullName>Caregiver action that caused injury</fullName>
+                <default>false</default>
+                <label>Caregiver action that caused injury</label>
+            </value>
+            <value>
+                <fullName>Suspicious death of child due to neglect</fullName>
+                <default>false</default>
+                <label>Suspicious death of child due to neglect</label>
+            </value>
+            <value>
+                <fullName>signs or diagnosis of non-organic</fullName>
+                <default>false</default>
+                <label>signs or diagnosis of non-organic</label>
+            </value>
+            <value>
+                <fullName>Inadequate of food/nutrition</fullName>
+                <default>false</default>
+                <label>Inadequate of food/nutrition</label>
+            </value>
+            <value>
+                <fullName>Exposure to unsafe</fullName>
+                <default>false</default>
+                <label>Exposure to unsafe</label>
+            </value>
+            <value>
+                <fullName>Inadequate clothing or hygiene</fullName>
+                <default>false</default>
+                <label>Inadequate clothing or hygiene</label>
+            </value>
+            <value>
+                <fullName>Inadequate supervision</fullName>
+                <default>false</default>
+                <label>Inadequate supervision</label>
+            </value>
+            <value>
+                <fullName>A child discharged from a facility</fullName>
+                <default>false</default>
+                <label>A child discharged from a facility</label>
+            </value>
+            <value>
+                <fullName>Physical treatment of the child poses</fullName>
+                <default>false</default>
+                <label>Physical treatment of the child poses</label>
+            </value>
+            <value>
+                <fullName>The caregiver does not intervene despite</fullName>
+                <default>false</default>
+                <label>The caregiver does not intervene despite</label>
+            </value>
+            <value>
+                <fullName>A child of any age has been abandoned</fullName>
+                <default>false</default>
+                <label>A child of any age has been abandoned</label>
+            </value>
+            <value>
+                <fullName>A child of any age who is physically</fullName>
+                <default>false</default>
+                <label>A child of any age who is physically</label>
+            </value>
+            <value>
+                <fullName>A child under 8 &amp; has been left alone</fullName>
+                <default>false</default>
+                <label>A child under 8 &amp; has been left alone</label>
+            </value>
+            <value>
+                <fullName>A child over the age of 8 has been left</fullName>
+                <default>false</default>
+                <label>A child over the age of 8 has been left</label>
+            </value>
+            <value>
+                <fullName>The unreasonable delay</fullName>
+                <default>false</default>
+                <label>The unreasonable delay</label>
+            </value>
+            <value>
+                <fullName>Abuse child has an observable, identifi</fullName>
+                <default>false</default>
+                <label>Abuse child has an observable, identifi</label>
+            </value>
+            <value>
+                <fullName>Neglect child has an observable, identif</fullName>
+                <default>false</default>
+                <label>Neglect child has an observable, identif</label>
+            </value>
+            <value>
+                <fullName>Sexual molestation of a child</fullName>
+                <default>false</default>
+                <label>Sexual molestation of a child</label>
+            </value>
+            <value>
+                <fullName>Sexual act(s) among siblings or other</fullName>
+                <default>false</default>
+                <label>Sexual act(s) among siblings or other</label>
+            </value>
+            <value>
+                <fullName>Sexual exploitation of a child</fullName>
+                <default>false</default>
+                <label>Sexual exploitation of a child</label>
+            </value>
+            <value>
+                <fullName>Physical, behavioral, or suspicious</fullName>
+                <default>false</default>
+                <label>Physical, behavioral, or suspicious</label>
+            </value>
+            <value>
+                <fullName>Harm Risk of Sex Trafficking</fullName>
+                <default>false</default>
+                <label>Harm Risk of Sex Trafficking</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Physical Abuse</controllingFieldValue>
+            <valueName>Suspicious death of a child due to abuse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Physical Abuse</controllingFieldValue>
+            <valueName>Non-accidental physical injury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Physical Abuse</controllingFieldValue>
+            <valueName>Injury inconsistent with explanation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Physical Abuse</controllingFieldValue>
+            <valueName>Injury that appears suspicious</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Physical Abuse</controllingFieldValue>
+            <valueName>Giving child toxic chemicals,alcohol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Physical Abuse</controllingFieldValue>
+            <valueName>Caregiver action that caused injury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>Suspicious death of child due to neglect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>signs or diagnosis of non-organic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>Inadequate of food/nutrition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>Exposure to unsafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>Inadequate clothing or hygiene</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>Inadequate supervision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>A child discharged from a facility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>Physical treatment of the child poses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neglect</controllingFieldValue>
+            <valueName>The caregiver does not intervene despite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sexual Abuse</controllingFieldValue>
+            <valueName>A child of any age has been abandoned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sexual Abuse</controllingFieldValue>
+            <valueName>A child of any age who is physically</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sexual Abuse</controllingFieldValue>
+            <valueName>A child under 8 &amp; has been left alone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sexual Abuse</controllingFieldValue>
+            <valueName>A child over the age of 8 has been left</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sexual Abuse</controllingFieldValue>
+            <valueName>The unreasonable delay</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

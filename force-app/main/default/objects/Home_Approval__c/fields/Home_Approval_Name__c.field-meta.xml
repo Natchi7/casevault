@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Home_Approval_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Home Approval Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoptive Home Approval</fullName>
+                <default>false</default>
+                <label>Adoptive Home Approval</label>
+            </value>
+            <value>
+                <fullName>Guardianship Home Approval</fullName>
+                <default>false</default>
+                <label>Guardianship Home Approval</label>
+            </value>
+            <value>
+                <fullName>ICPC Home Approval</fullName>
+                <default>false</default>
+                <label>ICPC Home Approval</label>
+            </value>
+            <value>
+                <fullName>Kinship Home Approval</fullName>
+                <default>false</default>
+                <label>Kinship Home Approval</label>
+            </value>
+            <value>
+                <fullName>Provisional Kinship Home Approval</fullName>
+                <default>false</default>
+                <label>Provisional Kinship Home Approval</label>
+            </value>
+            <value>
+                <fullName>Provisional Regular Home Approval</fullName>
+                <default>false</default>
+                <label>Provisional Regular Home Approval</label>
+            </value>
+            <value>
+                <fullName>Provisional Restricted Home Approval</fullName>
+                <default>false</default>
+                <label>Provisional Restricted Home Approval</label>
+            </value>
+            <value>
+                <fullName>Regular Home Approval</fullName>
+                <default>false</default>
+                <label>Regular Home Approval</label>
+            </value>
+            <value>
+                <fullName>Restricted Home Approval</fullName>
+                <default>false</default>
+                <label>Restricted Home Approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

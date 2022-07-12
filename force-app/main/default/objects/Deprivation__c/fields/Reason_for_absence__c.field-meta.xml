@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_absence__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for absence</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Desertion</fullName>
+                <default>false</default>
+                <label>Desertion</label>
+            </value>
+            <value>
+                <fullName>Incarceration</fullName>
+                <default>false</default>
+                <label>Incarceration</label>
+            </value>
+            <value>
+                <fullName>Paternity not established</fullName>
+                <default>false</default>
+                <label>Paternity not established</label>
+            </value>
+            <value>
+                <fullName>Other Absences</fullName>
+                <default>false</default>
+                <label>Other Absences</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

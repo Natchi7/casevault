@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adulthood_Marriage_Relationship__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>2b. Applicant&apos;s current functioning in relation to the development tasks of adulthood: Marriage/Relationship</inlineHelpText>
+    <label>2b. Marriage/Relationship</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

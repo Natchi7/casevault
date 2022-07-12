@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_For_Closure__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason For Closure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Did not complete CAP</fullName>
+                <default>false</default>
+                <label>Did not complete CAP</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Abuse/Neglect</fullName>
+                <default>false</default>
+                <label>Abuse/Neglect</label>
+            </value>
+            <value>
+                <fullName>Adopted Child</fullName>
+                <default>false</default>
+                <label>Adopted Child</label>
+            </value>
+            <value>
+                <fullName>Change in Family</fullName>
+                <default>false</default>
+                <label>Change in Family</label>
+            </value>
+            <value>
+                <fullName>Death</fullName>
+                <default>false</default>
+                <label>Death</label>
+            </value>
+            <value>
+                <fullName>Child No Longer in Home</fullName>
+                <default>false</default>
+                <label>Child No Longer in Home</label>
+            </value>
+            <value>
+                <fullName>Loss of Child</fullName>
+                <default>false</default>
+                <label>Loss of Child</label>
+            </value>
+            <value>
+                <fullName>Disillusionment</fullName>
+                <default>false</default>
+                <label>Disillusionment</label>
+            </value>
+            <value>
+                <fullName>Health (Provider)</fullName>
+                <default>false</default>
+                <label>Health (Provider)</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Safety</fullName>
+                <default>false</default>
+                <label>Health &amp; Safety</label>
+            </value>
+            <value>
+                <fullName>Questionable Practices</fullName>
+                <default>false</default>
+                <label>Questionable Practices</label>
+            </value>
+            <value>
+                <fullName>Foster Parent Retired</fullName>
+                <default>false</default>
+                <label>Foster Parent Retired</label>
+            </value>
+            <value>
+                <fullName>Error in Entering</fullName>
+                <default>false</default>
+                <label>Error in Entering</label>
+            </value>
+            <value>
+                <fullName>Duplicate entry</fullName>
+                <default>false</default>
+                <label>Duplicate entry</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Contract Not Renewed</fullName>
+                <default>false</default>
+                <label>Contract Not Renewed</label>
+            </value>
+            <value>
+                <fullName>License Returned</fullName>
+                <default>false</default>
+                <label>License Returned</label>
+            </value>
+            <value>
+                <fullName>Private Organization Closed</fullName>
+                <default>false</default>
+                <label>Private Organization Closed</label>
+            </value>
+            <value>
+                <fullName>Provider Requested Case Close</fullName>
+                <default>false</default>
+                <label>Provider Requested Case Close</label>
+            </value>
+            <value>
+                <fullName>Revocation of License</fullName>
+                <default>false</default>
+                <label>Revocation of License</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

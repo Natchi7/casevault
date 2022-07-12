@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_IN_Out_Of_Home_Placement__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>CHILD IN OUT-OF-HOME PLACEMENT FOR 15 MONTHS OR LONGER?</inlineHelpText>
+    <label>Child IN Out Of Home Placement</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

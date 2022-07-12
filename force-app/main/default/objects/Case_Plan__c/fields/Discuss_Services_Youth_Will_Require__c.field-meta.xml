@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discuss_Services_Youth_Will_Require__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Discuss services the youth will require in order to live independently.List what steps are begin taken to arrange for needed services.Consideration should be given to any documented special needs that the youth may have.If yes,list specific services needed.</inlineHelpText>
+    <label>Discuss Services Youth Will Require</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

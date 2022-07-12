@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Default_Limit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default Limit</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>HasNamespace</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Has Namespace</shortDescription>
+        <value>false</value>
+    </labels>
+    <labels>
+        <fullName>Org_NamePrefix</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Org NamePrefix</shortDescription>
+        <value>cv123__</value>
+    </labels>
+</CustomLabels>

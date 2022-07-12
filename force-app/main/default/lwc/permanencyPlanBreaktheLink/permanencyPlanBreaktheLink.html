@@ -1,0 +1,179 @@
+<template>
+    <div class="spinner">
+        <template if:true={loading}>
+            <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+        </template>
+    </div>
+    <lightning-card title="BREAK THE LINK">
+        <lightning-button label="ADD" title="ADD" slot="actions" variant="brand" icon-name="utility:add" onclick={handleAddBreaklink} class="slds-p-around_x-small" disabled={showTable}></lightning-button>
+    </lightning-card>
+
+    <lightning-datatable
+                    key-field="Id"
+                    data={breakList}
+                    columns={columns}
+                    hide-checkbox-column
+                    onrowaction={handleRowAction}>
+    </lightning-datatable>
+
+    <div class="eventModal" if:true={showBreaklinkModal}>
+    <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_large'>
+        <span slot="modalClose">
+                    <lightning-button-icon icon-name="utility:close"
+                                              onclick={closeBreaklinkModal}
+                                              alternative-text="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"></lightning-button-icon>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">View Break Link</h2>
+        </span>
+        <span slot="modalBody">
+
+            <lightning-layout>
+                <lightning-layout-item size="4" class="slds-p-around_small">
+                    <lightning-input type="text" label="Adoption Plan Begin Date" name="Adoption_Plan_Begin_Date__c" value={adoptionPlanBeginDate} disabled="true"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" class="slds-p-around_small">
+                    <lightning-input type="text" label="Narrative/Checklist Approval Status" name="Disclosure_Approval_Status__c" value={disclosureApprovalStatus} disabled="true"></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+
+                    <lightning-layout>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="checkbox" label="Child is legally free" name="Child_is_Legally_free__c" checked={breaktheLinkRec.Child_is_Legally_free__c} disabled="true"   required onchange={handleChange}></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="date" label="TPR Date of Parent1" name="tprDateofParent1" value={tprDateofParent1} disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="date" label="TPR Date of Parent2" name="tprDateofParent2" value={tprDateofParent2} disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                        <div class="slds-border_top"></div>
+                    <lightning-layout>
+                        <lightning-layout-item size=4 class="slds-p-around_small">
+                            <lightning-input type="checkbox" label="Child was in an Approved pre-Adoptive Placement and Removal" name="Child_was_in_an_Approved_Pre_Adoptive__c"  checked={breaktheLinkRec.Child_was_in_an_Approved_Pre_Adoptive__c} onchange={handleChange} required disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="3" class="slds-p-around_small">
+                            <div>Provider Name : {providerName}</div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="1" class="slds-p-around_small">
+                            
+                        </lightning-layout-item>
+                        <lightning-layout-item size="3" class="slds-p-around_small">
+                            <div>Placement Structure :{placementStructure}</div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                    <lightning-layout>
+                        <lightning-layout-item size="3" class="slds-p-around_small">
+                        </lightning-layout-item>
+                        <lightning-layout-item size="3" class="slds-p-around_small">
+                            <p></p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="3" class="slds-p-around_small">
+                            
+                        </lightning-layout-item>
+                        <lightning-layout-item size="3" class="slds-p-around_small">
+                            <p></p>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                    <lightning-layout>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+
+                        </lightning-layout-item>
+                        <lightning-layout-item size="2" class="slds-p-around_small">
+                            <lightning-input type="date" label="Placement Begin Date" name="Begin_Date__c" value={beginDate} disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="2" class="slds-p-around_small">
+                            <lightning-input type="date" label="Placement End Date" name="End_Date__c" value={endDate} disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="2" class="slds-p-around_small">
+                            <lightning-input type="text"  label="Approval Status" name="Placement_Approval_Status__c" value={approvalStatus} disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <div class="slds-border_top"></div>
+                    <lightning-layout>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <div class="slds-list_horizontal">Adoptive Placement Agreement Has Been Signed <br></br><h1 class="slds-text-color_error">*</h1></div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <div class="slds-list_horizontal">Date Agreement Signed <h1 class="slds-text-color_error">*</h1></div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                    <lightning-layout>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="checkbox" variant="label-hidden" name="Adoptive_Placement_Agreement_signed__c" checked={breaktheLinkRec.Adoptive_Placement_Agreement_signed__c} onchange={handleChange} required ></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="date" variant="label-hidden" name="Date_Agreement_signed__c" value={breaktheLinkRec.Date_Agreement_signed__c} onchange={handleChange} required ></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <div class="slds-border_top"></div>
+                    <lightning-layout>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <div class="slds-list_horizontal">Adoption Has Been Finalized <br></br><h1 class="slds-text-color_error">*</h1></div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <div class="slds-list_horizontal">Associated Court Order Date <br></br><h1 class="slds-text-color_error">*</h1></div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <div class="slds-list_horizontal">Finalization Date <br></br><h1 class="slds-text-color_error">*</h1></div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                    <lightning-layout>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="checkbox" variant="label-hidden" name="Adoption_has_been_finalized__c" checked={breaktheLinkRec.Adoption_has_been_finalized__c}  required onchange={handleChange} disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="date" variant="label-hidden" name="" value={courtRec.Court__r.Court_Order_Date__c} required  disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" class="slds-p-around_small">
+                            <lightning-input type="date" variant="label-hidden" name="" value={courtRec.Court__r.Court_Order_Date__c} required  disabled="true"></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <lightning-layout>
+                    <div class="slds-list_horizontal"><h1 class="slds-text-color_error">Notes:<br></br></h1>The finalization date checkbox will enable when child's placement and removal episode is closed.</div>
+                    </lightning-layout>
+                    <lightning-layout>
+                        <div class="slds-p-top_small">Approval Status:{breaktheLinkRec.Break_Line_Approval_Status__c}</div>
+                    </lightning-layout>
+        </span>
+
+        <span slot="modalFooter">
+                <lightning-button label="SAVE" onclick={handleSave} variant="brand" icon-name="utility:save" disabled={disablebutton}></lightning-button>
+                <template if:false={showApprovalBtn}>
+                    <lightning-button label="CREATE ADOPTION CASE" onclick={submitforApproval} variant="brand" class="slds-p-left_small" ></lightning-button>
+                </template>
+                </span>
+
+    </c-modal-component>
+</div>
+
+<template if:true={showApprovalScreen}>
+    <div class="slds-modal slds-fade-in-open slds-backdrop">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <lightning-button-icon icon-name="utility:close"
+                                onclick={hideApprovalScreen}
+                                alternative-text="close"
+                                variant="bare-inverse"
+                                class="slds-modal__close"></lightning-button-icon>  
+                <h2>Submit for Approval</h2>  
+            </div>
+            <div class="slds-modal__content slds-p-around_medium">
+                <c-custom-lookup-component iconname="standard:user" object-name="User" searchfield="Name" onselectedrec={handleSelectRec}>
+                </c-custom-lookup-component>
+            </div>
+            <div class="slds-modal__footer">
+                <lightning-button label="Submit for Approval" title="Submit for Approval" onclick={submitApproval} variant="brand" class= "slds-var-p-around_x-small" disabled={enableSubmit}></lightning-button>
+                <lightning-button label="Cancel" variant="destructive" title="Cancel" onclick={hideApprovalScreen} class= "slds-var-p-around_x-small" icon-name="utility:close"></lightning-button>
+            </div>
+
+        </div> 
+    </div>
+
+</template>
+</template>

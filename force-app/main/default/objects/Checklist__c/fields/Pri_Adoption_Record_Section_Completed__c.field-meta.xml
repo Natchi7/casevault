@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pri_Adoption_Record_Section_Completed__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR( State_federal_Completed__c , Home_study_includes_Completed__c , Application_complete__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Section Completed?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

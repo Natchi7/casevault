@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Tax_Id_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND(
+OR(
+ISPICKVAL( Type__c , &apos;Local Department Home&apos;),
+ISPICKVAL( Type__c , &apos;ICPC Home Study&apos;)
+),
+NOT(ISPICKVAL( Tax_Id_Type__c , &apos;SSN&apos;))
+), true,
+IF(
+AND(
+OR(
+ISPICKVAL( Type__c , &apos;CPA Office&apos;),
+ISPICKVAL( Type__c , &apos;Private Organization&apos;),
+ISPICKVAL( Type__c , &apos;RCC Facility&apos;)
+),
+NOT(ISPICKVAL( Tax_Id_Type__c , &apos;FEIN&apos;))
+),
+true,
+false
+)
+)</errorConditionFormula>
+    <errorMessage>Referral Type, Tax Id Type combination not valid.</errorMessage>
+</ValidationRule>

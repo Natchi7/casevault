@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fiscal_Category_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Fiscal Category Description</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>7502 - Disbursements from Conserved Accounts</fullName>
+                <default>false</default>
+                <label>7502 - Disbursements from Conserved Accounts</label>
+            </value>
+            <value>
+                <fullName>7503 - Disbursements from Dedicated Accounts</fullName>
+                <default>false</default>
+                <label>7503 - Disbursements from Dedicated Accounts</label>
+            </value>
+            <value>
+                <fullName>7504 - Disbursements from Independent Living Accou</fullName>
+                <default>false</default>
+                <label>7504 - Disbursements from Independent Living Accou</label>
+            </value>
+            <value>
+                <fullName>2110 - OTO Adoption Services</fullName>
+                <default>false</default>
+                <label>2110 - OTO Adoption Services</label>
+            </value>
+            <value>
+                <fullName>2123 - Infant Care for Teenage Mothers</fullName>
+                <default>false</default>
+                <label>2123 - Infant Care for Teenage Mothers</label>
+            </value>
+            <value>
+                <fullName>2131 - Purchased Institutional Supplemental Services</fullName>
+                <default>false</default>
+                <label>2131 - Purchased Institutional Supplemental Services</label>
+            </value>
+            <value>
+                <fullName>2132 - Foster Care Day Care Services</fullName>
+                <default>false</default>
+                <label>2132 - Foster Care Day Care Services</label>
+            </value>
+            <value>
+                <fullName>2134 - Transportation Services</fullName>
+                <default>false</default>
+                <label>2134 - Transportation Services</label>
+            </value>
+            <value>
+                <fullName>2135 - Social Admissions</fullName>
+                <default>false</default>
+                <label>2135 - Social Admissions</label>
+            </value>
+            <value>
+                <fullName>2136 - Psychiatric Admissions</fullName>
+                <default>false</default>
+                <label>2136 - Psychiatric Admissions</label>
+            </value>
+            <value>
+                <fullName>2137 - Emergency FC Retainer</fullName>
+                <default>false</default>
+                <label>2137 - Emergency FC Retainer</label>
+            </value>
+            <value>
+                <fullName>2138 - AIDS Stipend</fullName>
+                <default>false</default>
+                <label>2138 - AIDS Stipend</label>
+            </value>
+            <value>
+                <fullName>2140 - Adoption</fullName>
+                <default>false</default>
+                <label>2140 - Adoption</label>
+            </value>
+            <value>
+                <fullName>2141 - CPS</fullName>
+                <default>false</default>
+                <label>2141 - CPS</label>
+            </value>
+            <value>
+                <fullName>2142 - SFC</fullName>
+                <default>false</default>
+                <label>2142 - SFC</label>
+            </value>
+            <value>
+                <fullName>2143 - IFS</fullName>
+                <default>false</default>
+                <label>2143 - IFS</label>
+            </value>
+            <value>
+                <fullName>2144 - Kinship Care</fullName>
+                <default>false</default>
+                <label>2144 - Kinship Care</label>
+            </value>
+            <value>
+                <fullName>2145 - Families Now - Level I</fullName>
+                <default>false</default>
+                <label>2145 - Families Now - Level I</label>
+            </value>
+            <value>
+                <fullName>2146 - Families Now - Level II</fullName>
+                <default>false</default>
+                <label>2146 - Families Now - Level II</label>
+            </value>
+            <value>
+                <fullName>2147 - Families Now - Level III</fullName>
+                <default>false</default>
+                <label>2147 - Families Now - Level III</label>
+            </value>
+            <value>
+                <fullName>2148 - Families Now - Level IV</fullName>
+                <default>false</default>
+                <label>2148 - Families Now - Level IV</label>
+            </value>
+            <value>
+                <fullName>2149 - TFC Support Services</fullName>
+                <default>false</default>
+                <label>2149 - TFC Support Services</label>
+            </value>
+            <value>
+                <fullName>2150 - Court Ordered</fullName>
+                <default>false</default>
+                <label>2150 - Court Ordered</label>
+            </value>
+            <value>
+                <fullName>2152 - Independent Living</fullName>
+                <default>false</default>
+                <label>2152 - Independent Living</label>
+            </value>
+            <value>
+                <fullName>2155 - FC SSI-IAR Reimbursements Received</fullName>
+                <default>false</default>
+                <label>2155 - FC SSI-IAR Reimbursements Received</label>
+            </value>
+            <value>
+                <fullName>2156 - FC SSI-IAR Reimbursements Received</fullName>
+                <default>false</default>
+                <label>2156 - FC SSI-IAR Reimbursements Received</label>
+            </value>
+            <value>
+                <fullName>2171 - Emergency Foster Home Care</fullName>
+                <default>false</default>
+                <label>2171 - Emergency Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>2172 - Emergency Group Shelter Care</fullName>
+                <default>false</default>
+                <label>2172 - Emergency Group Shelter Care</label>
+            </value>
+            <value>
+                <fullName>2173 - Regular Foster Home Care</fullName>
+                <default>false</default>
+                <label>2173 - Regular Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>2174 - Intermediate Foster Home Care</fullName>
+                <default>false</default>
+                <label>2174 - Intermediate Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>2175 - Treatment Foster Home Care</fullName>
+                <default>false</default>
+                <label>2175 - Treatment Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>2176 - Purchased Foster Home Care</fullName>
+                <default>false</default>
+                <label>2176 - Purchased Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>2177 - In-State Institutional Care</fullName>
+                <default>false</default>
+                <label>2177 - In-State Institutional Care</label>
+            </value>
+            <value>
+                <fullName>2178 - Out of State Institutional Care</fullName>
+                <default>false</default>
+                <label>2178 - Out of State Institutional Care</label>
+            </value>
+            <value>
+                <fullName>2179 - Semi-Independent Living</fullName>
+                <default>false</default>
+                <label>2179 - Semi-Independent Living</label>
+            </value>
+            <value>
+                <fullName>2180 - Refugee children</fullName>
+                <default>false</default>
+                <label>2180 - Refugee children</label>
+            </value>
+            <value>
+                <fullName>2181 - Adoption Subsidy</fullName>
+                <default>false</default>
+                <label>2181 - Adoption Subsidy</label>
+            </value>
+            <value>
+                <fullName>2182 - Relative Placement</fullName>
+                <default>false</default>
+                <label>2182 - Relative Placement</label>
+            </value>
+            <value>
+                <fullName>2185 - GAP</fullName>
+                <default>false</default>
+                <label>2185 - GAP</label>
+            </value>
+            <value>
+                <fullName>2192 - CPS Day Care</fullName>
+                <default>false</default>
+                <label>2192 - CPS Day Care</label>
+            </value>
+            <value>
+                <fullName>2193 - Kinship Care Day Care</fullName>
+                <default>false</default>
+                <label>2193 - Kinship Care Day Care</label>
+            </value>
+            <value>
+                <fullName>7110 - OTO Adoption Services</fullName>
+                <default>false</default>
+                <label>7110 - OTO Adoption Services</label>
+            </value>
+            <value>
+                <fullName>7131 - Purchased Institutional Supplemental Services</fullName>
+                <default>false</default>
+                <label>7131 - Purchased Institutional Supplemental Services</label>
+            </value>
+            <value>
+                <fullName>7132 - Foster Care Day Care Services</fullName>
+                <default>false</default>
+                <label>7132 - Foster Care Day Care Services</label>
+            </value>
+            <value>
+                <fullName>7134 - Transportation Services</fullName>
+                <default>false</default>
+                <label>7134 - Transportation Services</label>
+            </value>
+            <value>
+                <fullName>7135 - Social Admissions</fullName>
+                <default>false</default>
+                <label>7135 - Social Admissions</label>
+            </value>
+            <value>
+                <fullName>7136 - Psychiatric Admissions</fullName>
+                <default>false</default>
+                <label>7136 - Psychiatric Admissions</label>
+            </value>
+            <value>
+                <fullName>7137 - Emergency FC Retainer</fullName>
+                <default>false</default>
+                <label>7137 - Emergency FC Retainer</label>
+            </value>
+            <value>
+                <fullName>7138 - AIDS Stipend</fullName>
+                <default>false</default>
+                <label>7138 - AIDS Stipend</label>
+            </value>
+            <value>
+                <fullName>7140 - Adoption</fullName>
+                <default>false</default>
+                <label>7140 - Adoption</label>
+            </value>
+            <value>
+                <fullName>7141 - CPS</fullName>
+                <default>false</default>
+                <label>7141 - CPS</label>
+            </value>
+            <value>
+                <fullName>7142 - SFC</fullName>
+                <default>false</default>
+                <label>7142 - SFC</label>
+            </value>
+            <value>
+                <fullName>7143 - IFS</fullName>
+                <default>false</default>
+                <label>7143 - IFS</label>
+            </value>
+            <value>
+                <fullName>7144 - Kinship Care</fullName>
+                <default>false</default>
+                <label>7144 - Kinship Care</label>
+            </value>
+            <value>
+                <fullName>7145 - Families Now - Level I</fullName>
+                <default>false</default>
+                <label>7145 - Families Now - Level I</label>
+            </value>
+            <value>
+                <fullName>7146 - Families Now - Level II</fullName>
+                <default>false</default>
+                <label>7146 - Families Now - Level II</label>
+            </value>
+            <value>
+                <fullName>7147 - Families Now - Level III</fullName>
+                <default>false</default>
+                <label>7147 - Families Now - Level III</label>
+            </value>
+            <value>
+                <fullName>7148 - Families Now - Level IV</fullName>
+                <default>false</default>
+                <label>7148 - Families Now - Level IV</label>
+            </value>
+            <value>
+                <fullName>7149 - TFC Support Services</fullName>
+                <default>false</default>
+                <label>7149 - TFC Support Services</label>
+            </value>
+            <value>
+                <fullName>7150 - Court Ordered</fullName>
+                <default>false</default>
+                <label>7150 - Court Ordered</label>
+            </value>
+            <value>
+                <fullName>7152 - Independent Living</fullName>
+                <default>false</default>
+                <label>7152 - Independent Living</label>
+            </value>
+            <value>
+                <fullName>7155 - FC SSI-IAR Reimbursements Received</fullName>
+                <default>false</default>
+                <label>7155 - FC SSI-IAR Reimbursements Received</label>
+            </value>
+            <value>
+                <fullName>7156 - FC SSI-IAR Reimbursements Received</fullName>
+                <default>false</default>
+                <label>7156 - FC SSI-IAR Reimbursements Received</label>
+            </value>
+            <value>
+                <fullName>7171 - Emergency Foster Home Care</fullName>
+                <default>false</default>
+                <label>7171 - Emergency Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>7172 - Emergency Group Shelter Care</fullName>
+                <default>false</default>
+                <label>7172 - Emergency Group Shelter Care</label>
+            </value>
+            <value>
+                <fullName>7173 - Infant Care for Teenage Mothers</fullName>
+                <default>false</default>
+                <label>7173 - Infant Care for Teenage Mothers</label>
+            </value>
+            <value>
+                <fullName>7173 - Regular Foster Home Care</fullName>
+                <default>false</default>
+                <label>7173 - Regular Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>7174 - Intermediate Foster Home Care</fullName>
+                <default>false</default>
+                <label>7174 - Intermediate Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>7175 - Treatment Foster Home Care</fullName>
+                <default>false</default>
+                <label>7175 - Treatment Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>7176 - Purchased Foster Home Care</fullName>
+                <default>false</default>
+                <label>7176 - Purchased Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>7177 - In-State Institutional Care</fullName>
+                <default>false</default>
+                <label>7177 - In-State Institutional Care</label>
+            </value>
+            <value>
+                <fullName>7178 - Out of State Institutional Care</fullName>
+                <default>false</default>
+                <label>7178 - Out of State Institutional Care</label>
+            </value>
+            <value>
+                <fullName>7179 - Semi-Independent Living</fullName>
+                <default>false</default>
+                <label>7179 - Semi-Independent Living</label>
+            </value>
+            <value>
+                <fullName>7180 - Refugee children</fullName>
+                <default>false</default>
+                <label>7180 - Refugee children</label>
+            </value>
+            <value>
+                <fullName>7181 - Adoption Subsidy</fullName>
+                <default>false</default>
+                <label>7181 - Adoption Subsidy</label>
+            </value>
+            <value>
+                <fullName>7182 - Relative Placement</fullName>
+                <default>false</default>
+                <label>7182 - Relative Placement</label>
+            </value>
+            <value>
+                <fullName>7185 - GAP</fullName>
+                <default>false</default>
+                <label>7185 - GAP</label>
+            </value>
+            <value>
+                <fullName>7192 - CPS Day Care</fullName>
+                <default>false</default>
+                <label>7192 - CPS Day Care</label>
+            </value>
+            <value>
+                <fullName>7193 - Kinship Care Day Care</fullName>
+                <default>false</default>
+                <label>7193 - Kinship Care Day Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

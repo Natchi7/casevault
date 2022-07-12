@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>sivasankar@softsquare.biz</contactEmail>
+    <label>Casevault mobileapp</label>
+    <logoUrl>https://casevault-dev-ed--c.documentforce.com/servlet/servlet.ImageServer?id=0155w000003VfrF&amp;oid=00D5w000004yOc7</logoUrl>
+    <oauthConfig>
+        <callbackUrl>testsfdc:///mobilesdk/detect/oauth/done</callbackUrl>
+        <consumerKey>3MVG95jctIhbyCprFwUG27._uibrBgL04bnqnUVNXmhGNR6dTGQOUpVS4ioHrFLDLCpEknC4lNV7RdKpBKiVM</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+        <scopes>CustomPermissions</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Lightning</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE_RELAXREFRESH</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <sessionPolicy>
+        <sessionTimeout>1440</sessionTimeout>
+    </sessionPolicy>
+</ConnectedApp>

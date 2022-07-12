@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organization_name_is_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+ ISPICKVAL( Type__c , &apos;RCC Facility&apos;),ISPICKVAL( Type__c , &apos;Private Organization&apos;), ISPICKVAL( Type__c , &apos;CPA Office&apos;)
+) &amp;&amp;
+ Organization_Name__c = NULL</errorConditionFormula>
+    <errorMessage>Organization name is mandatory for this type</errorMessage>
+</ValidationRule>

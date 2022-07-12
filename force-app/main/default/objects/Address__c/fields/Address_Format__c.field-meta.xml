@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Format__c</fullName>
+    <externalId>false</externalId>
+    <label>Address Format</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>P.O. Box</fullName>
+                <default>false</default>
+                <label>P.O. Box</label>
+            </value>
+            <value>
+                <fullName>Rural Address</fullName>
+                <default>false</default>
+                <label>Rural Address</label>
+            </value>
+            <value>
+                <fullName>Street Address</fullName>
+                <default>false</default>
+                <label>Street Address</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

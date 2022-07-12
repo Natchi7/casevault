@@ -1,0 +1,49 @@
+<template>
+   
+    <div class="spinner">
+        <template if:true={loading}>
+             <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+        </template>
+    </div>
+        <div class="slds-text-align_right slds-p-bottom_small">
+            <lightning-button variant="brand" label="CREATE NEW SERVICE PLAN VERSION" onclick={openServicePlanVersionsModal}></lightning-button>                                           
+        </div>
+        <lightning-datatable
+                                    key-field="Id"
+                                    columns={columns}
+                                    data={serviceplanversionlist}
+                                    hide-checkbox-column
+                                    onrowaction={handleRowAction}>
+        </lightning-datatable>
+        <template if:true={showServicePlanVersionModal}>
+            <lightning-layout>
+                <lightning-layout-item size="12" class="slds-p-around_small">
+                    <lightning-dual-listbox name="Persons_Benefitizing__c"
+                        label="Persons Benefiting"
+                        source-label="Available"
+                        selected-label="Selected"
+                        options={personBenefitingPicklistValue}
+                        onchange={handleChange}
+                        value={getSelected}
+                    >
+                    </lightning-dual-listbox>    
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                    <lightning-input type="date" date-style="short" label=" Start Date" name="Start_Date__c" value={serviceplanversionRec.Start_Date__c} required="true" onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                    <lightning-input type="date" date-style="short" label=" End Date" name="End_Date__c" value={serviceplanversionRec.End_Date__c} required="true" onchange={handleChange}></lightning-input>
+                 </lightning-layout-item>
+
+            </lightning-layout>
+            <div class="slds-text-align_right  slds-p-bottom_medium">
+                <lightning-button variant="brand" label="SAVE" class="slds-p-right_medium" onclick={handleSave} icon-name="utility:save" ></lightning-button>
+                <lightning-button label="CANCEL" variant="destructive" onclick={handleCancel} icon-name="utility:close"></lightning-button>
+            </div>
+        </template>
+                
+               
+</template>

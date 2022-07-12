@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alien_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Alien Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Refugee</fullName>
+                <default>false</default>
+                <label>Refugee</label>
+            </value>
+            <value>
+                <fullName>Asylees</fullName>
+                <default>false</default>
+                <label>Asylees</label>
+            </value>
+            <value>
+                <fullName>Cuban and Haitian Entrants</fullName>
+                <default>false</default>
+                <label>Cuban and Haitian Entrants</label>
+            </value>
+            <value>
+                <fullName>Victims of a severe form of trafficking</fullName>
+                <default>false</default>
+                <label>Victims of a severe form of trafficking</label>
+            </value>
+            <value>
+                <fullName>Aliens whose deportation is being withheld</fullName>
+                <default>false</default>
+                <label>Aliens whose deportation is being withheld</label>
+            </value>
+            <value>
+                <fullName>Special Immigrants from Iraq and Afghanistan</fullName>
+                <default>false</default>
+                <label>Special Immigrants from Iraq and Afghanistan</label>
+            </value>
+            <value>
+                <fullName>Honorably discharged U.S. military veterans, active duty military personnel, and their spouses and unmarried dependent children</fullName>
+                <default>false</default>
+                <label>Honorably discharged U.S. military veterans, active duty military personnel, and their spouses and unmarried dependent children</label>
+            </value>
+            <value>
+                <fullName>Battered aliens</fullName>
+                <default>false</default>
+                <label>Battered aliens</label>
+            </value>
+            <value>
+                <fullName>Aliens admitted to the country as an Amerasian immigrant</fullName>
+                <default>false</default>
+                <label>Aliens admitted to the country as an Amerasian immigrant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

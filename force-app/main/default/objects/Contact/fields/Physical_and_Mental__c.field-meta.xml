@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_and_Mental__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>2c. Applicant&apos;s current functioning in relation to the development tasks of adulthood: Physical and Mental</inlineHelpText>
+    <label>2c. Physical and Mental</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

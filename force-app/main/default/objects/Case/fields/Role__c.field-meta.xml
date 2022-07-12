@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alleged victim</fullName>
+                <default>false</default>
+                <label>Alleged victim</label>
+            </value>
+            <value>
+                <fullName>Anonymous reporter</fullName>
+                <default>false</default>
+                <label>Anonymous reporter</label>
+            </value>
+            <value>
+                <fullName>Child day care provider</fullName>
+                <default>false</default>
+                <label>Child day care provider</label>
+            </value>
+            <value>
+                <fullName>Education personnel</fullName>
+                <default>false</default>
+                <label>Education personnel</label>
+            </value>
+            <value>
+                <fullName>Friends/neighbor</fullName>
+                <default>false</default>
+                <label>Friends/neighbor</label>
+            </value>
+            <value>
+                <fullName>Legal,Law enforcement, or criminal justice person</fullName>
+                <default>false</default>
+                <label>Legal,Law enforcement, or criminal justice person</label>
+            </value>
+            <value>
+                <fullName>Medical Personnel</fullName>
+                <default>false</default>
+                <label>Medical Personnel</label>
+            </value>
+            <value>
+                <fullName>Mental health personnel</fullName>
+                <default>false</default>
+                <label>Mental health personnel</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other relative</fullName>
+                <default>false</default>
+                <label>Other relative</label>
+            </value>
+            <value>
+                <fullName>Parent</fullName>
+                <default>false</default>
+                <label>Parent</label>
+            </value>
+            <value>
+                <fullName>Reporter</fullName>
+                <default>false</default>
+                <label>Reporter</label>
+            </value>
+            <value>
+                <fullName>Social Service Personnel</fullName>
+                <default>false</default>
+                <label>Social Service Personnel</label>
+            </value>
+            <value>
+                <fullName>Substitute care Provider</fullName>
+                <default>false</default>
+                <label>Substitute care Provider</label>
+            </value>
+            <value>
+                <fullName>Unknown or missing</fullName>
+                <default>false</default>
+                <label>Unknown or missing</label>
+            </value>
+            <value>
+                <fullName>Friend/Neighbor</fullName>
+                <default>false</default>
+                <label>Friend/Neighbor</label>
+            </value>
+            <value>
+                <fullName>Biological Child</fullName>
+                <default>false</default>
+                <label>Biological Child</label>
+            </value>
+            <value>
+                <fullName>Other Child (Not in Household)</fullName>
+                <default>false</default>
+                <label>Other Child (Not in Household)</label>
+            </value>
+            <value>
+                <fullName>Alleged Maltreator</fullName>
+                <default>false</default>
+                <label>Alleged Maltreator</label>
+            </value>
+            <value>
+                <fullName>Conservator</fullName>
+                <default>false</default>
+                <label>Conservator</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Foster Parent</fullName>
+                <default>false</default>
+                <label>Foster Parent</label>
+            </value>
+            <value>
+                <fullName>Casehead</fullName>
+                <default>false</default>
+                <label>Casehead</label>
+            </value>
+            <value>
+                <fullName>I &amp; R Participant</fullName>
+                <default>false</default>
+                <label>I &amp; R Participant</label>
+            </value>
+            <value>
+                <fullName>Law Enforcement</fullName>
+                <default>false</default>
+                <label>Law Enforcement</label>
+            </value>
+            <value>
+                <fullName>Legal Guardian</fullName>
+                <default>false</default>
+                <label>Legal Guardian</label>
+            </value>
+            <value>
+                <fullName>Legal Representive</fullName>
+                <default>false</default>
+                <label>Legal Representive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

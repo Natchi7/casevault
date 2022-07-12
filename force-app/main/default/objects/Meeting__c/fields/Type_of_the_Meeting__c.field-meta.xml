@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_the_Meeting__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of the Meeting</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assessment Meeting</fullName>
+                <default>false</default>
+                <label>Assessment Meeting</label>
+            </value>
+            <value>
+                <fullName>Attorney/Legal</fullName>
+                <default>false</default>
+                <label>Attorney/Legal</label>
+            </value>
+            <value>
+                <fullName>CASA</fullName>
+                <default>false</default>
+                <label>CASA</label>
+            </value>
+            <value>
+                <fullName>FIM</fullName>
+                <default>false</default>
+                <label>FIM</label>
+            </value>
+            <value>
+                <fullName>Legal/Lawyer</fullName>
+                <default>false</default>
+                <label>Legal/Lawyer</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Multi D</fullName>
+                <default>false</default>
+                <label>Multi D</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

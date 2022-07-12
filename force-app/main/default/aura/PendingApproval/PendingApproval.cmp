@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="public" controller='ApprovalInboxController'>
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="pendingList" type="List" />
+    <aura:attribute name="processIns" type="ProcessInstance" default="{'sobjectType':'ProcessInstance'}" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+
+    <c:ApprovalFilliterCmp/>
+    <div class="slds-p-top_large">
+        <lightning:datatable keyField="id" data="{! v.pendingList }" columns="{! v.columns }" hideCheckboxColumn="true" />
+    </div>
+</aura:component>

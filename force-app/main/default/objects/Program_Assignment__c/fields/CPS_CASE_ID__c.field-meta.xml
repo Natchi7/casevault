@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_CASE_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Contact__r.Service_Case__c != null, Contact__r.Service_Case__r.Name , IF(Contact__r.Investigation__c!= null ,Contact__r.Investigation__r.Name, &apos;&apos;) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CPS / CASE ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

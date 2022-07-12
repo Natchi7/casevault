@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_For_Hospitalization__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason For Hospitalization</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergic Reaction</fullName>
+                <default>false</default>
+                <label>Allergic Reaction</label>
+            </value>
+            <value>
+                <fullName>Anemia</fullName>
+                <default>false</default>
+                <label>Anemia</label>
+            </value>
+            <value>
+                <fullName>Appendicitis</fullName>
+                <default>false</default>
+                <label>Appendicitis</label>
+            </value>
+            <value>
+                <fullName>Asthma</fullName>
+                <default>false</default>
+                <label>Asthma</label>
+            </value>
+            <value>
+                <fullName>Back Problem</fullName>
+                <default>false</default>
+                <label>Back Problem</label>
+            </value>
+            <value>
+                <fullName>Blood Disorder</fullName>
+                <default>false</default>
+                <label>Blood Disorder</label>
+            </value>
+            <value>
+                <fullName>Broken bone(s)</fullName>
+                <default>false</default>
+                <label>Broken bone(s)</label>
+            </value>
+            <value>
+                <fullName>Bronchitis</fullName>
+                <default>false</default>
+                <label>Bronchitis</label>
+            </value>
+            <value>
+                <fullName>Burn treatment</fullName>
+                <default>false</default>
+                <label>Burn treatment</label>
+            </value>
+            <value>
+                <fullName>Cancer</fullName>
+                <default>false</default>
+                <label>Cancer</label>
+            </value>
+            <value>
+                <fullName>Cardiac arrhythmia</fullName>
+                <default>false</default>
+                <label>Cardiac arrhythmia</label>
+            </value>
+            <value>
+                <fullName>Chronic obstructive lung disease</fullName>
+                <default>false</default>
+                <label>Chronic obstructive lung disease</label>
+            </value>
+            <value>
+                <fullName>Circulatory disorder</fullName>
+                <default>false</default>
+                <label>Circulatory disorder</label>
+            </value>
+            <value>
+                <fullName>Condition not defined</fullName>
+                <default>false</default>
+                <label>Condition not defined</label>
+            </value>
+            <value>
+                <fullName>Congenital abnormality</fullName>
+                <default>false</default>
+                <label>Congenital abnormality</label>
+            </value>
+            <value>
+                <fullName>Dehydration</fullName>
+                <default>false</default>
+                <label>Dehydration</label>
+            </value>
+            <value>
+                <fullName>Depression</fullName>
+                <default>false</default>
+                <label>Depression</label>
+            </value>
+            <value>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+                <label>Diabetes</label>
+            </value>
+            <value>
+                <fullName>Digestive disorder</fullName>
+                <default>false</default>
+                <label>Digestive disorder</label>
+            </value>
+            <value>
+                <fullName>Eating disorder</fullName>
+                <default>false</default>
+                <label>Eating disorder</label>
+            </value>
+            <value>
+                <fullName>Electrolyte disorder</fullName>
+                <default>false</default>
+                <label>Electrolyte disorder</label>
+            </value>
+            <value>
+                <fullName>Endocrine disorder</fullName>
+                <default>false</default>
+                <label>Endocrine disorder</label>
+            </value>
+            <value>
+                <fullName>Epilepsy</fullName>
+                <default>false</default>
+                <label>Epilepsy</label>
+            </value>
+            <value>
+                <fullName>Female reproductive disorder</fullName>
+                <default>false</default>
+                <label>Female reproductive disorder</label>
+            </value>
+            <value>
+                <fullName>Failure to Thrive</fullName>
+                <default>false</default>
+                <label>Failure to Thrive</label>
+            </value>
+            <value>
+                <fullName>Heart disease</fullName>
+                <default>false</default>
+                <label>Heart disease</label>
+            </value>
+            <value>
+                <fullName>Homicidal ideation</fullName>
+                <default>false</default>
+                <label>Homicidal ideation</label>
+            </value>
+            <value>
+                <fullName>Immunity disorder</fullName>
+                <default>false</default>
+                <label>Immunity disorder</label>
+            </value>
+            <value>
+                <fullName>Infectious disease</fullName>
+                <default>false</default>
+                <label>Infectious disease</label>
+            </value>
+            <value>
+                <fullName>Injury (NOS)</fullName>
+                <default>false</default>
+                <label>Injury (NOS)</label>
+            </value>
+            <value>
+                <fullName>Intestinal infection</fullName>
+                <default>false</default>
+                <label>Intestinal infection</label>
+            </value>
+            <value>
+                <fullName>Intracranial hemorrhage</fullName>
+                <default>false</default>
+                <label>Intracranial hemorrhage</label>
+            </value>
+            <value>
+                <fullName>Jaundice</fullName>
+                <default>false</default>
+                <label>Jaundice</label>
+            </value>
+            <value>
+                <fullName>Kidney disorder</fullName>
+                <default>false</default>
+                <label>Kidney disorder</label>
+            </value>
+            <value>
+                <fullName>Mental disorder (NOS)</fullName>
+                <default>false</default>
+                <label>Mental disorder (NOS)</label>
+            </value>
+            <value>
+                <fullName>Metabolic disorder (NOS)</fullName>
+                <default>false</default>
+                <label>Metabolic disorder (NOS)</label>
+            </value>
+            <value>
+                <fullName>Mood disorder</fullName>
+                <default>false</default>
+                <label>Mood disorder</label>
+            </value>
+            <value>
+                <fullName>Musculoskeletal disease</fullName>
+                <default>false</default>
+                <label>Musculoskeletal disease</label>
+            </value>
+            <value>
+                <fullName>Nervous system disease</fullName>
+                <default>false</default>
+                <label>Nervous system disease</label>
+            </value>
+            <value>
+                <fullName>Nonspecific chest pain</fullName>
+                <default>false</default>
+                <label>Nonspecific chest pain</label>
+            </value>
+            <value>
+                <fullName>Nutritional disorder</fullName>
+                <default>false</default>
+                <label>Nutritional disorder</label>
+            </value>
+            <value>
+                <fullName>Other condition</fullName>
+                <default>false</default>
+                <label>Other condition</label>
+            </value>
+            <value>
+                <fullName>Pancreas disorder</fullName>
+                <default>false</default>
+                <label>Pancreas disorder</label>
+            </value>
+            <value>
+                <fullName>Parasitic disease</fullName>
+                <default>false</default>
+                <label>Parasitic disease</label>
+            </value>
+            <value>
+                <fullName>Pneumonia</fullName>
+                <default>false</default>
+                <label>Pneumonia</label>
+            </value>
+            <value>
+                <fullName>Poisoning</fullName>
+                <default>false</default>
+                <label>Poisoning</label>
+            </value>
+            <value>
+                <fullName>Pulmonary disorder</fullName>
+                <default>false</default>
+                <label>Pulmonary disorder</label>
+            </value>
+            <value>
+                <fullName>Pregnancy complication</fullName>
+                <default>false</default>
+                <label>Pregnancy complication</label>
+            </value>
+            <value>
+                <fullName>Psychosis (NOS)</fullName>
+                <default>false</default>
+                <label>Psychosis (NOS)</label>
+            </value>
+            <value>
+                <fullName>Sickle Cell anemia</fullName>
+                <default>false</default>
+                <label>Sickle Cell anemia</label>
+            </value>
+            <value>
+                <fullName>Sensory disease</fullName>
+                <default>false</default>
+                <label>Sensory disease</label>
+            </value>
+            <value>
+                <fullName>Skin disease</fullName>
+                <default>false</default>
+                <label>Skin disease</label>
+            </value>
+            <value>
+                <fullName>Suicidal ideation</fullName>
+                <default>false</default>
+                <label>Suicidal ideation</label>
+            </value>
+            <value>
+                <fullName>Substance abuse</fullName>
+                <default>false</default>
+                <label>Substance abuse</label>
+            </value>
+            <value>
+                <fullName>Upper respiratory infection</fullName>
+                <default>false</default>
+                <label>Upper respiratory infection</label>
+            </value>
+            <value>
+                <fullName>Urinary tract infection</fullName>
+                <default>false</default>
+                <label>Urinary tract infection</label>
+            </value>
+            <value>
+                <fullName>Vaginal delivery</fullName>
+                <default>false</default>
+                <label>Vaginal delivery</label>
+            </value>
+            <value>
+                <fullName>Viral infection</fullName>
+                <default>false</default>
+                <label>Viral infection</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Shaken Baby Syndrome</fullName>
+                <default>false</default>
+                <label>Shaken Baby Syndrome</label>
+            </value>
+            <value>
+                <fullName>Ear Injury</fullName>
+                <default>false</default>
+                <label>Ear Injury</label>
+            </value>
+            <value>
+                <fullName>Eye Injury</fullName>
+                <default>false</default>
+                <label>Eye Injury</label>
+            </value>
+            <value>
+                <fullName>Untreated condition (specify)</fullName>
+                <default>false</default>
+                <label>Untreated condition (specify)</label>
+            </value>
+            <value>
+                <fullName>Gynecological condition</fullName>
+                <default>false</default>
+                <label>Gynecological condition</label>
+            </value>
+            <value>
+                <fullName>Child Birth</fullName>
+                <default>false</default>
+                <label>Child Birth</label>
+            </value>
+            <value>
+                <fullName>Gastroentitis</fullName>
+                <default>false</default>
+                <label>Gastroentitis</label>
+            </value>
+            <value>
+                <fullName>Broken Arm</fullName>
+                <default>false</default>
+                <label>Broken Arm</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

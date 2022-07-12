@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_must_be_18</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND( NOT(ISBLANK( Age__c )), Age__c &lt; 18),AND(NOT(ISBLANK( Co_Applicant_Age__c)), Co_Applicant_Age__c &lt; 18))</errorConditionFormula>
+    <errorMessage>Age must be 18 years or over for this home to be approved</errorMessage>
+</ValidationRule>

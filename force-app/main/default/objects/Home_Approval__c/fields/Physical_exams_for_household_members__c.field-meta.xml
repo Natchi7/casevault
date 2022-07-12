@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_exams_for_household_members__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Physical exams have been performed for all household member in the last two year (System).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>System</inlineHelpText>
+    <label>Physical exams(Related to in household)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

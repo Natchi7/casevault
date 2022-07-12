@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Race__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Race</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Black/African-American</fullName>
+                <default>false</default>
+                <label>Black/African-American</label>
+            </value>
+            <value>
+                <fullName>Alaskan Native</fullName>
+                <default>false</default>
+                <label>Alaskan Native</label>
+            </value>
+            <value>
+                <fullName>American Indian</fullName>
+                <default>false</default>
+                <label>American Indian</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>White/Caucasian</fullName>
+                <default>false</default>
+                <label>White/Caucasian</label>
+            </value>
+            <value>
+                <fullName>Asian</fullName>
+                <default>false</default>
+                <label>Asian</label>
+            </value>
+            <value>
+                <fullName>Native Hawaiian/Pacific Islander</fullName>
+                <default>false</default>
+                <label>Native Hawaiian/Pacific Islander</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Guardian_Relationship__c</fullName>
+    <externalId>false</externalId>
+    <label>Secondary Guardian Relationship</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoptive Child</fullName>
+                <default>false</default>
+                <label>Adoptive Child</label>
+            </value>
+            <value>
+                <fullName>Adoptive Father</fullName>
+                <default>false</default>
+                <label>Adoptive Father</label>
+            </value>
+            <value>
+                <fullName>Adoptive Monther</fullName>
+                <default>false</default>
+                <label>Adoptive Monther</label>
+            </value>
+            <value>
+                <fullName>Biological Brother</fullName>
+                <default>false</default>
+                <label>Biological Brother</label>
+            </value>
+            <value>
+                <fullName>Biological Child</fullName>
+                <default>false</default>
+                <label>Biological Child</label>
+            </value>
+            <value>
+                <fullName>Biological Father</fullName>
+                <default>false</default>
+                <label>Biological Father</label>
+            </value>
+            <value>
+                <fullName>Biological Sister</fullName>
+                <default>false</default>
+                <label>Biological Sister</label>
+            </value>
+            <value>
+                <fullName>Boyfriend</fullName>
+                <default>false</default>
+                <label>Boyfriend</label>
+            </value>
+            <value>
+                <fullName>Boyfriend-Ex</fullName>
+                <default>false</default>
+                <label>Boyfriend-Ex</label>
+            </value>
+            <value>
+                <fullName>Brother-in-Law</fullName>
+                <default>false</default>
+                <label>Brother-in-Law</label>
+            </value>
+            <value>
+                <fullName>Child Care Center employee</fullName>
+                <default>false</default>
+                <label>Child Care Center employee</label>
+            </value>
+            <value>
+                <fullName>Child Care Home Provider</fullName>
+                <default>false</default>
+                <label>Child Care Home Provider</label>
+            </value>
+            <value>
+                <fullName>Child Care Worker</fullName>
+                <default>false</default>
+                <label>Child Care Worker</label>
+            </value>
+            <value>
+                <fullName>Child Therapeutic Foster</fullName>
+                <default>false</default>
+                <label>Child Therapeutic Foster</label>
+            </value>
+            <value>
+                <fullName>Co-Worker</fullName>
+                <default>false</default>
+                <label>Co-Worker</label>
+            </value>
+            <value>
+                <fullName>Custodian(Legal)</fullName>
+                <default>false</default>
+                <label>Custodian(Legal)</label>
+            </value>
+            <value>
+                <fullName>Daughter in Law</fullName>
+                <default>false</default>
+                <label>Daughter in Law</label>
+            </value>
+            <value>
+                <fullName>Daycare child</fullName>
+                <default>false</default>
+                <label>Daycare child</label>
+            </value>
+            <value>
+                <fullName>Father-In-Law</fullName>
+                <default>false</default>
+                <label>Father-In-Law</label>
+            </value>
+            <value>
+                <fullName>Father therapeutic Foster</fullName>
+                <default>false</default>
+                <label>Father therapeutic Foster</label>
+            </value>
+            <value>
+                <fullName>Foster Child</fullName>
+                <default>false</default>
+                <label>Foster Child</label>
+            </value>
+            <value>
+                <fullName>Foster Father</fullName>
+                <default>false</default>
+                <label>Foster Father</label>
+            </value>
+            <value>
+                <fullName>Foster Mother</fullName>
+                <default>false</default>
+                <label>Foster Mother</label>
+            </value>
+            <value>
+                <fullName>Foster Parent</fullName>
+                <default>false</default>
+                <label>Foster Parent</label>
+            </value>
+            <value>
+                <fullName>Friend</fullName>
+                <default>false</default>
+                <label>Friend</label>
+            </value>
+            <value>
+                <fullName>Girlfriend</fullName>
+                <default>false</default>
+                <label>Girlfriend</label>
+            </value>
+            <value>
+                <fullName>Girlfriend-Ex</fullName>
+                <default>false</default>
+                <label>Girlfriend-Ex</label>
+            </value>
+            <value>
+                <fullName>GodFather</fullName>
+                <default>false</default>
+                <label>GodFather</label>
+            </value>
+            <value>
+                <fullName>GodMother</fullName>
+                <default>false</default>
+                <label>GodMother</label>
+            </value>
+            <value>
+                <fullName>Guardian(Legal)</fullName>
+                <default>false</default>
+                <label>Guardian(Legal)</label>
+            </value>
+            <value>
+                <fullName>Half Brother</fullName>
+                <default>false</default>
+                <label>Half Brother</label>
+            </value>
+            <value>
+                <fullName>Half  Sister</fullName>
+                <default>false</default>
+                <label>Half  Sister</label>
+            </value>
+            <value>
+                <fullName>Husband</fullName>
+                <default>false</default>
+                <label>Husband</label>
+            </value>
+            <value>
+                <fullName>Husband-Ex</fullName>
+                <default>false</default>
+                <label>Husband-Ex</label>
+            </value>
+            <value>
+                <fullName>Legal Brother</fullName>
+                <default>false</default>
+                <label>Legal Brother</label>
+            </value>
+            <value>
+                <fullName>Legal Child</fullName>
+                <default>false</default>
+                <label>Legal Child</label>
+            </value>
+            <value>
+                <fullName>Legal Father</fullName>
+                <default>false</default>
+                <label>Legal Father</label>
+            </value>
+            <value>
+                <fullName>Legal Mother</fullName>
+                <default>false</default>
+                <label>Legal Mother</label>
+            </value>
+            <value>
+                <fullName>Legal sister</fullName>
+                <default>false</default>
+                <label>Legal sister</label>
+            </value>
+            <value>
+                <fullName>Maternal Aunt</fullName>
+                <default>false</default>
+                <label>Maternal Aunt</label>
+            </value>
+            <value>
+                <fullName>Maternal Cousin</fullName>
+                <default>false</default>
+                <label>Maternal Cousin</label>
+            </value>
+            <value>
+                <fullName>Maternal Grandchild</fullName>
+                <default>false</default>
+                <label>Maternal Grandchild</label>
+            </value>
+            <value>
+                <fullName>Maternal Grandparent</fullName>
+                <default>false</default>
+                <label>Maternal Grandparent</label>
+            </value>
+            <value>
+                <fullName>Maternal Great Aunt</fullName>
+                <default>false</default>
+                <label>Maternal Great Aunt</label>
+            </value>
+            <value>
+                <fullName>Maternal Great Grandchild</fullName>
+                <default>false</default>
+                <label>Maternal Great Grandchild</label>
+            </value>
+            <value>
+                <fullName>Maternal Great Grandparent</fullName>
+                <default>false</default>
+                <label>Maternal Great Grandparent</label>
+            </value>
+            <value>
+                <fullName>Maternal Great Uncle</fullName>
+                <default>false</default>
+                <label>Maternal Great Uncle</label>
+            </value>
+            <value>
+                <fullName>Maternal Nephew</fullName>
+                <default>false</default>
+                <label>Maternal Nephew</label>
+            </value>
+            <value>
+                <fullName>Maternal Step GrandChild</fullName>
+                <default>false</default>
+                <label>Maternal Step GrandChild</label>
+            </value>
+            <value>
+                <fullName>Maternal Niece</fullName>
+                <default>false</default>
+                <label>Maternal Niece</label>
+            </value>
+            <value>
+                <fullName>Maternal Uncle</fullName>
+                <default>false</default>
+                <label>Maternal Uncle</label>
+            </value>
+            <value>
+                <fullName>Mother-In-Law</fullName>
+                <default>false</default>
+                <label>Mother-In-Law</label>
+            </value>
+            <value>
+                <fullName>Mother Therapeutic Foster</fullName>
+                <default>false</default>
+                <label>Mother Therapeutic Foster</label>
+            </value>
+            <value>
+                <fullName>Neighbor</fullName>
+                <default>false</default>
+                <label>Neighbor</label>
+            </value>
+            <value>
+                <fullName>Non-Custodial Parent</fullName>
+                <default>false</default>
+                <label>Non-Custodial Parent</label>
+            </value>
+            <value>
+                <fullName>No Relation</fullName>
+                <default>false</default>
+                <label>No Relation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Parent</fullName>
+                <default>false</default>
+                <label>Parent</label>
+            </value>
+            <value>
+                <fullName>Paternal Aunt</fullName>
+                <default>false</default>
+                <label>Paternal Aunt</label>
+            </value>
+            <value>
+                <fullName>Paternal cousin</fullName>
+                <default>false</default>
+                <label>Paternal cousin</label>
+            </value>
+            <value>
+                <fullName>Paternal GuardChild</fullName>
+                <default>false</default>
+                <label>Paternal GuardChild</label>
+            </value>
+            <value>
+                <fullName>Paternal GuardParent</fullName>
+                <default>false</default>
+                <label>Paternal GuardParent</label>
+            </value>
+            <value>
+                <fullName>Paternal Great Aunty</fullName>
+                <default>false</default>
+                <label>Paternal Great Aunty</label>
+            </value>
+            <value>
+                <fullName>Paternal Great Guardchild</fullName>
+                <default>false</default>
+                <label>Paternal Great Guardchild</label>
+            </value>
+            <value>
+                <fullName>Paternal Great GuardParent</fullName>
+                <default>false</default>
+                <label>Paternal Great GuardParent</label>
+            </value>
+            <value>
+                <fullName>Paternal Great Uncle</fullName>
+                <default>false</default>
+                <label>Paternal Great Uncle</label>
+            </value>
+            <value>
+                <fullName>Paternal Nephew</fullName>
+                <default>false</default>
+                <label>Paternal Nephew</label>
+            </value>
+            <value>
+                <fullName>Paternal Niece</fullName>
+                <default>false</default>
+                <label>Paternal Niece</label>
+            </value>
+            <value>
+                <fullName>Paternal Step Grandchild</fullName>
+                <default>false</default>
+                <label>Paternal Step Grandchild</label>
+            </value>
+            <value>
+                <fullName>Paternal Uncle</fullName>
+                <default>false</default>
+                <label>Paternal Uncle</label>
+            </value>
+            <value>
+                <fullName>Putative Child</fullName>
+                <default>false</default>
+                <label>Putative Child</label>
+            </value>
+            <value>
+                <fullName>Putative Father</fullName>
+                <default>false</default>
+                <label>Putative Father</label>
+            </value>
+            <value>
+                <fullName>Putative Mother</fullName>
+                <default>false</default>
+                <label>Putative Mother</label>
+            </value>
+            <value>
+                <fullName>Relative(Other)</fullName>
+                <default>false</default>
+                <label>Relative(Other)</label>
+            </value>
+            <value>
+                <fullName>Resident</fullName>
+                <default>false</default>
+                <label>Resident</label>
+            </value>
+            <value>
+                <fullName>Residential Facility Staff</fullName>
+                <default>false</default>
+                <label>Residential Facility Staff</label>
+            </value>
+            <value>
+                <fullName>School Counselor</fullName>
+                <default>false</default>
+                <label>School Counselor</label>
+            </value>
+            <value>
+                <fullName>Self</fullName>
+                <default>false</default>
+                <label>Self</label>
+            </value>
+            <value>
+                <fullName>Significant Other/Parent</fullName>
+                <default>false</default>
+                <label>Significant Other/Parent</label>
+            </value>
+            <value>
+                <fullName>Sister-in-Law</fullName>
+                <default>false</default>
+                <label>Sister-in-Law</label>
+            </value>
+            <value>
+                <fullName>Social Worker</fullName>
+                <default>false</default>
+                <label>Social Worker</label>
+            </value>
+            <value>
+                <fullName>Son in Law</fullName>
+                <default>false</default>
+                <label>Son in Law</label>
+            </value>
+            <value>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+                <label>Spouse</label>
+            </value>
+            <value>
+                <fullName>Spouse - Ex</fullName>
+                <default>false</default>
+                <label>Spouse - Ex</label>
+            </value>
+            <value>
+                <fullName>Step Brother</fullName>
+                <default>false</default>
+                <label>Step Brother</label>
+            </value>
+            <value>
+                <fullName>Step Child</fullName>
+                <default>false</default>
+                <label>Step Child</label>
+            </value>
+            <value>
+                <fullName>Step Father</fullName>
+                <default>false</default>
+                <label>Step Father</label>
+            </value>
+            <value>
+                <fullName>Step Grandchild</fullName>
+                <default>false</default>
+                <label>Step Grandchild</label>
+            </value>
+            <value>
+                <fullName>Step Grandparent</fullName>
+                <default>false</default>
+                <label>Step Grandparent</label>
+            </value>
+            <value>
+                <fullName>Step Maternal Grandparent</fullName>
+                <default>false</default>
+                <label>Step Maternal Grandparent</label>
+            </value>
+            <value>
+                <fullName>Step Mother</fullName>
+                <default>false</default>
+                <label>Step Mother</label>
+            </value>
+            <value>
+                <fullName>Step-Paternal  Grandparent</fullName>
+                <default>false</default>
+                <label>Step-Paternal  Grandparent</label>
+            </value>
+            <value>
+                <fullName>Step Sister</fullName>
+                <default>false</default>
+                <label>Step Sister</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Support Staff</fullName>
+                <default>false</default>
+                <label>Support Staff</label>
+            </value>
+            <value>
+                <fullName>Teacher</fullName>
+                <default>false</default>
+                <label>Teacher</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Unknown Father</fullName>
+                <default>false</default>
+                <label>Unknown Father</label>
+            </value>
+            <value>
+                <fullName>Unknown Mother</fullName>
+                <default>false</default>
+                <label>Unknown Mother</label>
+            </value>
+            <value>
+                <fullName>Wife</fullName>
+                <default>false</default>
+                <label>Wife</label>
+            </value>
+            <value>
+                <fullName>Wife - EX</fullName>
+                <default>false</default>
+                <label>Wife - EX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

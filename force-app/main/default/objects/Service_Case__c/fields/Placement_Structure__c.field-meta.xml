@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placement_Structure__c</fullName>
+    <externalId>false</externalId>
+    <label>Placement Structure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Intermediate Foster Care</fullName>
+                <default>false</default>
+                <label>Intermediate Foster Care</label>
+            </value>
+            <value>
+                <fullName>Intermediate Foster Care Difficulty of Care</fullName>
+                <default>false</default>
+                <label>Intermediate Foster Care Difficulty of Care</label>
+            </value>
+            <value>
+                <fullName>Pre-Finalized Adoptive Home</fullName>
+                <default>false</default>
+                <label>Pre-Finalized Adoptive Home</label>
+            </value>
+            <value>
+                <fullName>Refuse Child</fullName>
+                <default>false</default>
+                <label>Refuse Child</label>
+            </value>
+            <value>
+                <fullName>Regular Foster Care</fullName>
+                <default>false</default>
+                <label>Regular Foster Care</label>
+            </value>
+            <value>
+                <fullName>Residential Group Homes</fullName>
+                <default>false</default>
+                <label>Residential Group Homes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

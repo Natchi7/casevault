@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copies_of_this_transition_plan_have_been__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Copies of this transition plan have been made for the following</inlineHelpText>
+    <label>Copies of this transition plan have been</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Youth</fullName>
+                <default>false</default>
+                <label>Youth</label>
+            </value>
+            <value>
+                <fullName>Caregiver</fullName>
+                <default>false</default>
+                <label>Caregiver</label>
+            </value>
+            <value>
+                <fullName>Case File</fullName>
+                <default>false</default>
+                <label>Case File</label>
+            </value>
+            <value>
+                <fullName>Independent Living Provider</fullName>
+                <default>false</default>
+                <label>Independent Living Provider</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

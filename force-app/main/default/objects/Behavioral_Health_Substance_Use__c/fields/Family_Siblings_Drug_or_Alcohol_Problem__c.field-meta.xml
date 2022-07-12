@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Siblings_Drug_or_Alcohol_Problem__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Family/peer/Siblings Drug or Alcohol Problem</inlineHelpText>
+    <label>Family/Siblings Drug or Alcohol Problem</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

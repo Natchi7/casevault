@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Health_Sleeping_Problems__c</fullName>
+    <externalId>false</externalId>
+    <label>Sleeping Problems</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Insomnia</fullName>
+                <default>false</default>
+                <label>Insomnia</label>
+            </value>
+            <value>
+                <fullName>Nightmares</fullName>
+                <default>false</default>
+                <label>Nightmares</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <label>Other (Specify)</label>
+            </value>
+            <value>
+                <fullName>Sleepwalking</fullName>
+                <default>false</default>
+                <label>Sleepwalking</label>
+            </value>
+            <value>
+                <fullName>Phobia</fullName>
+                <default>false</default>
+                <label>Phobia</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

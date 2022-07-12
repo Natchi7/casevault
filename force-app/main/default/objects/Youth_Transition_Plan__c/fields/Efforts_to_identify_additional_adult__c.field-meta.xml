@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Efforts_to_identify_additional_adult__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Efforts to identify additional adult supports and mentors</inlineHelpText>
+    <label>Efforts to identify additional adult</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

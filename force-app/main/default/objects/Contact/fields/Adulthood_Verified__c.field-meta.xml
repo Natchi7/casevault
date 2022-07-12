@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adulthood_Verified__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK( Adulthood_his_her_support__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Verified Enabled, If filled - 1. How Applicant meets his/her support</inlineHelpText>
+    <label>Verified(Filled Applicant meet support)</label>
+    <type>Checkbox</type>
+</CustomField>

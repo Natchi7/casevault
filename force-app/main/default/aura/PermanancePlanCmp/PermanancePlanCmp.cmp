@@ -1,0 +1,174 @@
+<aura:component implements="force:hasRecordId,lightning:actionOverride" access="public" controller="PermanacyPlanController">
+    
+    <aura:attribute name="permanancyPlanRec" type="Permanency_Plan__c" default="{'sobjectType': 'Permanency_Plan__c',
+                                                                                'Service_Case__c':'',
+                                                                                'Contact__c':'',
+                                                                                'Placement__c' : ''
+                                                                                }"/>
+    <aura:attribute name="Primary" type="List" default="[]"/>  
+    <aura:attribute name="Concurrent" type="List" default="[]"/>  
+    <aura:attribute name="options" type="List" default="[]"/>
+    <aura:attribute name="serviceCaseId" type="String"/>
+    <aura:attribute name="childList" type="List" default="[]"/>
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="selectedChild" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <aura:attribute name="childErrorMessage" type="boolean" default="false"/>
+    <aura:attribute name="placementRecordId" type="String"/>
+    <aura:registerEvent name="appEvent" type="c:servicecaseRefreshEvent"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>
+    
+    <c:UtilityBaseCmp aura:id="utils" />
+    
+    <aura:if isTrue="{!empty(v.permanancyPlanRec.Id)}">
+        <lightning:card title="Child List">
+            <aura:if isTrue="{!v.childErrorMessage}">
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small">No child Records Found. Please add the child record.</h2>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+            <div>
+                <lightning:datatable
+                                     columns="{! v.columns }"
+                                     data="{!v.childList}"
+                                     class="table-test"
+                                     keyField="Id"
+                                     resizeStep="20"
+                                     onrowselection = "{! c.handleRowSelection }"
+                                     maxRowSelection = "1"
+                                     />
+            </div>
+        </lightning:card>
+    </aura:if>
+    <aura:if isTrue="{!not(empty(v.permanancyPlanRec.Contact__c))}">
+        <lightning:card title="Permanency Plan">
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input name="PermanencyPlanName" aura:id="requiredFields" value="{!v.permanancyPlanRec.Name}" label="Permanency Plan Name" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:combobox name="Primary Permanency Plan" aura:id="requiredFields" value="{!v.permanancyPlanRec.Primary_Permanency_Plan__c}" label="Primary Permanency Plan" placeholder="Select Primary Plan" options="{! v.Primary }" required="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="date" dateStyle="short"  name="Plan Established Date" value="{!v.permanancyPlanRec.Plan_Established_Date__c}" aura:id="requiredFields" label="Plan Established Date" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:textarea name="Comments" value="{!v.permanancyPlanRec.Plan_Comments__c}" label="Comments" />
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:combobox name="Concurrent Permanency Plan" value="{!v.permanancyPlanRec.Concurrent_Permanency_Plan__c}" aura:id="requiredFields" label="Concurrent Permanency Plan"  placeholder="Select Concurrent Plan" options="{! v.Concurrent }" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="date" dateStyle="short"  name="Plan Established Date ConCurrent" value="{!v.permanancyPlanRec.Concurrent_Plan_Established_Date__c}" aura:id="requiredFields" label="Plan Established Date" required="true"/>
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:textarea name="Comments Concurrent" value="{!v.permanancyPlanRec.Concurrent_Comments__c}" label="Comments" /> 
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="date" dateStyle="short"  name="End Date" value="{!v.permanancyPlanRec.End_Date__c}" label="End Date"/>
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:textarea name="End Reason" value="{!v.permanancyPlanRec.End_Reason__c}" label="End Reason" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="checkbox" label="Court order received and uploaded in Casevault " name="input1" checked="{!v.permanancyPlanRec.Court_order_received_and_upload_in_CJAMS__c}"/>
+                    
+                </lightning:layoutItem>
+                <lightning:combobox name="Primary Permanency Return Plan" value="{!v.permanancyPlanRec.If_the_Permanency_plan_is_to_return_home__c}" label="If the permanency Plan is to return home or relative placement, is the placement in close proximity to this child's family?" options="{! v.options }" />
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea  name="radio" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Explanation_Required__c}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>      
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea name="input1" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Discuss_how_the_caregiver_is_meeting__c}" label="Discuss how the caregiver is meeting the safety needs of the child as well as the appropriateness and the restrictiveness of the present placement, the child's adjustment to the placement, and how the palcement meets the best interset and the specialneeds of the child." /> 
+                </lightning:layoutItem>
+            </lightning:layout>        
+            
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea  name="input2" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Discuss_and_explain_changes_in_the_child__c}" label="Discuss and explain changes in the child's placement during the last 6 months. Discuss any anticipated changes in placement in the next 6 months."/> 
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout> 
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea name="input3" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Describe_how_the_worker_is_carrying_out__c}" label="Describe how the worker is carrying out specific court orders pertaining to the child." />
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea  name="input4" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Document_what_steps_have_been_taken__c}" label="Document what steps have been taken to finalize the placement for children whose permanency plan is adoption or placement at another permanent home?"/>
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout> 
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea name="input5" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Describe_how_the_worker_is_ensuring__c}" label="Describe how the worker is ensuring that the child receives safe and appropriate care. Discuss specific outcomes of ongoing/past services hat have been offered to the child during the assessment period?" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea  name="input6" placeholder="Explanation Required" value="{!v.permanancyPlanRec.What_efforts_were_made_to_promote__c}" label="What efforts were made to promote permanency for the child during this assessment period?"/>
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout> 
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea name="input7" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Has_a_Lifebook_been_prepared__c}" label="Has a Lifebook been prepared? if no,Explain?" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea  name="input8" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Describe_the_parent_s_compliance__c}" label="Describe the parent's compliance in developing and carrying out of the terms of the Service Agreement.Discuss Specific outcomes during this assessment period).Describe the parent's involvement including dates of case planing meetings, in working with the caseworker to develop the case plan. Discuss specific outcomes of ongoing and past services offered to the parent(s) during this assessment period, including times of participation and the results of any meetings"/>
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout> 
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:combobox name="input9" value="{!v.permanancyPlanRec.Does_the_Provider_agree_permanency__c}" label="Does the Provider agree with the Permanency Plan?" options="{! v.options }" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout> 
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea  name="input10" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Permanancy_Agree_Explanation_Required__c}"/>
+                </lightning:layoutItem>
+            </lightning:layout>       
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+                    <lightning:textarea name="input11" placeholder="Explanation Required" value="{!v.permanancyPlanRec.Discuss_services_being_provided__c}" label="Discuss services being provided to other signification persons including contacts with siblings, extended family, permanent foster parents, prospective adoptive parents, etc.Describe the child's relationship with these significant others and/or any other relevent issuses.Explain why child not placed with siblings, including how such placement would be contraty to be safety or well being of any of the sibilings. " />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:set attribute="footer">
+                <div class="slds-text-align_right">
+                    <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.onSave }" iconName="utility:save" />
+                </div>
+            </aura:set>
+            
+        </lightning:card>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component implements="lightning:availableForFlowScreens">
+    <aura:attribute name="legalCustodyCheck" type="boolean"/>
+    <aura:attribute name="childDateCheck" type="boolean"/>
+    <aura:attribute name="childAgeCheck" type="boolean"/>
+    <aura:attribute name="primaryCitizenCheck" type="boolean"/>
+    
+    
+    <lightning:input type="checkbox" label="Child has an active legal custody record." name="input3" checked="{!v.legalCustodyCheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="Child's date of birth is on or before the removal start date." name="input3" checked="{!v.childDateCheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="Child is not over the age of 18." name="input3" checked="{!v.childAgeCheck}" disabled="true"/>
+    <lightning:input type="checkbox" label="Primary Citizenship required." name="input3" checked="{!v.primaryCitizenCheck}" disabled="true"/>
+</aura:component>

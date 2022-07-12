@@ -1,0 +1,3 @@
+<aura:component implements="lightning:backgroundUtilityItem,flexipage:availableForAllPageTypes">
+	    <ltng:require styles="{!$Resource.Hide_Save_New_Button }" />
+</aura:component>

@@ -1,0 +1,239 @@
+<template>
+    
+    <div class="spinner">
+        <template if:true={loading}>
+            <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+        </template>
+</div>
+
+<lightning-card title="Cirucumstances of child">
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-input type="checkbox" label="Child is living with resource parent(s),relative(s) or friends and the LDSS holds custody" name="Child_is_living_with_LDSS_holds_custody__c" checked={permanencyPlanRec.Child_is_living_with_LDSS_holds_custody__c}
+                onchange={handleChange}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-input type="checkbox" label="Prospective adoptive family is deeply committed to the child" name="Prospective_adoptive_family_committed__c" checked={permanencyPlanRec.Prospective_adoptive_family_committed__c} onchange={handleChange}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-small">
+            <h3><b>Notes</b></h3>
+            <lightning-textarea type="text" name="Notes_for_Emotional_ties__c" value={permanencyPlanRec.Notes_for_Emotional_ties__c} onchange={handleChange}></lightning-textarea>
+        </lightning-layout-item>
+    </lightning-layout>
+</lightning-card>
+<div class="AlignPaddingTop">
+    <lightning-button icon-name="utility:add" variant="brand" label="ADD" title="ADD" onclick={handleModal} class="slds-m-left_small"></lightning-button>
+</div>
+</br>
+</br>
+<lightning-card title="SIGNFICANT EMOTIONAL TILES">
+    <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="wrapText" scope="col">
+                    <div title="ProviderId">PROVIDER ID</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="Name">NAME</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="Relation to child"> RELATION TO CHILD</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="Relation to child"> IMPORTANCE TO CHILD</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="Action"> ACTION </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={emotionalTiesList} for:index="index" for:item="row">
+                <tr key={row.Id}>
+                    <td class="wrapText" data-label="">
+                        <div id={index} title={row.providerId}>{row.providerId}</div>
+                    </td>
+                    <td class="wrapText" data-label="">
+                        <div id={index} title={row.providerName}>{row.providerName}</div>
+                    </td>
+                    <td class="wrapText" data-label="">
+                        <div id={index} title={row.Relationship_to_Child__c}>{row.Relationship_to_Child__c}</div>
+                    </td>
+                    <td class="wrapText" data-label="">
+                        <div id={index} title={row.Importance_to_Child__c}>{row.Importance_to_Child__c}</div>
+                    </td>
+                    <td>
+                        <lightning-button-icon icon-name="utility:preview" name="view"  alternative-text="View" class="slds-m-left_xx-small" title="View" data-id={row.Id} onclick={handleView}></lightning-button-icon>
+                    </td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</lightning-card>
+<div class="AlignPaddingTop">
+    <lightning-button icon-name="utility:jump_to_right" variant="brand" label="SAVE AND PROCEED TO NEXT" title="save" onclick={handleSaveNext} class="slds-m-left_small"></lightning-button>
+    <lightning-button icon-name="utility:save" variant="brand" label="SAVE" title="save" onclick={handleSaveNext} class="slds-m-left_small"></lightning-button>
+</div>
+
+    <template if:true={showAddEmotionalTies}>
+        <div class="slds-modal slds-fade-in-open slds-backdrop">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close"
+                        onclick={closeModal}
+                        alternative-text="close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"></lightning-button-icon>   
+                        <h2>Emotional Ties</h2> 
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-radio-group label="Type"
+                    name="Type__c"
+                    options={typeList}
+                    value={emotionalTiesRec.Type__c}
+                    onchange={handleTypeChange}
+                    type="radio" disabled={readOnly}></lightning-radio-group>
+                    <template if:true={showProvider}>
+                        <lightning-layout>
+                            <lightning-layout-item size="4" padding="around-small">
+                                <lightning-button  icon-name="utility:search" label="SEARCH PROVIDER" variant="brand" onclick={handleSearchProvider} disabled={readOnly}></lightning-button>    
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout>
+                            <lightning-layout-item size="3" padding="around-small">
+                                <div>Provider ID :{selectedProvider.Casevault_ProID__c}</div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout>
+                            <lightning-layout-item size="3" padding="around-small">
+                                <lightning-input type="text" label="Relationship to child" name="Relationship_to_Child__c" value={emotionalTiesRec.Relationship_to_Child__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="3" padding="around-small">
+                                <lightning-input type="text" label="Importance to child" name="Importance_to_Child__c" value={emotionalTiesRec.Importance_to_Child__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </template>
+                    <template if:true={showOther}>
+                        <lightning-layout>
+                            <lightning-layout-item size="2" padding="around-small"> 
+                                <lightning-combobox label="Prefix" name="Prefix__c" value={emotionalTiesRec.Prefix__c} options={prefixList} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-combobox>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="2" padding="around-small">
+                                <lightning-input type="text" label="First Name" name="First_Name__c" value={emotionalTiesRec.First_Name__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="2" padding="around-small">
+                                <lightning-input type="text" label="Middle Name" name="Middle_Name__c" value={emotionalTiesRec.Middle_Name__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="2" padding="around-small">
+                                <lightning-input type="text" label="Last Name" name="Last_Name__c" value={emotionalTiesRec.Last_Name__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="2" padding="around-small"> 
+                                <lightning-combobox label="Suffix" name="Suffix__c" value={emotionalTiesRec.Suffix__c} options={suffixList} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-combobox>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout>
+                            <lightning-layout-item size="3" padding="around-small">
+                                <lightning-input type="text" label="Relationship to child" name="Relationship_to_Child__c" value={emotionalTiesRec.Relationship_to_Child__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="3" padding="around-small">
+                                <lightning-input type="text" label="Importance to child" name="Importance_to_Child__c" value={emotionalTiesRec.Importance_to_Child__c} onchange={handleEmotionalTieChange} disabled={readOnly}></lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </template>
+                </div>
+                <div class="slds-modal__footer"> 
+                    <lightning-button icon-name="utility:save" label="Save" variant="brand" onclick={handleEmotionalTiesSave} disabled={readOnly}></lightning-button>  
+                </div>  
+            </div>
+        </div>
+    </template>
+    <template if:true={showSearchProvider}>
+        <div class="slds-modal slds-fade-in-open slds-backdrop">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close"
+                        onclick={closeSearchProviderModal}
+                        alternative-text="close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"></lightning-button-icon>   
+                        <h2>Provider Search</h2> 
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-layout>
+                        <lightning-layout-item class="slds-p-around_x-small" size="4">
+                           <lightning-input type="text" name="firstName" label="First Name" onchange={searchHandle} value={searchInput.firstName}></lightning-input>
+                       </lightning-layout-item>
+                       <lightning-layout-item class="slds-p-around_x-small" size="4">
+                           <lightning-input type="text" name="middleName" label="Middle Name" onchange={searchHandle} value={searchInput.middleName}></lightning-input>
+                       </lightning-layout-item>
+                       <lightning-layout-item class="slds-p-around_x-small" size="4">
+                           <lightning-input type="text" name="lastName" label="Last Name" onchange={searchHandle} value={searchInput.lastName}></lightning-input>
+                       </lightning-layout-item>
+                   </lightning-layout>
+                   <lightning-layout>
+                        <lightning-layout-item class="slds-p-around_small" size="8">
+                            <lightning-dual-listbox name="childCharacter"
+                                                    label="Child Characteristics"
+                                                    source-label="Available"
+                                                    selected-label="Selected"
+                                                    field-level-help="Select One of the following Child Characteristics"
+                                                    options={childCharPick}
+                                                    onchange={searchHandle}
+                                                    >
+                            </lightning-dual-listbox> 
+                        </lightning-layout-item>
+                        <lightning-layout-item class="slds-p-around_small" size="4">
+                            <lightning-combobox label="Placement Structure" name="placementStructure" placeholder="-Select-" options={placementStructurePick} onchange={searchHandle} value={searchInput.placementStructure}></lightning-combobox>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <lightning-layout>
+                        <lightning-layout-item class="slds-p-around_small" size="6">
+                            <lightning-combobox label="Local Department" name="localDept" placeholder="-Select-" options={localDeptPick} onchange={searchHandle} value={searchInput.localDept} ></lightning-combobox>
+                        </lightning-layout-item>
+                        <lightning-layout-item class="slds-p-around_small" size="6">
+                            <lightning-combobox label="Bundled Placement Services" name="" placeholder="-Select-" options="" value={} ></lightning-combobox>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <lightning-layout>
+                        <lightning-layout-item class="slds-p-around_small" size="6">
+                            <lightning-input type="text" label="Provider Id" name="providerId" onchange={searchHandle} value={searchInput.providerId}></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+                <div class="slds-modal__footer"> 
+                    <lightning-button label="Clear" variant="brand" onclick={handleClear} class="slds-p-right_small"></lightning-button>
+                    <lightning-button icon-name="utility:search" label="Search" variant="brand" onclick={handleSearch}></lightning-button>  
+                </div>  
+            </div>
+        </div>
+
+    </template>
+    <template if:true={showProviderList}>
+        <div class="slds-modal slds-fade-in-open slds-backdrop">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close"
+                        onclick={closeshowProviderList}
+                        alternative-text="close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"></lightning-button-icon>   
+                    <h2>Provider Search</h2> 
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-datatable key-field="Id"
+                        data={providerList}
+                        columns={columns} onrowselection={handleRowSelection}>
+                    </lightning-datatable>
+                </div>
+                <div class="slds-modal__footer"> 
+                    <lightning-button label="Back to Search" variant="brand" onclick={handleBacktoSearch} class="slds-p-right_small"></lightning-button>
+                    <lightning-button  label="Select Provider" variant="brand" onclick={handleSelectProvider}></lightning-button>  
+                </div> 
+            </div>
+        </div>
+    </template>
+</template>

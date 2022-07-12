@@ -1,0 +1,90 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" controller="ServiceCaseHistoryContorller" access="public" >
+    <aura:attribute name="serviceCaseRecordId" type="String"/>
+    <aura:attribute name="openModal" type="boolean"/>
+    <aura:attribute name="openCPSIntakeReportCmp" type="boolean"/>
+    <aura:attribute name="serviceCaseList" type="List" default="[]"/>
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="childErrorMessage" type="boolean" default="false"/>
+    <aura:attribute name="showBtn" type="boolean"/>
+    <aura:attribute name="showApprovalBtn" type="boolean"/>
+	<aura:attribute name="sObjectName" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>
+    
+    <lightning:card title="">
+        <aura:if isTrue="{!v.showBtn}">
+        <!--<aura:set attribute="actions">-->
+          <div class="slds-text-align_right">
+           <lightning:buttonIcon iconName="utility:refresh" variant="brand" onclick="{! c.refreshPage }" alternativeText="Refresh" title="Refresh" />
+            <aura:if isTrue="{!v.showApprovalBtn}">
+                <lightning:button variant="brand" iconName="utility:add" label="ADD" title="Add" onclick="{!c.init}"/>
+            </aura:if>
+            <lightning:button variant="brand" label="CPS INTAKE REPORT" onclick="{!c.getCPSIntakeReport}" />
+        	</div>
+              <!--</aura:set>-->
+        <aura:set attribute="else">
+            <div class="slds-text-align_right">
+        	<!--<aura:set attribute="actions">-->
+            	<lightning:button variant="brand" label="CPS INTAKE REPORT" onclick="{!c.getCPSIntakeReport}" />
+            <!--</aura:set>-->
+            </div>
+        </aura:set>
+        </aura:if>
+    </lightning:card> 
+	<aura:if isTrue="{!not(empty(v.serviceCaseList))}">
+	  <lightning:datatable
+                                     columns="{! v.columns }"
+                                     data="{!v.serviceCaseList}"
+                                     class="table-test"
+                                     keyField="Id"
+                                     resizeStep="20"
+                                     hideCheckboxColumn = "true"
+                                     />
+    </aura:if>
+      
+    <aura:if isTrue="{!v.openModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close"  variant="bare" alternativeText="Close" />
+                    <!--<lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>-->
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Status/Decision</h2>
+                    
+                </header>
+                
+                <div class="slds-modal__content">
+                    <p class="slds-p-horizontal_small">
+                        <lightning:card title="">
+                            <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                        </lightning:card>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <!--<aura:if isTrue="{!v.openCPSIntakeReportCmp}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close"  variant="bare" alternativeText="Close" />
+                </header>
+                <div class="slds-modal__content">
+                    <lightning:card title="">
+                        <p class="slds-p-horizontal_small">
+                            <c:CPSIntakeReport recordId ="{!v.recordId}"/>
+                        </p>
+                    </lightning:card>
+                </div>
+            </div>
+        </section>
+       <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>-->
+    
+</aura:component>

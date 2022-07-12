@@ -1,0 +1,15 @@
+.THIS {
+}
+.THIS .notCompletedColor {
+    color:#1798c1;
+}
+.THIS .CompletedColor {
+    color:green;
+}
+.THIS .blackFont {
+    color:black;
+}
+
+.THIS .margin15px {
+    margin: 15px;
+}

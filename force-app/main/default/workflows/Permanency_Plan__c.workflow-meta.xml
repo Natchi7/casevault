@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Approved_by</fullName>
+        <field>Disclosure_Approved_by__c</field>
+        <formula>$User.FirstName + &quot; &quot; + $User.LastName</formula>
+        <name>Approved by</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Creation_Date</fullName>
+        <field>Case_Creation_Date__c</field>
+        <formula>Today()</formula>
+        <name>Case Creation Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Checked_all_placement_end_value</fullName>
+        <field>All_Placements_and_Removal_have_been_End__c</field>
+        <literalValue>1</literalValue>
+        <name>Checked all placement end value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Disclosure_Approved_by</fullName>
+        <field>Disclosure_Approved_by__c</field>
+        <formula>$User.FirstName + &quot; &quot; +$User.LastName</formula>
+        <name>Disclosure Approved by</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Disclosure_Submitted_Date</fullName>
+        <field>Disclosure_Submitted_Date__c</field>
+        <formula>Today()</formula>
+        <name>Disclosure Submitted Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected</fullName>
+        <field>Permanency_Plan_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submitted_by</fullName>
+        <field>Disclosure_Submitted_by__c</field>
+        <formula>$User.FirstName + &quot; &quot; +$User.LastName</formula>
+        <name>Submitted by</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Adoption_Planning_Stage</fullName>
+        <field>Adoption_Planning_Stage__c</field>
+        <literalValue>DISCLOSURE CHECKLIST</literalValue>
+        <name>Update Adoption Planning Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Adoption_Stage</fullName>
+        <field>Adoption_Planning__c</field>
+        <literalValue>5</literalValue>
+        <name>Update Adoption Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_As_A_Approved</fullName>
+        <field>Disclosure_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update As Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_As_A_Rejected</fullName>
+        <field>Disclosure_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update As A Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_As_Approved</fullName>
+        <field>Applicable_Child_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update As Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_As_Rejected</fullName>
+        <field>Applicable_Child_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update As Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_As_Submitted</fullName>
+        <field>Applicable_Child_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update As Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Break_As_Approved</fullName>
+        <field>Break_Line_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Break As Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Break_As_Rejected</fullName>
+        <field>Break_Line_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Break As Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Break_As_Submitted</fullName>
+        <field>Break_Line_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update Break As Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Case_Creation_Date</fullName>
+        <field>Case_Creation_Date__c</field>
+        <formula>Today()</formula>
+        <name>Update Case Creation Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Disclosure_Approved_Date</fullName>
+        <field>Disclosure_Approved_Date__c</field>
+        <formula>Today()</formula>
+        <name>Update Disclosure Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Disclosure_As_Submitted</fullName>
+        <field>Disclosure_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update As Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Event_into_Suspension</fullName>
+        <field>Event_Description__c</field>
+        <literalValue>Guardianship Suspension Review</literalValue>
+        <name>Update Event into Suspension</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Guardian_into_Agreement</fullName>
+        <field>Guardianship_Planing__c</field>
+        <literalValue>3</literalValue>
+        <name>Update Guardian into Agreement</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Guardian_into_Annual_Review</fullName>
+        <field>Guardianship_Planing__c</field>
+        <literalValue>4</literalValue>
+        <name>Update Guardian into Annual Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Guardianship_into_suspension</fullName>
+        <field>Guardianship_Planing__c</field>
+        <literalValue>5</literalValue>
+        <name>Update Guardianship into suspension</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Permanency_Plan_Submitted</fullName>
+        <field>Permanency_Plan_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Update Permanency Plan Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Approved</fullName>
+        <field>Permanency_Plan_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Annual_review</fullName>
+        <field>Event_Description__c</field>
+        <literalValue>Guardianship Annual Review</literalValue>
+        <name>Update Status into Annual review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Approved</fullName>
+        <field>Permanency_Proceed_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Update Status into Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Submit</fullName>
+        <field>Permanency_Proceed_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Update Status into Submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_into_Submitted_for_Approva</fullName>
+        <field>Permanency_Proceed_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Update Status into Submitted for Approva</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Subsidy_Approve</fullName>
+        <field>Subsidy_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Subsidy Approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Subsidy_Rejected</fullName>
+        <field>Subsidy_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Subsidy Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_Empty</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event Empty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_annual_empty_approve</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event annual empty-approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_annual_empty_reject</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event annual empty-reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_empty_after_reject</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event empty after reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_empty_approve</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event empty approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_empty_disclosure</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event empty disclosure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_empty_reject</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event empty - reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_into_Aggrement</fullName>
+        <field>Event_Description__c</field>
+        <literalValue>Guardianship Agreement Review</literalValue>
+        <name>Update event into Aggrement</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_suspension_empty_approve</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event suspension empty-approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_suspension_empty_reject</fullName>
+        <field>Event_Description__c</field>
+        <name>Update event suspension empty-reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_event_value</fullName>
+        <field>Event_Description__c</field>
+        <literalValue>Guardianship Application Review</literalValue>
+        <name>Update event value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_planning_into_Complete</fullName>
+        <field>Guardianship_Planing__c</field>
+        <literalValue>6</literalValue>
+        <name>Update planning into Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_into_Rejected</fullName>
+        <field>Permanency_Proceed_Status__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Update status into Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_into_disclosure</fullName>
+        <field>Guardianship_Planing__c</field>
+        <literalValue>2</literalValue>
+        <name>Update status into disclosure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_subsidy_Submitted</fullName>
+        <field>Subsidy_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update subsidy Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_event_empty_disclosure_reject</fullName>
+        <field>Event_Description__c</field>
+        <name>update event empty disclosure reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_event_value_disclosure</fullName>
+        <field>Event_Description__c</field>
+        <literalValue>Guardianship Disclosure Review</literalValue>
+        <name>update event value disclosure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Enable all placement value</fullName>
+        <actions>
+            <name>Checked_all_placement_end_value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISNULL(Placement__r.End_Date__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

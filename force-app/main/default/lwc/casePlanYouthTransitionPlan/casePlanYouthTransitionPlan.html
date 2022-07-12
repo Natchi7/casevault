@@ -1,0 +1,37 @@
+<template>
+    <div class="spinner">
+        <template if:true={loading}>
+             <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+        </template>
+    </div>
+       <div class="slds-p-bottom_large"><h4><b>Please select Youth Transition Plan to view data:</b></h4></div>
+        <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="wrapText" scope="col">Select Plan</th>
+                    <th class="wrapText" scope="col">Child Name</th>
+                    <th class="wrapText" scope="col">Created Date</th>
+                    <th class="wrapText" scope="col">Completion Date</th>
+                    <th class="wrapText" scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template if:true={showTable}>
+                <template for:each={youthTransitionPlanList} for:index="index" for:item="row">  
+                    <tr key={row.Id}>
+                        <td><a onclick={navigateClick} data-id={row.Id}>{row.Name}</a></td>
+                        <td>{row.Contact__r.Name}</td>
+                        <td><lightning-formatted-date-time value={row.CreatedDate} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                        <td><lightning-formatted-date-time value={row.Transition_Plan_Completed_Date__c} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                        <td>{row.Status__c}</td>
+                    </tr>
+                </template>
+                </template>
+            </tbody>
+        </table>
+        <template if:false={showTable}>
+            <div class="slds-text-align_center slds-p-top_large slds-text-heading_medium">
+                No Records Found.
+            </div>        
+        </template>
+</template>

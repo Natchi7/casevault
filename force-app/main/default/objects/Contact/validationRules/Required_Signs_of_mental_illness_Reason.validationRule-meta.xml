@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Signs_of_mental_illness_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Sign_Reason__c ),ISPICKVAL( Signs_of_mental_illness__c  ,&quot;Yes&quot;))</errorConditionFormula>
+    <errorDisplayField>Sign_Reason__c</errorDisplayField>
+    <errorMessage>The required Field value is missing</errorMessage>
+</ValidationRule>

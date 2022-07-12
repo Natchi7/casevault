@@ -1,0 +1,36 @@
+<apex:page standardController="Case" extensions="IntakeAcknowldgementLetterController" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+<html>
+<style>
+h1 {
+    text-align:center;
+        }
+</style>
+<body>
+  <h1 style="text-align:center;">Acknowledgement Letter</h1>
+  <hr style="height:2px;border-width:0;color:red;background-color:red"/>
+  <div>
+    <div>
+      <div><tr><th><h2 style="font-weight:bold;">Date:</h2></th><th>{!Case.Received_Date__c}</th></tr></div>
+      <div><tr><th>{!Case.First_Name__c}</th><th>{!Case.Last_Name__c}</th></tr></div><br/>
+      <div><tr><th>{!Case.Address_1__c}</th><th>{!Case.Address_2__c}</th><br/><th>{!Case.City__c}</th><br/><th>{!Case.Narrative_County__c}</th><br/><th>{!Case.State__c}</th></tr></div><br/>
+      <div>{!Case.Email_Address__c }</div><br/>
+      </div>
+  </div>
+  <div>
+      <div><tr><th><h2 style="font-weight:bold;">Dear:</h2></th><th>{!Case.First_Name__c}</th><th>{!Case.Last_Name__c},</th></tr></div>
+      <div>I am writing to acknowledge receipt of your referral regarding the safety and well-being of a child in the family. (Note: if you are a 
+            mandated reporter, please note your obligation to forwared a written report to us within 48 hours of making the oral report.)</div><br/><br/>
+       <div> The information you provided has been reviewed and referred for appropriate action. If you have any additional information or 
+                concerns, please contact this Deprtment at the number listed below. Please be aware that, except under certain conditions, State 
+                confidentiality laws(Human Services Article $$1-20202, Annotated Code of Maryland) may prohibit us from diclosing more information regarding 
+                this matter without permission from all the involved individuals. We appreciate your concern.<br/>
+                <h4 style=" text-align: right;">Sincerely,</h4>
+       </div>
+       <br/><br/><br/><br/>
+       <div>Note:if you contacted the agency to request Services other that those already suggested or provided by the local department, please see the 
+            attached.
+       </div>     
+  </div>
+  </body>
+</html>
+</apex:page>

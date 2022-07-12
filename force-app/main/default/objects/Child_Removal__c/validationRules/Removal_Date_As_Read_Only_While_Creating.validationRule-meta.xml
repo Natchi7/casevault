@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removal_Date_As_Read_Only_While_Creating</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW() &amp;&amp; NOT(ISBLANK( Removal_End_Date_Time__c ))</errorConditionFormula>
+    <errorDisplayField>Removal_End_Date_Time__c</errorDisplayField>
+    <errorMessage>Not allowed to edit this field while creating child removal.</errorMessage>
+</ValidationRule>

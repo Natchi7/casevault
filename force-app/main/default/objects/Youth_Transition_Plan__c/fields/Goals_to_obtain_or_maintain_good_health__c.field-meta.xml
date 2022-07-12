@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goals_to_obtain_or_maintain_good_health__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Goals to obtain or maintain good health</inlineHelpText>
+    <label>Goals to obtain or maintain good health</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

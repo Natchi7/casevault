@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C_What_Services_were_offered_prior__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>C. What Services were offered prior to removal: (for every checked item, please explain)</inlineHelpText>
+    <label>C. What Services were offered prior</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Monitored child safety through in-Home Services</fullName>
+                <default>false</default>
+                <label>Monitored child safety through in-Home Services</label>
+            </value>
+            <value>
+                <fullName>Offered/provided Child Welfare Services</fullName>
+                <default>false</default>
+                <label>Offered/provided Child Welfare Services</label>
+            </value>
+            <value>
+                <fullName>Connected family member to medical services/provided necessary monitoring</fullName>
+                <default>false</default>
+                <label>Connected family member to medical services/provided necessary monitoring</label>
+            </value>
+            <value>
+                <fullName>Connected (mother/father) to parenting classes/provided necessary monitoring</fullName>
+                <default>false</default>
+                <label>Connected (mother/father) to parenting classes/provided necessary monitoring</label>
+            </value>
+            <value>
+                <fullName>Connected (mother/father) to substance use disorder screening and treatment/provided necessary monitoring</fullName>
+                <default>false</default>
+                <label>Connected (mother/father) to substance use disorder screening and treatment/provided necessary monitoring</label>
+            </value>
+            <value>
+                <fullName>Connected family member to mental health services/provided necessary monitoring</fullName>
+                <default>false</default>
+                <label>Connected family member to mental health services/provided necessary monitoring</label>
+            </value>
+            <value>
+                <fullName>Explored relative/other placement resources</fullName>
+                <default>false</default>
+                <label>Explored relative/other placement resources</label>
+            </value>
+            <value>
+                <fullName>Other- specify (transportation, respire, child care, etc.)</fullName>
+                <default>false</default>
+                <label>Other- specify (transportation, respire, child care, etc.)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

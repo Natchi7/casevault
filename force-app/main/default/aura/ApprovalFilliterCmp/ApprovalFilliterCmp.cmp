@@ -1,0 +1,46 @@
+<aura:component access="public">
+    <lightning:card title="">
+        <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="requiredFields" label="Local Department" value = "{!v.permanancyPlanRec.Agreement_Start_Date__c}" required="true"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="requiredFields" label="Units" value = "{!v.permanancyPlanRec.Agreement_Start_Date__c}" required="true"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="Date" aura:id="requiredFields" label="Assigned To" value = "{!v.permanancyPlanRec.Agreement_Start_Date__c}" required="true"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="requiredFields" label="Case Number" value = "{!v.permanancyPlanRec.Agreement_Start_Date__c}" required="true"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="date" name="input1" value="{!v.processIns.CreatedDate }" label="SUBMITTED FROM DATE" onchange="{!c.fromDateChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="date" name="input2" value="{!v.processIns.CompletedDate }" label="SUBMITTED END DATE" onchange="{!c.endDateChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <div class="slds-text-align--center">
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    
+                    <lightning:button onclick="{!c.Search}"
+                                      variant="brand"
+                                      label="Search"
+                                      iconName="utility:search"/>
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:button onclick="{!c.Search}"
+                                      variant="brand"
+                                      label="Cancel"
+                                      />
+                </lightning:layoutItem>
+                
+            </lightning:layout>
+        </div>
+    </lightning:card>
+    
+</aura:component>

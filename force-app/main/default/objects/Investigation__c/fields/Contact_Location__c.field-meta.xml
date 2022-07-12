@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Location__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>DHR Office</fullName>
+                <default>false</default>
+                <label>DHR Office</label>
+            </value>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Provider office</fullName>
+                <default>false</default>
+                <label>Provider office</label>
+            </value>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+                <label>School</label>
+            </value>
+            <value>
+                <fullName>LDSS Office</fullName>
+                <default>false</default>
+                <label>LDSS Office</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Court</fullName>
+                <default>false</default>
+                <label>Court</label>
+            </value>
+            <value>
+                <fullName>Detention Facility</fullName>
+                <default>false</default>
+                <label>Detention Facility</label>
+            </value>
+            <value>
+                <fullName>Parent&apos;s Residence</fullName>
+                <default>false</default>
+                <label>Parent&apos;s Residence</label>
+            </value>
+            <value>
+                <fullName>Relative&apos;s Residence</fullName>
+                <default>false</default>
+                <label>Relative&apos;s Residence</label>
+            </value>
+            <value>
+                <fullName>Public Facility</fullName>
+                <default>false</default>
+                <label>Public Facility</label>
+            </value>
+            <value>
+                <fullName>Service Professional Office</fullName>
+                <default>false</default>
+                <label>Service Professional Office</label>
+            </value>
+            <value>
+                <fullName>Child&apos;s Residence</fullName>
+                <default>false</default>
+                <label>Child&apos;s Residence</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

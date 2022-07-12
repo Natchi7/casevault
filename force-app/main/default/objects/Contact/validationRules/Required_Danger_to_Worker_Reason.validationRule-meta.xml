@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Danger_to_Worker_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK( Worker_Reason__c ),ISPICKVAL(Danger_to_worker__c,&quot;Yes&quot;))</errorConditionFormula>
+    <errorDisplayField>Worker_Reason__c</errorDisplayField>
+    <errorMessage>The required Field value is missing</errorMessage>
+</ValidationRule>

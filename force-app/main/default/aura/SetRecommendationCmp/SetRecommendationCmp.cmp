@@ -1,0 +1,165 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="public" controller="SetRecommendation">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="contactIns" type="Map" default="{}" />
+    <aura:attribute name="isModalOpen" type="boolean" default="false" />
+    <aura:attribute name="recommendationSelectValue" type="String" default="" />
+    <c:UtilityBaseCmp aura:id="utils" />
+
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'This home should be Approved', 'value': 'This home should be Approved'},
+                                                        {'label': 'This home should be Approved under CAP', 'value': 'This home should be Approved under CAP'},
+                                                        {'label': 'This home should be Denied', 'value': 'This home should be Denied'},
+                                                        {'label': 'No recommendation - Application Abandoned', 'value': 'No recommendation - Application Abandoned'}
+                                                        ]"/>
+    <div class="slds-text-align_right">
+        <lightning:button label="Set Recommendation" title="Set Recommendation" onclick="{! c.handleClick }" />
+    </div>
+
+    <aura:if isTrue="{!v.isModalOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box Header Starts here-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModel }" alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Set Recommendation</h2>
+                </header>
+                <!--Modal/Popup Box Body Starts here-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+                    <lightning:card title="">
+                        <div class="slds-p-left_large slds-border_bottom">
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <b>Provider Name:</b>&nbsp;&nbsp;{!v.contactIns.providerName}
+                                    <!--<lightning:input name="" label="Provider Name" disabled="true" value="{!v.contactIns.providerName}" />-->
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <b>CaseVault Provider Id:</b>&nbsp;&nbsp;{!v.contactIns.providerId}
+                                    <!--<lightning:input name="" label="CaseVault Provider Id" disabled="true" value="{!v.contactIns.providerId}" />-->
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <b>Home Approval Type:</b>&nbsp;&nbsp;{!v.contactIns.homeType}
+                                    <!--<lightning:input name="" label="Home Approval Type" disabled="true" value="{!v.contactIns.homeType}" />-->
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <b>Reason:</b>&nbsp;&nbsp;{!v.contactIns.reason}
+                                    <!--<lightning:input name="" label="Reason" disabled="true" value="{!v.contactIns.reason}" />-->
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </div>
+                    </lightning:card>
+
+                    <lightning:card title="Home Approval Details Screen">
+                        <div class="slds-p-left_large">
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Application Signed" readonly="true" disabled="true" checked="{!v.contactIns.applicationSigned}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Home Assessment" readonly="true" disabled="true" checked="{!v.contactIns.homeAssessment}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Family Assessment" readonly="true" disabled="true" checked="{!v.contactIns.familyAssessment}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="At Least One Home Visit" readonly="true" disabled="true" checked="{!v.contactIns.atleastOneHomeVisit}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Recommendations Entered" readonly="true" disabled="true" checked="true" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Restricted Clients Identified" readonly="true" disabled="true" checked="true" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </div>
+                    </lightning:card>
+
+                    <lightning:layout>
+                        <lightning:layoutItem size="6">
+                            <lightning:card title="Applicant Screen">
+                                <div class="slds-p-left_large">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Personal Information Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.personalInfoStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Clearance Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.clearanceStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Background Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.backgroudStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Childhood Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.childhoodStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Adulthood Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.adulthoodStatus}" />
+                                </div>
+                            </lightning:card>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="6">
+                            <lightning:card title="Co-Applicant Screen">
+                                <div class="slds-p-left_small">
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Personal Information Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.co_personalInfoStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Clearance Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.co_clearanceStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Background Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.co_backgroudStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Childhood Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.co_childhoodStatus}" />
+                                    <lightning:input type="checkbox" name="Personal Tab Status" label="Adulthood Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.co_adulthoodStatus}" />
+                                </div>
+                            </lightning:card>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:card title="Family Screen">
+                        <div class="slds-p-left_large">
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Household Tab Status" label="Household Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.householdStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Child Evaluation Tab Status" label="Child Evaluation Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.childEvaluStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Clearance Tab Status" label="Clearance Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.clearanceTabStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Family As A System Tab Status" label="Family As A System Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.familyAsAStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Pets Tab Status" label="Pets Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.petsStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="reference Tab Status" label="References Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.referenceStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Motivation Tab Status" label="Motivation Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.motivationStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Backup Tab Status" label="Backup Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.backupStatus}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </div>
+                    </lightning:card>
+                    <lightning:card title="Other Screens">
+                        <div class="slds-p-left_large">
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Checklist Tab Status" label="Checklist Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.householdStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Family Assessment Tab Status" label="Family Assessment Tab Status" readonly="true" disabled="true" checked="{!v.contactIns.childEvaluStatus}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6">
+                                    <lightning:input type="checkbox" name="Recon Detail Tab Status" label="Recon Detail Tab Status" readonly="true" disabled="true" checked="true" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </div>
+                    </lightning:card>
+
+                    <lightning:card title="Recommendations">
+                        <div class="slds-p-left_large slds-p-top_xx-small">
+                            <lightning:combobox name="Recommendation" label="Recommendation" value="{!v.recommendationSelectValue}" placeholder="--None--" options="{! v.options }" onchange="{! c.onCombohandleChange }" />
+                        </div>
+                    </lightning:card>
+
+                </div>
+                <footer class="slds-modal__footer">
+                    <div class="slds-text-align_right">
+                        <lightning:button variant="destructive" label="Cancel" title="Cancel" onclick="{! c.closeModel }" />
+                        <lightning:button variant="brand" label="Ok" title="Ok" onclick="{! c.updateHomeRecord }" />
+                        <lightning:button variant="brand-outline" label="Help" title="Help" />
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

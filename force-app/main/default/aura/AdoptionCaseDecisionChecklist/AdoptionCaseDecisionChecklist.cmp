@@ -1,0 +1,19 @@
+<aura:component implements="lightning:availableForFlowScreens" access="public" >
+	<aura:attribute	name="noClients" type="boolean" default="true"></aura:attribute>
+    <aura:attribute	name="allServiceLog" type="boolean" default="true"></aura:attribute>
+    <aura:attribute	name="allAdoptionSubsidy" type="boolean" default="true"></aura:attribute>
+    <aura:attribute	name="allProviderPayemnt" type="boolean" default="true"></aura:attribute>
+    <aura:attribute	name="allIVE" type="boolean" default="true"></aura:attribute>
+    <aura:attribute name="value" type="String" />
+
+   
+    <lightning:input type="checkbox" label="No clients have an open program Assignment" checked="{!v.noClients}"></lightning:input>
+    <lightning:input type="checkbox" label="All Service Log records (both agency and Referred)have been end-dated" checked="{!v.allServiceLog}"></lightning:input>
+    <lightning:input type="checkbox" label="All Adoption Subsidy payments have an end-date that does not exceed the date of case closing" checked="{!v.allAdoptionSubsidy}"></lightning:input>
+    <lightning:input type="checkbox" label="All Provider Payments have been completed" checked="{!v.allProviderPayemnt}"></lightning:input>
+    <lightning:input type="checkbox" label="All IV-E eligibility determinations have been completed" checked="{!v.allIVE}"></lightning:input>
+    
+    <lightning:button variant="brand" label="CONFIRM CLOSURE" title="CONFIRM CLOSURE" onclick="{!c.onButtonPressed}" aura:id="NEXT"/>
+
+    
+</aura:component>

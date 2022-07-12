@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Childhood_Losses__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>3b. History of Connections with Primary Family: Losses</inlineHelpText>
+    <label>3b. Losses</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

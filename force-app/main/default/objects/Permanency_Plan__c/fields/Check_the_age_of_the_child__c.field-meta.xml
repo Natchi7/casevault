@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_the_age_of_the_child__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Check the age of the child by the end of the federal fiscal year (October 1 to September 30) in which the adoption assistance agreement is entered into</inlineHelpText>
+    <label>Check the age of the child</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>16-18 October 1,2009 - September 30,2010</fullName>
+                <default>false</default>
+                <label>16-18 October 1,2009 - September 30,2010</label>
+            </value>
+            <value>
+                <fullName>14-18 October 1,2010 - September 30,2011</fullName>
+                <default>false</default>
+                <label>14-18 October 1,2010 - September 30,2011</label>
+            </value>
+            <value>
+                <fullName>12-18 October 1,2011 - September 30,2012</fullName>
+                <default>false</default>
+                <label>12-18 October 1,2011 - September 30,2012</label>
+            </value>
+            <value>
+                <fullName>10-18 October 1,2012 - September 30,2013</fullName>
+                <default>false</default>
+                <label>10-18 October 1,2012 - September 30,2013</label>
+            </value>
+            <value>
+                <fullName>8-18 October 1,2013 - September 30,2014</fullName>
+                <default>false</default>
+                <label>8-18 October 1,2013 - September 30,2014</label>
+            </value>
+            <value>
+                <fullName>6-18 October 1,2014 - September 30,2015</fullName>
+                <default>false</default>
+                <label>6-18 October 1,2014 - September 30,2015</label>
+            </value>
+            <value>
+                <fullName>4-18 October 1,2015 - September 30,2016</fullName>
+                <default>false</default>
+                <label>4-18 October 1,2015 - September 30,2016</label>
+            </value>
+            <value>
+                <fullName>2-18 October 1,2016 - September 30,2017</fullName>
+                <default>false</default>
+                <label>2-18 October 1,2016 - September 30,2017</label>
+            </value>
+            <value>
+                <fullName>0-18 October 1,2017 - December 31,2017</fullName>
+                <default>false</default>
+                <label>0-18 October 1,2017 - December 31,2017</label>
+            </value>
+            <value>
+                <fullName>2-18 January 1,2018 - June 30,2024</fullName>
+                <default>false</default>
+                <label>2-18 January 1,2018 - June 30,2024</label>
+            </value>
+            <value>
+                <fullName>0-18 July 1,2024</fullName>
+                <default>false</default>
+                <label>0-18 July 1,2024</label>
+            </value>
+            <value>
+                <fullName>None of the ages apply</fullName>
+                <default>false</default>
+                <label>None of the ages apply</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

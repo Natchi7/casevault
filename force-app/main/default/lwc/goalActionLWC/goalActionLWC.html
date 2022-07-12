@@ -1,0 +1,57 @@
+<template>
+        <div class="spinner">
+            <template if:true={loading}>
+                 <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+            </template>
+        </div>
+        <div class="slds-text-align_right slds-p-bottom_medium">
+            <lightning-button variant="brand" icon-name="utility:add" label="Add Action" onclick={handleAdd}></lightning-button>
+        </div>
+        <lightning-datatable key-field="Id" data={actionList} columns={columns} hide-checkbox-column onrowaction={handleRowAction} show-row-number-column="true"></lightning-datatable>
+        <template if:true={showAddRecord}>
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input label="Action Name" name="Name" required="true" value={actionRec.Name} onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-combobox label="Status" name="Status__c" required="true" value={actionRec.Status__c} onchange={handleChange} options={statusPicklistValue}></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-dual-listbox name="Person_Benefitizing__c"
+                                                        label="Persons Benefiting"
+                                                        source-label="Available"
+                                                        selected-label="Selected"
+                                                        field-level-help="Select"
+                                                        options={personBenefitingPicklistValue}
+                                                        onchange={handleChange}
+                                                        value={getSelected}
+                                                        required="true"
+                                                        >
+                        </lightning-dual-listbox>
+                   
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-combobox label="Person Responsible" name="Person_Responsible__c" value={actionRec.Person_Responsible__c} required="true" options={personResponsiblePicklistValue} onchange={handleChange}></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="date" date-style="short" label="Start Date" name="Start_Date__c" required="true" value={actionRec.Start_Date__c} onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="date" date-style="short" label="End Date" name="End_Date__c" required="true" value={actionRec.End_Date__c} onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="12" padding="around-small">
+                    <lightning-textarea label="Comments" name="Comments__c" value={actionRec.Comments__c} onchange={handleChange}></lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-text-align_right slds-p-bottom_medium">
+                <lightning-button variant="destructive" icon-name="utility:close" label="Cancel" onclick={handleCancel} class="slds-p-right_medium"></lightning-button>
+                <lightning-button variant="brand" icon-name="utility:save" label="Save" onclick={handleSave}></lightning-button>
+            </div>
+        </template>
+</template>

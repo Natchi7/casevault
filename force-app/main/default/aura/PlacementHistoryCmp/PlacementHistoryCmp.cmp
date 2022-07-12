@@ -1,0 +1,56 @@
+<aura:component implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId" controller ="PlacementHistoryController" access="public" >
+    <c:UtilityBaseCmp aura:id="utils"/>
+    <!--History Attribute-->
+     <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name ="showHistoryModal" type="boolean" default="false"/>
+    <aura:attribute name ="historyPlacementApprovalList" type="List"/>
+    <aura:attribute name ="historyCaseApprovalList" type="List"/>    
+    <aura:attribute name="providerPlacement" type="String" default="Provider Placement"/>
+    <aura:attribute name="placementColumns" type="List" default="[{label: 'Placement ID', fieldName: 'name', type: 'text'},
+                                                                 {label: 'Provider ID', fieldName: 'ProviderId', type: 'text'},
+                                                                 {label: 'Provider Name', fieldName: 'ProviderName', type: 'text'}, 
+                                                                 {label: 'Reason', fieldName: 'Reson', type: 'text'}, 
+                                                                 {label: 'Start Date', fieldName: 'historyDate', type: 'date', typeAttributes:{
+                                                                 month: 'numeric', day: 'numeric', year: 'numeric',timeZone:'UTC'}},
+                                                                 {label: 'End Date', fieldName: 'historyEndDate', type: 'date', typeAttributes:{
+                                                                 month: 'numeric', day: 'numeric', year: 'numeric',timeZone:'UTC'}},
+                                                                 {label: 'Approved On', fieldName: 'approvedOn', type: 'date', typeAttributes:{
+                                                                 month: 'numeric', day: 'numeric', year: 'numeric',timeZone:'UTC'}},
+                                                                 {label: 'Approved By', fieldName: 'approvedBy', type: 'text'},
+                                                                 {label: 'Request On', fieldName: 'requestOn', type: 'date', typeAttributes:{
+                                                                 month: 'numeric', day: 'numeric', year: 'numeric',timeZone:'UTC'}},
+                                                                 {label: 'Request By', fieldName: 'requestBy', type: 'text'},
+                                                                 {label: 'Void', fieldName: 'voidString', type: 'text'}                                                     
+                                                                 ]"/>
+    <aura:attribute name="caseColumns" type="List" default="[{label: 'Case', fieldName: 'caseNumber', type: 'text'},
+                                                            {label: 'Type', fieldName: 'caseType', type: 'text'},
+                                                            {label: 'Name', fieldName: 'caseProviderName', type: 'text'}, 
+                                                            {label: 'Address', fieldName: 'Address', type: 'text'},
+                                                            {label: 'Start Date', fieldName: 'historyStartDate', type: 'date', typeAttributes:{
+                                                            month: 'numeric', day: 'numeric', year: 'numeric',timeZone:'UTC'}},
+                                                            {label: 'End Date', fieldName: 'historyEndDate', type: 'date', typeAttributes:{
+                                                            month: 'numeric', day: 'numeric', year: 'numeric',timeZone:'UTC'}},
+                                                            {label: 'Status', fieldName: 'caseStatus', type: 'text'}
+                                                            
+                                                            ]"/> 
+    <aura:handler name="init" value="{!this}" action ="{! c.viewHistory }" />
+    <!--<lightning:button variant="brand" label="Placement History" title="Placement History" onclick="{! c.viewHistory }"/>-->
+    <lightning:card class="slds-text-heading_small" title="Case History">
+        <lightning:datatable
+                             columns="{! v.caseColumns}"
+                             data="{!v.historyCaseApprovalList}"
+                             keyField="Id"
+                             hideCheckboxColumn = "true"
+                             />
+    </lightning:card>
+    <br/>
+    <lightning:card class="slds-text-heading_small" title="Placement History">
+        <lightning:datatable
+                             columns="{! v.placementColumns }"
+                             data="{!v.historyPlacementApprovalList}"
+                             keyField="Id"
+                             hideCheckboxColumn = "true"
+                             />
+    </lightning:card>
+    
+</aura:component>

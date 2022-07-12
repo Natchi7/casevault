@@ -1,0 +1,82 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="public" controller="PlacementController">
+    
+    <aura:attribute name="CPAHomeOptions" type="List" default="[]"/>
+    <aura:attribute name="showProviderDetail" type="boolean"/>
+    <aura:attribute name="placementRec" type="Placement__c" default="{'sobjectType': 'Placement__c'}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>
+    <aura:attribute name="exitTypepeoptions" type="List" default="[]"/>
+    <aura:attribute name="reasonforExitoptions" type="List" default="[]"/>    
+    <aura:attribute name="isSpinner" type="Boolean" default="false"/>
+    <!--<ltng:require styles="{!$Resource.ModalWidthCSS}"/>-->
+    <c:UtilityBaseCmp aura:id="utils" />
+    
+    <aura:if isTrue="{!v.isSpinner}">
+        <!--<div class="demo-only" style="height:55rem">
+            <div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>-->
+        <lightning:spinner alternativeText="Loading" size="medium" />
+    </aura:if>    
+    <!-- ERROR MESSAGE IF NOT RECORDS FOUND--> 
+    
+    <aura:if isTrue="{!v.CPAHomeOptions.length == 1}">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">No CPA Home Records Found in this <u><b>{!v.placementRec.Provider__r.Name}</b></u> Provider. Please add the CPA Home record.</h2>
+                </div>
+            </div>
+        </div>
+        <!--<div style="text-align:right;margin-top:20px">
+            <lightning:button  iconName="utility:close"  variant="destructive" label="Cancel" onclick="{!c.onCancel }"/>
+        </div>-->
+    </aura:if>
+            
+    <header class="slds-modal__header"> 
+        <h2 class="title slds-text-heading--medium" >CPA Home</h2>
+    </header>
+    
+    <div class="slds-modal__content modal-body slds-p-around__medium ">
+    		<aura:if isTrue="{!v.CPAHomeOptions.length > 1}">
+                <lightning:combobox name="input1"  aura:id="requiredFields" options="{!v.CPAHomeOptions}" label="Provider Name" value="{!v.placementRec.CPA_Home_Id__c}" onchange="{! c.handleChange }" required="true" />
+                <lightning:input type="datetime" name="entryDateTime" label="Entry date/time" value="{!v.placementRec.Entry_Date_and_Entry_Time__c}"/>
+                 <lightning:layout>
+                        <lightning:layoutItem size="12">
+                            <lightning:combobox name="ExitType" aura:id="exiTypeauraId" value="{!v.placementRec.Exit_Type__c}" options="{!v.exitTypepeoptions}" label="Exit Type"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <aura:if isTrue="{!v.placementRec.Exit_Type__c}">
+                        <lightning:layout>
+                            <lightning:layoutItem size="12">
+                                <lightning:input label="Exit Date and Time" aura:id="requiredEndDate" required="true" type="datetime" name="enddateandtime" value="{!v.placementRec.Exit_Date_Time__c}"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </aura:if>
+                    <aura:if isTrue="{!v.placementRec.Exit_Type__c == 'Permanently Leaving Custody and Care'}">
+                        <lightning:layout>
+                            <lightning:layoutItem size="12">
+                                <lightning:combobox name="ReasonforExit" aura:id="requiredReasonforExit" required="true" value="{!v.placementRec.Reason_for_Exit__c}" options="{!v.reasonforExitoptions}" label="Reason for Exit"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </aura:if>
+                    <lightning:layout>
+                        <lightning:layoutItem size="12" class="slds-p-top_large">
+                            <lightning:textarea name="Comments" label="Comments" value="{!v.placementRec.Exit_Comments__c}"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+            </aura:if>
+    </div>
+   <!-- <footer class="slds-modal__footer slds-p-top_large" style='width:600px;'>-->
+    <!--<div class="slds-col modal-footer slds-modal__footer">-->
+    <div style="text-align:right;">
+    	<lightning:button  iconName="utility:close"  variant="destructive" label="Cancel" onclick="{!c.onCancel }"/>
+    	<lightning:button   iconName="utility:save"  variant="brand" label="Update" onclick="{!c.onSave }"/> 
+    </div>
+     <!--</div>-->
+   <!-- </footer>-->
+</aura:component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAFEC_Caregiver_does_not_or_refuse__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Caregiver does not or refuse to provide supervision to protect the child, based on the child&apos;s age and there is no substitute caregiver to adequately plan for the child&apos;s supervision. and this places the child in immediate danger.</inlineHelpText>
+    <label>Caregiver does not or refuse</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

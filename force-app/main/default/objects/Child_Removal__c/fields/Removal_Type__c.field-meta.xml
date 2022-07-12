@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removal_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Removal Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Judicial Determination</fullName>
+                <default>false</default>
+                <label>Judicial Determination</label>
+            </value>
+            <value>
+                <fullName>Children with Disabilities Voluntary Placement</fullName>
+                <default>false</default>
+                <label>Children with Disabilities Voluntary Placement</label>
+            </value>
+            <value>
+                <fullName>Time Limited Voluntary Placement</fullName>
+                <default>false</default>
+                <label>Time Limited Voluntary Placement</label>
+            </value>
+            <value>
+                <fullName>Enhanced Aftercare Voluntary Placement</fullName>
+                <default>false</default>
+                <label>Enhanced Aftercare Voluntary Placement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

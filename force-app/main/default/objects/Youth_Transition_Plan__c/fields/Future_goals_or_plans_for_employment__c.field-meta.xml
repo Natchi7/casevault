@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_goals_or_plans_for_employment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Future goals or plans for employment/career : (What career field do you want to pursue? How will you gain the skills necessary for your career goals? Who can help you obtain experience in this career area?Any plans for job shadowing or internship?)</inlineHelpText>
+    <label>Future goals or plans for employment</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

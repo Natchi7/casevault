@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>commitment_Caring_Permanently_for_Child__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Relative Caregiver(s) demonstrate a strong commitment to caring permanently for the child and a strong attachment is evident between a child and a relative caregiver.</inlineHelpText>
+    <label>commitment Caring Permanently for Child</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Caregiver__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Primary Caregiver</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5) AND ((6 AND 7) OR (8 AND 9))</booleanFilter>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>notContain</operation>
+            <value>1</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>notContain</operation>
+            <value>2</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>notContain</operation>
+            <value>3</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>notContain</operation>
+            <value>4</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>notContain</operation>
+            <value>5</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Service_Case__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Service_Case__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Service_Case__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Investigation__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Investigation__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Investigation__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Child Removals (Primary Caregiver)</relationshipLabel>
+    <relationshipName>Child_Removals1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

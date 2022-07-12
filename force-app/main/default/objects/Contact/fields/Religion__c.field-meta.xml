@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Religion__c</fullName>
+    <externalId>false</externalId>
+    <label>Religion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Protestant/Other Christian</fullName>
+                <default>false</default>
+                <label>Protestant/Other Christian</label>
+            </value>
+            <value>
+                <fullName>Catholic</fullName>
+                <default>false</default>
+                <label>Catholic</label>
+            </value>
+            <value>
+                <fullName>Mormon</fullName>
+                <default>false</default>
+                <label>Mormon</label>
+            </value>
+            <value>
+                <fullName>None/Atheist/Agnostic</fullName>
+                <default>false</default>
+                <label>None/Atheist/Agnostic</label>
+            </value>
+            <value>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+                <label>Jewish</label>
+            </value>
+            <value>
+                <fullName>Muslim</fullName>
+                <default>false</default>
+                <label>Muslim</label>
+            </value>
+            <value>
+                <fullName>Other non-Christian religion</fullName>
+                <default>false</default>
+                <label>Other non-Christian religion</label>
+            </value>
+            <value>
+                <fullName>No response given</fullName>
+                <default>false</default>
+                <label>No response given</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

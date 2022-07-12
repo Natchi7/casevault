@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_efforts_were_made_to_promote__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What efforts were made to promote permanency for the child during this assessment period?</inlineHelpText>
+    <label>What efforts were made to promote</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_For_CPA_Office_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL( Type__c , &apos;CPA Office&apos;),
+   OR(   
+     ISBLANK(Organization_Site_Name__c),
+     ISBLANK( Administrative_Contact_First_Name__c ),
+     ISBLANK( Administrative_Contact_Last_Name__c) 
+   )
+)</errorConditionFormula>
+    <errorMessage>Organization name, administrative first name &amp; last name mandatory for &apos;CPA Office&apos; type.</errorMessage>
+</ValidationRule>

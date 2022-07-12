@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adoptive_Family_s_Relationship_to_Child__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Adoptive Family&apos;s Relationship to Child</inlineHelpText>
+    <label>Adoptive Family&apos;s Relationship to Child</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

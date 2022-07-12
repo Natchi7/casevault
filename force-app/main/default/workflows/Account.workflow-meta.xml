@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Address_Field_Update</fullName>
+        <field>Personal_Payment_Address__c</field>
+        <name>Address Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Organization_name_update</fullName>
+        <field>Organization_Site_Name__c</field>
+        <formula>&apos;Grayed Out&apos;</formula>
+        <name>Organization name update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Provider_Name_As_Account_Name</fullName>
+        <field>Name</field>
+        <formula>Provider_Name__c</formula>
+        <name>Provider Name As Account Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Provider_name_update</fullName>
+        <field>Provider_Name__c</field>
+        <formula>Provider_Name__c</formula>
+        <name>Provider name update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Record_Type_Update</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Private_Provider</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Record Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_1099_Indicator</fullName>
+        <field>Indicator__c</field>
+        <literalValue>1.Yes</literalValue>
+        <name>Set 1099 Indicator</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Address</fullName>
+        <field>Personal_Payment_Address__c</field>
+        <formula>Payment_Address__c</formula>
+        <name>Update Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Close_Date</fullName>
+        <field>Close_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Close Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Payment_Address</fullName>
+        <field>Personal_Payment_Address__c</field>
+        <formula>Personal_Payment_Address__c</formula>
+        <name>Update Payment Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Provider_Status_Active</fullName>
+        <field>Provider_Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Update Provider Status Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Provider_Status_Approved</fullName>
+        <field>Provider_Status__c</field>
+        <literalValue>Suspended</literalValue>
+        <name>Update Provider Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Provider_Status_Request_to_Approv</fullName>
+        <field>Provider_Status__c</field>
+        <literalValue>Request to Approve</literalValue>
+        <name>Update Provider Status Request to Approv</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Closed</fullName>
+        <field>Approval_Status__c</field>
+        <formula>&apos;Closed&apos;</formula>
+        <name>Update Status Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Open</fullName>
+        <field>Approval_Status__c</field>
+        <formula>&apos;Open&apos;</formula>
+        <name>Update Status Open</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Pending_for_closure</fullName>
+        <field>Approval_Status__c</field>
+        <formula>&apos;Pending for Closure Approval&apos;</formula>
+        <name>Update Status Pending for closure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updation</fullName>
+        <field>Payment_Address__c</field>
+        <name>Updation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>1099 Indicator</fullName>
+        <actions>
+            <name>Set_1099_Indicator</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Type__c</field>
+            <operation>equals</operation>
+            <value>Local Department Home</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Field Update</fullName>
+        <actions>
+            <name>Address_Field_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Send_Payment_To__c)  &amp;&amp;  ISPICKVAL(Send_Payment_To__c, &apos;A Different Payment Address&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Payment Address</fullName>
+        <actions>
+            <name>Update_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Account.Send_Payment_To__c</field>
+            <operation>equals</operation>
+            <value>The Same Address</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Payment Different Address</fullName>
+        <actions>
+            <name>Update_Payment_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Send_Payment_To__c</field>
+            <operation>equals</operation>
+            <value>A Different Payment Address</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Payment info name update</fullName>
+        <actions>
+            <name>Provider_name_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Provider_Name__c</field>
+            <operation>notEqual</operation>
+            <value>NULL</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

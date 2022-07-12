@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Class__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Class</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Elementary</fullName>
+                <default>true</default>
+                <label>Elementary</label>
+            </value>
+            <value>
+                <fullName>Junior High</fullName>
+                <default>false</default>
+                <label>Junior High</label>
+            </value>
+            <value>
+                <fullName>High School</fullName>
+                <default>false</default>
+                <label>High School</label>
+            </value>
+            <value>
+                <fullName>GED Program</fullName>
+                <default>false</default>
+                <label>GED Program</label>
+            </value>
+            <value>
+                <fullName>Type III</fullName>
+                <default>false</default>
+                <label>Type III</label>
+            </value>
+            <value>
+                <fullName>Vocational Training Program</fullName>
+                <default>false</default>
+                <label>Vocational Training Program</label>
+            </value>
+            <value>
+                <fullName>Special Education</fullName>
+                <default>false</default>
+                <label>Special Education</label>
+            </value>
+            <value>
+                <fullName>College</fullName>
+                <default>false</default>
+                <label>College</label>
+            </value>
+            <value>
+                <fullName>Internship/Apprenticeship</fullName>
+                <default>false</default>
+                <label>Internship/Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Not in School</fullName>
+                <default>false</default>
+                <label>Not in School</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Infant &amp; Toddler Programs</fullName>
+                <default>false</default>
+                <label>Infant &amp; Toddler Programs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

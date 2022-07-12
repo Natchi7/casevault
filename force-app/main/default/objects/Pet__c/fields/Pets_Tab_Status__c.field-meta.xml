@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pets_Tab_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(NOT(ISBLANK( Breed__c )),NOT(ISBLANK( Name )),NOT(ISBLANK( Type_of_Pet__c )),true)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pets Tab Status</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

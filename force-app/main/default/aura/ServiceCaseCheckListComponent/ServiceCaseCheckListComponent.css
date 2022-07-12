@@ -1,0 +1,12 @@
+.THIS .padding10px{
+    padding:10px;
+}
+.THIS .table-test thead th span {
+    background-color: #808080;
+    color: white
+}
+
+.THIS .tableHeaderColor {
+    background-color: #1798c1;
+    color: white
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinalStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>FinalStatus</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DATA MISSING/INCOMPLETE</fullName>
+                <default>false</default>
+                <label>DATA MISSING/INCOMPLETE</label>
+            </value>
+            <value>
+                <fullName>NON-ELIGIBLE FOR A REIMBURSEMENT</fullName>
+                <default>false</default>
+                <label>NON-ELIGIBLE FOR A REIMBURSEMENT</label>
+            </value>
+            <value>
+                <fullName>ELIGIBLE FOR A REIMBURSEMENT</fullName>
+                <default>false</default>
+                <label>ELIGIBLE FOR A REIMBURSEMENT</label>
+            </value>
+            <value>
+                <fullName>INCOMPLETE</fullName>
+                <default>false</default>
+                <label>INCOMPLETE</label>
+            </value>
+            <value>
+                <fullName>MISSING INFO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MISSING INFO</label>
+            </value>
+            <value>
+                <fullName>null</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>null</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application Received, Not Yet Assigned</fullName>
+                <default>false</default>
+                <label>Application Received, Not Yet Assigned</label>
+            </value>
+            <value>
+                <fullName>Application Signed</fullName>
+                <default>false</default>
+                <label>Application Signed</label>
+            </value>
+            <value>
+                <fullName>Family Assessment Completed</fullName>
+                <default>false</default>
+                <label>Family Assessment Completed</label>
+            </value>
+            <value>
+                <fullName>Home Assessment Completed</fullName>
+                <default>false</default>
+                <label>Home Assessment Completed</label>
+            </value>
+            <value>
+                <fullName>Recon Home Visit Performed</fullName>
+                <default>false</default>
+                <label>Recon Home Visit Performed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Changes_Based_on_Referal_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND((ISPICKVAL(Referal_status__c,&quot;ReOpened&quot;)), (ISCHANGED( Type__c )))</errorConditionFormula>
+    <errorMessage>Can&apos;t chage the Type value, When Referal status is ReOpened.</errorMessage>
+</ValidationRule>

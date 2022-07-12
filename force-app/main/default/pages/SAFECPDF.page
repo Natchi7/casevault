@@ -1,0 +1,231 @@
+<apex:page controller="AssessmentController" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+            <style>
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                table {
+                    width: 100%;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <apex:form id="form">
+                <img src="https://casevault-dev-ed--c.documentforce.com/file-asset/Final_case_vault_logo537_21?v=1&amp;width=200&amp;height=200&quot;" height="80px" width="80px"></img>
+                <h2 style="text-align:center;">SAFE-C ASSESSMENT</h2>
+                <h3>Section I : Other Children in Household </h3>
+                 <table>
+                     <tr>
+                         <th>Child Name</th>
+                         <th>Age</th>
+                         <th>ID</th>
+                         <th>Client ID</th>                       
+                      </tr>
+                      <apex:repeat value="{!contactRecords}" var="a" >
+                      <tr>
+                                                
+                           <td>{!a.Name}</td>                       
+                           <td><apex:outputText value="{0, number}">
+                                   <apex:param value="{!a.Age__c}" />
+                                </apex:outputText></td>
+                           <td>{!a.Id}</td>
+                           <td>{!a.Casevault_PID__c}</td>
+                          
+                         </tr>
+                    </apex:repeat> 
+                                         
+                  </table>
+            
+                  <p>Date Time Assessment Initiated :<apex:outputText value="{0,date,MM'-'dd'-'yyyy h:mm a}" >  
+                      <apex:param value="{!assessmentRecord.SAFEC_Date_Time_Assessment_Initiated__c}"/>  
+                 </apex:outputText>  </p>
+                  
+                  <p>Date Time of Last Safety Plan :<apex:outputText value="{0,date,MM'-'dd'-'yyyy h:mm a}" >  
+                      <apex:param value="{!assessmentRecord.SAFEC_Date_Time_of_Last_Safety_Plan__c}"/>  
+                 </apex:outputText></p>
+                  
+                  <p>Legal Guardian Name : {!assessmentRecord.SAFEC_Legal_Guardian_Name__c}</p>
+                  <p>CPS/Case ID : {!assessmentRecord.SAFEC_CPS_Case_ID__c} </p>
+                  <p>Head of Household : {!assessmentRecord.SAFEC_Head_of_Household__c}</p>
+                  <p>Relationship : {!assessmentRecord.SAFEC_Relationship__c}</p>
+                  <p>CIS ID : {!assessmentRecord.SAFEC_CIS_ID__c}</p>
+                  <p>Caregivers : {!assessmentRecord.SAFEC_Caregiver__c}</p>
+                  
+                  <h3>Section II : Time-frame for Completion</h3>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_At_the_Initial_face_to_facecontact__c}"/> At the initial face to face contact with the alleged victim and contact or attempted contact with the caregiver</p>
+                  <p> <apex:outputField value="{!assessmentRecord.SAFEC_At_the_completion_closure__c}"/>At the completion/closure of the investigation if the case has been opened longer than 3 months</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_When_the_safety_plan__c}"/>When the safety plan is re-evaluated.Date of last Safety Plan</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_When_The_case_Assessor_discovers__c}"/>When The case Assessor discovers there is a significant change in the composition of the individuals in the home</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_When_circumstances_suggest__c}"/>When Circumstances Suggest That the Childs Youths Safety May be Jeopardized.</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_Within_7_Working_days_of_case__c}"/>Within 7 Working days of case acceptance in service</P>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_Before_Completing_a_case__c}"/>Before Completing a case reconsideration</p>
+                  <h4>Out of Home Placement Services</h4>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_At_time_of_trial_home_visit__c}"/>At time of trial home visit with caregiver</P>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_Within_ten_10_working_days__c}"/>Within ten(10) working days of the assignment or transfer of the case to the assessor</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_Out_HOME_Before_completing_a_case__c}"/>Before completing a case reconsideration</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_within_7_working_days_prior__c}"/>Within 7 working days prior to beginning unsupervised visitation</p>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_Within_7_working_days_prior_to__c}"/>Within 7 working days prior to returning a child home</P>
+                  <p><apex:outputField value="{!assessmentRecord.SAFEC_OUT_HOME_When_the_case_assessor__c}"/>When the case assessor discovers there is a significant change in the composition of the individuals in the home</p>
+                  <P><apex:outputField value="{!assessmentRecord.SAFEC_When_circumstances_suggest_that__c}"/>When circumstances suggest that the childs safety may be jeopardized</p>   
+                  
+                  <h3>Section III. Factors Influencing Child</h3>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_Age_0_5_Years_old__c}"/>Age 0-5 years old</p>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_Diminished_Physical_capacity__c}"/>Diminished physical capacity (e.g., non-ambulatory, limited use of limbs)</p>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_Diminished_mental_capacity__c}"/>Diminished mental capacity (e.g., developmental delay, non-verbal)</p>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_School_age_but_not_attending__c}"/>School age, but not attending school</p>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_Significant_diagnosed_medical_or__c}"/>Significant diagnosed medical or mental disorder</p>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_Child_s_extreme_anxiety_or_fear__c}"/>child's extreme anxiety or fear about the current placement or home environment</p>
+                      <p><apex:outputField value="{!assessmentRecord.SAFEC_When_circumstances_suggest_that__c}"/>When circumstances suggest that the child's safety may be jeopardized</p>    
+                
+                <h3>Section IV. Danger Influences</h3>
+                  <p>1. Caregiver fails to protect the child from serious harm or threatened harm by others.(This may include failure to protect the child from physical abuse,sexual abuse, or neglect)</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_fails_to_protect__c}</p>
+                  <p>{!comment1}</p>
+                  <p>2. Caregiver made a plausible threat to cause serious physical harm to the child or HAS caused serious physical harm to the child as indicated by : verbal thread of serious injury to the child OR threat of retaliation against the child OR caregiver fears he/she will harm the child.</p>
+                  <p>{!comment2}</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_made_a_plausible_threat__c}</p>
+                  <p>3. There has been current act of maltreatment since the last SAFE-C, Where excessive discipline or Physical force against the child, in which a weapon or object (e.g., gun, knife, cord, hanger, etc.,,) was used to inflict or threaten harm to the child.</p>
+                  <p>{!assessmentRecord.SAFEC_There_has_been_current_act__c}</p><p>{!comment3}</p>
+                  <p>4. Child sexual abuse is suspected and circumstances suggest that the child's safety may be of immediate concern.</p>
+                  <p>{!assessmentRecord.SAFEC_Child_sexual_abuse_is_suspected__c}</p><p>{!comment4}</p>
+                  <p>5. Cargiver describes the child in predominately negative terms or acts towards the child in negative way that result in the child being a danger to self or others, acting out aggressively, or being severely withdrawn and/or suicidal.</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_describes_the_child__c}</p><p>{!comment5}</p>
+                  <p>6. Cargiver's suspected or observed substance abuse/use seriously impairs his/her ability to supervise, protect or care for the child is a drug exposed newborn/infant and the caregiver is unable or unwilling to corporate with treatment for substance abuse/use</p>
+                  <p>{!assessmentRecord.SAFEC_Cargiver_s_suspected_or_observed__c}</p><p>{!comment6}</p>
+                  <p>7. Caregiver's emotional instability, developmental status, lack of knowledge, Skills or motivation to parent, cognitive deficiency or behaviors resulting from mental or physical illness or disability, seriously impairs his/her current ability to supervise,protect or care for the child</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_s_emotional_instability__c}</p><p>{!comment7}</p>
+                  <p>8. Caregiver's explanation for an injury to the child is questionable or inconsistent with the type of injury and nature of the injury suggests that the child's safety may be of immediate concern.</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_s_explanation__c}</p><p>{!comment8}</p>
+                  <p>9. Caregiver's justification or denial of his/her own harmful behavior or the harmful behavior of others, places the child in immediate danger.</p>
+                  <p>{!assessmentRecord.SAFEC_Caregivers_justification_or_denial__c}</p><p>{!comment9}</p>
+                  <p>10. Caregiver does not or refuse to provide supervision to protect the child, based on the child's age and there is no substitute caregiver to adequately plan for the child's supervision. and this places the child in immediate danger.</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_does_not_or_refuse__c}</p><p>{!comment10}</p>
+                  <p>11. Domestic violence exists in the home and poses an imminent danger of serious physical and or emotional harm to the child.</p>
+                  <p>{!assessmentRecord.SAFEC_Domestic_violence_exists__c}</p><p>{!comment11}</p>
+                  <p>12. Caregiver does not meet the child's current/imminent environment need for food or clothing or adequate shelter and there are no substitue caregiver who are capable of obtaining resource to meet the needs.</p>
+                  <p>{!assessmentRecord.SAFEC_Caregiver_does_not_meet_the_childs__c}</p><p>{!comment12}</p>
+                  <p>13. The child's whereabouts are unkonwn, the family refuses access to the child or there is reason to belive that the family is about to flee.</p>
+                  <p>{!assessmentRecord.SAFEC_The_childs_whereabouts_are_unknown__c}</p><p>{!comment13}</p>
+                  <p>14. The child has special needs, behaviors or medical concerns and the cargiver does not meet the child's need for current/immediate medical,dental or mental healthcare.</p>
+                  <p>{!assessmentRecord.SAFEC_The_child_has_special_needs__c}</p><p>{!comment14}</p>
+                  <p>15. The child is extermely anxious or hearful about the current home environment.</p>
+                  <p>{!assessmentRecord.SAFEC_The_child_is_extremely_anxious__c}</p><p>{!comment15}</p>
+                  <p>16. The child is unable to protect self and conditiions in the home indicate immediate danger.</p>
+                  <p>{!assessmentRecord.SAFEC_The_child_is_unable_to_protect__c}</p><p>{!comment16}</p>
+                  <p>17. Previous services to the caregiver regarding similar harmful behaviors. resulted in to change in the caregiver's behavisors towards the child(ren).</p>
+                  <p>{!assessmentRecord.SAFEC_Previous_services_to_the_caregiver__c}</p><p>{!comment17}</p>
+                  <p>18. There have been multiple reports from the community or since the last SAFE-C regarding this family, Where ther were previous concerns about the safety of the child(ren).</p>
+                  <p>{!assessmentRecord.SAFEC_There_have_been_multiple_reports__c}</p><p>{!comment18}</p>
+              <h3>Section V : Protective Capacity of the Child</h3>
+              <h4>Child</h4>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Child__c}"/>
+                      Child has the congnitive, physical and emotional capacity to participate in safety interventions.
+                  </div>
+              <h4>Caregiver</h4>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Caregiver_is_able__c}"/>
+                      Caregiver is able and willing to participate in creating and carrying out safety interventions to protect child.
+                  </div>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Caregiver_is_able_and_willing__c}"/>
+                      Caregiver is able and willing to use resources that are necessary to protect child.
+                  </div>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Caregiver_has_supportive__c}"/>
+                      Cargiver has supportive relationships with one or more persons ho maybe willing to participate in safety planning AND cargiver is willing and able to accept their assistance.
+                  </div>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Caregiver_exhibits_self_control__c}"/>
+                      Cargiver exhibits self control and puts the child's safety ahead of his/her own needs and for wants.
+                  </div>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_There_is_evidence_of_a_healthy__c}"/>
+                      There is evidence of a healthy relationship between cargiver and child.
+                  </div>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Caregiver_demonstrated_effective__c}"/>
+                      Caregiver has demonstrated effective problem solving.
+                  </div>
+              <h4>Community</h4>
+                  <div><apex:outputField value="{!assessmentRecord.SAFEC_Relevant_community_services__c}"/>Relevent community services or resources are immediately available.</div>
+              <h3>Section VI : Safety Decision</h3>
+              <div><apex:outputField value="{!assessmentRecord.SAFEC_Child_is_Safe_Influences_1_18__c}"/>Child is Safe (Influences 1-18 Marked No)</div>
+              <div><apex:outputField value="{!assessmentRecord.SAFEC_Child_is_conditionally_Safe__c}"/> Child is conditionally Safe (Any Influences 1-16 is Checked And There is A completed Safety Plan That is Signed by All Parties)</div>
+              <div><apex:outputField value="{!assessmentRecord.SAFEC_Child_is_Conditionally_Safe_17_16__c}"/> Child is Conditionally Safe (Any Influences 17-18 is Checked Yes All Actions in A Required Case Staffing Have Been Implemented)</div>
+              <div><apex:outputField value="{!assessmentRecord.SAFEC_Child_is_UnSafe__c}"/> Child is UnSafe</div>
+              <div style="padding-left:20px;"><apex:outputField value="{!assessmentRecord.SAFEC_Any_Influences_1_18_was_checked__c}"/> Any Infuences 1-18 was checked Yes and there is no Safety Plan</div>
+              <div style="padding-left:20px;"><apex:outputField value="{!assessmentRecord.SAFEC_Child_currently_has_Out_of_Home__c}"/> Child currently has an Out of Home Program Assignment and it is not Safe for the child to return to this caregiver</div>
+              <div style="padding-left:20px;"><apex:outputField value="{!assessmentRecord.SAFEC_Caregiver_did_not_agree_to_safety__c}"/> Caregiver did not agree to a safety Plan</div>
+              <div style="padding-left:20px;"><apex:outputField value="{!assessmentRecord.SAFEC_Danger_cannot_be_addressed_via__c}"/> Danger cannot be addressed via Safety Plan</div>
+                
+              <h3>Section VII : Safety plan</h3>
+              <p><b>F: DANGER INFLUENCE RESPONSES: </b>(Identify an appropriate response when deciding what action is required to complete the Safety Plan. When using one of the following responses by very clear as to whom or what resource will be supporting the family.)</p>
+              <p>1. Use family resources, neighbours, or individuals in the community as safety resources (Protective Factors).</p>
+              <p>2. Use community agencies or services as supportive resources.</p>
+              <p>3. The alleged perpetrator will leave the home. either voluntarily or in response to legal action.</p>
+              <p>4. The non-maltreating caregiver will move to a safe environment with child.</p>
+              <p>5. The cargiver(s) will place the child outside the home (formal voluntary placement). Note: Include explanation below regarding why responses 1-4 above could not be used to keep the child safe.</p>
+              <p><b>Other:</b> Place explain In Section I Action required</p>
+              <table>
+                  <tr>
+                    <th class="bordered">DANGER INFLUENCE Number from the SAFE_C</th>
+                    <th class="bordered">Specific DANGER INFLUENCE (Specifically Identify individuals and the issue.)</th>
+                    <th class="bordered">Action Required (Clearly identify resourrces/individuals and/or actions that need to occur in order to help address the Danger influences.)</th>
+                    <th class="bordered">Date to be completed</th>
+                    <th class="bordered">Responsible Parties</th>
+                    <th class="bordered">Re-evaluation Date</th>
+                   </tr>
+                       <apex:repeat value="{!safetyListRecords}" var="a" >
+                          <tr>
+                                                    
+                               <td>{!a.Question_Name__c}</td>                       
+                               <td>{!a.Specific_Danger_Influence__c}</td>
+                               <td>{!a.Action_Required__c}</td>
+                               <td><apex:outputText value="{0,date,MM'-'dd'-'yyyy h:mm a}" >  
+                                      <apex:param value="{!a.Date_to_be_Completed__c}"/>  
+                                     </apex:outputText>
+                               </td>
+                               <td>{!a.Responsible_Parties__c}</td>
+                               <td><apex:outputText value="{0,date,MM'-'dd'-'yyyy h:mm a}" >  
+                                      <apex:param value="{!a.Re_evaluation_Date__c}"/>  
+                                     </apex:outputText>
+                               </td>
+                              
+                             </tr>
+                        </apex:repeat>
+                    
+              </table>
+              <p style="text-align:center;">{!safetyListComments}</p>
+              
+              <h3>SECTION VIII: Comments</h3>
+              <p>
+                  <span style="display:inline-block;width:30%;">LDSS :{!assessmentRecord.SAFEC_LDSS__c}</span>
+                  <span style="display:inline-block;width:30%;">Workers Name :{!assessmentRecord.Workers_Name__c}</span>
+                  <span style="display:inline-block;width:30%;">Supervisor Name :{!assessmentRecord.Supervisor_Name__c}</span>
+              </p>
+              <p>
+                  <span style="display:inline-block;width:30%;">Submit for Approval :{!assessmentRecord.Submit_for_Approval__c}</span>
+                  <span style="display:inline-block;width:30%;">Case Worker Signature :</span>
+                  <span style="display:inline-block;width:30%;">Re-Route Supervisor Name :</span>
+              </p>
+              <p>
+                  <span style="display:inline-block;width:30%;">Case Worker comments :{!assessmentRecord.SAFEC_Case_Worker_Comments__c}</span>
+                  <span style="display:inline-block;width:30%;">Safety Assessment Approval Date Time :<apex:outputText value="{0,date,MM'-'dd'-'yyyy h:mm a}" >  
+                      <apex:param value="{!assessmentRecord.Safety_Assessment_Approval_Date_Time__c}"/>  
+                 </apex:outputText></span>
+                  <span style="display:inline-block;width:30%;">Safety Assessment Completion Date Time :<apex:outputText value="{0,date,MM'-'dd'-'yyyy h:mm a}" >  
+                      <apex:param value="{!assessmentRecord.Safety_Assessment_Completion_Date_Time__c}"/>  
+                 </apex:outputText></span>
+              </p>
+            </apex:form>
+        </body>
+        
+        
+        
+    </html>
+
+  
+
+
+
+
+</apex:page>

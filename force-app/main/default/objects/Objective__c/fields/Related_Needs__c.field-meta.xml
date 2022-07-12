@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Needs__c</fullName>
+    <externalId>false</externalId>
+    <label>Related Needs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Attachment Difficulties</fullName>
+                <default>false</default>
+                <label>Attachment Difficulties</label>
+            </value>
+            <value>
+                <fullName>Community Life</fullName>
+                <default>false</default>
+                <label>Community Life</label>
+            </value>
+            <value>
+                <fullName>Cultural Identity</fullName>
+                <default>false</default>
+                <label>Cultural Identity</label>
+            </value>
+            <value>
+                <fullName>Developmental</fullName>
+                <default>false</default>
+                <label>Developmental</label>
+            </value>
+            <value>
+                <fullName>Family Stress</fullName>
+                <default>false</default>
+                <label>Family Stress</label>
+            </value>
+            <value>
+                <fullName>Knowledge</fullName>
+                <default>false</default>
+                <label>Knowledge</label>
+            </value>
+            <value>
+                <fullName>Marital / Partner Conflict</fullName>
+                <default>false</default>
+                <label>Marital / Partner Conflict</label>
+            </value>
+            <value>
+                <fullName>Mental Health</fullName>
+                <default>false</default>
+                <label>Mental Health</label>
+            </value>
+            <value>
+                <fullName>Natural Supports (i.e., unpaid)</fullName>
+                <default>false</default>
+                <label>Natural Supports (i.e., unpaid)</label>
+            </value>
+            <value>
+                <fullName>Organization</fullName>
+                <default>false</default>
+                <label>Organization</label>
+            </value>
+            <value>
+                <fullName>Physical Health</fullName>
+                <default>false</default>
+                <label>Physical Health</label>
+            </value>
+            <value>
+                <fullName>Relationship Performance</fullName>
+                <default>false</default>
+                <label>Relationship Performance</label>
+            </value>
+            <value>
+                <fullName>Resourcefulness</fullName>
+                <default>false</default>
+                <label>Resourcefulness</label>
+            </value>
+            <value>
+                <fullName>Resources</fullName>
+                <default>false</default>
+                <label>Resources</label>
+            </value>
+            <value>
+                <fullName>Safety</fullName>
+                <default>false</default>
+                <label>Safety</label>
+            </value>
+            <value>
+                <fullName>Spiritual/Religious</fullName>
+                <default>false</default>
+                <label>Spiritual/Religious</label>
+            </value>
+            <value>
+                <fullName>Substance Use</fullName>
+                <default>false</default>
+                <label>Substance Use</label>
+            </value>
+            <value>
+                <fullName>Supermion</fullName>
+                <default>false</default>
+                <label>Supermion</label>
+            </value>
+            <value>
+                <fullName>Vocational Preferences &amp; Skills</fullName>
+                <default>false</default>
+                <label>Vocational Preferences &amp; Skills</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

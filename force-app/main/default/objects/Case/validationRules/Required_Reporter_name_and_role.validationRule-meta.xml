@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Reporter_name_and_role</fullName>
+    <active>true</active>
+    <errorConditionFormula>$RecordType.Name  &lt;&gt; &quot;Adoptive Case&quot; &amp;&amp; Unknown_Reporter__c  = false &amp;&amp; (  ISNULL(First_Name__c)  || ISNULL( Last_Name__c ) || ISBLANK(TEXT( Role__c )) )</errorConditionFormula>
+    <errorMessage>First name , Last name and Role are required when not an unknown reporter.</errorMessage>
+</ValidationRule>

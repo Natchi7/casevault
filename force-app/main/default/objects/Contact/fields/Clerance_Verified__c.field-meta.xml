@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clerance_Verified__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK( Applicant_CPS_Completion_Date__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Verified Enabled, If filled CPS Completion Date</inlineHelpText>
+    <label>Verified(Filled CPS Completion Date)</label>
+    <type>Checkbox</type>
+</CustomField>

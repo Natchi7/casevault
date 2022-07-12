@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X01_03_Job_description_Cancelled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>01.03 Job description and titles</inlineHelpText>
+    <label>01.03 Job description and titles</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

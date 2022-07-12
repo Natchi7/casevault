@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Primary_Race</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(TEXT(Primary_Race__c)) &amp;&amp; NOT(ISBLANK(Secondary_Race__c ))</errorConditionFormula>
+    <errorDisplayField>Primary_Race__c</errorDisplayField>
+    <errorMessage>When &apos;Primary Race&apos; is declined,Selection of Secondary Race should not be allowed.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,79 @@
+<template>
+
+    <template if:true={loading}>
+        <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+    </template>
+
+    
+    <lightning-card  variant="Narrow"  title="SSI/SSA Data" >
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_small" size="8">
+                <p>Is the child recelving SSI or SSA during review period?</p>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_small" size="2">
+                <lightning-combobox name="child_receive_SSI_SSA_during_review__c"  variant="label-hidden" 
+                value={titleIvERec.child_receive_SSI_SSA_during_review__c} placeholder="-Select-" options={PickList} onchange={handleChange} 
+                 > </lightning-combobox>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_small" size="8">
+                <p>Has the agency opted to suspend the SSI payment and claim Iv.</p>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_small" size="2">
+                <lightning-combobox name="Agency_opted_to_suspend_SSI_claim_IV_E__c"  variant="label-hidden"
+                 value={titleIvERec.Agency_opted_to_suspend_SSI_claim_IV_E__c} placeholder="-Select-" options={PickList} onchange={handleChange}> 
+                </lightning-combobox>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_small" size="8">
+                <p>Is the  Agency the RepresentativePayee.</p>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_small" size="2">
+                <lightning-combobox name="IsThe_Agency_TheRepresentativePayee__c"  variant="label-hidden"
+                 value={titleIvERec.IsThe_Agency_TheRepresentativePayee__c} placeholder="-Select-" options={PickList} onchange={handleChange}> 
+                </lightning-combobox>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    <lightning-card  variant="Narrow"  title="Supporting Document" >
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_small" size="4">
+                <lightning-input  class="slds-p-left_x-small" type="text" name="Citizenship_How_verified__c" 
+                value={titleIvERec.Citizenship_How_verified__c} label="Citizenship: how verified?" onchange={handleChange} required ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_small" size="4">
+                <lightning-input  class="slds-p-left_x-small" type="text" name="Age_How_verified__c"
+                 value={titleIvERec.Age_How_verified__c} label="Age:how verified?" onchange={handleChange} required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_small" size="4">
+                <lightning-input  class="slds-p-left_x-small" type="text" name="Asset_Information_How_verified__c"
+                 value={titleIvERec.Asset_Information_How_verified__c} label="Assest Information: how verified?" onchange={handleChange} required></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_small" size="4">
+                <lightning-input  class="slds-p-left_x-small" type="text" name="SSI_SSA_Information_How_verified__c" 
+                value={titleIvERec.SSI_SSA_Information_How_verified__c} label="SSI/SSA Information: how verified?" onchange={handleChange} required ></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item class="slds-p-around_small" size="8">
+                <p>Does the IV-E case/record financial information citing income and resources/assets of all assistance unit members?
+                <span class="textcolor"> *</span></p>
+                
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-around_small" size="4">
+                <lightning-combobox name="IV_E_case_has_income_assets_of_AU_member__c"  variant="label-hidden" 
+                value={titleIvERec.IV_E_case_has_income_assets_of_AU_member__c} placeholder="-Select-" options={AgencyPickList} onchange={handleChange} 
+                  > </lightning-combobox>     
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    <div class="slds-text-align_right">
+       <!-- <lightning-button label="SAVE AS DRAFT" title="SAVE AS DRAFT" onclick={handleSave} variant="brand" class= "slds-var-p-around_x-small"  disabled={readOnly}></lightning-button>-->
+        <lightning-button label="SAVE AND CONFIRM" title="SAVE AND CONFIRM" onclick={handleSave} variant="brand" class= "slds-var-p-around_x-small"  ></lightning-button>
+    </div>
+</template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Service_Case_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Service_Case__r.Status__c, &apos;Close&apos;)</errorConditionFormula>
+    <errorMessage>Cannot create/Edit in Child Removal because Service Case is closed</errorMessage>
+</ValidationRule>

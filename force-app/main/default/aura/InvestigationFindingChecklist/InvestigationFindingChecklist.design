@@ -1,0 +1,7 @@
+<design:component>
+	<design:attribute	name="initialFacetoFace"></design:attribute>
+    <design:attribute	name="approvedSAFEC"></design:attribute>
+    <design:attribute	name="approvedMFIRA"></design:attribute>
+    <design:attribute	name="approvedCANSF"></design:attribute>
+    <design:attribute	name="relationshipIdentified"></design:attribute>
+</design:component>

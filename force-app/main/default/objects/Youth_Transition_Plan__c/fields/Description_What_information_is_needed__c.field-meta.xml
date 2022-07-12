@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_What_information_is_needed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - What information is needed for medical coverage after foster care?</inlineHelpText>
+    <label>Description - What information is needed</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

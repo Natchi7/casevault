@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_and_Close</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Number_of_days__c</columns>
+    <columns>Intake__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <label>Open</label>
+</ListView>

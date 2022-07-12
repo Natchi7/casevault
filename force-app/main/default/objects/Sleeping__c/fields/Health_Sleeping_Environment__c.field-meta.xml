@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Health_Sleeping_Environment__c</fullName>
+    <externalId>false</externalId>
+    <label>Sleeping Environment</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bed</fullName>
+                <default>false</default>
+                <label>Bed</label>
+            </value>
+            <value>
+                <fullName>Crib</fullName>
+                <default>false</default>
+                <label>Crib</label>
+            </value>
+            <value>
+                <fullName>Light On</fullName>
+                <default>false</default>
+                <label>Light On</label>
+            </value>
+            <value>
+                <fullName>Other (specify)</fullName>
+                <default>false</default>
+                <label>Other (specify)</label>
+            </value>
+            <value>
+                <fullName>Sleeps alone</fullName>
+                <default>false</default>
+                <label>Sleeps alone</label>
+            </value>
+            <value>
+                <fullName>Sleeps with someone</fullName>
+                <default>false</default>
+                <label>Sleeps with someone</label>
+            </value>
+            <value>
+                <fullName>Light Off</fullName>
+                <default>false</default>
+                <label>Light Off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

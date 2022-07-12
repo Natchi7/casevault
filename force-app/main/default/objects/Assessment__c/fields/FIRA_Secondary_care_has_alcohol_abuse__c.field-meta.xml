@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIRA_Secondary_care_has_alcohol_abuse__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Abuse Score-Secondary Caregiver has past or current alcohol or substance abuse problem</inlineHelpText>
+    <label>Secondary caregiver has alcohol abuse</label>
+    <length>10</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

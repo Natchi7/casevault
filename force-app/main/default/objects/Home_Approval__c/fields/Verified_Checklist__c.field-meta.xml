@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verified_Checklist__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND( NOT(ISBLANK(Fire_Safety_Inspection_Completion_Date__c)),  NOT(ISBLANK(Health_Sanitary_Survey_Completion_Date__c )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Verified, If filled the Fire Safety Inspection Completion Date and Health &amp; Sanitary Survey Completion Date</inlineHelpText>
+    <label>Verified (Checklist)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

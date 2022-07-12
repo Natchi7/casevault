@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_required_values_for_CPA_Home</fullName>
+    <active>true</active>
+    <description>Tax Id Type &amp; Tax Id values not required for CPA Home.</description>
+    <errorConditionFormula>(NOT(ISBLANK(TEXT(Tax_Id_Type__c))) || NOT(ISBLANK(Tax_Id__c))) &amp;&amp;    ISPICKVAL(Type__c, &apos;CPA Home&apos;)</errorConditionFormula>
+    <errorDisplayField>Tax_Id_Type__c</errorDisplayField>
+    <errorMessage>Tax Id Type &amp; Tax Id not required for CPA Home.</errorMessage>
+</ValidationRule>

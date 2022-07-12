@@ -1,0 +1,58 @@
+<template>
+    <div class="slds-p-bottom_large slds-text-align_right"><lightning-button label="SAVE CASE PLAN SERVICE VERSION LIST" icon-name="utility:save" variant="brand"></lightning-button></div>
+    <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="wrapText" scope="col">SERVICE PLAN</th>
+                <th class="wrapText" scope="col">EFFECTIVE DATE</th>
+                <th class="wrapText" scope="col">TARGET END DATE</th>
+                <th class="wrapText" scope="col">COMPLETION DATE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template if:true={showServicePlan}>
+            <template for:each={servicePlanRecordList} for:index="index" for:item="row">  
+            <tr key={row.Id}>
+                <td>     
+                        <div class="slds-p-bottom_small"><a onclick={navigateClick} data-id={row.Service_Plan__c}>{row.Service_Plan__r.Name}</a></div>        
+                        <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="wrapText" scope="col">Snapshot Version</th>
+                                <th class="wrapText" scope="col">Person Benefitting</th>
+                                <th class="wrapText" scope="col">Preview</th>
+                                <th class="wrapText" scope="col">Select</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template if:true={row.showServicePlanVersion}>
+                            <template for:each={row.servicePlanVersionRecordList} for:index="index" for:item="row1">  
+                                <tr key={row1.Id}>
+                                    <td><a onclick={navigateClick} data-id={row1.Id}>{row1.Name}</a></td>
+                                    <td>{row1.Persons_Benefitizing__c}</td>
+                                    <td><lightning-button-icon icon-name="utility:preview" data-id={row.Service_Plan__c} onclick={navigateClick}></lightning-button-icon></td>
+                                    <td><lightning-input type="checkbox" variant="label-hidden" checked=""></lightning-input></td>
+                                </tr>
+                            </template>
+                        </template>
+                        </tbody>
+                        </table>
+                        <div class="slds-p-bottom_small"></div>
+                        <template if:false={row.showServicePlanVersion}>
+                            <div class="slds-text-align_center"><h4><b>No Record Found!!</b></h4></div>
+                        </template>
+                </td>
+                <td><lightning-formatted-date-time value={row.Service_Plan__r.Start_Date__c} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                <td><lightning-formatted-date-time value={row.Service_Plan__r.Target_End_Date__c} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                <td></td>
+            </tr>
+        </template>
+        </template>
+        </tbody>
+    </table>
+    <template if:false={showServicePlan}>
+        <div class="slds-text-align_center slds-p-top_large slds-text-heading_medium">
+            No Records Found.
+        </div>    
+    </template>
+</template>

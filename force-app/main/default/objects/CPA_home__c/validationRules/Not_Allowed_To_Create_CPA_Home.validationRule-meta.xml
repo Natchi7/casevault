@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Allowed_To_Create_CPA_Home</fullName>
+    <active>true</active>
+    <description>Not Allowed To Create CPA Home For &apos;RFC (RCC) Contract&apos; contract type.</description>
+    <errorConditionFormula>ISPICKVAL(Program__r.Contracts__r.Contract_Type__c , &apos;RFC (RCC) Contract&apos;) &amp;&amp; ISNEW()</errorConditionFormula>
+    <errorMessage>If Contract type equals &apos;RFC (RCC) Contract&apos;, then not allowed to create CPA Home.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email</fullName>
+    <active>false</active>
+    <label>Email</label>
+    <picklistValues>
+        <picklist>Email_Type__c</picklist>
+        <values>
+            <fullName>Beeper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nationality__c</picklist>
+        <values>
+            <fullName>Aboriginal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Beeper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

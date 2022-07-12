@@ -1,0 +1,92 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="MaltreatmentAllegationController">
+    <aura:attribute name="activeSections" type="List" default="[]" />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    <aura:attribute name="maltreatmentList" type="List" />
+    <aura:attribute name="recordEditFormFields" type = "map"/>
+    <aura:registerEvent name="appEvent" type="c:RefreshEvent"/>
+
+ 
+    <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections}">
+        <aura:iteration items="{!v.maltreatmentList}" var="maltreatment" indexVar="count">
+            <div class="margin15px slds-theme_shade">
+                <lightning:accordionSection aura:id="accSection" name="{!maltreatment.Id}" label="{!maltreatment.Accordion_Label__c}" >                   
+                    <aura:set attribute="body">
+                        <div >
+                            <lightning:recordEditForm  recordId="{!maltreatment.Id}" objectApiName="{!v.recordEditFormFields.MaltreatmentObj}" onsuccess="{!c.closeCurrentAccordian}" onerror="{!c.errorSubmission}" >
+                                
+                                <lightning:messages />
+                                <lightning:layout>
+                                    <lightning:layoutItem size="4" padding="around-small">
+                                       <lightning:input label="This maltreatment is not applicable" type="checkbox" aura:id="notapplicable" name="{!maltreatment.Id}" onchange="{!c.handleChange}" checked="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                        <!--<lightning:inputField fieldName="{!v.recordEditFormFields.MaltreatmentNotApplicable}" variant="label-hidden"  name="{!count}" onchange="{!c.handleChange}"/>-->
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="4" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.DateIncident}"  required="true" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="4" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.EndDate}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="4" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.IncidentLocation}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}" />
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="4" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.IsAnotherJurisdiction}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="4" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.ApproxDate}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <lightning:layout>
+                                    
+                                    
+                                   
+                                </lightning:layout>	
+                                <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.AreaInjury}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.MaltreatmentCharc}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                 
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.InjuryChar}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                 
+                                </lightning:layout>
+                                
+                                 <lightning:layout>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.ProviderInvolved}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="6" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.ContFactor}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                
+                                <lightning:layout>
+                                    <lightning:layoutItem size="12" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.InjuryCharComments}" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+              
+                                <lightning:layout>
+                                    <lightning:layoutItem size="12" padding="around-small">
+                                        <lightning:inputField fieldName="{!v.recordEditFormFields.MalCharComments}" required="true" disabled="{!maltreatment.This_maltreatment_is_not_applicable__c}"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                <div style="text-align:right;">
+                                    <lightning:button class="slds-m-top_small" variant="brand" type="submit"  name="update" label="Save" iconName="utility:save"/>
+                                </div>
+                            </lightning:recordEditForm>
+                        </div>
+                    </aura:set>
+                </lightning:accordionSection>
+            </div>
+        </aura:iteration>
+    </lightning:accordion>
+</aura:component>

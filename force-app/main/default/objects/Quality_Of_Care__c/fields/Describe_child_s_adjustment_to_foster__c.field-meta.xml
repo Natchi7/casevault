@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Describe_child_s_adjustment_to_foster__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe the child&apos;s adjustment to foster home, foster parents, and other persons in the home. N/A- Child is not of school age NOTE: For Section (3). (b) and/or (c). If the child may be educationally handicapped and is not receiving special educational services, the local educational agency must be notified promptly - in writing - to request a screening for these services.</inlineHelpText>
+    <label>Describe child&apos;s adjustment to foster</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,58 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="PermanacyPlanController">
+
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}" />
+    <aura:attribute name="map" type="Map" default="{'1': 'Application', '2': 'Disclosure Checklist', '3': 'Agreement', '4': 'Annual Reviews', '5': 'Suspension'}" />
+    <aura:attribute name="currentStage" type="String" />
+    <aura:attribute name="onCurrentStage" type="String" />
+    <aura:attribute name="guardianshipPlaningList" type="List" />
+    <aura:attribute name="permanencyRec" type="Permanency_Plan__c" />
+
+
+    <lightning:card title="">
+        <lightning:progressIndicator currentStep="{!v.currentStage}" type="path" variant="base">
+            <aura:iteration items="{! v.guardianshipPlaningList }" var="step">
+                <lightning:progressStep label="{!step.label}" value="{!step.value}" onclick="{!c.stageAction}" />
+            </aura:iteration>
+
+        </lightning:progressIndicator>
+    </lightning:card>
+    <aura:if isTrue="{!v.onCurrentStage != '6'}">
+        <lightning:card title="">
+            <lightning:layout>
+                <lightning:layoutItem size="3">
+                    <p> <b>Client Name : </b>{!v.permanencyRec.Client_Name__c} </p>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="3">
+                    <p> <b>Casevault PID# : </b>{!v.permanencyRec.Contact__r.Casevault_PID__c} </p>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="3">
+                    <p> <b>D.O.B : </b><lightning:formattedDateTime value="{!v.permanencyRec.D_O_B__c}" year="numeric" month="numeric" day="numeric" /></p>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="3">
+                    <p> <b>Gender : </b>{!v.permanencyRec.Gender__c}</p>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:card>
+    </aura:if>
+    <lightning:card title="{!v.map.onCurrentStage}">
+        <aura:if isTrue="{!or(v.onCurrentStage == '1', v.onCurrentStage == '6')}">
+            <c:PermanencyApplicationCmp recordId="{!v.recordId}" onClickCurrentStage="{!v.onCurrentStage}" />
+        </aura:if>
+        <aura:if isTrue="{!v.onCurrentStage == '2'}">
+            <c:PermanancyDisclosureCmp recordId="{!v.recordId}" onClickCurrentStage="{!v.onCurrentStage}" />
+        </aura:if>
+        <aura:if isTrue="{!v.onCurrentStage == '3'}">
+            <c:PermanancyAgreementCmp recordId="{!v.recordId}" onClickCurrentStage="{!v.onCurrentStage}" />
+        </aura:if>
+        <aura:if isTrue="{!v.onCurrentStage == '4'}">
+            <c:PermanancyAnnualCmp recordId="{!v.recordId}" onClickCurrentStage="{!v.onCurrentStage}" />
+        </aura:if>
+        <aura:if isTrue="{!v.onCurrentStage == '5'}">
+            <c:PermanancySuspensionCmp recordId="{!v.recordId}" onClickCurrentStage="{!v.onCurrentStage}" />
+        </aura:if>
+        <!--<aura:if isTrue="{!v.onCurrentStage == '6'}">
+            <span ><center><b>Guardianship Assistance Program Completed</b></center></span>
+        </aura:if>-->
+    </lightning:card>
+</aura:component>

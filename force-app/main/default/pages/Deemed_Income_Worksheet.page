@@ -1,0 +1,114 @@
+<apex:page controller="EligibilityWorksheetCalculation" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    
+    <html>
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    
+            <style> 
+               
+               table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                      
+                hr {
+                width:20%;
+                margin-left:1px;
+                margin-top:3px;
+               border: 1px solid black;
+                }
+                </style>
+                 
+        </head>
+    
+
+    <body>
+        <apex:form id="form">
+        <h3>DEEMED INCOME CALCULATION WORKSHEET</h3>
+        <p><i>(Use to determine the contribution to art Assitance Unit when income is deemed to be available from Step-Parent/Illegal
+        Aillen Parent)</i></p>
+           <p style="font-size:14px;">CHILD’S NAME:{!titleIvERecord.Child_Removal__r.Child__r.Name}</p>
+           <p style="font-size:14px;">CLIENT ID:{!titleIvERecord.Name}</p>
+           <p style="font-size:14px;">COUNTY OF JURISDICTION:{!titleIvERecord.Child_Removal__r.Child__r.JURISDICTION__c}</p>
+           <p style="font-size:14px;"> STEP-PARENT/ILLEGAL  ALIEN   PARENT NAME:</p>
+        <div>
+        <p style="font-size:14px;">A. {!inAuCount} IN ASSISTANCE UNIT</p>
+        <p style="line-height:0.1px">(Include Child, Bio Parent and Siblings not included with Step-Parent/Illegal Alien Parent)</p>
+        </div>
+        <p style="font-size:14px;">B. {!notInAuCount} OF DEPENDENTS NOT IN ASSISTANCE UNIT</p>
+        <p style="line-height:0.1px">(Include Step-Parent/Illegal Alien Parent, his/her children and children common to both)</p>
+        <p style="font-size:14px;">C. ${!notInAuAmount} RECORD AMOUNT FOR {!notInAuCount} NOT IN ASSISTANCE UNIT FROM SCHEDULE H, COLUMN. III</p>
+        <div style="height:20px;"></div>
+        <table>
+        <tr>
+        <td style="text-align:center;width:30px;"><div>1</div></td>
+        <td ><div style="margin-left:5px;">Monthly Gross Earnings of Step-Parent/Illegal Alien Parent</div> 
+             <div style="margin-left:5px;">[The total earnings of the step-parent/illegal alien parent]</div></td>
+        <td style="text-align:center;">${!monthlyGrossIncomeParent}</td>
+        </tr>
+        <tr>
+        <td style="text-align:center;">2</td>
+        <td> <div style="margin-left:5px;">Subtract $75.00 Earnings Disregard</div>
+             <div style="margin-left:5px;">[The amount minus the disregard earnings]</div></td>
+                     <td style="text-align:center;">${!disRegardAuAmount}</td>
+
+        </tr>
+        <tr>
+        <td style="text-align:center;">3</td>
+       <td> <div style="margin-left:5px;">Add Unearned income of Step-Parent/Illegal Alien Parent</div>
+            <div style="margin-left:5px;"> [Any countable unearned income of the step parent/illegal alien parent]-$ </div></td>
+                     <td style="text-align:center;">$0</td>
+
+        </tr>
+        <tr>
+       <td style="text-align:center;">4</td>
+       <td> <div style="margin-left:5px;">Subtract Amount from Schedule H, Column III ({!notInAuCount} Not in the Assistance Unit)</div>
+             <div style="margin-left:5px;">[The reminding amount after subtracting the amount from line C.]-$0</div> </td>
+                     <td style="text-align:center;">${!remainingAmountnotInAu}</td>
+
+       </tr>
+       <tr>
+       <td style="text-align:center;">5</td>
+        <td> <div style="margin-left:5px;">Subtract all Court Ordered Support that the Step-Parent/Illegal Alien Parent has paid (e.g., Child
+             Support, Alimony payments)</div>
+             <div style="margin-left:5px;">[All verified CS or alimony payments actually paid by step-parent/illegal alien parent to persons
+             living outside the home in the eligibility month]</div></td>
+                     <td style="text-align:center;">$</td>
+
+        </tr>
+        <tr>
+        <td style="text-align:center;">6</td>
+        <td> <div style="margin-left:5px;">Remaining Amount of Step-Parent/Illegal Alien Parent income is deemed available to the Assistance 
+             Unit</div>
+             <div style="margin-left:5px;">[This is the amount that goes on the income calculation worksheet Step II line B (unearned income)]</div></td>
+             <td style="text-align:center;">${!remainingAmountnotInAu}</td>
+
+        
+        </tr>
+        </table>
+        <div style="height:20px;"></div>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <div>
+        <h4> PRINT NAME OF ELIGIBILITY REVIEWER </h4>
+        <h4> SIGNATURE </h4>
+        <h4>TITLE</h4>
+        <h4>Date__/__/___</h4>
+        </div>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <div>
+        <h4> PRINT NAME OF SUPERVISOR </h4>
+        <h4> SIGNATURE </h4>
+        <h4>TITLE</h4>
+        <h4>Date__/__/___</h4>
+        </div>
+
+    </apex:form>
+    </body>
+    
+    </html>
+</apex:page>

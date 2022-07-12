@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alleged_Maltreator_s__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Alleged Maltreator(s)</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(((1 AND 2) OR (6 AND 7)) OR (3 AND 4)) AND 5</booleanFilter>
+        <filterItems>
+            <field>Contact.Service_Case__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Service_Case__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Service_Case__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Intake__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Intake__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Intake__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>7</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Investigation__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Investigation__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Investigation__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipName>SDMS1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

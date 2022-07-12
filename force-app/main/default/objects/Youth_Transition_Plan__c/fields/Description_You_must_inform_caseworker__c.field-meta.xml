@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_You_must_inform_caseworker__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - You must inform your caseworker of any address changes to receive health coverage after care</inlineHelpText>
+    <label>Description - You must inform caseworker</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_the_youth_received_the_following_doc__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Has the youth received the following documents?</inlineHelpText>
+    <label>Has the youth received the following doc</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Foster Care Verification Letter</fullName>
+                <default>false</default>
+                <label>Foster Care Verification Letter</label>
+            </value>
+            <value>
+                <fullName>Education Records</fullName>
+                <default>false</default>
+                <label>Education Records</label>
+            </value>
+            <value>
+                <fullName>Social Security Card</fullName>
+                <default>false</default>
+                <label>Social Security Card</label>
+            </value>
+            <value>
+                <fullName>Maryland State Photo identification or Driver&apos;s License</fullName>
+                <default>false</default>
+                <label>Maryland State Photo identification or Driver&apos;s License</label>
+            </value>
+            <value>
+                <fullName>Medical/Health Insurance Card</fullName>
+                <default>false</default>
+                <label>Medical/Health Insurance Card</label>
+            </value>
+            <value>
+                <fullName>Instructions on how to request official replacement documents</fullName>
+                <default>false</default>
+                <label>Instructions on how to request official replacement documents</label>
+            </value>
+            <value>
+                <fullName>Green card(if applicable)</fullName>
+                <default>false</default>
+                <label>Green card(if applicable)</label>
+            </value>
+            <value>
+                <fullName>Medical Records</fullName>
+                <default>false</default>
+                <label>Medical Records</label>
+            </value>
+            <value>
+                <fullName>Birth Certificate</fullName>
+                <default>false</default>
+                <label>Birth Certificate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

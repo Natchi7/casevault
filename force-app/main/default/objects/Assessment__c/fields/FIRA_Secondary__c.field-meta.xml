@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIRA_Secondary__c</fullName>
+    <externalId>false</externalId>
+    <label>Secondary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Secondary Caregiver</fullName>
+                <default>false</default>
+                <label>No Secondary Caregiver</label>
+            </value>
+            <value>
+                <fullName>Arrest</fullName>
+                <default>false</default>
+                <label>Arrest</label>
+            </value>
+            <value>
+                <fullName>Conviction</fullName>
+                <default>false</default>
+                <label>Conviction</label>
+            </value>
+            <value>
+                <fullName>Felony Conviction</fullName>
+                <default>false</default>
+                <label>Felony Conviction</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

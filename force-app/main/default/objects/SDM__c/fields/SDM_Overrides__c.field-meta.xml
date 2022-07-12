@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDM_Overrides__c</fullName>
+    <externalId>false</externalId>
+    <label>Overrides</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No overrides apply</fullName>
+                <default>false</default>
+                <label>No overrides apply</label>
+            </value>
+            <value>
+                <fullName>Screen out: One or more maltreatment types are marked, but referral will be screened out (mark all that apply)</fullName>
+                <default>false</default>
+                <label>Screen out: One or more maltreatment types are marked, but referral will be screened out (mark all that apply)</label>
+            </value>
+            <value>
+                <fullName>Screen in; No maltreatment type is marked, but referral will be reopened</fullName>
+                <default>false</default>
+                <label>Screen in; No maltreatment type is marked, but referral will be reopened</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Hair_color__c</fullName>
+    <externalId>false</externalId>
+    <label>Hair color</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>black</fullName>
+                <default>false</default>
+                <label>black</label>
+            </value>
+            <value>
+                <fullName>darkest brown</fullName>
+                <default>false</default>
+                <label>darkest brown</label>
+            </value>
+            <value>
+                <fullName>dark brown</fullName>
+                <default>false</default>
+                <label>dark brown</label>
+            </value>
+            <value>
+                <fullName>brown</fullName>
+                <default>false</default>
+                <label>brown</label>
+            </value>
+            <value>
+                <fullName>light brown</fullName>
+                <default>false</default>
+                <label>light brown</label>
+            </value>
+            <value>
+                <fullName>dark blonde</fullName>
+                <default>false</default>
+                <label>dark blonde</label>
+            </value>
+            <value>
+                <fullName>blonde</fullName>
+                <default>false</default>
+                <label>blonde</label>
+            </value>
+            <value>
+                <fullName>light blonde</fullName>
+                <default>false</default>
+                <label>light blonde</label>
+            </value>
+            <value>
+                <fullName>very light blonde</fullName>
+                <default>false</default>
+                <label>very light blonde</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

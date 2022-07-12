@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Does_the_child_have_any_diagnosed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the child have any diagnosed physical or mental health disabilities(explain and give date of diagnosis)?</inlineHelpText>
+    <label>Does the child have any diagnosed</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

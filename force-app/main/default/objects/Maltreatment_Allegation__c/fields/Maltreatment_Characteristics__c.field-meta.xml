@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maltreatment_Characteristics__c</fullName>
+    <externalId>false</externalId>
+    <label>Maltreatment Characteristics</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alcohol Abuse - Child</fullName>
+                <default>false</default>
+                <label>Alcohol Abuse - Child</label>
+            </value>
+            <value>
+                <fullName>Alcohol Abuse - Caretaker</fullName>
+                <default>false</default>
+                <label>Alcohol Abuse - Caretaker</label>
+            </value>
+            <value>
+                <fullName>Abandonment</fullName>
+                <default>false</default>
+                <label>Abandonment</label>
+            </value>
+            <value>
+                <fullName>Age Inappropriate Sexual Behavior</fullName>
+                <default>false</default>
+                <label>Age Inappropriate Sexual Behavior</label>
+            </value>
+            <value>
+                <fullName>Anal Penetration through intercourse</fullName>
+                <default>false</default>
+                <label>Anal Penetration through intercourse</label>
+            </value>
+            <value>
+                <fullName>Anal Penetration through instrumentation</fullName>
+                <default>false</default>
+                <label>Anal Penetration through instrumentation</label>
+            </value>
+            <value>
+                <fullName>Pinching</fullName>
+                <default>false</default>
+                <label>Pinching</label>
+            </value>
+            <value>
+                <fullName>Self-mutilation</fullName>
+                <default>false</default>
+                <label>Self-mutilation</label>
+            </value>
+            <value>
+                <fullName>Stabbing</fullName>
+                <default>false</default>
+                <label>Stabbing</label>
+            </value>
+            <value>
+                <fullName>None Apparent</fullName>
+                <default>false</default>
+                <label>None Apparent</label>
+            </value>
+            <value>
+                <fullName>Dirty House</fullName>
+                <default>false</default>
+                <label>Dirty House</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse</fullName>
+                <default>false</default>
+                <label>Substance Abuse</label>
+            </value>
+            <value>
+                <fullName>Alcohol Use - Caretaker</fullName>
+                <default>false</default>
+                <label>Alcohol Use - Caretaker</label>
+            </value>
+            <value>
+                <fullName>Alcohol Use - Child</fullName>
+                <default>false</default>
+                <label>Alcohol Use - Child</label>
+            </value>
+            <value>
+                <fullName>Bestiality</fullName>
+                <default>false</default>
+                <label>Bestiality</label>
+            </value>
+            <value>
+                <fullName>Biting</fullName>
+                <default>false</default>
+                <label>Biting</label>
+            </value>
+            <value>
+                <fullName>Bizarre Sex Practices</fullName>
+                <default>false</default>
+                <label>Bizarre Sex Practices</label>
+            </value>
+            <value>
+                <fullName>Burning</fullName>
+                <default>false</default>
+                <label>Burning</label>
+            </value>
+            <value>
+                <fullName>Child Critical - Near Fatality</fullName>
+                <default>false</default>
+                <label>Child Critical - Near Fatality</label>
+            </value>
+            <value>
+                <fullName>Child enticed to expose self</fullName>
+                <default>false</default>
+                <label>Child enticed to expose self</label>
+            </value>
+            <value>
+                <fullName>Child enticed to masturbate</fullName>
+                <default>false</default>
+                <label>Child enticed to masturbate</label>
+            </value>
+            <value>
+                <fullName>Child Fatality</fullName>
+                <default>false</default>
+                <label>Child Fatality</label>
+            </value>
+            <value>
+                <fullName>Confinement</fullName>
+                <default>false</default>
+                <label>Confinement</label>
+            </value>
+            <value>
+                <fullName>Cruel Restraint</fullName>
+                <default>false</default>
+                <label>Cruel Restraint</label>
+            </value>
+            <value>
+                <fullName>Cutting</fullName>
+                <default>false</default>
+                <label>Cutting</label>
+            </value>
+            <value>
+                <fullName>Diagnosed Mental Illness-Child</fullName>
+                <default>false</default>
+                <label>Diagnosed Mental Illness-Child</label>
+            </value>
+            <value>
+                <fullName>Diagnosed Mental lIlness-Caregiver</fullName>
+                <default>false</default>
+                <label>Diagnosed Mental lIlness-Caregiver</label>
+            </value>
+            <value>
+                <fullName>Diagnosed Mental Retardation-Child</fullName>
+                <default>false</default>
+                <label>Diagnosed Mental Retardation-Child</label>
+            </value>
+            <value>
+                <fullName>Diagnosed Mental Retardation-Parent</fullName>
+                <default>false</default>
+                <label>Diagnosed Mental Retardation-Parent</label>
+            </value>
+            <value>
+                <fullName>Digital Anal Penetration</fullName>
+                <default>false</default>
+                <label>Digital Anal Penetration</label>
+            </value>
+            <value>
+                <fullName>Digital Vaginal Penetration</fullName>
+                <default>false</default>
+                <label>Digital Vaginal Penetration</label>
+            </value>
+            <value>
+                <fullName>Domestic Violence</fullName>
+                <default>false</default>
+                <label>Domestic Violence</label>
+            </value>
+            <value>
+                <fullName>Drug Abuse - Caretaker</fullName>
+                <default>false</default>
+                <label>Drug Abuse - Caretaker</label>
+            </value>
+            <value>
+                <fullName>Drug Abuse - Child</fullName>
+                <default>false</default>
+                <label>Drug Abuse - Child</label>
+            </value>
+            <value>
+                <fullName>Drug Use - Caretaker</fullName>
+                <default>false</default>
+                <label>Drug Use - Caretaker</label>
+            </value>
+            <value>
+                <fullName>Drug Use - Child</fullName>
+                <default>false</default>
+                <label>Drug Use - Child</label>
+            </value>
+            <value>
+                <fullName>Educational</fullName>
+                <default>false</default>
+                <label>Educational</label>
+            </value>
+            <value>
+                <fullName>Emotional Neglect - Failure to Bond-Attach</fullName>
+                <default>false</default>
+                <label>Emotional Neglect - Failure to Bond-Attach</label>
+            </value>
+            <value>
+                <fullName>Emotional Neglect - Indifference</fullName>
+                <default>false</default>
+                <label>Emotional Neglect - Indifference</label>
+            </value>
+            <value>
+                <fullName>Emotional Neglect - No Expectations</fullName>
+                <default>false</default>
+                <label>Emotional Neglect - No Expectations</label>
+            </value>
+            <value>
+                <fullName>Emotional Neglect - Unrealistic Expectations</fullName>
+                <default>false</default>
+                <label>Emotional Neglect - Unrealistic Expectations</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Aggression</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Aggression</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Condemnation</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Condemnation</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Deprivation</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Deprivation</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Domestic Violence</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Domestic Violence</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Double Binding</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Double Binding</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Labels Child</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Labels Child</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Rejection-Coldness</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Rejection-Coldness</label>
+            </value>
+            <value>
+                <fullName>Emotional-Psychological Abuse - Scapegoating</fullName>
+                <default>false</default>
+                <label>Emotional-Psychological Abuse - Scapegoating</label>
+            </value>
+            <value>
+                <fullName>Excessive Corporal Punishment</fullName>
+                <default>false</default>
+                <label>Excessive Corporal Punishment</label>
+            </value>
+            <value>
+                <fullName>Exhibitionism</fullName>
+                <default>false</default>
+                <label>Exhibitionism</label>
+            </value>
+            <value>
+                <fullName>Exposure to Adult Sexuality</fullName>
+                <default>false</default>
+                <label>Exposure to Adult Sexuality</label>
+            </value>
+            <value>
+                <fullName>Failure to Protect</fullName>
+                <default>false</default>
+                <label>Failure to Protect</label>
+            </value>
+            <value>
+                <fullName>Failure to Provide Adequate Nutrition</fullName>
+                <default>false</default>
+                <label>Failure to Provide Adequate Nutrition</label>
+            </value>
+            <value>
+                <fullName>Failure to Thrive</fullName>
+                <default>false</default>
+                <label>Failure to Thrive</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Fondling</fullName>
+                <default>false</default>
+                <label>Fondling</label>
+            </value>
+            <value>
+                <fullName>Hitting</fullName>
+                <default>false</default>
+                <label>Hitting</label>
+            </value>
+            <value>
+                <fullName>Hitting - Instrument</fullName>
+                <default>false</default>
+                <label>Hitting - Instrument</label>
+            </value>
+            <value>
+                <fullName>Inadequate Clothing</fullName>
+                <default>false</default>
+                <label>Inadequate Clothing</label>
+            </value>
+            <value>
+                <fullName>Inadequate Housing</fullName>
+                <default>false</default>
+                <label>Inadequate Housing</label>
+            </value>
+            <value>
+                <fullName>Inadequate or Dangerous Shelter</fullName>
+                <default>false</default>
+                <label>Inadequate or Dangerous Shelter</label>
+            </value>
+            <value>
+                <fullName>Inadequate Physical Care</fullName>
+                <default>false</default>
+                <label>Inadequate Physical Care</label>
+            </value>
+            <value>
+                <fullName>Inadequate treatment of serious illness or disease</fullName>
+                <default>false</default>
+                <label>Inadequate treatment of serious illness or disease</label>
+            </value>
+            <value>
+                <fullName>Kicking</fullName>
+                <default>false</default>
+                <label>Kicking</label>
+            </value>
+            <value>
+                <fullName>Lack of Supervision</fullName>
+                <default>false</default>
+                <label>Lack of Supervision</label>
+            </value>
+            <value>
+                <fullName>Limited Cognitive Capability-Caretaker</fullName>
+                <default>false</default>
+                <label>Limited Cognitive Capability-Caretaker</label>
+            </value>
+            <value>
+                <fullName>Limited Cognitive Capability-Child</fullName>
+                <default>false</default>
+                <label>Limited Cognitive Capability-Child</label>
+            </value>
+            <value>
+                <fullName>Malnutrition</fullName>
+                <default>false</default>
+                <label>Malnutrition</label>
+            </value>
+            <value>
+                <fullName>Masturbation-Exposure - Caretaker</fullName>
+                <default>false</default>
+                <label>Masturbation-Exposure - Caretaker</label>
+            </value>
+            <value>
+                <fullName>Medical Neglect of Disabled Child (Baby Doe)</fullName>
+                <default>false</default>
+                <label>Medical Neglect of Disabled Child (Baby Doe)</label>
+            </value>
+            <value>
+                <fullName>Munchausen Syndrome by Proxy</fullName>
+                <default>false</default>
+                <label>Munchausen Syndrome by Proxy</label>
+            </value>
+            <value>
+                <fullName>Non-accidental Trauma</fullName>
+                <default>false</default>
+                <label>Non-accidental Trauma</label>
+            </value>
+            <value>
+                <fullName>Nutritional Deprivation</fullName>
+                <default>false</default>
+                <label>Nutritional Deprivation</label>
+            </value>
+            <value>
+                <fullName>Oral-Genital Contact</fullName>
+                <default>false</default>
+                <label>Oral-Genital Contact</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pedal ( foot ) Anal Penetration</fullName>
+                <default>false</default>
+                <label>Pedal ( foot ) Anal Penetration</label>
+            </value>
+            <value>
+                <fullName>Pedal ( foot ) Vaginal Penetration</fullName>
+                <default>false</default>
+                <label>Pedal ( foot ) Vaginal Penetration</label>
+            </value>
+            <value>
+                <fullName>Physical Disability - Child</fullName>
+                <default>false</default>
+                <label>Physical Disability - Child</label>
+            </value>
+            <value>
+                <fullName>Physical Disability - Parent</fullName>
+                <default>false</default>
+                <label>Physical Disability - Parent</label>
+            </value>
+            <value>
+                <fullName>Poisoning</fullName>
+                <default>false</default>
+                <label>Poisoning</label>
+            </value>
+            <value>
+                <fullName>Pornography</fullName>
+                <default>false</default>
+                <label>Pornography</label>
+            </value>
+            <value>
+                <fullName>Previous Sexual Offenses toward a Child</fullName>
+                <default>false</default>
+                <label>Previous Sexual Offenses toward a Child</label>
+            </value>
+            <value>
+                <fullName>Refusal to Obtain Medical Attention</fullName>
+                <default>false</default>
+                <label>Refusal to Obtain Medical Attention</label>
+            </value>
+            <value>
+                <fullName>Refusal to Obtain Psychiatric Attention</fullName>
+                <default>false</default>
+                <label>Refusal to Obtain Psychiatric Attention</label>
+            </value>
+            <value>
+                <fullName>Ritual Abuse</fullName>
+                <default>false</default>
+                <label>Ritual Abuse</label>
+            </value>
+            <value>
+                <fullName>Sale-Attempted Sale of Child</fullName>
+                <default>false</default>
+                <label>Sale-Attempted Sale of Child</label>
+            </value>
+            <value>
+                <fullName>Scalding</fullName>
+                <default>false</default>
+                <label>Scalding</label>
+            </value>
+            <value>
+                <fullName>Serious Physical Injury</fullName>
+                <default>false</default>
+                <label>Serious Physical Injury</label>
+            </value>
+            <value>
+                <fullName>Sexual Abuse with Violence</fullName>
+                <default>false</default>
+                <label>Sexual Abuse with Violence</label>
+            </value>
+            <value>
+                <fullName>Sexual Exploitation</fullName>
+                <default>false</default>
+                <label>Sexual Exploitation</label>
+            </value>
+            <value>
+                <fullName>Shaking</fullName>
+                <default>false</default>
+                <label>Shaking</label>
+            </value>
+            <value>
+                <fullName>Symptoms of Mental Disturbance-Illness - Child</fullName>
+                <default>false</default>
+                <label>Symptoms of Mental Disturbance-Illness - Child</label>
+            </value>
+            <value>
+                <fullName>Symptoms of Mental Disturbance-Illness - Parent</fullName>
+                <default>false</default>
+                <label>Symptoms of Mental Disturbance-Illness - Parent</label>
+            </value>
+            <value>
+                <fullName>Throwing</fullName>
+                <default>false</default>
+                <label>Throwing</label>
+            </value>
+            <value>
+                <fullName>Vaginal Penetration through Instrumentation</fullName>
+                <default>false</default>
+                <label>Vaginal Penetration through Instrumentation</label>
+            </value>
+            <value>
+                <fullName>Vaginal Penetration through Intercourse</fullName>
+                <default>false</default>
+                <label>Vaginal Penetration through Intercourse</label>
+            </value>
+            <value>
+                <fullName>Venereal Disease</fullName>
+                <default>false</default>
+                <label>Venereal Disease</label>
+            </value>
+            <value>
+                <fullName>Vicious Beating</fullName>
+                <default>false</default>
+                <label>Vicious Beating</label>
+            </value>
+            <value>
+                <fullName>Voyeurism</fullName>
+                <default>false</default>
+                <label>Voyeurism</label>
+            </value>
+            <value>
+                <fullName>Choking</fullName>
+                <default>false</default>
+                <label>Choking</label>
+            </value>
+            <value>
+                <fullName>Pushing</fullName>
+                <default>false</default>
+                <label>Pushing</label>
+            </value>
+            <value>
+                <fullName>Drug Affected Newborns</fullName>
+                <default>false</default>
+                <label>Drug Affected Newborns</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

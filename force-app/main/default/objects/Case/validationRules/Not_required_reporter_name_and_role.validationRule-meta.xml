@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_required_reporter_name_and_role</fullName>
+    <active>true</active>
+    <errorConditionFormula>Unknown_Reporter__c  = true  &amp;&amp; ( 
+NOT( ISBLANK( Title__c ) )  || NOT( ISBLANK( First_Name__c ) ) || NOT( ISBLANK( Middle_Name__c ) )  ||
+NOT( ISBLANK( Last_Name__c ) ) || NOT( ISBLANK (TEXT( Gender__c )) ) || NOT( ISBLANK (TEXT( Role__c )) ) ||
+NOT( ISBLANK( Email_Address__c ) ) || NOT( ISBLANK( Address_Phone_Number__c ) ) || NOT( ISBLANK( Ext__c ) ) ||
+NOT( ISBLANK( Address_1__c ) ) || NOT( ISBLANK( City__c ) ) ||  Acknowledgement_Letter__c = true ||
+NOT( ISBLANK(TEXT( State__c ))) || NOT( ISBLANK(TEXT( Country__c  ))) 
+)</errorConditionFormula>
+    <errorMessage>Reporter details should not entry when reporter is unknown.</errorMessage>
+</ValidationRule>

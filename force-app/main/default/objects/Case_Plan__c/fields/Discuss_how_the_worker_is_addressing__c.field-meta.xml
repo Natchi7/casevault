@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discuss_how_the_worker_is_addressing__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Discuss how the worker is addressing the child&apos;s needs(Specify the needs and services,include by reference dates all contact sheet notes documenting visitation between child and caseworker).</inlineHelpText>
+    <label>Discuss how the worker is addressing</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

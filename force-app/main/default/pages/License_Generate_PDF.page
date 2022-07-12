@@ -1,0 +1,48 @@
+<apex:page renderAs="pdf" standardController="License__c" extensions="LicenseController" showHeader="false" standardStylesheets="false" applyBodyTag="true" applyHtmlTag="true">
+  <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Caring for Kids, Inc." collapsible="false">
+        <apex:outputField value="{!licenseIns.Name}"/><br/>  
+        <apex:outputField value="{!licenseIns.Activity_Date__c}"/><br/>
+        <apex:outputField value="{!licenseIns.Address__c}"/><br/>
+            <!--<apex:outputField value="{!licenseIns.Last_Name__c}"/><br/>
+            <apex:outputField value="{!licenseIns.Title__c}"/><br/>
+            <apex:outputField value="{!licenseIns.Role__c}"/><br/>
+            <apex:outputField value="{!licenseIns.SuppliedEmail}"/><br/>
+            <apex:outputField value="{!licenseIns.City__c}"/><br/>
+            <apex:outputField value="{!licenseIns.Address_1__c}"/><br/>
+            <apex:outputField value="{!licenseIns.Address_2__c}"/><br/>-->
+        </apex:pageBlockSection>                            
+    </apex:pageBlock>
+  </apex:form>
+  <html>
+      
+      <div>
+          
+          Dear Audrey and Christopher:
+      </div>
+          
+      <p>
+    
+                This letter is to inform you of ther favourable determination of your home study for the purpose of domestic adoption.
+                The following is taken directly from your home study document.
+                
+                Audrey and Christopher are approved to adopt two children, of either gender, birth to one year of age.
+                
+                This home study was completed and approved.
+                
+                Your home study will expire two years from the date of approval.In the event that you should decide to update
+                the home study every two years, the home study will not expire.
+                
+                Congratulations on the completion of this portion of the home study process.
+                
+        </p>
+        
+        <div>
+            Licensing Authority,
+        </div><div>
+            Dept. of Child Care.
+        </div>            
+       
+   </html>
+</apex:page>

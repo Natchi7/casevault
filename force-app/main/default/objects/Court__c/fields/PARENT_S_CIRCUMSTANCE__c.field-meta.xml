@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PARENT_S_CIRCUMSTANCE__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>PARENT&apos;S CIRCUMSTANCE(answer for mother and father)</inlineHelpText>
+    <label>PARENT&apos;S CIRCUMSTANCE</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A. Parent cannot be identified: (mother/father)Why?</fullName>
+                <default>false</default>
+                <label>A. Parent cannot be identified: (mother/father)Why?</label>
+            </value>
+            <value>
+                <fullName>B. Parent&apos;s location unknown: (mother/father)</fullName>
+                <default>false</default>
+                <label>B. Parent&apos;s location unknown: (mother/father)</label>
+            </value>
+            <value>
+                <fullName>C. Department&apos;s attempt to locate and/or contact parents: (mother/father)</fullName>
+                <default>false</default>
+                <label>C. Department&apos;s attempt to locate and/or contact parents: (mother/father)</label>
+            </value>
+            <value>
+                <fullName>D. Physical/mental health issues of parents: (mother/father) N/A</fullName>
+                <default>false</default>
+                <label>D. Physical/mental health issues of parents: (mother/father) N/A</label>
+            </value>
+            <value>
+                <fullName>E. Parent incarcerated:(mother/father) if so,where?</fullName>
+                <default>false</default>
+                <label>E. Parent incarcerated:(mother/father) if so,where?</label>
+            </value>
+            <value>
+                <fullName>F. Parent&apos;s economic status: (Mother/Father)</fullName>
+                <default>false</default>
+                <label>F. Parent&apos;s economic status: (Mother/Father)</label>
+            </value>
+            <value>
+                <fullName>G. Parent&apos;s cannot or will not care for child: (mother/father)</fullName>
+                <default>false</default>
+                <label>G. Parent&apos;s cannot or will not care for child: (mother/father)</label>
+            </value>
+            <value>
+                <fullName>H. Parent substance use/abuse (mother/father)</fullName>
+                <default>false</default>
+                <label>H. Parent substance use/abuse (mother/father)</label>
+            </value>
+            <value>
+                <fullName>I. Parent admitted  to using substances :(mother/father)</fullName>
+                <default>false</default>
+                <label>I. Parent admitted  to using substances :(mother/father)</label>
+            </value>
+            <value>
+                <fullName>J. Parent refused treatment for substance use disorder : (mother/father)</fullName>
+                <default>false</default>
+                <label>J. Parent refused treatment for substance use disorder : (mother/father)</label>
+            </value>
+            <value>
+                <fullName>K. Parent did not successfully complete treatment for substance use disorder:(mother/father)</fullName>
+                <default>false</default>
+                <label>K. Parent did not successfully complete treatment for substance use disorder:(mother/father)</label>
+            </value>
+            <value>
+                <fullName>L. Parent uncooperative: (mother/father) how?</fullName>
+                <default>false</default>
+                <label>L. Parent uncooperative: (mother/father) how?</label>
+            </value>
+            <value>
+                <fullName>M. Parent did not comply with Safety Plan/Service Agreement: (mother/father)</fullName>
+                <default>false</default>
+                <label>M. Parent did not comply with Safety Plan/Service Agreement: (mother/father)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visit_Duration__c</fullName>
+    <externalId>false</externalId>
+    <label>Visit Duration</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 hour</fullName>
+                <default>false</default>
+                <label>1 hour</label>
+            </value>
+            <value>
+                <fullName>2 hours</fullName>
+                <default>false</default>
+                <label>2 hours</label>
+            </value>
+            <value>
+                <fullName>Day visit</fullName>
+                <default>false</default>
+                <label>Day visit</label>
+            </value>
+            <value>
+                <fullName>Less than 1 hour</fullName>
+                <default>false</default>
+                <label>Less than 1 hour</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Overnight</fullName>
+                <default>false</default>
+                <label>Overnight</label>
+            </value>
+            <value>
+                <fullName>Weekend</fullName>
+                <default>false</default>
+                <label>Weekend</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,111 @@
+<template>
+    <div class="spinner">
+        <template if:true={loading}>
+            <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+        </template>
+</div>
+<lightning-card title="ADOPTION PLANNING">
+    <lightning-layout>
+        <lightning-layout-item size="4" class="layoutIteam">
+            <lightning-input type="checkbox" label="Reasonable but unsuccessful efforts have been made to place the child without assistance" name="Reasonable_but_unsuccessful_efforts__c" onchange={handleChange} disabled={readOnly} checked={checkboxValue}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" class="layoutIteam">
+            <lightning-input type="checkbox" label="Exception granted in child's best interests" name="Exception_granted_in_child_s_interest__c" onchange={handleChange} disabled={readOnly} checked={permanencyRec.Exception_granted_in_child_s_interest__c}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" class="layoutIteam">
+            <lightning-input type="date" label="Date and time for Exception granted in child's best interests" name="Date_Exception_granted_child_interests__c" value={permanencyRec.Date_Exception_granted_child_interests__c} onchange={handleChange} disabled={readOnly}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item size="12" class="layoutIteam">
+            <h3><b>Notes</b></h3>
+            <lightning-input-rich-text name="Notes__c" value={permanencyRec.Notes__c} onchange={handleChange} disabled={readOnly}></lightning-input-rich-text>
+        </lightning-layout-item>
+    </lightning-layout>
+</lightning-card>
+
+<lightning-card title="EFFORTS TO PLACE CHILD WITHOUT SUBSIDY">
+    <lightning-button label="ADD" title="ADD" slot="actions" variant="brand" icon-name="utility:add" onclick={handleAddAdoption} class="slds-var-p-around_x-small"></lightning-button>
+    <table class="slds-table slds-table_bordered slds-border_left slds-border_right css-serial">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="wrapText" scope="col">
+                    <div title="EFFORT DATE">EFFORT DATE</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="TYPE OF EFFOR">TYPE OF EFFORT</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="NOTES">NOTES</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div title="ACTION">ACTION</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={effortRecords} for:index="index" for:item="row">  
+                    <tr key={row.Id}>
+                        <td class="wrapText">
+                            <div id={index}><lightning-formatted-date-time value={row.Effort_Date__c} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></div>
+                        </td>
+                        <td class="wrapText">
+                            <div id={index} >{row.Type_of_Effort__c}</div>
+                        </td>
+                        <td class="wrapText">
+                            <div id={index} >{row.Notes__c}</div>
+                        </td>
+                        <td class="wrapText">
+                          <div class="slds-p-right_small"><lightning-button-icon icon-name="utility:edit" onclick={handleEffortEdit} data-id={row.Id}></lightning-button-icon>
+                         <lightning-button-icon icon-name="utility:delete" onclick={handleEffortDelete} data-id={row.Id}></lightning-button-icon></div>
+                      </td>
+                    </tr>
+                </template>
+        </tbody>
+    </table>
+
+    <div class="slds-text-align_right slds-p-top_medium">
+        <lightning-button label="SAVE AND PROCEED TO NEXT" title="SAVE AND PROCEED TO NEXT" icon-name="utility:jump_to_right" variant="brand" class="slds-var-p-around_x-small" onclick={handleSaveNext}></lightning-button>
+        <lightning-button label="SAVE" title="SAVE" variant="brand" icon-name="utility:save" class="slds-var-p-around_x-small" onclick={handleSaveNext}></lightning-button>
+    </div>
+</lightning-card>
+
+<div if:true={showUpdateModal}>
+    <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+        <span slot="modalClose">
+                    <lightning-button-icon icon-name="utility:close"
+                                              onclick={closeUpdateModal}
+                                              alternative-text="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"></lightning-button-icon>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Update Effort</h2>
+                </span>
+
+        <span slot="modalBody" class="slds-modal__content">
+                    <lightning-layout>
+                        <lightning-layout-item size="6" padding="around-small">
+                            <lightning-input type="date" label="Effort Date" name="Effort_Date__c" onchange={handleUpdate} value={effortRec.Effort_Date__c}></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="6" padding="around-small">
+                            <lightning-input type="text" label="Type of Effort" name="Type_of_Effort__c" onchange={handleUpdate} value={effortRec.Type_of_Effort__c}></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                    <lightning-layout>
+                        <lightning-layout-item size="12" padding="around-small">
+                            <lightning-textarea label="Notes" name="Notes__c"  onchange={handleUpdate} value={effortRec.Notes__c}></lightning-textarea>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </span>
+
+        <span slot="modalFooter">
+                    <div class="slds-text-align_right">
+                        <lightning-button label="Cancel" title="Cancel" onclick={closeUpdateModal} variant="destructive" class= "slds-var-p-around_x-small" icon-name="utility:close"></lightning-button>
+                        <lightning-button label="Save" title="Save"  variant="brand" class= "slds-var-p-around_x-small" icon-name="utility:save" onclick={handleEffortSave}></lightning-button>
+                    </div>
+                </span>
+
+    </c-modal-component>
+</div>
+</template>

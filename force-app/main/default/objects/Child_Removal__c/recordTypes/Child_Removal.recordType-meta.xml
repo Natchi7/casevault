@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Removal</fullName>
+    <active>true</active>
+    <label>Child Removal</label>
+    <picklistValues>
+        <picklist>Autism_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Autism_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Autism_Spectrum_Disorder__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_Home_Address_Same_as_Primary_Addre__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cognitive_Developmental_Delay__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cognitive_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cognitive_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Completed_By__c</picklist>
+        <values>
+            <fullName>Uploaded Manually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uploaded via System</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Does_the_person_have_disabilities__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Emotionally_Disturbed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Emotionally_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Emotionally_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Factor_At_Removal__c</picklist>
+        <values>
+            <fullName>Abandonment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alcohol Abuse %28Child%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alcohol Abuse %28Parent%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caregiver%27s Inability to Cope Due to Illness or Other Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child%27s Behavior Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child%27s Disabilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death of Parent%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drug Abuse%28Child%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incarceration of Parent%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neglect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical abuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relinquishment for Adoption%28incl%2E Safe Haven%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sexual Abuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family_Structure__c</picklist>
+        <values>
+            <fullName>Divorced Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Divorced Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married Couple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separated Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separated Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Female - Cohabitating with Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Male - Cohabitating with Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Determine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unmarried Couple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unmarried Couple - One Parent Present</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_Disability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intellectual_Disability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intellectual_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Disability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Physical_Disability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Physical_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Physical_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reasonable_efforts_made_to_prevent_child__c</picklist>
+        <values>
+            <fullName>Child Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Oriented Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chore Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Day Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domestic Violence Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due to the emergent nature of the situation%2C reasonable efforts were not necessary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Crisis Counseling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Preservation Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Support Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food or Clothing Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homemaking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitalization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Home Health Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual Crisis Counseling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life Skills Management and Social Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parenting Education and Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peer Support Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement with relatives or friends</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable efforts have been made but have been unsuccessful in preventing or eliminating the need</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respite Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Routine%2FEmergency Alcohol or Drug Abuse Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Routine%2FEmergency Medical Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Routine%2FEmergency Mental Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social%2FEmotional Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervision%2FObservation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unique Child Condition Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relationship_of_Person_Involved__c</picklist>
+        <values>
+            <fullName>Administrative Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advocate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attorney General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aunt %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aunt %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boyfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother %28Half%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother %28Step%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother%28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caretaker-Caregiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Advocate-CASA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Center Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Home Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Welfare Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clergy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counselor-Therapist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cousin %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cousin %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cousin %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custodian %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter %28Adopted%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter %28Alleged%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter %28Foster%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter %28Step%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Day Care Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daycare Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detention Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Shelter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex-Boyfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex-Girlfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex-Spouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIM Facilitator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIM-Assigned Caseworker%2FSupervisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIM-Facilitator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIM-Non-assigned caseworker%2Fsupervisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Adoptive%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Foster%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Putative%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Step%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father %28Unknown%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Sibling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Girlfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Godfather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Godmother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandaughter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Granddaughter %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Granddaughter %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandfather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandfather %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandfather %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandmother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandmother %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandmother %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandparent %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandparent %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandparent- Step %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandparent-Step %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandson %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandson %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Granddaughter %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Granddaughter %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Grandparent %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Grandparent %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Grandson %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Grandson %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great-Aunt %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great-Aunt %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great-Uncle %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great-Uncle %28Parental%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian Ad Litem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital Ethics Committee Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Husband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Home worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landlord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Representative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensing Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live-In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother %28Adoptive%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother %28Foster%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother %28Putative%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother %28Step%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neighbor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephew %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephew %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niece %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niece %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Relation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Custodial Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Relation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent Surrogate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parole Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Probation Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prosecuting Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative %28Other%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative%28other than grandparent%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Facility Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Counselor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling %28Brother%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling %28Sister%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Significant Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister %28Half%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister %28Step%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son %28Adoptive%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son %28Alleged%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son %28Biological%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son %28Foster%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son %28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son %28Step%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse%28Ex%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Granddaughter %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Granddaughter %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Grandson %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Grandson %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stepparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Foster Daughter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Foster Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Foster Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Foster Son</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party Reviewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truancy Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncle %28Maternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncle %28Paternal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Witness</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Removal_Type__c</picklist>
+        <values>
+            <fullName>Children with Disabilities Voluntary Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enhanced Aftercare Voluntary Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Judicial Determination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Limited Voluntary Placement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shelter_Authorization_Completed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Visual_Disability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Visual_Personal_Hygiene__c</picklist>
+        <values>
+            <fullName>Bathes Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dresses Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menstruation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Bathing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Brushing Teeth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Dressing Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Fixing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Removing Clothes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Using the Toilet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Alone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toilet Trained</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes Hair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washes and Dries Hands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Visual_Special_Needs__c</picklist>
+        <values>
+            <fullName>Age is %3E 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apnea Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Safety Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crutches %2F Cane %2F Walker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmentally Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feeding Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glasses %2F Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Disability %2F Hearing Aid %28Right%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk of Physical or Mental Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Interpreter Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentally Retarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightmares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Disability %2F Requires Wheelchair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racial or Ethnic Factor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Diet %28Specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Disability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Where_is_the_child_going_to__c</picklist>
+        <values>
+            <fullName>Adult Correctional Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency Foster Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kinship Home %28Relative or %27Fictive Kin%27%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noncustodial Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Treatment Foster Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Treatment Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Runaway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervised Independent Living</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Group Home</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

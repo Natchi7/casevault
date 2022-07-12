@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Decision__c</fullName>
+    <externalId>false</externalId>
+    <label>License Decision</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>License Issued</fullName>
+                <default>false</default>
+                <label>License Issued</label>
+            </value>
+            <value>
+                <fullName>License Updated</fullName>
+                <default>false</default>
+                <label>License Updated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

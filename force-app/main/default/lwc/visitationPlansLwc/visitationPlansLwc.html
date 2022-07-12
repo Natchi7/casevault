@@ -1,0 +1,110 @@
+<template>
+    <div class="slds-text-align_right slds-p-bottom_small"><lightning-button label="Add Visitation Plan" variant="brand" onclick={handleAddVisitationPlan}></lightning-button></div>
+    <lightning-datatable
+    key-field="Id"
+    data={visitationRecordList}
+    columns={columns}
+    hide-checkbox-column show-row-number-column="true"
+    onrowaction={handleRowAction}>
+</lightning-datatable>
+    <template if:true={openAddVisitationPlan}>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-combobox label="Client" name="Client__c" placeholder="-Select-" options={clientPickList} onchange={handleChange} value={visitationRecord.Client__c} disabled={readyOnly}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-input type="date" date-style="short" label="Established Date" name="Established_Date__c" onchange={handleChange} value={visitationRecord.Established_Date__c} disabled={readyOnly} required></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-input type="date" date-style="short" label="End Date" name="End_Date__c" onchange={handleChange} value={visitationRecord.End_Date__c} disabled={readyOnly}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-dual-listbox name="Person_involved__c"
+                                                        label="Person Involved"
+                                                        source-label="Available"
+                                                        selected-label="Selected"
+                                                        options={personInvolvedPicklist}
+                                                        onchange={handleChange}
+                                                        disabled={readyOnly}
+                                                        value={getSelected}
+                                                        >
+                                </lightning-dual-listbox>    
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-input type="checkbox" name="Court_Ordered__c" label="Court Ordered?" onchange={handleChange} checked={visitationRecord.Court_Ordered__c} disabled={readyOnly}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-input type="checkbox" name="No_visits_allowed__c" label="No visits allowed?" onchange={handleChange} checked={visitationRecord.No_visits_allowed__c} disabled={readyOnly}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-combobox label="Conditions" name="Conditions__c" placeholder="-Select-" options={conditionsPicklist} onchange={handleChange} value={visitationRecord.Conditions__c} disabled={readyOnly}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-textarea type="text" name="Comments__c" label="Comments" onchange={handleChange} value={visitationRecord.Comments__c} disabled={readyOnly}></lightning-textarea>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="12" class="slds-p-around_small">
+            <lightning-textarea type="text" name="Explain_Visit_Plan__c" label="Explain Visit Plan" onchange={handleChange} value={visitationRecord.Explain_Visit_Plan__c} disabled={readyOnly}></lightning-textarea>
+        </lightning-layout-item>
+    </lightning-layout><lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-combobox label="Frequency" name="Frequency__c" placeholder="-Select-" options={frequencyPicklist} onchange={handleChange} value={visitationRecord.Frequency__c} disabled={readyOnly}></lightning-combobox>
+
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-textarea type="text"  name="Explain__c" label="Explain" onchange={handleChange} value={visitationRecord.Explain__c} disabled={readyOnly}></lightning-textarea>
+
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-combobox label="Visit Duration" name="Visit_Duration__c" placeholder="-Select-" options={visitDurationPicklist} onchange={handleChange} disabled={readyOnly} value={visitationRecord.Visit_Duration__c}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-input type="text" name="Location__c" label="Location" onchange={handleChange} value={visitationRecord.Location__c} disabled={readyOnly}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-combobox label="Child Transportation" name="Child_Transportation__c" placeholder="-Select-" options={childTransportationPicklist} disabled={readyOnly} onchange={handleChange} value={visitationRecord.Child_Transportation__c}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-textarea type="text" name="ExplainChild__c" label="Explain" onchange={handleChange} value={visitationRecord.ExplainChild__c} disabled={readyOnly}></lightning-textarea>
+
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-combobox label="Visitor Transportation" name="Visitor_Transportation__c" placeholder="-Select-" options={visitorTransportationPicklist} onchange={handleChange} disabled={readyOnly} value={visitationRecord.Visitor_Transportation__c}></lightning-combobox>
+
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <lightning-textarea type="text" name="Explain_Visitor__c" label="Explain" onchange={handleChange} value={visitationRecord.Explain_Visitor__c} disabled={readyOnly}></lightning-textarea>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+        </lightning-layout-item>
+        <lightning-layout-item size="6" class="slds-p-around_small">
+            <div class="slds-text-align_right">
+                <lightning-button label="Cancel" variant="destructive" onclick={handleCancel} class="slds-p-right_small"></lightning-button>
+
+            <template if:true={showSave}>
+            <lightning-button label="Save" variant="brand" class="slds-p-right_small" onclick={handleSave}></lightning-button>
+            </template>
+            <template if:true={showUpdate}>
+            <lightning-button label="Update" variant="brand" class="slds-p-right_small" onclick={handleSave}></lightning-button>
+            </template>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    </template>
+   
+</template>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Income_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Income Source</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child Support</fullName>
+                <default>false</default>
+                <label>Child Support</label>
+            </value>
+            <value>
+                <fullName>Deemed Income</fullName>
+                <default>false</default>
+                <label>Deemed Income</label>
+            </value>
+            <value>
+                <fullName>Federal Grants/Loans</fullName>
+                <default>false</default>
+                <label>Federal Grants/Loans</label>
+            </value>
+            <value>
+                <fullName>Grants/Loans Non-Federal</fullName>
+                <default>false</default>
+                <label>Grants/Loans Non-Federal</label>
+            </value>
+            <value>
+                <fullName>Income From Sale of Property</fullName>
+                <default>false</default>
+                <label>Income From Sale of Property</label>
+            </value>
+            <value>
+                <fullName>IV-E Payments</fullName>
+                <default>false</default>
+                <label>IV-E Payments</label>
+            </value>
+            <value>
+                <fullName>Net Rental Income</fullName>
+                <default>false</default>
+                <label>Net Rental Income</label>
+            </value>
+            <value>
+                <fullName>None - Earned</fullName>
+                <default>false</default>
+                <label>None - Earned</label>
+            </value>
+            <value>
+                <fullName>None- Unearned</fullName>
+                <default>false</default>
+                <label>None- Unearned</label>
+            </value>
+            <value>
+                <fullName>Other - Earned</fullName>
+                <default>false</default>
+                <label>Other - Earned</label>
+            </value>
+            <value>
+                <fullName>Other-Unearned</fullName>
+                <default>false</default>
+                <label>Other-Unearned</label>
+            </value>
+            <value>
+                <fullName>Pension</fullName>
+                <default>false</default>
+                <label>Pension</label>
+            </value>
+            <value>
+                <fullName>Railroad Retirement Benefits</fullName>
+                <default>false</default>
+                <label>Railroad Retirement Benefits</label>
+            </value>
+            <value>
+                <fullName>Regular Cash Contribution</fullName>
+                <default>false</default>
+                <label>Regular Cash Contribution</label>
+            </value>
+            <value>
+                <fullName>Self Employment Earning</fullName>
+                <default>false</default>
+                <label>Self Employment Earning</label>
+            </value>
+            <value>
+                <fullName>Sick Leave Benefits</fullName>
+                <default>false</default>
+                <label>Sick Leave Benefits</label>
+            </value>
+            <value>
+                <fullName>Social Security Disability Insurance</fullName>
+                <default>false</default>
+                <label>Social Security Disability Insurance</label>
+            </value>
+            <value>
+                <fullName>Social Security Retirement</fullName>
+                <default>false</default>
+                <label>Social Security Retirement</label>
+            </value>
+            <value>
+                <fullName>Social Security Survivors (Benefits)</fullName>
+                <default>false</default>
+                <label>Social Security Survivors (Benefits)</label>
+            </value>
+            <value>
+                <fullName>SSI/Supplemental Security Income</fullName>
+                <default>false</default>
+                <label>SSI/Supplemental Security Income</label>
+            </value>
+            <value>
+                <fullName>Student Income</fullName>
+                <default>false</default>
+                <label>Student Income</label>
+            </value>
+            <value>
+                <fullName>TANF</fullName>
+                <default>false</default>
+                <label>TANF</label>
+            </value>
+            <value>
+                <fullName>Tips</fullName>
+                <default>false</default>
+                <label>Tips</label>
+            </value>
+            <value>
+                <fullName>Title XIX-Medicaid</fullName>
+                <default>false</default>
+                <label>Title XIX-Medicaid</label>
+            </value>
+            <value>
+                <fullName>Unemployment Compensation</fullName>
+                <default>false</default>
+                <label>Unemployment Compensation</label>
+            </value>
+            <value>
+                <fullName>Veteran Benefits</fullName>
+                <default>false</default>
+                <label>Veteran Benefits</label>
+            </value>
+            <value>
+                <fullName>Wages or Salary</fullName>
+                <default>false</default>
+                <label>Wages or Salary</label>
+            </value>
+            <value>
+                <fullName>WIC Payments</fullName>
+                <default>false</default>
+                <label>WIC Payments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

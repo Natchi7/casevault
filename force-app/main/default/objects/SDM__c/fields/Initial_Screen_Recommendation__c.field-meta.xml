@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Screen_Recommendation__c</fullName>
+    <externalId>false</externalId>
+    <label>Initial Screen Recommendation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Screen out (no maltreatment type is marked)</fullName>
+                <default>false</default>
+                <label>Screen out (no maltreatment type is marked)</label>
+            </value>
+            <value>
+                <fullName>Screen in (one or more maltreatment types are marked)</fullName>
+                <default>false</default>
+                <label>Screen in (one or more maltreatment types are marked)</label>
+            </value>
+            <value>
+                <fullName>Accept as Non-CPS: Only Risk of Harm type is marked</fullName>
+                <default>false</default>
+                <label>Accept as Non-CPS: Only Risk of Harm type is marked</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

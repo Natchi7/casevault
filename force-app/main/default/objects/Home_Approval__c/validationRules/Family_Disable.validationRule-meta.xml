@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Disable</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(  ISPICKVAL(New_Home_Approval_Type__c , &apos;Regular Home Approval&apos;) ,OR(ISCHANGED( Ability_of_the_family_to_meet_needs__c ), ISCHANGED( Family_s_ability_to_resolve_conflict__c ) , ISCHANGED( Family_s_ability_to_work_as_a_team__c ), ISCHANGED( Summary_of_child_s_past_experience__c ), ISCHANGED( Family_s_ability_to_meet_child_s_need__c ), ISCHANGED( Applicant_s_supervision_and_assure__c ) , ISCHANGED(Description__c )))</errorConditionFormula>
+    <errorMessage>When the New Home Approval Type  is &apos;Regular Home Approval&apos; You are not suppose to edit Family Content</errorMessage>
+</ValidationRule>

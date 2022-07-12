@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gender__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Contact__r.Gender__c, &quot;Male&quot;),&apos;Male&apos;,IF(ISPICKVAL(Contact__r.Gender__c, &quot;Female&quot;),&apos;Female&apos;,IF(ISPICKVAL(Contact__r.Gender__c, &quot;Invaild&quot;),&apos;Invaild&apos;,IF(ISPICKVAL(Contact__r.Gender__c, &quot;Transgender&quot;),&apos;Transgender&apos;,IF(ISPICKVAL(Contact__r.Gender__c, &quot;Missing&quot;),&apos;Missing&apos;,&apos;Other&apos;)))))</formula>
+    <label>Gender</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

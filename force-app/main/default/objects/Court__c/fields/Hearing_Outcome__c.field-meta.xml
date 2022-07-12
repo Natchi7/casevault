@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hearing_Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>Hearing Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Adoption Denied</fullName>
+                <default>false</default>
+                <label>Adoption Denied</label>
+            </value>
+            <value>
+                <fullName>Adoption Granted</fullName>
+                <default>false</default>
+                <label>Adoption Granted</label>
+            </value>
+            <value>
+                <fullName>Agency Lost Legal Responsibility</fullName>
+                <default>false</default>
+                <label>Agency Lost Legal Responsibility</label>
+            </value>
+            <value>
+                <fullName>Appointment of Parent Surrogate</fullName>
+                <default>false</default>
+                <label>Appointment of Parent Surrogate</label>
+            </value>
+            <value>
+                <fullName>Arraignment Preliminary Hearing Completed</fullName>
+                <default>false</default>
+                <label>Arraignment Preliminary Hearing Completed</label>
+            </value>
+            <value>
+                <fullName>Arraignment Preliminary Hearing Not Completed</fullName>
+                <default>false</default>
+                <label>Arraignment Preliminary Hearing Not Completed</label>
+            </value>
+            <value>
+                <fullName>Case Dismissed</fullName>
+                <default>false</default>
+                <label>Case Dismissed</label>
+            </value>
+            <value>
+                <fullName>Case Transferred</fullName>
+                <default>false</default>
+                <label>Case Transferred</label>
+            </value>
+            <value>
+                <fullName>Child Aged Out</fullName>
+                <default>false</default>
+                <label>Child Aged Out</label>
+            </value>
+            <value>
+                <fullName>Child Continued as CINA</fullName>
+                <default>false</default>
+                <label>Child Continued as CINA</label>
+            </value>
+            <value>
+                <fullName>Child Emancipated</fullName>
+                <default>false</default>
+                <label>Child Emancipated</label>
+            </value>
+            <value>
+                <fullName>Child Found CINA</fullName>
+                <default>false</default>
+                <label>Child Found CINA</label>
+            </value>
+            <value>
+                <fullName>Child Found CINA/Amended Allegation</fullName>
+                <default>false</default>
+                <label>Child Found CINA/Amended Allegation</label>
+            </value>
+            <value>
+                <fullName>Co-commitment to DSS and DDA</fullName>
+                <default>false</default>
+                <label>Co-commitment to DSS and DDA</label>
+            </value>
+            <value>
+                <fullName>Co-commitment to DSS and DHMH</fullName>
+                <default>false</default>
+                <label>Co-commitment to DSS and DHMH</label>
+            </value>
+            <value>
+                <fullName>Co-commitment to DSS,DDA,DHMH</fullName>
+                <default>false</default>
+                <label>Co-commitment to DSS,DDA,DHMH</label>
+            </value>
+            <value>
+                <fullName>Commitment Rescinded</fullName>
+                <default>false</default>
+                <label>Commitment Rescinded</label>
+            </value>
+            <value>
+                <fullName>Commitment to the Agency</fullName>
+                <default>false</default>
+                <label>Commitment to the Agency</label>
+            </value>
+            <value>
+                <fullName>Continued Co-Commitment</fullName>
+                <default>false</default>
+                <label>Continued Co-Commitment</label>
+            </value>
+            <value>
+                <fullName>Continued Commitment</fullName>
+                <default>false</default>
+                <label>Continued Commitment</label>
+            </value>
+            <value>
+                <fullName>Continued Custody and Guardianship</fullName>
+                <default>false</default>
+                <label>Continued Custody and Guardianship</label>
+            </value>
+            <value>
+                <fullName>Continued Disposition</fullName>
+                <default>false</default>
+                <label>Continued Disposition</label>
+            </value>
+            <value>
+                <fullName>Continued Guardianship</fullName>
+                <default>false</default>
+                <label>Continued Guardianship</label>
+            </value>
+            <value>
+                <fullName>Continued OPS</fullName>
+                <default>false</default>
+                <label>Continued OPS</label>
+            </value>
+            <value>
+                <fullName>Continued Placement - Guardian</fullName>
+                <default>false</default>
+                <label>Continued Placement - Guardian</label>
+            </value>
+            <value>
+                <fullName>Continued Placement - Other</fullName>
+                <default>false</default>
+                <label>Continued Placement - Other</label>
+            </value>
+            <value>
+                <fullName>Continued Placement - Parent</fullName>
+                <default>false</default>
+                <label>Continued Placement - Parent</label>
+            </value>
+            <value>
+                <fullName>Continued Placement - Relative</fullName>
+                <default>false</default>
+                <label>Continued Placement - Relative</label>
+            </value>
+            <value>
+                <fullName>Court Ordered Removal of Child from Home</fullName>
+                <default>false</default>
+                <label>Court Ordered Removal of Child from Home</label>
+            </value>
+            <value>
+                <fullName>Custody and Guardianship</fullName>
+                <default>false</default>
+                <label>Custody and Guardianship</label>
+            </value>
+            <value>
+                <fullName>Exception Denied</fullName>
+                <default>false</default>
+                <label>Exception Denied</label>
+            </value>
+            <value>
+                <fullName>Exception Granted</fullName>
+                <default>false</default>
+                <label>Exception Granted</label>
+            </value>
+            <value>
+                <fullName>joint Guardianship</fullName>
+                <default>false</default>
+                <label>Joint Guardianship</label>
+            </value>
+            <value>
+                <fullName>Jurisdiction not Terminated</fullName>
+                <default>false</default>
+                <label>Jurisdiction not Terminated</label>
+            </value>
+            <value>
+                <fullName>Jurisdiction Terminated</fullName>
+                <default>false</default>
+                <label>Jurisdiction Terminated</label>
+            </value>
+            <value>
+                <fullName>Legal Guardianship</fullName>
+                <default>false</default>
+                <label>Legal Guardianship</label>
+            </value>
+            <value>
+                <fullName>Limited Guardianship</fullName>
+                <default>false</default>
+                <label>Limited Guardianship</label>
+            </value>
+            <value>
+                <fullName>No Party Appeared</fullName>
+                <default>false</default>
+                <label>No Party Appeared</label>
+            </value>
+            <value>
+                <fullName>No Services Affected</fullName>
+                <default>false</default>
+                <label>No Services Affected</label>
+            </value>
+            <value>
+                <fullName>OPS Rescinded</fullName>
+                <default>false</default>
+                <label>OPS Rescinded</label>
+            </value>
+            <value>
+                <fullName>Order Controlling the Conduct</fullName>
+                <default>false</default>
+                <label>Order Controlling the Conduct</label>
+            </value>
+            <value>
+                <fullName>Order of Protective Supervision</fullName>
+                <default>false</default>
+                <label>Order of Protective Supervision</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Party Served/Failed to Appear</fullName>
+                <default>false</default>
+                <label>Party Served/Failed to Appear</label>
+            </value>
+            <value>
+                <fullName>Petition Dismissed</fullName>
+                <default>false</default>
+                <label>Petition Dismissed</label>
+            </value>
+            <value>
+                <fullName>Petition Granted</fullName>
+                <default>false</default>
+                <label>Petition Granted</label>
+            </value>
+            <value>
+                <fullName>Petition Withdrawn</fullName>
+                <default>false</default>
+                <label>Petition Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Petition Withdrawn After Shelter Care</fullName>
+                <default>false</default>
+                <label>Petition Withdrawn After Shelter Care</label>
+            </value>
+            <value>
+                <fullName>Placement Certified As Permanent</fullName>
+                <default>false</default>
+                <label>Placement Certified As Permanent</label>
+            </value>
+            <value>
+                <fullName>Placement Original Custodian</fullName>
+                <default>false</default>
+                <label>Placement Original Custodian</label>
+            </value>
+            <value>
+                <fullName>Placement Original Guardian</fullName>
+                <default>false</default>
+                <label>Placement Original Guardian</label>
+            </value>
+            <value>
+                <fullName>Placement Original Parent</fullName>
+                <default>false</default>
+                <label>Placement Original Parent</label>
+            </value>
+            <value>
+                <fullName>Placement with Other</fullName>
+                <default>false</default>
+                <label>Placement with Other</label>
+            </value>
+            <value>
+                <fullName>Rescission</fullName>
+                <default>false</default>
+                <label>Rescission</label>
+            </value>
+            <value>
+                <fullName>Shelter Contested</fullName>
+                <default>false</default>
+                <label>Shelter Contested</label>
+            </value>
+            <value>
+                <fullName>Shelter Denied</fullName>
+                <default>false</default>
+                <label>Shelter Denied</label>
+            </value>
+            <value>
+                <fullName>Shelter Granted</fullName>
+                <default>false</default>
+                <label>Shelter Granted</label>
+            </value>
+            <value>
+                <fullName>Sibling Visitation Denied</fullName>
+                <default>false</default>
+                <label>Sibling Visitation Denied</label>
+            </value>
+            <value>
+                <fullName>Sibling Visitation Granted</fullName>
+                <default>false</default>
+                <label>Sibling Visitation Granted</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse Assessment</fullName>
+                <default>false</default>
+                <label>Substance Abuse Assessment</label>
+            </value>
+            <value>
+                <fullName>Temporary Commitment</fullName>
+                <default>false</default>
+                <label>Temporary Commitment</label>
+            </value>
+            <value>
+                <fullName>TPR Denied</fullName>
+                <default>false</default>
+                <label>TPR Denied</label>
+            </value>
+            <value>
+                <fullName>TPR Granted</fullName>
+                <default>false</default>
+                <label>TPR Granted</label>
+            </value>
+            <value>
+                <fullName>Voluntary Placement Agreement Extended</fullName>
+                <default>false</default>
+                <label>Voluntary Placement Agreement Extended</label>
+            </value>
+            <value>
+                <fullName>Writ issued</fullName>
+                <default>false</default>
+                <label>Writ issued</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

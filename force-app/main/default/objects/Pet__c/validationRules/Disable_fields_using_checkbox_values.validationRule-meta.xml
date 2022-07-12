@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_fields_using_checkbox_values</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( There_are_no_Pets_in_this_Household__c == false,OR(ISNEW(), ISCHANGED( Breed__c ),ISCHANGED( Age_of_Pet__c ),ISCHANGED(  Pet_Name__c  ),ISCHANGED( Type_of_Pet__c ),ISCHANGED( Rabies_Certification_Date__c ),ISCHANGED( Rabies_Expiration_Date__c )))</errorConditionFormula>
+    <errorMessage>This Household contains a Pet Record So you are unable to edit or create New Record</errorMessage>
+</ValidationRule>

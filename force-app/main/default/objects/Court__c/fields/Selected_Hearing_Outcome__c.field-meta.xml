@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Selected_Hearing_Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>Selected Hearing Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Court orders are not signed by the judge</fullName>
+                <default>false</default>
+                <label>Court orders are not signed by the judge</label>
+            </value>
+            <value>
+                <fullName>Court order Received By LDSS</fullName>
+                <default>false</default>
+                <label>Court order Received By LDSS</label>
+            </value>
+            <value>
+                <fullName>The Court Order Specifies action(s) other than what was recommended</fullName>
+                <default>false</default>
+                <label>The Court Order Specifies action(s) other than what was recommended</label>
+            </value>
+            <value>
+                <fullName>Visitations Court Ordered</fullName>
+                <default>false</default>
+                <label>Visitations Court Ordered</label>
+            </value>
+            <value>
+                <fullName>The Court Order Specifies a placement other than what was recommended</fullName>
+                <default>false</default>
+                <label>The Court Order Specifies a placement other than what was recommended</label>
+            </value>
+            <value>
+                <fullName>Services Court Orderd</fullName>
+                <default>false</default>
+                <label>Services Court Orderd</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

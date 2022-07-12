@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_is_between_18_and_21_years_old__c</fullName>
+    <description>If a child is between 18 and 21 years old,is he/she in school,employed,or disabled?</description>
+    <externalId>false</externalId>
+    <label>Child is between 18 and 21 years old</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

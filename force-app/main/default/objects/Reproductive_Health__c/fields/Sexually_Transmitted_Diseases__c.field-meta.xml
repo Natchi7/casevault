@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sexually_Transmitted_Diseases__c</fullName>
+    <externalId>false</externalId>
+    <label>Sexually Transmitted Diseases</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bacterial Vaginosis</fullName>
+                <default>false</default>
+                <label>Bacterial Vaginosis</label>
+            </value>
+            <value>
+                <fullName>Chancroid</fullName>
+                <default>false</default>
+                <label>Chancroid</label>
+            </value>
+            <value>
+                <fullName>Chlamydia</fullName>
+                <default>false</default>
+                <label>Chlamydia</label>
+            </value>
+            <value>
+                <fullName>Genital Herpes</fullName>
+                <default>false</default>
+                <label>Genital Herpes</label>
+            </value>
+            <value>
+                <fullName>Gonorrhea</fullName>
+                <default>false</default>
+                <label>Gonorrhea</label>
+            </value>
+            <value>
+                <fullName>HIV/AIDS</fullName>
+                <default>false</default>
+                <label>HIV/AIDS</label>
+            </value>
+            <value>
+                <fullName>Human Papillomavirus HPV/ Genital Warts</fullName>
+                <default>false</default>
+                <label>Human Papillomavirus HPV/ Genital Warts</label>
+            </value>
+            <value>
+                <fullName>Other(Specify)</fullName>
+                <default>false</default>
+                <label>Other(Specify)</label>
+            </value>
+            <value>
+                <fullName>Pelvic Inflammatory Disease</fullName>
+                <default>false</default>
+                <label>Pelvic Inflammatory Disease</label>
+            </value>
+            <value>
+                <fullName>Pubic Lice</fullName>
+                <default>false</default>
+                <label>Pubic Lice</label>
+            </value>
+            <value>
+                <fullName>Syphilis</fullName>
+                <default>false</default>
+                <label>Syphilis</label>
+            </value>
+            <value>
+                <fullName>Trichomona</fullName>
+                <default>false</default>
+                <label>Trichomona</label>
+            </value>
+            <value>
+                <fullName>Viral Hepatitis</fullName>
+                <default>false</default>
+                <label>Viral Hepatitis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

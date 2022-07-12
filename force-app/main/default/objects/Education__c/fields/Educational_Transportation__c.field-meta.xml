@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Educational_Transportation__c</fullName>
+    <externalId>false</externalId>
+    <label>Educational Transportation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>School Bus</fullName>
+                <default>true</default>
+                <label>School Bus</label>
+            </value>
+            <value>
+                <fullName>Drop-off</fullName>
+                <default>false</default>
+                <label>Drop-off</label>
+            </value>
+            <value>
+                <fullName>Car</fullName>
+                <default>false</default>
+                <label>Car</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Public Transportation</fullName>
+                <default>false</default>
+                <label>Public Transportation</label>
+            </value>
+            <value>
+                <fullName>Walk</fullName>
+                <default>false</default>
+                <label>Walk</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

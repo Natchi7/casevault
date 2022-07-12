@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personal_Hygiene__c</fullName>
+    <externalId>false</externalId>
+    <label>Intellectual Personal Hygiene</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bathes Self</fullName>
+                <default>false</default>
+                <label>Bathes Self</label>
+            </value>
+            <value>
+                <fullName>Dresses Self</fullName>
+                <default>false</default>
+                <label>Dresses Self</label>
+            </value>
+            <value>
+                <fullName>Fixes Hair</fullName>
+                <default>false</default>
+                <label>Fixes Hair</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <label>Other (Specify)</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Brushing Teeth</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Brushing Teeth</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Washes Hair</fullName>
+                <default>false</default>
+                <label>Washes Hair</label>
+            </value>
+            <value>
+                <fullName>Menstruation</fullName>
+                <default>false</default>
+                <label>Menstruation</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Bathing Self</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Bathing Self</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Dressing Self</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Dressing Self</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Fixing Hair</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Fixing Hair</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Removing Clothes</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Removing Clothes</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Using the Toilet</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Using the Toilet</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Washing and Drying Hands</label>
+            </value>
+            <value>
+                <fullName>Needs Assistance with Washing Hair</fullName>
+                <default>false</default>
+                <label>Needs Assistance with Washing Hair</label>
+            </value>
+            <value>
+                <fullName>Toilet Alone</fullName>
+                <default>false</default>
+                <label>Toilet Alone</label>
+            </value>
+            <value>
+                <fullName>Toilet Trained</fullName>
+                <default>false</default>
+                <label>Toilet Trained</label>
+            </value>
+            <value>
+                <fullName>Washes and Dries Hands</fullName>
+                <default>false</default>
+                <label>Washes and Dries Hands</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Factor_At_Removal__c</fullName>
+    <externalId>false</externalId>
+    <label>Factors At Removal</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abandonment</fullName>
+                <default>false</default>
+                <label>Abandonment</label>
+            </value>
+            <value>
+                <fullName>Alcohol Abuse (Child)</fullName>
+                <default>false</default>
+                <label>Alcohol Abuse (Child)</label>
+            </value>
+            <value>
+                <fullName>Alcohol Abuse (Parent)</fullName>
+                <default>false</default>
+                <label>Alcohol Abuse (Parent)</label>
+            </value>
+            <value>
+                <fullName>Caregiver&apos;s Inability to Cope Due to Illness or Other Reason</fullName>
+                <default>false</default>
+                <label>Caregiver&apos;s Inability to Cope Due to Illness or Other Reason</label>
+            </value>
+            <value>
+                <fullName>Child&apos;s Behavior Problem</fullName>
+                <default>false</default>
+                <label>Child&apos;s Behavior Problem</label>
+            </value>
+            <value>
+                <fullName>Child&apos;s Disabilities</fullName>
+                <default>false</default>
+                <label>Child&apos;s Disabilities</label>
+            </value>
+            <value>
+                <fullName>Death of Parent(s)</fullName>
+                <default>false</default>
+                <label>Death of Parent(s)</label>
+            </value>
+            <value>
+                <fullName>Drug Abuse(Child)</fullName>
+                <default>false</default>
+                <label>Drug Abuse(Child)</label>
+            </value>
+            <value>
+                <fullName>Inadequate Housing</fullName>
+                <default>false</default>
+                <label>Inadequate Housing</label>
+            </value>
+            <value>
+                <fullName>Incarceration of Parent(s)</fullName>
+                <default>false</default>
+                <label>Incarceration of Parent(s)</label>
+            </value>
+            <value>
+                <fullName>Neglect</fullName>
+                <default>false</default>
+                <label>Neglect</label>
+            </value>
+            <value>
+                <fullName>Physical abuse</fullName>
+                <default>false</default>
+                <label>Physical abuse</label>
+            </value>
+            <value>
+                <fullName>Relinquishment for Adoption(incl. Safe Haven)</fullName>
+                <default>false</default>
+                <label>Relinquishment for Adoption(incl. Safe Haven)</label>
+            </value>
+            <value>
+                <fullName>Sexual Abuse</fullName>
+                <default>false</default>
+                <label>Sexual Abuse</label>
+            </value>
+            <value>
+                <fullName>Voluntary Placement</fullName>
+                <default>false</default>
+                <label>Voluntary Placement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

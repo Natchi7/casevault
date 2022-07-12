@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Needs__c</fullName>
+    <externalId>false</externalId>
+    <label>Other Needs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nutritional Supplement</fullName>
+                <default>true</default>
+                <label>Nutritional Supplement</label>
+            </value>
+            <value>
+                <fullName>Gastrostomy Intestinal tube (G-tube)</fullName>
+                <default>false</default>
+                <label>Gastrostomy Intestinal tube (G-tube)</label>
+            </value>
+            <value>
+                <fullName>Nasogastric tube (NG-tube)</fullName>
+                <default>false</default>
+                <label>Nasogastric tube (NG-tube)</label>
+            </value>
+            <value>
+                <fullName>Other (specify)</fullName>
+                <default>false</default>
+                <label>Other (specify)</label>
+            </value>
+            <value>
+                <fullName>Pacifier</fullName>
+                <default>false</default>
+                <label>Pacifier</label>
+            </value>
+            <value>
+                <fullName>Special nipple</fullName>
+                <default>false</default>
+                <label>Special nipple</label>
+            </value>
+            <value>
+                <fullName>Thumbsucker</fullName>
+                <default>false</default>
+                <label>Thumbsucker</label>
+            </value>
+            <value>
+                <fullName>Sucks Fingers</fullName>
+                <default>false</default>
+                <label>Sucks Fingers</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

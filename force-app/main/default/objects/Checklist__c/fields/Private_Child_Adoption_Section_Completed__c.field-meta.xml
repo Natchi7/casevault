@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Private_Child_Adoption_Section_Completed__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR( Face_Sheet_Complete__c , Race_relegion_etnic_complete__c , If_school_age_edu_completed__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Section Completed?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_injury_was_not_caused_by_accidental__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The injury was not caused by accidental means (provide details supporting either
+an intentional act or reckless disregard for the child&apos;s health or welfare causing the</inlineHelpText>
+    <label>The injury was not caused by accidental</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

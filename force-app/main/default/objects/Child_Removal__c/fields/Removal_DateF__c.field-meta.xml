@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removal_DateF__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISBLANK(Removal_End_Date_Time__c)) ,  
+TEXT(MONTH(Removal_Date__c))+&apos;/&apos;+TEXT(DAY(Removal_Date__c))+&apos;/&apos;+TEXT(YEAR(Removal_Date__c))+&apos; - &apos;+  
+TEXT(MONTH(DATEVALUE(Removal_End_Date_Time__c)))+&apos;/&apos;+TEXT(DAY(DATEVALUE(Removal_End_Date_Time__c)))+&apos;/&apos;+
+TEXT(YEAR(DATEVALUE(Removal_End_Date_Time__c))), TEXT(MONTH(Removal_Date__c))+&apos;/&apos;+TEXT(DAY(Removal_Date__c))+&apos;/&apos;+TEXT(YEAR(Removal_Date__c))+&apos; - Open&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Removal Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

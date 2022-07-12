@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_services_are_being_provided__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What services are being provided to the child to facilitate permanency and/or self-sufficiency?</inlineHelpText>
+    <label>What services are being provided</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

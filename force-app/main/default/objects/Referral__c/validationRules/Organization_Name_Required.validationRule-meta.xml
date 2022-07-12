@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organization_Name_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR(ISPICKVAL(Type__c, &apos;Local Department Home&apos;), ISPICKVAL(Type__c, &apos;CPA Home&apos;))) &amp;&amp; Organization_Site_Name__c = &apos;&apos;</errorConditionFormula>
+    <errorDisplayField>Organization_Name__c</errorDisplayField>
+    <errorMessage>Organization Name is Required</errorMessage>
+</ValidationRule>

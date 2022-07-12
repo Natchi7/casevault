@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Your_caseworker_will_provide_you_with__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Your caseworker will provide you with a copy of the Advance Directive for Selecting a Health Care Agent, to help you in the process of appointing a Health Care Agent should you choose to do so</inlineHelpText>
+    <label>Your caseworker will provide you with</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Discussed the importance of designating a Health Care Agent</fullName>
+                <default>false</default>
+                <label>Discussed the importance of designating a Health Care Agent</label>
+            </value>
+            <value>
+                <fullName>Received copy of the Advance Directive for Selecting a Health Care-Agent</fullName>
+                <default>false</default>
+                <label>Received copy of the Advance Directive for Selecting a Health Care-Agent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

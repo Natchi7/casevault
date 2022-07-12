@@ -1,0 +1,8 @@
+<aura:component access="public">
+    <aura:method name="checkNameSpace" action="{!c.checkNamespaceIsApplicable}">
+        <aura:attribute name="objParam" type="list"></aura:attribute>
+        <aura:attribute name="addNSParam" type="boolean"></aura:attribute>
+        <aura:attribute name="returnList" type="list"></aura:attribute>
+
+    </aura:method>
+</aura:component>

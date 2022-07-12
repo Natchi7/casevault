@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDM</fullName>
+    <active>true</active>
+    <label>SDM</label>
+    <picklistValues>
+        <picklist>CPS_Response_Type__c</picklist>
+        <values>
+            <fullName>CPS-AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPS-IR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_Fatality__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Final_Screening_Decision__c</picklist>
+        <values>
+            <fullName>Accept as Non- CPS %3A only Risk of Harm type is marked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen in %3A At least one maltreatment type of screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen out %3A No maltreatment type  is marked and no screen - in overrides apply</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initial_Screen_Recommendation__c</picklist>
+        <values>
+            <fullName>Accept as Non-CPS%3A Only Risk of Harm type is marked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen in %28one or more maltreatment types are marked%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen out %28no maltreatment type is marked%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initial_Screening_Recommendation__c</picklist>
+        <values>
+            <fullName>Accept as Non-CPS %3A Only Risk of Harm type is marked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen Out and %28no maltreatment type is marked%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen in%28one or more maltreatment types are marked%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Involved_Maltreatment__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Report_includes_allegation_of_abuse__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Response_Time_Decision__c</picklist>
+        <values>
+            <fullName>Immediate Response required based on one or more criteria below%28mark that all apply%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No immediate response criteria exist and allegations include the following%3A</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SDM_Overrides__c</picklist>
+        <values>
+            <fullName>No overrides apply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen in%3B No maltreatment type is marked%2C but referral will be reopened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen out%3A One or more maltreatment types are marked%2C but referral will be screened out %28mark all that apply%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

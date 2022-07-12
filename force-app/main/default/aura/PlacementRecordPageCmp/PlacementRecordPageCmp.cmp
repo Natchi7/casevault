@@ -1,0 +1,321 @@
+<aura:component implements="force:hasRecordId,lightning:actionOverride" access="public" controller="PlacementController">
+    
+    <c:UtilityBaseCmp aura:id="utils"/>
+    <!-- CREATE ATTRIBUTE/VARIABLE-->
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="data" type="List" default="[]"/>
+    <aura:attribute name="sortDirection" type="String" default="asc" />
+    <aura:attribute name="defaultSortDirection" type="String" default="asc" />
+    <aura:attribute name="sortedBy" type="String" />
+    <aura:attribute name="childList" type="List" description="use for store and display child list return from server"/>
+    <aura:attribute name="searchResult" type="List" description="use for store and display account list return from server"/>
+    <aura:attribute name="searchKeyword" type="String" description="use for store user search input"/>
+    <aura:attribute name="showAddedProviderDetail" type="boolean" default="false" description="use for display added record detail"/>
+    <aura:attribute name="TotalNumberOfRecord" type="integer" default="0" description="use for display Number of records"/>
+    <aura:attribute name="getInputMap" type="Map" default="{placementStructure : '',childCharacter : '', localDept : '',childCharacterSet : [], providerType: 'Public Provider'}"/>
+    <aura:attribute name="pickListValueMap" type="Map" default="{}"/>
+    <aura:attribute name="placementRecordId" type="String" default="" />
+    <aura:attribute name="showEditView" type="boolean" default="false"/>
+    <aura:attribute name="showCreateView" type="boolean" default="false"/>
+    <aura:attribute name="childOptions" type="List"/>
+    <aura:attribute name="childId" type="string"/>
+    <aura:attribute name="placementRecordList" type="List"/>
+
+    <!-- Map Attribute -->
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="zoomLevel" type="Integer" />
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="showPlacementModal" type="boolean" default="false"/>
+    <aura:attribute name="Message" type="boolean" default="false"/>
+    <aura:attribute name="childErrorMessage" type="boolean" default="false"/>
+    <aura:attribute name="selectedProviderRec" type="Account" />
+    <aura:attribute name="selectedChildRec" type="Contact" />
+    <aura:attribute name="placementRec" type="Placement__c" default="{Response_Accepted__c: '', Placement_Structure__c: '', Reason_for_Decline__c: '', COMAR_Rate_Category__c: '', Comments__c: '', Description__c: ''}"/>
+    <aura:attribute name="providerTypeOptions" type="List" default="[
+                                                                    {'label': 'Public', 'value': 'Public Provider'},
+                                                                    {'label': 'Private', 'value': 'Private Provider Org'},
+                                                                    ]"/>
+    <!--History Attribute-->
+    <aura:attribute name ="showHistoryModal" type="boolean" default="false"/>
+    <aura:attribute name ="histroyList" type="List"/>
+    <aura:attribute name ="approvalList" type="List"/>    
+    <aura:attribute name="providerPlacement" type="String" default="Provider Placement"/>
+    <aura:registerEvent name="appEvent" type="c:servicecaseRefreshEvent"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="showChild" type="boolean" default="false"></aura:attribute>
+    <aura:attribute name="visibleData" type="List"/>
+   
+    <!--Use aura:if tag to display/hide popup based on isModalOpen value--> 
+    
+    <aura:if isTrue="{!v.isModalOpen}">
+        <div class="slds-m-around_xx-large">
+            <!-- Modal/Popup Box starts here-->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box Header Starts here-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal/PopUp Box</h2>
+                    </header>
+                    <!--Modal/Popup Box Body Starts here-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning:map 
+                                       mapMarkers="{! v.mapMarkers }" 
+                                       zoomLevel="{!v.zoomLevel}" />
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand"
+                                          label="OK"
+                                          title="OK"
+                                          onclick="{!c.closeModel}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>
+    
+    <!-- ERROR MESSAGE IF NOT RECORDS FOUND--> 
+    <aura:if isTrue="{!v.childErrorMessage}">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">No child Records Found. Please add the child record.</h2>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <!-- SHOW LOADING SPINNER--> 
+    <lightning:spinner variant="brand" size="large" aura:id="Id_spinner" class="slds-hide" />
+    
+<aura:if isTrue="{!v.showEditView}">
+    <lightning:card title="PROVIDER SEARCH">
+        <!-- SEARCH INPUT AND SEARCH BUTTON-->
+        <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:combobox name="providerType" label="Provider Type" value="{!v.getInputMap.providerType}" placeholder="" options="{! v.providerTypeOptions }"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <aura:if isTrue="{!v.getInputMap.providerType == 'Private Provider'}">
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:input name="providerName" label="Provider Name" value="{!v.getInputMap.providerName}" placeholder="Provider Name"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:set attribute="else">
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:input value="{!v.getInputMap.firstName}"
+                                         placeholder="First Name"
+                                         aura:id="searchField"
+                                         label="First Name"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:input value="{!v.getInputMap.middleName}"
+                                         placeholder="Middle Name"
+                                         aura:id="searchField"
+                                         label="Middle Name"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:input value="{!v.getInputMap.lastName}"
+                                         placeholder="Last Name"
+                                         aura:id="searchField"
+                                         label="Last Name"/>
+                    </lightning:layoutItem>            
+                </lightning:layout>
+            </aura:set>
+        </aura:if>
+        <lightning:layout>
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="slds-p-top_x-small"><label>Child Characteristics</label>
+                    <div><c:MultiSelectComponent options_="{!v.pickListValueMap.childCharPicklist}" selectedItems="{!v.getInputMap.childCharacterSet}"/></div>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <lightning:combobox name="progress" label="Placement Structure" value="{!v.getInputMap.placementStructure}" placeholder="" options="{!v.pickListValueMap.placementStructurePicklist}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout>
+            <lightning:layoutItem size="6" padding="around-small">
+                <lightning:combobox name="progress" label="Local Department" value="{!v.getInputMap.localDept}" placeholder="" options="{!v.pickListValueMap.localDeptPicklist}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <lightning:combobox name="progress" label="Bundled Placement Services" value="{!v.getInputMap.bundledService}" placeholder="" options=""/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6" padding="around-small">
+                <lightning:input value="{!v.getInputMap.providerId}"
+                                 placeholder="Provider Id"
+                                 label="Provider Id"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <div class="slds-text-align_right slds-p-around_small">
+            <lightning:button onclick="{!c.Search}"
+                              variant="brand"
+                              label="Search"
+                              iconName="utility:search"/>
+            
+        </div>
+        
+        <!-- TOTAL RECORDS BADGES--> 
+        <!--<div class="slds-m-around_x-small">
+            <lightning:badge label="{!v.TotalNumberOfRecord}" />
+        </div>-->
+        
+        <!-- ERROR MESSAGE IF NOT RECORDS FOUND--> 
+        <aura:if isTrue="{!v.Message}">
+            <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small">No Searching Provider Records Found...</h2>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.searchResult.length }">
+            <lightning:card title="">
+                <div class="slds-p-around_x-small"><b>Total Records:</b>&nbsp;{!v.searchResult.length}</div>
+                <div class="slds-p-top_medium">
+                    <lightning:datatable
+                                         columns="{! v.columns }"
+                                         data="{!v.visibleData}"
+                                         class="table-test"
+                                         keyField="Id"
+                                         resizeStep="20"
+                                         sortedDirection="{!v.sortDirection}"
+                                         sortedBy="{!v.sortedBy}"
+                                         onsort="{!c.handleSort}"
+                                         onrowaction="{! c.handleRowAction }"
+                                         onrowselection = "{! c.handleRowSelection }"
+                                         maxRowSelection = "1"
+                                         />
+                </div>
+                <div>
+                <aura:if isTrue="{!v.showChild}">
+                    <c:paginationLWC totalList="{!v.searchResult}" onupdate="{!c.paginationHandler}"/>
+                </aura:if>
+            </div> 
+                <aura:set attribute="footer">
+                    <div class="slds-text-align_right">
+                        <lightning:button variant="brand" iconName="utility:add" label="Add" title="Add"  disabled="{!v.selectedProviderRec == null}" onclick="{!c.openProviderModal}" />
+                    </div>
+                </aura:set>
+            </lightning:card>
+        </aura:if>
+    </lightning:card>
+    
+    <aura:if isTrue="{!v.showAddedProviderDetail}">
+        <lightning:card title="ADD PROVIDER">
+            <div class="slds-p-left_large">
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <b>Name:&nbsp;</b> {!v.selectedProviderRec.Name}
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <b>First Name:&nbsp;</b> {!v.selectedProviderRec.Individual_First_Name__c}
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <b>Middle Name:&nbsp;</b> {!v.selectedProviderRec.Individual_Middle_Name__c}
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <b>Last Name:&nbsp;</b> {!v.selectedProviderRec.Individual_Last_Name__c}
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <b>Provider Id:&nbsp;</b> {!v.selectedProviderRec.Casevault_ProID__c}
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <b>Vacancy:&nbsp;</b> {!v.selectedProviderRec.Number_of_Beds__c}
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+            
+        </lightning:card>
+        
+    </aura:if>
+    
+    <lightning:card title="">
+        <lightning:card title="Response">
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:combobox name="ResponseAccepted" aura:id="requiredFields" label="Response Accepted" value="{!v.placementRec.Response_Accepted__c}" placeholder="" options="{!v.pickListValueMap.responseAcceptedPicklist}" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:combobox name="PlacementStructure" aura:id="requiredFields" label="Placement Structure" value="{!v.placementRec.Placement_Structure__c}" placeholder="" options="{!v.pickListValueMap.placementStructPicklist}" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:combobox name="ReasonforDecline" label="Reason for Decline" value="{!v.placementRec.Reason_for_Decline__c}" placeholder="" options="{!v.pickListValueMap.reasonForDeclinePicklist}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:combobox name="COMAR" label="COMAR Rate Category" value="{!v.placementRec.COMAR_Rate_Category__c}" placeholder="" options="{!v.pickListValueMap.comarRateCategoryPicklist}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    <lightning:textarea name="textArea1" label="Comments" value="{!v.placementRec.Comments__c}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    <lightning:textarea name="textArea2" label="Description" value="{!v.placementRec.Description__c}"/>
+                </lightning:layoutItem>
+            </lightning:layout>    
+        </lightning:card>
+        
+        <lightning:card title="Placement Entry">
+            <lightning:layout>
+                <lightning:layoutItem size="5" padding="around-small">
+                    <lightning:input type="dateTime" name="input2" aura:id="requiredFields" label="Begin Date" value="{!v.placementRec.Begin_Date__c}" required="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small"></lightning:layoutItem>
+                <lightning:layoutItem size="5" padding="around-small">
+                    <lightning:input type="date" name="input2" aura:id="requiredFields" label="Referral Sent Date" value="{!v.placementRec.Referral_Send_Date__c}" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:card>
+        
+        <aura:set attribute="footer">
+            <div class="slds-text-align_right">
+                <lightning:button variant="brand" iconName="utility:save" label="Save" title="Save" onclick="{!c.upsertPlacement}" />
+            </div>
+        </aura:set>
+    </lightning:card>
+</aura:if>
+
+    <aura:if isTrue="{!v.showCreateView}">
+
+        <lightning:recordEditForm aura:id="recordEditForm" recordId="" objectApiName="Placement__c" onsubmit="{!c.handleSubmit}" onsuccess="{!c.handleSuccess}">
+            <lightning:card title="New Placement">
+                <lightning:layout>
+                    <lightning:layoutItem size="6" padding="around-small">
+                        <lightning:combobox name="Child__r" label="Child" value="{!v.childId}" placeholder="Select Child" options="{! v.childOptions }"/>
+                    </lightning:layoutItem> 
+                    <lightning:layoutItem size="6" padding="around-small">
+                        <lightning:inputField fieldName="Begin_Date__c" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <div class="slds-text-align_right slds-p-right_small"><lightning:button  variant="brand" type="submit" name="save" label="Save"/></div>
+            </lightning:card>
+        </lightning:recordEditForm>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Child Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Service_Case__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.Service_Case__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>1;</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Youth Transition Plans</relationshipLabel>
+    <relationshipName>Youth_Transition_Plans</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="IntakeAcknowldgementLetterController" >
+	<lightning:button variant="brand" label="Download Letter" onclick="{!c.getAcknowldgeLetter}" />
+</aura:component>

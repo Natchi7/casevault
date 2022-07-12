@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_By__c</fullName>
+    <externalId>false</externalId>
+    <label>Completed By</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Shelter_Authorization_Completed__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Uploaded Manually</fullName>
+                <default>false</default>
+                <label>Uploaded Manually</label>
+            </value>
+            <value>
+                <fullName>Uploaded via System</fullName>
+                <default>false</default>
+                <label>Uploaded via System</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Uploaded Manually</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Uploaded via System</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

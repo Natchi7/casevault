@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_s_information_Disclosed_To__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Person(s) information Disclosed To</inlineHelpText>
+    <label>Person(s) information Disclosed To</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

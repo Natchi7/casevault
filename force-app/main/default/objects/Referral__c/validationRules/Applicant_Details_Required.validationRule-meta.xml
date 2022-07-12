@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Details_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISPICKVAL( Type__c , &apos;ICPC Home Study&apos;), ISPICKVAL( Type__c , &apos;Local Department Home&apos;)), OR(ISBLANK(Applicant_Last_Name__c), ISBLANK( Applicant_First_Name__c), ISBLANK(Tax_Id__c), ISBLANK( Applicant_Date_of_Birth__c)))</errorConditionFormula>
+    <errorMessage>Required applicant First Name, Last Name, Tax Id &amp; Date of birth.</errorMessage>
+</ValidationRule>

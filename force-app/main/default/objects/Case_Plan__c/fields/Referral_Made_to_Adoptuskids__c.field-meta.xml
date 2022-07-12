@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Made_to_Adoptuskids__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Referral Made to Adoptuskids(Date)?</inlineHelpText>
+    <label>Referral Made to Adoptuskids</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

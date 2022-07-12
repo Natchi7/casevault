@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_injury_was_caused_by_a_parent__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The injury was caused by a parent, caregiver, authority figure, or household or 
+family member ( insert name and whether the person is a parent, OR caregiver,
+OR authority figure, OR household OR family member)</inlineHelpText>
+    <label>The injury was caused by a parent</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

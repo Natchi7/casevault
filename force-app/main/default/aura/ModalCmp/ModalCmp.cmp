@@ -1,0 +1,23 @@
+<aura:component access="public" >
+    <aura:attribute name="header" type="Aura.Component[]" access="public"/>
+    <aura:attribute name="body" type="Aura.Component[]" access="public"/>
+    <aura:attribute name="footer" type="Aura.Component[]" access="public"/>
+    
+    <div class="demo-only">
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    {!v.header}
+                </header>
+                <div class="slds-modal__content">
+                    {!v.body}
+                </div>
+                <footer class="slds-modal__footer">
+                    {!v.footer}
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

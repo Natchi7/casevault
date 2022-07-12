@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_of_the_person_completing_the_report__c</fullName>
+    <externalId>false</externalId>
+    <label>Name of the person completing the report</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Facilitator</fullName>
+                <default>false</default>
+                <label>Facilitator</label>
+            </value>
+            <value>
+                <fullName>Case worker</fullName>
+                <default>false</default>
+                <label>Case worker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

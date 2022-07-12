@@ -1,0 +1,7 @@
+.THIS .margin15px {
+    margin: 15px;
+}
+.THIS .wrapText {
+    white-space: normal !important;
+    word-break: break-word !important;
+}

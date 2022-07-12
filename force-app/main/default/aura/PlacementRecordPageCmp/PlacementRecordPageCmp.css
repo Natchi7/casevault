@@ -1,0 +1,27 @@
+.THIS .padding10px{
+    padding:10px;
+}
+.THIS .table-test thead th span {
+    background-color: #808080;
+    color: white
+}
+
+.THIS .tableHeaderColor {
+    background-color: #1798c1;
+    color: white
+}
+.THIS.slds-modal__container{
+    max-width: 90rem !important;
+    width:95% !important;
+}
+.THIS.cuf-content {
+    padding: 0 0rem !important;
+}
+.THIS.slds-p-around--medium {
+    padding: 0rem !important;
+}
+.THIS.slds-modal__content{
+    overflow-y:hidden !important;
+    height:unset !important;
+    max-height:unset !important;
+}

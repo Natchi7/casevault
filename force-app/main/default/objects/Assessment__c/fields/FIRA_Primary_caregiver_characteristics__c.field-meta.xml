@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIRA_Primary_caregiver_characteristics__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary caregiver characteristics(Select all that apply)</inlineHelpText>
+    <label>Primary caregiver characteristics</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Provides insufficient emotional/psychological support</fullName>
+                <default>false</default>
+                <label>Provides insufficient emotional/psychological support</label>
+            </value>
+            <value>
+                <fullName>Employs excessive/inappropiate discipline</fullName>
+                <default>false</default>
+                <label>Employs excessive/inappropiate discipline</label>
+            </value>
+            <value>
+                <fullName>Domineering caregiver</fullName>
+                <default>false</default>
+                <label>Domineering caregiver</label>
+            </value>
+            <value>
+                <fullName>None of the above</fullName>
+                <default>false</default>
+                <label>None of the above</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

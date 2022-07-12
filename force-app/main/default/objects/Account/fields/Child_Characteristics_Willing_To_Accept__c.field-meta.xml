@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Characteristics_Willing_To_Accept__c</fullName>
+    <externalId>false</externalId>
+    <label>Child Characteristics Willing To Accept</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aggression - Cruelty To Animals</fullName>
+                <default>false</default>
+                <label>Aggression - Cruelty To Animals</label>
+            </value>
+            <value>
+                <fullName>Aggression - Physical To Adults</fullName>
+                <default>false</default>
+                <label>Aggression - Physical To Adults</label>
+            </value>
+            <value>
+                <fullName>Aggression - Physical To Peers</fullName>
+                <default>false</default>
+                <label>Aggression - Physical To Peers</label>
+            </value>
+            <value>
+                <fullName>Aggression - Physical To Staff</fullName>
+                <default>false</default>
+                <label>Aggression - Physical To Staff</label>
+            </value>
+            <value>
+                <fullName>Aggression - Property Destruction</fullName>
+                <default>false</default>
+                <label>Aggression - Property Destruction</label>
+            </value>
+            <value>
+                <fullName>Aggression - Verbal To Adults</fullName>
+                <default>false</default>
+                <label>Aggression - Verbal To Adults</label>
+            </value>
+            <value>
+                <fullName>Aggression - Verbal To Peers</fullName>
+                <default>false</default>
+                <label>Aggression - Verbal To Peers</label>
+            </value>
+            <value>
+                <fullName>Ambulation Impaired (I.E. Wheelchair Needs)</fullName>
+                <default>false</default>
+                <label>Ambulation Impaired (I.E. Wheelchair Needs)</label>
+            </value>
+            <value>
+                <fullName>And/Or Over The Counter Substances (Circle Which)</fullName>
+                <default>false</default>
+                <label>And/Or Over The Counter Substances (Circle Which)</label>
+            </value>
+            <value>
+                <fullName>Anxiety - Obsessions/Compulsions</fullName>
+                <default>false</default>
+                <label>Anxiety - Obsessions/Compulsions</label>
+            </value>
+            <value>
+                <fullName>Anxiety - Overanxious</fullName>
+                <default>false</default>
+                <label>Anxiety - Overanxious</label>
+            </value>
+            <value>
+                <fullName>Anxiety - Panic Attacks</fullName>
+                <default>false</default>
+                <label>Anxiety - Panic Attacks</label>
+            </value>
+            <value>
+                <fullName>Anxiety - Separation Anxiety</fullName>
+                <default>false</default>
+                <label>Anxiety - Separation Anxiety</label>
+            </value>
+            <value>
+                <fullName>Anxiety - Unrealistic Fears Or Phobias</fullName>
+                <default>false</default>
+                <label>Anxiety - Unrealistic Fears Or Phobias</label>
+            </value>
+            <value>
+                <fullName>Anxiety Disorder</fullName>
+                <default>false</default>
+                <label>Anxiety Disorder</label>
+            </value>
+            <value>
+                <fullName>Asthma (Controlled)</fullName>
+                <default>false</default>
+                <label>Asthma (Controlled)</label>
+            </value>
+            <value>
+                <fullName>Asthma (Not Controlled)</fullName>
+                <default>false</default>
+                <label>Asthma (Not Controlled)</label>
+            </value>
+            <value>
+                <fullName>Attention Deficit Disorder</fullName>
+                <default>false</default>
+                <label>Attention Deficit Disorder</label>
+            </value>
+            <value>
+                <fullName>Autistic (Self Stimulatory)</fullName>
+                <default>false</default>
+                <label>Autistic (Self Stimulatory)</label>
+            </value>
+            <value>
+                <fullName>Autistic (Self-Injurious)</fullName>
+                <default>false</default>
+                <label>Autistic (Self-Injurious)</label>
+            </value>
+            <value>
+                <fullName>Auto Theft</fullName>
+                <default>false</default>
+                <label>Auto Theft</label>
+            </value>
+            <value>
+                <fullName>Auto Theft- Chronic</fullName>
+                <default>false</default>
+                <label>Auto Theft- Chronic</label>
+            </value>
+            <value>
+                <fullName>Borderline Thru Normal Intelligence (I.Q. = 70+)</fullName>
+                <default>false</default>
+                <label>Borderline Thru Normal Intelligence (I.Q. = 70+)</label>
+            </value>
+            <value>
+                <fullName>Conduct Disorder</fullName>
+                <default>false</default>
+                <label>Conduct Disorder</label>
+            </value>
+            <value>
+                <fullName>Crime Against Person (Assault Or Robbery)</fullName>
+                <default>false</default>
+                <label>Crime Against Person (Assault Or Robbery)</label>
+            </value>
+            <value>
+                <fullName>Cult Involvement</fullName>
+                <default>false</default>
+                <label>Cult Involvement</label>
+            </value>
+            <value>
+                <fullName>Current Lisa L Class</fullName>
+                <default>false</default>
+                <label>Current Lisa L Class</label>
+            </value>
+            <value>
+                <fullName>Defiant/Non-Compliant/Oppositional</fullName>
+                <default>false</default>
+                <label>Defiant/Non-Compliant/Oppositional</label>
+            </value>
+            <value>
+                <fullName>Depression (By History)</fullName>
+                <default>false</default>
+                <label>Depression (By History)</label>
+            </value>
+            <value>
+                <fullName>Depression (Current)</fullName>
+                <default>false</default>
+                <label>Depression (Current)</label>
+            </value>
+            <value>
+                <fullName>Diabetes (Controlled)</fullName>
+                <default>false</default>
+                <label>Diabetes (Controlled)</label>
+            </value>
+            <value>
+                <fullName>Diabetes (Not Controlled)</fullName>
+                <default>false</default>
+                <label>Diabetes (Not Controlled)</label>
+            </value>
+            <value>
+                <fullName>Drug Dealer</fullName>
+                <default>false</default>
+                <label>Drug Dealer</label>
+            </value>
+            <value>
+                <fullName>Dual Diagnosis (Mentally Ill &amp; Drug Addiction)</fullName>
+                <default>false</default>
+                <label>Dual Diagnosis (Mentally Ill &amp; Drug Addiction)</label>
+            </value>
+            <value>
+                <fullName>Dual Diagnosis (Mentally Ill &amp; Mentally Retarded)</fullName>
+                <default>false</default>
+                <label>Dual Diagnosis (Mentally Ill &amp; Mentally Retarded)</label>
+            </value>
+            <value>
+                <fullName>Emotionally Abused</fullName>
+                <default>false</default>
+                <label>Emotionally Abused</label>
+            </value>
+            <value>
+                <fullName>Encopretic (Soiler)</fullName>
+                <default>false</default>
+                <label>Encopretic (Soiler)</label>
+            </value>
+            <value>
+                <fullName>Enuretic (Wetter)</fullName>
+                <default>false</default>
+                <label>Enuretic (Wetter)</label>
+            </value>
+            <value>
+                <fullName>Epilepsy (Controlled)</fullName>
+                <default>false</default>
+                <label>Epilepsy (Controlled)</label>
+            </value>
+            <value>
+                <fullName>Epilepsy (Not Controlled)</fullName>
+                <default>false</default>
+                <label>Epilepsy (Not Controlled)</label>
+            </value>
+            <value>
+                <fullName>Fire Setting (Isolated Episode And Dangerous)</fullName>
+                <default>false</default>
+                <label>Fire Setting (Isolated Episode And Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Fire Setting (Isolated Episode, Not Dangerous)</fullName>
+                <default>false</default>
+                <label>Fire Setting (Isolated Episode, Not Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Fire Setting (Not Recent Or Frequent &amp; Not Dangerous)</fullName>
+                <default>false</default>
+                <label>Fire Setting (Not Recent Or Frequent &amp; Not Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Fire Setting (Not Recent Or Frequent But Dangerous)</fullName>
+                <default>false</default>
+                <label>Fire Setting (Not Recent Or Frequent But Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Fire Setting (Recent And Dangerous)</fullName>
+                <default>false</default>
+                <label>Fire Setting (Recent And Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Fire Setting (Recent But Not Dangerous)</fullName>
+                <default>false</default>
+                <label>Fire Setting (Recent But Not Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Gang Involvement</fullName>
+                <default>false</default>
+                <label>Gang Involvement</label>
+            </value>
+            <value>
+                <fullName>Gender Identity Confusion</fullName>
+                <default>false</default>
+                <label>Gender Identity Confusion</label>
+            </value>
+            <value>
+                <fullName>Hearing Deficit (Moderate)</fullName>
+                <default>false</default>
+                <label>Hearing Deficit (Moderate)</label>
+            </value>
+            <value>
+                <fullName>Hearing Loss (Total) X</fullName>
+                <default>false</default>
+                <label>Hearing Loss (Total) X</label>
+            </value>
+            <value>
+                <fullName>Hiv + (Non Symptomatic)</fullName>
+                <default>false</default>
+                <label>Hiv + (Non Symptomatic)</label>
+            </value>
+            <value>
+                <fullName>Hiv + (Symptomatic)</fullName>
+                <default>false</default>
+                <label>Hiv + (Symptomatic)</label>
+            </value>
+            <value>
+                <fullName>Homicide Action</fullName>
+                <default>false</default>
+                <label>Homicide Action</label>
+            </value>
+            <value>
+                <fullName>Homicide Ideation</fullName>
+                <default>false</default>
+                <label>Homicide Ideation</label>
+            </value>
+            <value>
+                <fullName>Hyperactive/Overactive</fullName>
+                <default>false</default>
+                <label>Hyperactive/Overactive</label>
+            </value>
+            <value>
+                <fullName>Lack Of Impulse Control</fullName>
+                <default>false</default>
+                <label>Lack Of Impulse Control</label>
+            </value>
+            <value>
+                <fullName>Learning Disabilities</fullName>
+                <default>false</default>
+                <label>Learning Disabilities</label>
+            </value>
+            <value>
+                <fullName>Lying</fullName>
+                <default>false</default>
+                <label>Lying</label>
+            </value>
+            <value>
+                <fullName>Medically Fragile (Management Of Life Risk)</fullName>
+                <default>false</default>
+                <label>Medically Fragile (Management Of Life Risk)</label>
+            </value>
+            <value>
+                <fullName>Mild Mental Retardation (I.Q. = 55-70)</fullName>
+                <default>false</default>
+                <label>Mild Mental Retardation (I.Q. = 55-70)</label>
+            </value>
+            <value>
+                <fullName>Moderate Mental Retardation (I.Q. = 35- 55)</fullName>
+                <default>false</default>
+                <label>Moderate Mental Retardation (I.Q. = 35- 55)</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Constricted Affect</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Constricted Affect</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Mood Swings</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Mood Swings</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Poor Self Esteem</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Poor Self Esteem</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Suicide Gestures/Attempts (By History)</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Suicide Gestures/Attempts (By History)</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Suicide Gestures/Attempts (Current)</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Suicide Gestures/Attempts (Current)</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Suicide Ideation (By History)</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Suicide Ideation (By History)</label>
+            </value>
+            <value>
+                <fullName>Mood Disorder - Suicide Ideation (Current)</fullName>
+                <default>false</default>
+                <label>Mood Disorder - Suicide Ideation (Current)</label>
+            </value>
+            <value>
+                <fullName>Multiple Dangerous Behaviors (Life Threat To Others)</fullName>
+                <default>false</default>
+                <label>Multiple Dangerous Behaviors (Life Threat To Others)</label>
+            </value>
+            <value>
+                <fullName>Needs Facility Secure Environment</fullName>
+                <default>false</default>
+                <label>Needs Facility Secure Environment</label>
+            </value>
+            <value>
+                <fullName>Needs Staff Secure Environment</fullName>
+                <default>false</default>
+                <label>Needs Staff Secure Environment</label>
+            </value>
+            <value>
+                <fullName>Nightmares Or Night Terrors</fullName>
+                <default>false</default>
+                <label>Nightmares Or Night Terrors</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Not Willing To Participate In Treatment</fullName>
+                <default>false</default>
+                <label>Not Willing To Participate In Treatment</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other – Kinship Child</fullName>
+                <default>false</default>
+                <label>Other – Kinship Child</label>
+            </value>
+            <value>
+                <fullName>Passive Or Easily Led</fullName>
+                <default>false</default>
+                <label>Passive Or Easily Led</label>
+            </value>
+            <value>
+                <fullName>Personality Disorder</fullName>
+                <default>false</default>
+                <label>Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Pervasive Developmental Disorder</fullName>
+                <default>false</default>
+                <label>Pervasive Developmental Disorder</label>
+            </value>
+            <value>
+                <fullName>Physically Abused</fullName>
+                <default>false</default>
+                <label>Physically Abused</label>
+            </value>
+            <value>
+                <fullName>Poor Peer Relations</fullName>
+                <default>false</default>
+                <label>Poor Peer Relations</label>
+            </value>
+            <value>
+                <fullName>Pregnant</fullName>
+                <default>false</default>
+                <label>Pregnant</label>
+            </value>
+            <value>
+                <fullName>Profound/Severe Mental Retardation (I.Q &lt;20-35)</fullName>
+                <default>false</default>
+                <label>Profound/Severe Mental Retardation (I.Q &lt;20-35)</label>
+            </value>
+            <value>
+                <fullName>Property Offense (Theft Etc)</fullName>
+                <default>false</default>
+                <label>Property Offense (Theft Etc)</label>
+            </value>
+            <value>
+                <fullName>Prostitution</fullName>
+                <default>false</default>
+                <label>Prostitution</label>
+            </value>
+            <value>
+                <fullName>Psychosis</fullName>
+                <default>false</default>
+                <label>Psychosis</label>
+            </value>
+            <value>
+                <fullName>Requires Seclusion Or Mechanical/Chemical Restraint</fullName>
+                <default>false</default>
+                <label>Requires Seclusion Or Mechanical/Chemical Restraint</label>
+            </value>
+            <value>
+                <fullName>Requires Therapeutic Holds</fullName>
+                <default>false</default>
+                <label>Requires Therapeutic Holds</label>
+            </value>
+            <value>
+                <fullName>Runaway (Chronic &amp; Dangerous To Self Or Others)</fullName>
+                <default>false</default>
+                <label>Runaway (Chronic &amp; Dangerous To Self Or Others)</label>
+            </value>
+            <value>
+                <fullName>Runaway (Chronic &amp; No Danger To Self Or Others)</fullName>
+                <default>false</default>
+                <label>Runaway (Chronic &amp; No Danger To Self Or Others)</label>
+            </value>
+            <value>
+                <fullName>Runaway (Not Chronic &amp; Dangerous To Self Or Others)</fullName>
+                <default>false</default>
+                <label>Runaway (Not Chronic &amp; Dangerous To Self Or Others)</label>
+            </value>
+            <value>
+                <fullName>Runaway (Not Chronic &amp; No Danger To Self Or Others)</fullName>
+                <default>false</default>
+                <label>Runaway (Not Chronic &amp; No Danger To Self Or Others)</label>
+            </value>
+            <value>
+                <fullName>Self Abusive Or Injurious X</fullName>
+                <default>false</default>
+                <label>Self Abusive Or Injurious X</label>
+            </value>
+            <value>
+                <fullName>Self-Care/Hygiene Failure</fullName>
+                <default>false</default>
+                <label>Self-Care/Hygiene Failure</label>
+            </value>
+            <value>
+                <fullName>Sex Offender (Non Violent)</fullName>
+                <default>false</default>
+                <label>Sex Offender (Non Violent)</label>
+            </value>
+            <value>
+                <fullName>Sex Offender (Violent)</fullName>
+                <default>false</default>
+                <label>Sex Offender (Violent)</label>
+            </value>
+            <value>
+                <fullName>Sexual Voyeur</fullName>
+                <default>false</default>
+                <label>Sexual Voyeur</label>
+            </value>
+            <value>
+                <fullName>Sexually Abused</fullName>
+                <default>false</default>
+                <label>Sexually Abused</label>
+            </value>
+            <value>
+                <fullName>Sexually Active - Heterosexual</fullName>
+                <default>false</default>
+                <label>Sexually Active - Heterosexual</label>
+            </value>
+            <value>
+                <fullName>Sexually Active - Homosexual</fullName>
+                <default>false</default>
+                <label>Sexually Active - Homosexual</label>
+            </value>
+            <value>
+                <fullName>Sexually Promiscuous</fullName>
+                <default>false</default>
+                <label>Sexually Promiscuous</label>
+            </value>
+            <value>
+                <fullName>Sleep Disturbance Or Disorder</fullName>
+                <default>false</default>
+                <label>Sleep Disturbance Or Disorder</label>
+            </value>
+            <value>
+                <fullName>Social Withdrawal (Isolation)</fullName>
+                <default>false</default>
+                <label>Social Withdrawal (Isolation)</label>
+            </value>
+            <value>
+                <fullName>Speech Disorder</fullName>
+                <default>false</default>
+                <label>Speech Disorder</label>
+            </value>
+            <value>
+                <fullName>Speech Loss (I.E. Sign-Language Needs)</fullName>
+                <default>false</default>
+                <label>Speech Loss (I.E. Sign-Language Needs)</label>
+            </value>
+            <value>
+                <fullName>Stealing</fullName>
+                <default>false</default>
+                <label>Stealing</label>
+            </value>
+            <value>
+                <fullName>Substance Abuser - Alcohol, Drugs And/Or Over The Counter Substances (Circle Which)</fullName>
+                <default>false</default>
+                <label>Substance Abuser - Alcohol, Drugs And/Or Over The Counter Substances (Circle Which)</label>
+            </value>
+            <value>
+                <fullName>Substance Dependent - Alcohol, Drugs And/Or Over The Counter Substances (Circle Which)</fullName>
+                <default>false</default>
+                <label>Substance Dependent - Alcohol, Drugs And/Or Over The Counter Substances (Circle Which)</label>
+            </value>
+            <value>
+                <fullName>Substance User - Alcohol, Drugs</fullName>
+                <default>false</default>
+                <label>Substance User - Alcohol, Drugs</label>
+            </value>
+            <value>
+                <fullName>Technology Dependent</fullName>
+                <default>false</default>
+                <label>Technology Dependent</label>
+            </value>
+            <value>
+                <fullName>Teen Parent &amp; Child Under 4 Years Old</fullName>
+                <default>false</default>
+                <label>Teen Parent &amp; Child Under 4 Years Old</label>
+            </value>
+            <value>
+                <fullName>Teen Parent &amp; More Than One Child Under 4</fullName>
+                <default>false</default>
+                <label>Teen Parent &amp; More Than One Child Under 4</label>
+            </value>
+            <value>
+                <fullName>Thinking - Disorientation</fullName>
+                <default>false</default>
+                <label>Thinking - Disorientation</label>
+            </value>
+            <value>
+                <fullName>Thinking - Inattention</fullName>
+                <default>false</default>
+                <label>Thinking - Inattention</label>
+            </value>
+            <value>
+                <fullName>Thinking - Memory Impaired</fullName>
+                <default>false</default>
+                <label>Thinking - Memory Impaired</label>
+            </value>
+            <value>
+                <fullName>Thinking - Psychotic Thinking Or Features</fullName>
+                <default>false</default>
+                <label>Thinking - Psychotic Thinking Or Features</label>
+            </value>
+            <value>
+                <fullName>Vandalism</fullName>
+                <default>false</default>
+                <label>Vandalism</label>
+            </value>
+            <value>
+                <fullName>Violent Episode(S)</fullName>
+                <default>false</default>
+                <label>Violent Episode(S)</label>
+            </value>
+            <value>
+                <fullName>Violent Routinely</fullName>
+                <default>false</default>
+                <label>Violent Routinely</label>
+            </value>
+            <value>
+                <fullName>Vision Deficit (Moderate)</fullName>
+                <default>false</default>
+                <label>Vision Deficit (Moderate)</label>
+            </value>
+            <value>
+                <fullName>Vision Loss (Total)</fullName>
+                <default>false</default>
+                <label>Vision Loss (Total)</label>
+            </value>
+            <value>
+                <fullName>Weapon User (Not Recent But Dangerous)</fullName>
+                <default>false</default>
+                <label>Weapon User (Not Recent But Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Weapon User (Not Recent Or Dangerous)</fullName>
+                <default>false</default>
+                <label>Weapon User (Not Recent Or Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Weapon User (Recent And Dangerous)</fullName>
+                <default>false</default>
+                <label>Weapon User (Recent And Dangerous)</label>
+            </value>
+            <value>
+                <fullName>Youth Cannot Form Attachments With Staff</fullName>
+                <default>false</default>
+                <label>Youth Cannot Form Attachments With Staff</label>
+            </value>
+            <value>
+                <fullName>Youth Will Disrupt Milieu</fullName>
+                <default>false</default>
+                <label>Youth Will Disrupt Milieu</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

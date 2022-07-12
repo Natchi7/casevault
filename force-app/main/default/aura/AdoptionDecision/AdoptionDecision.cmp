@@ -1,0 +1,53 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="AdoptionCaseController" access="public" >
+ 	
+    <c:UtilityBaseCmp aura:id="utils" />
+     <aura:attribute name="openModal" type="boolean"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="caseList" type="List" default="[]"/>
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="showApprovalBtn" type="boolean"/>
+	<aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>
+    
+    <aura:if isTrue="{!v.showApprovalBtn}">
+        <div class="slds-text-align_right">
+    		<lightning:button variant="brand" label="Status/Decision" title="Status/Decision" onclick="{!c.startFlow}" />
+		</div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.openModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close"  variant="bare" alternativeText="Close" />
+                    
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Status/Decision</h2>
+                    
+                </header>
+                
+                <div class="slds-modal__content">
+                    <p class="slds-p-horizontal_small">
+                        <lightning:card title="">
+                           <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                        </lightning:card>
+                    </p>
+                    
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <div class="slds-p-top_large">
+        <aura:if isTrue="{!not(empty(v.caseList))}">
+        <lightning:datatable
+                                         columns="{! v.columns }"
+                                         data="{!v.caseList}"
+                                         class="table-test"
+                                         keyField="Id"
+                                         resizeStep="20"
+                                         hideCheckboxColumn = "true"
+                                         />
+        </aura:if>
+    </div>
+    
+</aura:component>

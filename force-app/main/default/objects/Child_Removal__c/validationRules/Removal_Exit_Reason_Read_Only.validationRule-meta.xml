@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removal_Exit_Reason_Read_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW() &amp;&amp; NOT(ISBLANK( Removal_Exit_Reason__c ))</errorConditionFormula>
+    <errorDisplayField>Removal_Exit_Reason__c</errorDisplayField>
+    <errorMessage>Not allowed to edit this field while creating child removal.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_mandates_of_court_order_pertaining__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>List mandates of court order pertaining to the child.Indicate date of court order.</inlineHelpText>
+    <label>List mandates of court order pertaining</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

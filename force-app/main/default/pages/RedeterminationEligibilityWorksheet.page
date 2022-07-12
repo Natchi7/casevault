@@ -1,0 +1,183 @@
+<apex:page controller="EligibilityWorksheetCalculation" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    
+    <html>
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    
+            <style> 
+               
+               table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                      
+                hr {
+                    width:20%;
+                    margin-left:1px;
+                    margin-top:3px;
+                   border: 1px solid black;
+                }
+                div{
+                    font-size:14px;
+                }
+                span{
+                    font-size:12px;
+                }
+                span.d {
+                    
+                    display:inline-block;
+                    width:200px;
+                    padding-bottom:3px;
+                }
+                </style>
+                 
+        </head>
+        <body>
+            <h5 style="text-align: center;">FOSTER CARE PROGRAM</h5>
+            <h5 style="text-align: center;">TITLE IV-E REDETERMINATION WORKSHEET</h5>
+             <div style="padding-bottom:3px;">
+                <span class="d"><b>CHILD NAME:{!titleIvERecord.Child_Removal__r.Child__r.Name}</b></span>
+                <span class="d"><b>CLIENT ID:{!titleIvERecord.Name}</b></span>
+                <span class="d"><b>COUNTRY OF JURISDICTION:{!titleIvERecord.Child_Removal__r.Child__r.JURISDICTION__c}</b></span>
+            </div>
+            <div style="padding-bottom:3px;">
+                <span class="d"><b>CHILD DOB:<apex:outputText value="{0,date,dd'-'MM'-'yyyy}" >  
+                        <apex:param value="{!dateofBirth}"/> 
+                        </apex:outputText></b></span>
+                <span class="d"><b>REVIEW PERIOD FROM {!titleIvERecord.Review_Period_Start_Date__c} TO--- {!titleIvERecord.Review_Period_End_Date__c}</b></span>
+            </div>
+            <div style="padding-bottom:3px;">
+                <span class="d"><b>REVIEW DATE:</b></span>
+                <span class="d"><b>AGE AT THE END OF REVIEW PERIOD</b></span>
+            </div>
+            <div><b>
+                <span>Decision:
+                    <img src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Eligible Reimbursable
+                    <img src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Eligible Non-Reimbursable
+                    <img src="/img/checkbox_{!IF(ineligible, '', 'un')}checked.gif" title="{!IF(ineligible, 'Checked', 'Not Checked')}" />Ineligible     
+               </span></b>
+            </div>
+            <div style="height:8px;"></div>
+            <div><b>Next Redetermination Due:</b></div>
+            <div style="height:8px;"></div>
+            <h5>I. AGE</h5>
+            <div style="height:8px;"></div>
+            <div>A. Was the child under the age of 18 during the review period?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(ageYes, '', 'un')}checked.gif" title="{!IF(ageYes, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(ageNo, '', 'un')}checked.gif" title="{!IF(ageNo, 'Checked', 'Not Checked')}" />NO</div>
+            
+            <div style="height:10px;"></div>
+            <div>B. Is the child a SILA child?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO</div>
+            
+            <div style="height:10px;"></div>
+            <div>C. Does the child age 18-21 meet one of the eligibility criteria listed below?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:40px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Completing secondary education or a program leading to an equivalent credential</div>
+                <div style="padding-left:80px;">Name of school program Start Date</div>
+            <div><img style="padding-left:40px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Enrolled in an institution that provides post-secondary or vocational education</div>
+                <div style="padding-left:80px;">Name of institution Start Date</div>
+            <div><img style="padding-left:40px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Participate in a program or activity designed to promote or remove barriers to employment</div>
+                <div style="padding-left:80px;">Name of program or activity Start Date</div>
+            <div><img style="padding-left:40px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Employed for at least 80 hours per month; or</div>
+                <div style="padding-left:80px;">Name of employer Start Date  Number of Hours </div>
+            <div><img style="padding-left:40px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />Incapable of doing any of the activities described above due to a medical condition,
+            which incapability is supported by regularly updated written or recorded information in the case plan of the child;</div>
+                <div style="padding-left:80px;">Disability Type Disability Start Date Evaluation Date</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO</div>
+
+            <h5>II.LEGAL</h5>
+            <div style="height:8px;"></div>
+            <div><b>Court Order Removals</b></div>
+            <div>A. Did the agency have legal responsibility via a Judicial Determination during the entire review period?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(legalresponsibilityYes, '', 'un')}checked.gif" title="{!IF(legalresponsibilityYes, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(legalresponsibilityNo, '', 'un')}checked.gif" title="{!IF(legalresponsibilityNo, 'Checked', 'Not Checked')}" />NO</div>
+            
+            <div>B. Has the child been in foster care 12 months or more before the end of the review period?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO</div>
+              
+            <div>C.Is there a Judicial Determination of “Reasonable Efforts to Finalize a Permanency Plan” (REFPP) that was made twelve (12) months from the date child entered foster care or the last REFPP judicial finding?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES Date of court order:</div>
+                <div style="padding-left:40px;">1.Was it timely?</div>
+                    <div><img style="padding-left:80px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES</div>
+                    <div><img style="padding-left:80px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO</div>
+                <div style="padding-left:40px;">What is the due date of the subsequent judicial determination of REFPP?</div>            
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO Date REFPP due:</div>
+            
+            <div style="height:8px;"></div>
+            <div><b>Voluntary Placement(s)</b></div><div style="height:8px;"></div>
+            <div><b>Time-Limited</b></div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES Date of court hearing:</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO</div>
+            
+            <div style="height:8px;"></div>
+            <div><b>Child with Disabilities</b></div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES Date of court hearing:</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />NO</div>
+        
+            <h5>III. RECEIPT OF OTHER BENEFITS</h5>
+            <div>A. Did the child receive any other benefits (SSI/SSA/) at any time during the review period?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(SSIYes, '', 'un')}checked.gif" title="{!IF(SSIYes, 'Checked', 'Not Checked')}" />YES</div>
+            <div style="margin-left:5px;">What type of benefit? Amount: $</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(SSINo, '', 'un')}checked.gif" title="{!IF(SSINo, 'Checked', 'Not Checked')}" />No</div>
+            <div>B. Is the agency the representative payee?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />No</div>
+            <div>C. Has the agency opted to suspend the SSI payment and claim IV-E?</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(suspendSSIYes, '', 'un')}checked.gif" title="{!IF(suspendSSIYes, 'Checked', 'Not Checked')}" />YES Date of request to suspend the SSI payment and claim IV-E.</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(suspendSSINo, '', 'un')}checked.gif" title="{!IF(suspendSSINo, 'Checked', 'Not Checked')}" />No</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(suspendSSINone, '', 'un')}checked.gif" title="{!IF(suspendSSINone, 'Checked', 'Not Checked')}" />N/A</div>
+            <h5>IV. REIMBURSABLE PLACEMENT</h5>
+            <div>D. Did the child reside in a reimbursable placement during the entire review? </div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(PlacementReimbursibleYes, '', 'un')}checked.gif" title="{!IF(PlacementReimbursibleYes, 'Checked', 'Not Checked')}" />YES</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(PlacementReimbursibleNo, '', 'un')}checked.gif" title="{!IF(PlacementReimbursibleNo, 'Checked', 'Not Checked')}" />No</div>
+            <h5>V. INDICATE THE MONTHS FOR WHICH THE CHILD IS: </h5>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />REMOVAL CLIENT HISTORY REPORT (for DHS staff)</div>
+            <div><img style="padding-left:20px;" src="/img/checkbox_{!IF(readValue, '', 'un')}checked.gif" title="{!IF(readValue, 'Checked', 'Not Checked')}" />ASSIST Database Placement Summary Report (for DJS staff)</div>
+            <div style="height:20px;"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Placement/Living Arrangement</td>
+                        <td>Type</td>
+                        <td>Provider ID/Name</td>
+                        <td>Provider Address</td>
+                        <td>Start Date</td>
+                        <td>End Date</td>
+                        </tr>
+                </thead>
+                <tbody>
+                    <td>{!PlacementOrLiving}</td>
+                    <td>{!providerType}</td>
+                    <td>{!providerName}</td>
+                    <td>{!address}</td>
+                    <td><apex:outputText value="{0,date,dd'-'MM'-'yyyy}" >  
+                        <apex:param value="{!startDate}"/>  
+                        </apex:outputText></td>
+                    <td><apex:outputText value="{0,date,dd'-'MM'-'yyyy}" >  
+                        <apex:param value="{!endDate}"/> 
+                        </apex:outputText></td>
+                </tbody>
+            </table>
+            <h5>VI. LAPSE IN PLACEMENT</h5>
+            <div>1. Has there been any lapse in placement during the review period?</div>
+            <h5>VII. REIMBURSABILITY EVENTS</h5>
+            <table>
+            <head>
+            <tr>
+            <td style="width:10px;">Event</td>
+            <td style="width:10px;">Start Date</td>
+            <td style="width:10px;">End Date</td>
+            <td style="width:10px;">Reimbursable</td>
+            
+            </tr>
+            </head>
+            </table>
+
+        
+        </body>
+    </html>
+   </apex:page>

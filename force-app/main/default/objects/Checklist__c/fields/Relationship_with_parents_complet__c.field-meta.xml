@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_with_parents_complet__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>02.09 Relationship with birth parents</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

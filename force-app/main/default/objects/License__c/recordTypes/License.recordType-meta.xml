@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License</fullName>
+    <active>true</active>
+    <label>License</label>
+    <picklistValues>
+        <picklist>Activity_Type__c</picklist>
+        <values>
+            <fullName>Application Abandoned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Returned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Issued Under CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Refused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Revoked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Sanctioned - Allow Placement Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Sanctioned - No New Placement Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Suspended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request to Revoke License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Visit Performed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initial_Relicensure__c</picklist>
+        <values>
+            <fullName>Initial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relicensure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>License_Decision__c</picklist>
+        <values>
+            <fullName>License Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Updated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>License_Type__c</picklist>
+        <values>
+            <fullName>Alternative Living Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA%3A Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA%3A Independent Living</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA%3A TFC Medically Fragile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA%3A Treatment Foster Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC Medically Fragile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC Shelter Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC%3A Large Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC%3A Respite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC%3A Small Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC%3A Teen Mothers Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Treatment Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Group Home</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Licensing_Agency__c</picklist>
+        <values>
+            <fullName>DHR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Previous_License__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Alternative Living Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC  %3A Respite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC %3A Medically Fragile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC %3A Shelter Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC %3A Small Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC %3A Teen Mother Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC%3A Large Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Treatment Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Group Home</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

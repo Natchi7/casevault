@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Exit_placement_status_boolean</fullName>
+        <field>Is_Exit_Placement_Submitted_for_approval__c</field>
+        <formula>&apos;Yes&apos;</formula>
+        <name>Exit placement status boolean</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Exit_placement_status_boolean_false</fullName>
+        <field>Is_Exit_Placement_Submitted_for_approval__c</field>
+        <formula>&apos;No&apos;</formula>
+        <name>Exit placement status boolean false</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Is_Exit_Approval_Completed_Just_now</fullName>
+        <field>Is_Exit_Placement_Submitted_for_approval__c</field>
+        <formula>&apos;Yes&apos;</formula>
+        <name>Is Exit Approval Completed Just now</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Exit_Status_Approved</fullName>
+        <field>Exit_Approval_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Update Exit Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Exit_Status_Rejected</fullName>
+        <field>Exit_Approval_Status__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Update Exit Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Exit_Status_Submitted</fullName>
+        <field>Exit_Approval_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Update Exit Status Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Read_Only_Layout</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Placement_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Read Only Layout</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Approved</fullName>
+        <field>Placement_Approval_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Update Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Rejected</fullName>
+        <field>Placement_Approval_Status__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Update Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Submitted</fullName>
+        <field>Placement_Approval_Status__c</field>
+        <formula>&apos;Submitted for Approval&apos;</formula>
+        <name>Update Status Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_exit_end_Date_Value</fullName>
+        <field>End_Date__c</field>
+        <formula>Exit_End_Date__c</formula>
+        <name>Update exit end Date Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

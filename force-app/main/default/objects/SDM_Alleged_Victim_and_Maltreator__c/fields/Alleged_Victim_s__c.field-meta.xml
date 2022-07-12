@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alleged_Victim_s__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Alleged Victim(s)</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>SDM Alleged Victim and Maltreators (Alleged Victim(s))</relationshipLabel>
+    <relationshipName>SDM_Alleged_Victim_and_Maltreators1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Asset Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Boat</fullName>
+                <default>false</default>
+                <label>Boat</label>
+            </value>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>Certificates of Deposit</fullName>
+                <default>false</default>
+                <label>Certificates of Deposit</label>
+            </value>
+            <value>
+                <fullName>Checking Acct</fullName>
+                <default>false</default>
+                <label>Checking Acct</label>
+            </value>
+            <value>
+                <fullName>Investment Funds</fullName>
+                <default>false</default>
+                <label>Investment Funds</label>
+            </value>
+            <value>
+                <fullName>Life Insurance</fullName>
+                <default>false</default>
+                <label>Life Insurance</label>
+            </value>
+            <value>
+                <fullName>Lump Sum Payment</fullName>
+                <default>false</default>
+                <label>Lump Sum Payment</label>
+            </value>
+            <value>
+                <fullName>Money Market Acct</fullName>
+                <default>false</default>
+                <label>Money Market Acct</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Residence</fullName>
+                <default>false</default>
+                <label>Residence</label>
+            </value>
+            <value>
+                <fullName>RV/ Trailer</fullName>
+                <default>false</default>
+                <label>RV/ Trailer</label>
+            </value>
+            <value>
+                <fullName>Savings Acct</fullName>
+                <default>false</default>
+                <label>Savings Acct</label>
+            </value>
+            <value>
+                <fullName>Trust</fullName>
+                <default>false</default>
+                <label>Trust</label>
+            </value>
+            <value>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+                <label>Vehicle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

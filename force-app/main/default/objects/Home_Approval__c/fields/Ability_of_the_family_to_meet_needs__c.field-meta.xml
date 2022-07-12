@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ability_of_the_family_to_meet_needs__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>1. Ability of the family to meet the needs of its members [including appropriate discipline., health/mental needs</inlineHelpText>
+    <label>1.Ability of the family to meet needs</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

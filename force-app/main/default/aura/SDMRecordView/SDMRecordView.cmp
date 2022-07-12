@@ -1,0 +1,109 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="SDMController">
+    <!-- attributes -->
+    <aura:attribute name="responseOptions" type="List"/>
+    <aura:attribute name="SDMRuleId" type="String"/>
+    <aura:attribute name="CPSResType" type="String"/>
+    <aura:attribute name="selectedAbuseName" type="String"/>
+    <aura:attribute name="CPSResponseMap" type="Map"/>
+    <aura:attribute name="updatingSDMRuleMap" type="Map"/>
+    <aura:attribute name="showModal" type="Boolean" default="false"/>
+    <aura:attribute name="isSpinner" type="Boolean" default="false"/>
+     <aura:attribute name="isRefresh" type="Boolean" default="false"/>
+    <aura:attribute name="isReadOnly" type="boolean" default="true"/>
+    <aura:attribute name="MandatoryDisqualifiers" type="String" default="CPS Response Type - Discretionary Disqualifiers"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+        <force:recordData 
+                recordId="{!v.recordId}"
+                recordUpdated="{! c.init }"
+                layoutType="FULL"
+                fields="Name"/>
+    <aura:attribute name="showCPSResponse" type="Boolean" default="false"></aura:attribute>
+    <!--handlers-->
+    <!--<aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <lightning:layoutItem size="12" padding="around-small">
+    <lightning:card title="">
+        <lightning:recordEditForm recordId="" objectApiName="Case">
+            <lightning:messages />
+            <lightning:layoutItem size="6" padding="around-small">
+                <div>Abuse Type</div>
+                <lightning:inputField fieldName="Abuse_Type__c" variant="label-hidden"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <div>Abuse Name</div>
+                <lightning:inputField fieldName="Abuse_Name__c" onchange="{!c.handleChange}" variant="label-hidden"/>
+            </lightning:layoutItem>
+        </lightning:recordEditForm>
+    </lightning:card>
+    </lightning:layoutItem> -->
+    <aura:if isTrue = "{!v.showCPSResponse}">
+        <aura:if isTrue="{!v.isSpinner}">
+            <div class="demo-only">
+                <div class="slds-spinner_container">
+                    <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <div class="slds-text-align_right">
+            <!--<lightning:button variant="brand" label="Refresh" title="Refresh" onclick="{! c.refreshPage }" />-->
+        </div>
+        <aura:if isTrue="{!and(v.showModal, not(empty(v.responseOptions)))}">
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:card title="Mandatory Disqualifying Criteria">
+                        <div class="slds-p-around_x-small">
+                            <aura:iteration items="{!v.responseOptions}" var="option">
+                                <aura:if isTrue="{!v.MandatoryDisqualifiers != option.type}">
+                                <lightning:input type="checkbox" label="{!option.Name}" value="{!option}" checked="{!option.checked}" disabled="{!option.disabled}" onchange="{! c.checkBoxChangeHandle}"/>
+                                </aura:if>
+                           </aura:iteration>
+                        </div>
+                    </lightning:card>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:card title="Discretionary Disqualifying Factors">
+                        <div class="slds-p-around_x-small">
+                            <aura:iteration items="{!v.responseOptions}" var="option">
+                                <aura:if isTrue="{!v.MandatoryDisqualifiers == option.type}">
+                                <lightning:input type="checkbox" label="{!option.Name}" value="{!option}" checked="{!option.checked}" disabled="{!option.disabled}" onchange="{! c.checkBoxChangeHandle}"/>
+                                </aura:if>
+                           </aura:iteration>
+                        </div>
+                    </lightning:card>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <div>
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <div class="slds-text-align_center">CPS Response Type</div>
+                        <lightning:input type="text" name="CPSResponseType" label="CPS Response Type" disabled="true" value="{!v.CPSResType}" variant="label-hidden"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small"></lightning:layoutItem>
+                </lightning:layout>
+            </div>
+            <div class="slds-p-top_large">
+                <div class="slds-docked-form-footer">
+                    <lightning:button variant="brand" iconName="utility:save" label="Save" title="Save" onclick="{! c.saveSDMRule }"/>
+                    <lightning:button variant="brand-outline" label="Help" title="Help" iconName="utility:help" onclick="{! c.handleClick }" iconPosition="right"/>
+                </div>
+            </div>
+            
+            <!--<aura:set attribute="else">
+       <div class="slds-text-heading_medium">
+                 <b>We didn't select any abuse value</b>
+                </div>     
+         </aura:set>-->
+        </aura:if>
+     	<aura:set attribute="else">
+           <div class="slds-text-align_center">
+                     <b>Complete Maltreatment Type</b>
+            </div>
+    </aura:set>
+    </aura:if>
+    
+</aura:component>

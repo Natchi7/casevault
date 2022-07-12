@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personal_Policy_Section_Completed__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR( Per_Check_Non_discriminatory_environment__c , Per_Check_Training_Cancelled__c , Per_Check_Written_Cancelled__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Section Completed?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

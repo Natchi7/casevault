@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goals__c</fullName>
+    <externalId>false</externalId>
+    <label>Goals</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>The continuity of family relationships and connections is preserved for youth</fullName>
+                <default>false</default>
+                <label>The continuity of family relationships and connections is preserved for youth</label>
+            </value>
+            <value>
+                <fullName>Families have enhanced capacity to provide for their youth&apos;s needs</fullName>
+                <default>false</default>
+                <label>Families have enhanced capacity to provide for their youth&apos;s needs</label>
+            </value>
+            <value>
+                <fullName>Youth educational needs are met</fullName>
+                <default>false</default>
+                <label>Youth educational needs are met</label>
+            </value>
+            <value>
+                <fullName>Youth are first and foremost protected from abuse and neglect</fullName>
+                <default>false</default>
+                <label>Youth are first and foremost protected from abuse and neglect</label>
+            </value>
+            <value>
+                <fullName>Youth physical and mental health needs are met</fullName>
+                <default>false</default>
+                <label>Youth physical and mental health needs are met</label>
+            </value>
+            <value>
+                <fullName>Youth are prepared for independence</fullName>
+                <default>false</default>
+                <label>Youth are prepared for independence</label>
+            </value>
+            <value>
+                <fullName>Youth have permanency and stability in their living situations</fullName>
+                <default>false</default>
+                <label>Youth have permanency and stability in their living situations</label>
+            </value>
+            <value>
+                <fullName>Youth are safely maintained in their homes whenever possible and appropriate</fullName>
+                <default>false</default>
+                <label>Youth are safely maintained in their homes whenever possible and appropriate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

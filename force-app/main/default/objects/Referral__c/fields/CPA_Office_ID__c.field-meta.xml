@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPA_Office_ID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Provider Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.Type__c</field>
+            <operation>equals</operation>
+            <value>Private Organization</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Type__c</field>
+            <operation>equals</operation>
+            <value>CPA Home</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Referrals (CPA Office ID)</relationshipLabel>
+    <relationshipName>Referrals2</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

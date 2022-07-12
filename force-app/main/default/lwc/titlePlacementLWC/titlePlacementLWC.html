@@ -1,0 +1,64 @@
+<template>
+    
+    <template if:true={loading}>
+        <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+    </template>
+
+    <template if:true={placementRec}>
+        <lightning-card variant="Narrow" title="Placements and Living Arrangements">
+            <lightning-layout>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input label="PlacementId" name="" value={titleIvERec.Placement__r.Name}  disabled></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input label="Placement/ Living Type" name="" value={placement}  onchange={handlechange} disabled></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input label="Type" name="" value={placementProvider.Type__c} onchange={handlechange} disabled></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-combobox label="Is Living Arrangement same as Placement?" name="Is_Living_Arrangement_same_as_Placement__c" value={titleIvERec.Is_Living_Arrangement_same_as_Placement__c} options={getLiving} onchange={handlechange}></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input label="Is Placement Reimbursible?" name="Is_Placement_Reimbursible__c" value={titleIvERec.Placement__r.PlacementReimbursable__c} disabled></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input type="dateTime" date-style="short" label="Start Date" name="" value={titleIvERec.Placement__r.Begin_Date__c} onchange={handlechange} disabled></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input type="date" date-style="short" label="End Date" name="" value={titleIvERec.Placement__r.End_Date__c} onchange={handlechange} disabled></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input type="text" label="Provider" name="" value={providerName} onchange={handlechange} disabled></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-around_small" size="4">
+                    <lightning-input type="text" label="Provider Address" name="" value={address} onchange={handlechange} disabled></lightning-input>
+                 <!--<div class="slds-p-top_small"><h4>Provider Address</h4></div>
+                 <lightning-formatted-address
+                    street={titleIvERec.Placement__r.Provider__r.BillingStreet}
+                    city={titleIvERec.Placement__r.Provider__r.BillingCity}
+                    province={titleIvERec.Placement__r.Provider__r.BillingState}
+                    country={titleIvERec.Placement__r.Provider__r.BillingCountry}
+                    postal-code={titleIvERec.Placement__r.Provider__r.BillingPostalCode}>
+                </lightning-formatted-address>-->
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="12" padding="around-small" >
+                  
+                </lightning-layout-item>
+            </lightning-layout>
+             
+            <div class="slds-text-align_right">
+                <!--<lightning-button label="SAVE AS DRAFT" title="" onclick={handleSaveAsDraft} variant="brand" class= "slds-var-p-around_x-small"  disabled={readOnly}></lightning-button>->-->
+                <lightning-button label="SAVE AND CONFIRM" title="" onclick={handleSave} variant="brand" class= "slds-var-p-around_x-small"  disabled={readOnly}></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+</template>

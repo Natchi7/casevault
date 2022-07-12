@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Superior_Contact_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>Postal mail</fullName>
+                <default>false</default>
+                <label>Postal mail</label>
+            </value>
+            <value>
+                <fullName>File Cabinet Client</fullName>
+                <default>false</default>
+                <label>File Cabinet Client</label>
+            </value>
+            <value>
+                <fullName>File Cabinet Case</fullName>
+                <default>false</default>
+                <label>File Cabinet Case</label>
+            </value>
+            <value>
+                <fullName>Doc Hard Copy</fullName>
+                <default>false</default>
+                <label>Doc Hard Copy</label>
+            </value>
+            <value>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+                <label>Face to Face</label>
+            </value>
+            <value>
+                <fullName>ROA</fullName>
+                <default>false</default>
+                <label>ROA</label>
+            </value>
+            <value>
+                <fullName>Hand Delivered</fullName>
+                <default>false</default>
+                <label>Hand Delivered</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

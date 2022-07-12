@@ -1,0 +1,81 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="PermanacyPlanProceedController">
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>	
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="onClickCurrentStage" type="Decimal"/>
+    <aura:attribute name="permanancyPlanRec" type="Permanency_Plan__c" default="{'sobjectType': 'Permanency_Plan__c'}"/>
+    <aura:attribute name="suspensionReasonOptions" type="List" default="[]"/> 
+    <aura:attribute name="suspensionRec" type="Suspension__c" default="{'sobjectType': 'Suspension__c'}"/>
+    <aura:attribute name="suspensionList" type="List"/> 
+    <aura:attribute name="openModal" type="boolean"/>
+    <aura:attribute name="openSuspensionModal" type="boolean"/>
+    <aura:attribute name="isReadOnly" type="boolean"/>
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="actions" type="List" default="[]"/>
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:attribute name="showApprovalBtn" type="boolean" default="false"></aura:attribute>
+
+    
+    <aura:if isTrue="{!v.openModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close"  variant="bare" alternativeText="Close" />
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Submit for Approval</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning:card>
+                            <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                    </lightning:card>
+                </div>
+            </div>
+        </section>  
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+     <aura:if isTrue="{!v.suspensionList.length }">
+        <lightning:card title="">
+            <div>
+                <lightning:datatable
+                                     columns="{! v.columns }"
+                                     data="{!v.suspensionList}"
+                                     keyField="Id"
+                                     resizeStep="20"
+                                     hideCheckboxColumn = "true"
+                                     onrowaction="{! c.handleRowAction }"
+									 onheaderaction="{! c.handleHeaderAction }"
+                                     />
+            </div>
+        </lightning:card>
+    </aura:if>
+	 <div class="slds-p-bottom_medium slds-text-align_right">
+        <lightning:button variant="brand" iconName="utility:add" label="Suspension" title="Suspension" onclick="{!c.addSuspension}" disabled="{!v.isAllReadOnly}"/>
+    </div>
+    
+    <aura:if isTrue="{!v.openSuspensionModal}">
+        <lightning:card title="">
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:combobox name="Suspension Reason" aura:id="requiredFields" value="{!v.suspensionRec.Suspension_Reason__c}" label="Suspension Reason"  options="{! v.suspensionReasonOptions }" required="true" disabled="{!v.isReadOnly}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="date" dateStyle="short" name="Start Date" aura:id="requiredFields" value="{!v.suspensionRec.Start_Date__c}" label="Start Date" required="true" disabled="{!v.isReadOnly}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="date" dateStyle="short" name="End Date" value="{!v.suspensionRec.End_Date__c}" label="End Date" disabled="{!v.isReadOnly}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:textarea name="notes"  value="{!v.suspensionRec.Notes__c}" label="Notes" disabled="{!v.isReadOnly}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:set attribute="footer"> 
+                <div class="slds-text-align_right">
+                    <lightning:button variant="brand" iconName="utility:save" label="Save" title="Save" onclick="{! c.onSave }" disabled="{!or(v.isReadOnly, v.suspensionRec.Approval_Status__c == 'Approved')}"/>
+                    <aura:if isTrue="{!v.showApprovalBtn}">
+                        <lightning:button variant="brand" label="Submit for Approval" title="Submit for Approval" onclick="{!c.onSubmitForApprovalAndSave }" disabled="{!or(v.isReadOnly, v.suspensionRec.Approval_Status__c == 'Approved')}"/>
+                    </aura:if>
+                </div>
+            </aura:set>
+        </lightning:card>
+    </aura:if>
+</aura:component>

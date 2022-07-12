@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Indicated_sexual_molestation__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>An act that involves sexual molestation or sexual exploitation (describe in detail)</inlineHelpText>
+    <label>sexual molestation/sexual exploitation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_Or_how_to_find_informatio__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - Or, how to find information for low income housing in the area, if needed?</inlineHelpText>
+    <label>Description - Or, how to find informatio</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_Where_to_find_help__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - Where to find help with interviewing skills,resume building, appropriate dressing, and proper behavior in the workspace?</inlineHelpText>
+    <label>Description - Where to find help</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

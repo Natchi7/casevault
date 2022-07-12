@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Local_Department_s_Served__c</fullName>
+    <externalId>false</externalId>
+    <label>Local Department&apos;s Served</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allegany County</fullName>
+                <default>false</default>
+                <label>Allegany County</label>
+            </value>
+            <value>
+                <fullName>Anne Arundel County</fullName>
+                <default>false</default>
+                <label>Anne Arundel County</label>
+            </value>
+            <value>
+                <fullName>Baltimore City</fullName>
+                <default>false</default>
+                <label>Baltimore City</label>
+            </value>
+            <value>
+                <fullName>Baltimore County</fullName>
+                <default>false</default>
+                <label>Baltimore County</label>
+            </value>
+            <value>
+                <fullName>Calvert County</fullName>
+                <default>false</default>
+                <label>Calvert County</label>
+            </value>
+            <value>
+                <fullName>Caroline County</fullName>
+                <default>false</default>
+                <label>Caroline County</label>
+            </value>
+            <value>
+                <fullName>Carroll County</fullName>
+                <default>false</default>
+                <label>Carroll County</label>
+            </value>
+            <value>
+                <fullName>Cecil County</fullName>
+                <default>false</default>
+                <label>Cecil County</label>
+            </value>
+            <value>
+                <fullName>Charles County</fullName>
+                <default>false</default>
+                <label>Charles County</label>
+            </value>
+            <value>
+                <fullName>Dorchester County</fullName>
+                <default>false</default>
+                <label>Dorchester County</label>
+            </value>
+            <value>
+                <fullName>Frederick County</fullName>
+                <default>false</default>
+                <label>Frederick County</label>
+            </value>
+            <value>
+                <fullName>Garrett County</fullName>
+                <default>false</default>
+                <label>Garrett County</label>
+            </value>
+            <value>
+                <fullName>Harford County</fullName>
+                <default>false</default>
+                <label>Harford County</label>
+            </value>
+            <value>
+                <fullName>Howard County</fullName>
+                <default>false</default>
+                <label>Howard County</label>
+            </value>
+            <value>
+                <fullName>Kent County</fullName>
+                <default>false</default>
+                <label>Kent County</label>
+            </value>
+            <value>
+                <fullName>Montgomery County</fullName>
+                <default>false</default>
+                <label>Montgomery County</label>
+            </value>
+            <value>
+                <fullName>Prince George&apos;s County</fullName>
+                <default>false</default>
+                <label>Prince George&apos;s County</label>
+            </value>
+            <value>
+                <fullName>Queen Anne&apos;s County</fullName>
+                <default>false</default>
+                <label>Queen Anne&apos;s County</label>
+            </value>
+            <value>
+                <fullName>Somerset County</fullName>
+                <default>false</default>
+                <label>Somerset County</label>
+            </value>
+            <value>
+                <fullName>St. Mary&apos;s County</fullName>
+                <default>false</default>
+                <label>St. Mary&apos;s County</label>
+            </value>
+            <value>
+                <fullName>Talbot County</fullName>
+                <default>false</default>
+                <label>Talbot County</label>
+            </value>
+            <value>
+                <fullName>Washington County</fullName>
+                <default>false</default>
+                <label>Washington County</label>
+            </value>
+            <value>
+                <fullName>Wicomico County</fullName>
+                <default>false</default>
+                <label>Wicomico County</label>
+            </value>
+            <value>
+                <fullName>Worcester County</fullName>
+                <default>false</default>
+                <label>Worcester County</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

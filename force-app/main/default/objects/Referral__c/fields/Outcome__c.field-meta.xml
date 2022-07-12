@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>Outcome</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application Received - Open New Provider</fullName>
+                <default>true</default>
+                <label>Application Received - Open New Provider</label>
+            </value>
+            <value>
+                <fullName>Application Received - Re-Open Closed Provider</fullName>
+                <default>false</default>
+                <label>Application Received - Re-Open Closed Provider</label>
+            </value>
+            <value>
+                <fullName>Closed Provider Referral</fullName>
+                <default>false</default>
+                <label>Closed Provider Referral</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

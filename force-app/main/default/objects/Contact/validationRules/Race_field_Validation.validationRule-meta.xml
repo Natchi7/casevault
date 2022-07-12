@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Race_field_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND(INCLUDES(Races__c,&apos;Declined&apos;),OR(INCLUDES(Races__c,&apos;White&apos;),INCLUDES(Races__c,&apos;Black or African American&apos;),INCLUDES(Races__c,&apos;Black or African American&apos;),INCLUDES(Races__c,&apos;American Indian or Alaska Native&apos;),INCLUDES(Races__c,&apos;Asian&apos;),INCLUDES(Races__c,&apos;Native Hawaiian or Other Pacific Islander&apos;),INCLUDES(Races__c,&apos;Abandoned&apos;),INCLUDES(Races__c,&apos;Unknown&apos;))),true,false)</errorConditionFormula>
+    <errorMessage>Declined cannot be choose with Another value</errorMessage>
+</ValidationRule>

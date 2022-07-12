@@ -1,0 +1,602 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="ChildRemovalController">
+    <aura:attribute name="childRemovalIns" type="Child_Removal__c" />
+    <aura:attribute name="selectedOption" type="String" />
+    <aura:attribute name="showAutismModal" type="Boolean" default="false" />
+    <aura:attribute name="showCognitiveModal" type="Boolean" default="false" />
+    <aura:attribute name="showEmotionallyModal" type="Boolean" default="false" />
+    <aura:attribute name="showHearingModal" type="Boolean" default="false" />
+    <aura:attribute name="showIntellectualModal" type="Boolean" default="false" />
+    <aura:attribute name="showOtherModal" type="Boolean" default="false" />
+    <aura:attribute name="showPhysicalModal" type="Boolean" default="false" />
+    <aura:attribute name="showVisualModal" type="Boolean" default="false" />
+    <aura:attribute name="disabledRadioButtons" type="Boolean" default="true" />
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'Yes', 'value': 'Yes'},
+                                                        {'label': 'No', 'value': 'No'},
+                                                        {'label': 'Unknown', 'value': 'Unknown'}                                                   
+                                                        ]" />
+    <aura:attribute name="options1" type="List" default="[
+                                                         {'label': 'Yes', 'value': 'Yes'},
+                                                         {'label': 'No', 'value': 'No'}                                                                                                        
+                                                         ]" />
+
+    <aura:attribute name="activeSections" type="List" default="[]" />
+    <aura:attribute name="specialNeedsOptions" type="List" default="[]" />
+    <aura:attribute name="personalHygieneOptions" type="List" default="[]" />
+    <c:UtilityBaseCmp aura:id="utils" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:accordion allowMultipleSectionsOpen="true" class="slds-section slds-theme_shade" activeSectionName="{!v.activeSections}">
+        <lightning:accordionSection name="A" label="Disability Details">
+            <aura:set attribute="body">
+                <lightning:card title="" class="padding10px">
+                    <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Does the person have disabilities?</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="disabilities" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="disabilities" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="disabilities" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                    <lightning:radioGroup aura:id="requriedFields" name="disabilities" label="Does the person have disabilities?" options="{! v.options1 }" value="{!v.childRemovalIns.Does_the_person_have_disabilities__c}" type="radio" onchange="{! c.onChange }" required="true"
+                        class="paddingLeft20px" />
+                </lightning:card>
+
+                <lightning:card title="" class="padding10px">
+                    <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Autism Spectrum Disorder</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input1" checked="{!v.childRemovalIns.Autism_Spectrum_Disorder__c == 'Yes' ? 'true' : 'false'}" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input1" checked="{!v.childRemovalIns.Autism_Spectrum_Disorder__c == 'No' ? 'true' : 'false'}" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" checked="{!v.childRemovalIns.Autism_Spectrum_Disorder__c == 'Unknown' ? 'true' : 'false'}" name="input1" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                    <span class="slds-text-heading_small paddingLeft10px"><b>Please Answer All The Questions Below:</b></span>
+                    <lightning:layout class="paddingLeft20px">
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input1" label="Autism Spectrum Disorder" options="{! v.options }" value="{!v.childRemovalIns.Autism_Spectrum_Disorder__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                        <!-- <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Cognitive/Developmental Delay</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input2" checked = "true" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input2" checked = "false"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input2" checked = "false" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input2" label="Cognitive/Developmental Delay" options="{! v.options }" value="{!v.childRemovalIns.Cognitive_Developmental_Delay__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                        <!-- <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Emotionally Disturbed</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input3"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input3"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input3" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input3" label="Emotionally Disturbed" options="{! v.options }" value="{!v.childRemovalIns.Emotionally_Disturbed__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                    <!-- <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Hearing Disability</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input4"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input4"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input4" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+
+                    <lightning:layout class="paddingLeft20px">
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input4" label="Hearing Disability" options="{! v.options }" value="{!v.childRemovalIns.Hearing_Disability__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                        <!-- <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Intellectual Disability</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input5"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input5"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input5" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input5" label="Intellectual Disability" options="{! v.options }" value="{!v.childRemovalIns.Intellectual_Disability__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                        <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Other Disability</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input6"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input6"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input6" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input6" label="Other Disability" options="{! v.options }" value="{!v.childRemovalIns.Other_Disability__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                    <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Physical Disability</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input7"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input7"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input7" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                    <lightning:layout class="paddingLeft20px">
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input7" label="Physical Disability" options="{! v.options }" value="{!v.childRemovalIns.Physical_Disability__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                        <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <Span>Visual Disability</Span>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="Yes" name="input8"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:input type="radio" label="No" name="input8"  onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="radio" label="Unknown" name="input8" onchange="{!c.onChange}"/>
+            </lightning:layoutItem>
+        </lightning:layout>-->
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <lightning:radioGroup aura:id="requriedFields" name="input8" label="Visual Disability" options="{! v.options }" value="{!v.childRemovalIns.Visual_Disability__c}" type="radio" onchange="{! c.onChange }" required="true" disabled="{!v.disabledRadioButtons}"
+                            />
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:card>
+
+                <aura:if isTrue="{!v.showAutismModal}">
+                    <!--aura:if isTrue="{!v.selectedOption == Yes}"-->
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Autism_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Autism_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Autism_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Autism_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Autism_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Autism_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Autism_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Autism_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <lightning:button iconName="utility:close" variant="destructive" onclick="{!c.closeModel }" label="Cancel" />
+                            <lightning:button iconName="utility:save" variant="brand" onclick="{!c.closeModel }" label="Add" />
+                        </aura:set>
+                    </c:ModalCmp>
+                    <!--/aura:if-->
+                </aura:if>
+
+                <aura:if isTrue="{!v.showCognitiveModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Cognitive_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Cognitive_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Cognitive_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Cognitive_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Cognitive_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Cognitive_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Cognitive_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Cognitive_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <lightning:button iconName="utility:close" variant="destructive" onclick="{!c.closeModel }" label="Cancel" />
+                            <lightning:button iconName="utility:save" variant="brand" onclick="{!c.closeModel }" label="Add" />
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <aura:if isTrue="{!v.showEmotionallyModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Emotionally_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Emotionally_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Emotionally_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Emotionally_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Emotionally_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Emotionally_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Emotionally_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Emotionally_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeModel }">Cancel</button>
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeModel }">Add</button>
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <aura:if isTrue="{!v.showHearingModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Hearing_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Hearing_Star_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Hearing_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Hearing_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Hearing_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Hearing_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Hearing_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Hearing_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeModel }">Cancel</button>
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeModel}">Add</button>
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <aura:if isTrue="{!v.showIntellectualModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Intellectual_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Intellectual_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Intellectual_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Intellectual_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Intellectual_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Intellectual_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Intellectual_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <lightning:button iconName="utility:close" variant="destructive" onclick="{!c.closeModel }" label="Cancel" />
+                            <lightning:button iconName="utility:save" variant="brand" onclick="{!c.closeModel }" label="Add" />
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <aura:if isTrue="{!v.showOtherModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Other_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Other_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Other_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Other_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Other_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Other_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Other_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Other_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <lightning:button iconName="utility:close" variant="destructive" onclick="{!c.closeModel }" label="Cancel" />
+                            <lightning:button iconName="utility:save" variant="brand" onclick="{!c.closeModel }" label="Add" />
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <aura:if isTrue="{!v.showPhysicalModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Physical_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Physical_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Physical_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Physical_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Physical_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Physical_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Physical_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Physical_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <lightning:button iconName="utility:close" variant="destructive" onclick="{!c.closeModel }" label="Cancel" />
+                            <lightning:button iconName="utility:save" variant="brand" onclick="{!c.closeModel }" label="Add" />
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <aura:if isTrue="{!v.showVisualModal}">
+                    <c:ModalCmp>
+                        <aura:set attribute="header">
+                            <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close" variant="bare" alternativeText="Close" />
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Disability</h2>
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <lightning:layout>
+                            </lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:input type="text" name="DiagnosedDisablity" label="Diagnosed Disablity" value="{!v.childRemovalIns.Visual_Diagnosed_Diability__c}" />
+                            </lightning:layoutItem>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="SDD" label="Start/Diagnosis Date" value="{!v.childRemovalIns.Visual_Start_Diagnosis_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ERD" label="End/Resolution Date" value="{!v.childRemovalIns.Visual_End_Resolution_Date__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="date" name="ED" label="Evaluation Date" value="{!v.childRemovalIns.Visual_Evaluation_Date__c}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:input type="text" name="EVN" label="Evalutor/Clinican Name" value="{!v.childRemovalIns.Visual_Evaluator_Clinician_Name__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="PersonalHygiene" label="Personal Hygiene" value="{!v.childRemovalIns.Visual_Personal_Hygiene__c}" placeholder="" options="{!v.personalHygieneOptions}" />
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="6" padding="around-small">
+                                    <lightning:combobox name="SpecialNeeds" label="Special Needs" value="{!v.childRemovalIns.Visual_Special_Needs__c}" placeholder="" options="{!v.specialNeedsOptions}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <lightning:layout>
+                                <lightning:layoutItem size="12" padding="around-small">
+                                    <lightning:textarea type="textarea" name="comments" label="comments" value="{!v.childRemovalIns.Visual_Comments__c}" />
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </aura:set>
+                        <aura:set attribute="footer">
+                            <lightning:button iconName="utility:close" variant="destructive" onclick="{!c.closeModel }" label="Cancel" />
+                            <lightning:button iconName="utility:save" variant="brand" onclick="{!c.closeModel }" label="Add" />
+                        </aura:set>
+                    </c:ModalCmp>
+                </aura:if>
+                <div class="slds-text-align_right slds-p-top_small">
+                    <lightning:button iconName="utility:save" variant="brand" label="Save" title="Save" onclick="{!c.onSave}" />
+                </div>
+            </aura:set>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

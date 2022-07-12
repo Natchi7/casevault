@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Federal_Verified__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(Federal_Completion_Date__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Verified, If filled the federal completion date.</inlineHelpText>
+    <label>Verified(Filled federal completion date)</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

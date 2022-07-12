@@ -1,0 +1,16 @@
+<aura:component implements="lightning:availableForFlowScreens" access="public" >
+	<aura:attribute	name="initialFacetoFace" type="boolean" ></aura:attribute>
+    <aura:attribute	name="approvedSAFEC" type="boolean"></aura:attribute>
+    <aura:attribute	name="approvedMFIRA" type="boolean" default="true"></aura:attribute>
+    <aura:attribute	name="approvedCANSF" type="boolean" default="true"></aura:attribute>
+    <aura:attribute	name="relationshipIdentified" type="boolean" ></aura:attribute>
+    <aura:attribute name="value" type="String"/>
+
+   
+    <lightning:input type="checkbox" label="Initial face to face" checked="{!v.initialFacetoFace}" disabled="true"></lightning:input>
+    <lightning:input type="checkbox" label="Approved SAFE-C / SAFE-C OHP" checked="{!v.approvedSAFEC}" disabled="true"></lightning:input>
+    <lightning:input type="checkbox" label="Approved MFIRA" checked="{!v.approvedMFIRA}" disabled="true"></lightning:input>
+    <lightning:input type="checkbox" label="Approved CANS-F" checked="{!v.approvedCANSF}" disabled="true"></lightning:input>
+    <lightning:input type="checkbox" label="Victim perpetrator relationship identified" checked="{!v.relationshipIdentified}" disabled="true"></lightning:input>
+ 
+</aura:component>

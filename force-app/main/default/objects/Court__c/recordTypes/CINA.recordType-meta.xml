@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CINA</fullName>
+    <active>true</active>
+    <label>CINA</label>
+    <picklistValues>
+        <picklist>A_Was_there_an_active_Child_Welfare__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forward to Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forward to Funding Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forward to Payment Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forwarded to Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InActive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InProgress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Override</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reject</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Un-Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>B_Inadequate_Housing__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>B_Was_Respondent_born_substance_exposed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>C_What_Services_were_offered_prior__c</picklist>
+        <values>
+            <fullName>Connected %28mother%2Ffather%29 to parenting classes%2Fprovided necessary monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connected %28mother%2Ffather%29 to substance use disorder screening and treatment%2Fprovided necessary monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connected family member to medical services%2Fprovided necessary monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connected family member to mental health services%2Fprovided necessary monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explored relative%2Fother placement resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitored child safety through in-Home Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered%2Fprovided Child Welfare Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other- specify %28transportation%2C respire%2C child care%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_s_Current_placement_if_not_foster__c</picklist>
+        <values>
+            <fullName>Foster Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kin Home</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_s_permanency_plan_continues_to_be__c</picklist>
+        <values>
+            <fullName>APPLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption by a non-relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption by a relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship by Non-Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship by a relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reunification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>County__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Court_Ordered_Language_Details__c</picklist>
+        <values>
+            <fullName>Continuation of the child in the child%27s home is contrary to the child%27s welfare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continuation of the child in the child%27s home is not contrary to the child%27s welfare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court has waived reunification efforts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court order delay removal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court order specifies who the child was physically and%2For legally removed from and the date the child last resided with the legal custodian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due to emergency nature of the situation%2C reasonable efforts could not be made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency plan of reunification may be changed to another permanency plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable efforts were made to finalize the child%27s permanency plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable efforts were made to prevent removal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable efforts were not made to finalize the child%27s permanency plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable efforts were not made to prevent removal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable efforts were unable to be determined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary placement is in the best interest of the child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary placement is not in the best interest of the child</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Court__c</picklist>
+        <values>
+            <fullName>Exception%2FAppeal Filed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Is there another court hearing Scheduled%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No further involvement with court</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>D_Special_needs_of_Respondent__c</picklist>
+        <values>
+            <fullName>Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical%2Cincluding need for the medication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychological</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>D_Were_reasonable_efforts_not_made__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Decision_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Decision__c</picklist>
+        <values>
+            <fullName>Close case</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Desicion_Recommendation__c</picklist>
+        <values>
+            <fullName>Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody and Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InProgress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order of Protective Supervision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order of Shelter Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination of Parental Rights</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Desicion_Role__c</picklist>
+        <values>
+            <fullName>Supervisor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E_A_Family_Involvement_Meeting__c</picklist>
+        <values>
+            <fullName>Held</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Emergency_Non_Emergency__c</picklist>
+        <values>
+            <fullName>Emergency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Emergency</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_Outcome__c</picklist>
+        <values>
+            <fullName>Adoption Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency Lost Legal Responsibility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of Parent Surrogate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arraignment Preliminary Hearing Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arraignment Preliminary Hearing Not Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Dismissed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Transferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Aged Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Continued as CINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Emancipated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Found CINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Found CINA%2FAmended Allegation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-commitment to DSS and DDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-commitment to DSS and DHMH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-commitment to DSS%2CDDA%2CDHMH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commitment Rescinded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commitment to the Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Co-Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Custody and Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Disposition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued OPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Placement - Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Placement - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Placement - Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continued Placement - Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court Ordered Removal of Child from Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody and Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exception Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exception Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jurisdiction Terminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jurisdiction not Terminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Party Appeared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Services Affected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPS Rescinded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Controlling the Conduct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order of Protective Supervision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Party Served%2FFailed to Appear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petition Dismissed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petition Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petition Withdrawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petition Withdrawn After Shelter Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Certified As Permanent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Original Custodian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Original Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Original Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement with Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Contested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Visitation Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling Visitation Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substance Abuse Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPR Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPR Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Agreement Extended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Writ issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>joint Guardianship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_State__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_Status__c</picklist>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hearing_Type__c</picklist>
+        <values>
+            <fullName>TPR-Guardianship - Contested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legal_Custody__c</picklist>
+        <values>
+            <fullName>Caretaker %28Non Relative%29 Custody</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caretaker %28Non Relative%29 Custody and Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caretaker Guardianship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Emancipated via marriage or court order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Committed to DSS and DDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Committed to DSS and DHMH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Committed to DSS and DJS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Committed to DSS%2C DJS%2C and DHMH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed to Another State Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed to DDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed to DHMH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed to DJS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed to DSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody and Guardianship to Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody to Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody to Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody to Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DJJ and DHMH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delinquent - Committed to DJJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delinquent - Committed to DSS and DJJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Decree of Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship to DSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order of Protective Supervision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parental Custody</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Care Order to DSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Care Order to Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Agreement - Child Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Agreement - Enhanced Aftercare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Agreement - Time Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Agreement to Caregiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Agreement to DSS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mental_health_disorder__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Review__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Clients_named_on_Petition__c</picklist>
+        <values>
+            <fullName>Akila</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durairaj</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keerthana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saravanan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PARENT_S_CIRCUMSTANCE__c</picklist>
+        <values>
+            <fullName>A%2E Parent cannot be identified%3A %28mother%2Ffather%29Why%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B%2E Parent%27s location unknown%3A %28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%2E Department%27s attempt to locate and%2For contact parents%3A %28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%2E Physical%2Fmental health issues of parents%3A %28mother%2Ffather%29 N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%2E Parent incarcerated%3A%28mother%2Ffather%29 if so%2Cwhere%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%2E Parent%27s economic status%3A %28Mother%2FFather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G%2E Parent%27s cannot or will not care for child%3A %28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H%2E Parent substance use%2Fabuse %28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2E Parent admitted  to using substances %3A%28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J%2E Parent refused treatment for substance use disorder %3A %28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K%2E Parent did not successfully complete treatment for substance use disorder%3A%28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%2E Parent uncooperative%3A %28mother%2Ffather%29 how%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2E Parent did not comply with Safety Plan%2FService Agreement%3A %28mother%2Ffather%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parent1__c</picklist>
+        <values>
+            <fullName>Reason for not notifying%3A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The parent 1 has been notified of this action by DDS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parent2__c</picklist>
+        <values>
+            <fullName>Reason for not notifying%3A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The parent 2 has been notified of this action by DSS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Participate_Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Person_Type__c</picklist>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Removal_Episode__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Scheduled_Hearing_Type__c</picklist>
+        <values>
+            <fullName>Adjudication%2FDisposition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appeal Hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contested Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contested CINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exception Hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Motions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motion Hearing%28CINA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Plan Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preliminary%2FArraignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QRTP Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable Efforts Hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reunification Services Wavier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Status Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPR%2FGuardianship- Contested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPR%2FGuardianship- Uncontested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement Hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Writ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Selected_Hearing_Outcome__c</picklist>
+        <values>
+            <fullName>Court order Received By LDSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court orders are not signed by the judge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services Court Orderd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Court Order Specifies a placement other than what was recommended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Court Order Specifies action%28s%29 other than what was recommended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visitations Court Ordered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Type__c</picklist>
+        <values>
+            <fullName>Request for services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Severe_chronic_development_disability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>In Home Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subpoenaed_Type_of_Record__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>The_check_mark_indicates_the_activity__c</picklist>
+        <values>
+            <fullName>A SAFE or SAFE-C OHR has been completed for all applicable children and the assessment has supervisory approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All Safety Plans have Supervisory Approval%28id appicable%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All are persons are Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Client have an open legal custody record of committed to Dss%2C Guardianship to Dss%2C Delinquency voluntary Placement Agreement%2C Shelter Care or Committed to Another State%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>There are no incomplete MFRA%27s or MFIRA%27s pending supervisor approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Petition__c</picklist>
+        <values>
+            <fullName>Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Services Petition not otherwise specified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment of Petition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of CASA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of Conservator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of Guardian ad Litem for Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of Guardian ad Litem for Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment of Guardian ad Litem for Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Welfare Petition%2C Not Otherwise Specified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservator Modication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delinquency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery from DHHR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery from Parents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domestic Violence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand Jury Review of DHHR Record</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian Modification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship%2FTPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immediate Custody</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Injunctive Relief</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Judicial Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Longterm Foster Care Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Examination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Petiton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental Health Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental Health Examination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modify Improvement Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motion of Continuance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motion to Quash Subpoena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motion to Quash Subpoenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Custodial Counseling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order of Attachment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment of Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petition to Detain Juvenile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ratification of Protective Custody</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recusal of Judge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Adoptive Record</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Child Medical Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Client Criminal Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Client Medical Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of DHHR Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Parent Criminal Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Parent Medical Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restraining Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review of Foster Care Arrangements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separation of Siblings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelter Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminate Improvement Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer of Case to Another County</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer of Custody of Minor Children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation of Juvenile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Placement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Placement__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Record__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Within_the_first_12_month_of_the_child_s__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Witness_List_Name__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X10_Previous_Juvenile_Court__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

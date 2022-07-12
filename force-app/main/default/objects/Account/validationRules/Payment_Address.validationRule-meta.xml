@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Address</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Send_Payment_To__c, &apos;The Same Address&apos;) &amp;&amp;  ISCHANGED( Personal_Payment_Address__c )</errorConditionFormula>
+    <errorDisplayField>Personal_Payment_Address__c</errorDisplayField>
+    <errorMessage>Not allowed to edit payment address field, if send payment to have the same address value.</errorMessage>
+</ValidationRule>

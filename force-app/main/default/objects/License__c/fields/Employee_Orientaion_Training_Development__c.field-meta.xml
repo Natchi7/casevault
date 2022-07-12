@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Orientaion_Training_Development__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Incorporation_papers__c  &amp;&amp;  Governing_board__c &amp;&amp;  Organization_chart__c &amp;&amp;  Authorized_individuals__c &amp;&amp;  Agency_Purpose__c &amp;&amp;  Agreements_or_contracts__c &amp;&amp;  Insurance_coverage__c &amp;&amp;  Procedures_for_notification__c  ,&apos;Yes&apos;, &apos;No&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Employee Orientaion,Training&amp;Development</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

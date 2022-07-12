@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_Is_your_worker_aware__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description -Is your worker aware of what you need to graduate?</inlineHelpText>
+    <label>Description -Is your worker aware</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

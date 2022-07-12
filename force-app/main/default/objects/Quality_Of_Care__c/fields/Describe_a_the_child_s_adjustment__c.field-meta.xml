@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Describe_a_the_child_s_adjustment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe (a) the child&apos;s adjustment to school, (b) school performance and (c) 
+appropriateness of school placement</inlineHelpText>
+    <label>Describe (a) the child&apos;s adjustment</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

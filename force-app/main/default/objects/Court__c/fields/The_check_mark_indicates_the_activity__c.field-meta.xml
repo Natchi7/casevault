@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_check_mark_indicates_the_activity__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The check mark indicates that the activity has been completed. All unchecked items must be completed to the close the case.</inlineHelpText>
+    <label>The check mark indicates the activity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Client have an open legal custody record of committed to Dss, Guardianship to Dss, Delinquency voluntary Placement Agreement, Shelter Care or Committed to Another State.</fullName>
+                <default>false</default>
+                <label>No Client have an open legal custody record of committed to Dss, Guardianship to Dss, Delinquency voluntary Placement Agreement, Shelter Care or Committed to Another State.</label>
+            </value>
+            <value>
+                <fullName>A SAFE or SAFE-C OHR has been completed for all applicable children and the assessment has supervisory approval</fullName>
+                <default>false</default>
+                <label>A SAFE or SAFE-C OHR has been completed for all applicable children and the assessment has supervisory approval</label>
+            </value>
+            <value>
+                <fullName>There are no incomplete MFRA&apos;s or MFIRA&apos;s pending supervisor approval</fullName>
+                <default>false</default>
+                <label>There are no incomplete MFRA&apos;s or MFIRA&apos;s pending supervisor approval</label>
+            </value>
+            <value>
+                <fullName>All Safety Plans have Supervisory Approval(id appicable)</fullName>
+                <default>false</default>
+                <label>All Safety Plans have Supervisory Approval(id appicable)</label>
+            </value>
+            <value>
+                <fullName>All are persons are Confirmed</fullName>
+                <default>false</default>
+                <label>All are persons are Confirmed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

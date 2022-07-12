@@ -1,0 +1,204 @@
+<apex:page controller="CPSIntakeReportController" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    
+    <html>
+    
+    <style> 
+                       
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            
+            th {
+                background-color:#aaa;
+            }
+            
+            h3 {
+             
+                background-color:#aaa;
+                text-align:center;
+            }
+        </style>
+    
+
+    <body>
+        <apex:form id="form">
+        
+        <div style="text-align:center;">Department of Human Services<br/>
+               <b>CHILDREN AND FAMILY SERVICES INTAKE WORKSHEET</b>
+        </div>
+        
+        <div>
+        
+            <h3 style="background-color:#aaa;text-align:center;">RECORD OF CONTACT</h3>
+            
+            <div>
+              <div>
+                  <div><b>Intake ID: </b> {!caseIns.CaseNumber}</div>
+                  <div><b>Type of Maltreatment: </b> Physical Abuse</div>
+                  <div><b>Office Location: </b></div>
+                  <div><b>Name of Screener: </b> </div>
+                  <div><b>Incident Location:</b> </div>
+                  <div><b>Screening Decision:</b>                       
+                                    
+                  </div>
+                  <div><b>Overrides:</b> No overrides apply</div>
+                  <div>
+                      <b>Final screening Decision
+                                (after consideration of
+                                            overrides):
+                                    </b> 
+                  </div>
+              </div>
+              <div>
+                  <div><b>Type of Referral:</b> {!caseIns.Origin}</div>
+                  <div><b>Date/Time Received:</b></div>
+                  <div><b>Date/Time Recorded:</b></div>
+                  <div><b>Screener Jurisdiction:</b></div>
+                  <div><b>Communication:</b>{!caseIns.Communication__c}</div>
+                 
+              </div>
+            </div>
+            
+        </div>
+        
+        <!--  style="float: left;width: 50%;"-->
+        <div>
+        
+            <h3 style="background-color:#aaa;text-align:center;">RECOMMENDED RESPONSE TIME</h3>
+            <b>No immediate response criteria exist and allegations include the following</b>
+            
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">HEAD OF HOUSEHOLD</h3>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">OTHER MEMBERS OF HOUSEHOLD</h3>
+            
+            <table style="width:100%">
+              <tr>
+                <th>Name</th>
+                <th>Race</th> 
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Role</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>              
+            </table>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">PARTICIPANTS IN HOUSEHOLD</h3>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">ADDRESS AND CONTACT INFORMATION</h3>
+            
+            <div style="text-align:center;">
+                ADDRESS INFORMATION WAS NOT PROVIDED<br/>
+                CONTACT INFORMATION WAS NOT PROVIDED
+            </div>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">PARTICIPANTS IN HOUSEHOLD</h3>
+            
+            <div><b>Name : </b> </div>
+            
+              
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">ADDRESS AND CONTACT INFORMATION</h3>
+            
+            <div style="text-align:center;">
+                ADDRESS INFORMATION WAS NOT PROVIDED<br/>
+                CONTACT INFORMATION WAS NOT PROVIDED
+            </div>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">OTHER MEMBERS NOT IN HOUSEHOLD</h3>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">NARRATIVE</h3>
+            
+            <div>
+                <div><b>Created By:</b> </div>
+                <div><b>Date Created:</b> </div>
+                <div><b>Last updated on :</b> </div>                
+            </div>
+            
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">HISTORY CLEARANCE INFORMATION</h3>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">ALLEGATIONS PERTAINING TO CHILD PROTECTIVE SERVICES (CPS)</h3>
+            
+            <div>
+                
+                <div><b>Physical Abuse :</b> </div> 
+            </div>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">RECOMMENDATIONS AND OVERRIDES</h3>
+            
+            <div>
+                <div><b>Screening Decision :</b> </div>
+                <div><b>Overrides :</b> </div>
+            
+            </div>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">WORKER/SUPERVISOR APPROVALS</h3>
+            
+            <table style="width:100%">
+              <tr>
+                <th>Status</th>
+                <th>Position</th> 
+                <th>Name</th>
+                <th>Request/Approved Date</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>              
+            </table>
+        </div>
+        
+        <div>
+            <h3 style="background-color:#aaa;text-align:center;">SOURCE OF REFERRAL</h3>
+            
+            <div>
+                
+                <div><b>Referral Name :</b> </div>
+                <div><b>Organization :</b> </div>
+                <div><b>Role :</b> </div>
+                <div><b>Phone Number :</b></div>
+                <div><b>Email : </b> </div>
+                <div><b>Address :</b> </div>
+                <div><b>Acknowledgement :</b><input type="checkbox" id="vehicle1" name="Acknowledgement" value="Bike"/> </div>
+            </div>
+        </div>        
+        
+    </apex:form>
+    </body>
+    
+    </html>
+</apex:page>

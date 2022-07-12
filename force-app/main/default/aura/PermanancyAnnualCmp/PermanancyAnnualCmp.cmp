@@ -1,0 +1,168 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="PermanacyPlanProceedController">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="onClickCurrentStage" type="Decimal"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}"/>
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="annualReviewList" type="List" default="[]"/>
+    <aura:attribute name="annualReviewsOptions" type="List" default="[]"/>
+    <aura:attribute name="annualReviewsRec" type="Annual_Review__c" default="{'sobjectType': 'Annual_Review__c'}"/>
+    <aura:attribute name="openModal" type="boolean"/>
+    <aura:attribute name="openAnnualReviewModal" type="boolean"/>
+    <aura:attribute name="isReadOnly" type="boolean"/>
+    <aura:attribute name="isAllReadOnly" type="boolean" default="false"/>
+    <aura:attribute name="permanancyPlanRec" type="Permanency_Plan__c" default="{'sobjectType' : 'Permanency_Plan__c'}"/>
+    <aura:attribute name="showApprovalBtn" type="boolean" default="false"></aura:attribute>
+
+    <aura:if isTrue="{!v.openModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close"  variant="bare" alternativeText="Close" />
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Submit for Approval</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning:card>
+                        <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                    </lightning:card>
+                </div>
+            </div>
+        </section>  
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    
+    <div class="slds-text-align_right slds-p-bottom_medium">
+        <lightning:button variant="brand" iconName="utility:add" label="ANNUAL REVIEW" title="ANNUAL REVIEW" onclick="{!c.addAnnualReview }" disabled="{!v.isAllReadOnly}"/>
+    </div>
+    
+    <aura:if isTrue="{!v.annualReviewList.length }">
+        <lightning:card title="Reviews">
+            <div>
+                <lightning:datatable
+                                     columns="{! v.columns }"
+                                     data="{!v.annualReviewList}"
+                                     keyField="Id"
+                                     resizeStep="20"
+                                     hideCheckboxColumn = "true"
+                                     />
+            </div>
+        </lightning:card>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.openAnnualReviewModal}">
+        <lightning:card title="">
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:input type="Date" dateStyle="short" aura:id="requiredFields" label="Review Date" value = "{!v.annualReviewsRec.Review_Date__c}" required="true"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Guardian is legally responsible	for child?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input1" variant="label-hidden" value="{!v.annualReviewsRec.Guardian_is_legally_responsible__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Guardian provides financial support for child
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input2" variant="label-hidden" value="{!v.annualReviewsRec.Guardian_provides_financial_support__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Child currently resides with guardian (or primary residence if away at school)
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input3" variant="label-hidden" value="{!v.annualReviewsRec.Child_currently_resides_with_guardian__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout> 
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Child is currently attending school	
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input4" variant="label-hidden" value="{!v.annualReviewsRec.Child_is_currently_attending_school__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Is the requried document for eduction andior healthcare provider?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input5" variant="label-hidden" value="{!v.annualReviewsRec.Is_the_requried_document__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Will the child reach 18th birthday 	during need 12 months?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input6" variant="label-hidden" value="{!v.annualReviewsRec.Will_the_child_reach_18th_birthday__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Child has a mental or physical disibility waranting continuation of assistance?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input7" variant="label-hidden"  value="{!v.annualReviewsRec.Child_has_a_mental_or_physical__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Child is enrolled in educational or vocational traning program?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input8" variant="label-hidden" value="{!v.annualReviewsRec.Child_is_enrolled_in_educational__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Child is participating in a program	or activity that barriers to unemployment?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input9" variant="label-hidden" value="{!v.annualReviewsRec.Child_is_participating_in_a_program__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="10" padding="around-small">
+                    Provide a field to indicate	that turn in complete [Mandutory feild]
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" padding="around-small">
+                    <lightning:combobox name="input10" variant="label-hidden" value="{!v.annualReviewsRec.Provide_a_field_to_indicate__c}" options="{!v.annualReviewsOptions}" label=""/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <div class="slds-text-align_right">
+                <lightning:layout>
+                    <lightning:layoutItem size="12" padding="around-small">
+                        <lightning:input type="checkbox" label="Completed" checked= "{!v.annualReviewsRec.Completed__c}"/>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:input type="Date" dateStyle="short" aura:id="requiredFields" label="Primary Caregiver Sign Date" required="true" value ="{!v.annualReviewsRec.Primary_Caregiver_Sign_Date__c}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:input type="Date" dateStyle="short" label="Secondary Caregiver Sign Date"  value = "{!v.annualReviewsRec.Secondary_Caregiver_Sign_Date__c}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:input type="Date" dateStyle="short" aura:id="requiredFields" label = "Director Sign Date" required="true" value = "{!v.annualReviewsRec.Director_Sign_Date__c}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:card> 
+    </aura:if>
+    <div class="slds-text-align_right">
+        <lightning:button variant="brand" iconName="utility:save" label="Save" title="Save" onclick="{!c.onSave }" disabled="{!v.isAllReadOnly}"/>
+        <aura:if isTrue="{!v.showApprovalBtn}">
+            <lightning:button variant="brand" label="Submit for Approval" title="Submit for Approval" onclick="{!c.onSubmitForApprovalAndSave }" disabled="{!v.isAllReadOnly}"/>
+        </aura:if>
+    </div>
+</aura:component>

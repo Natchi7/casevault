@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contest_for_HIV_Test_Received__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Contest for HIV Test Received</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

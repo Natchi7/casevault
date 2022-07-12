@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suspension_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Suspension Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual review materials not submitted by guardian</fullName>
+                <default>true</default>
+                <label>Annual review materials not submitted by guardian</label>
+            </value>
+            <value>
+                <fullName>Child Enter out of Home Placement</fullName>
+                <default>false</default>
+                <label>Child Enter out of Home Placement</label>
+            </value>
+            <value>
+                <fullName>Child physically not residing with guardian</fullName>
+                <default>false</default>
+                <label>Child physically not residing with guardian</label>
+            </value>
+            <value>
+                <fullName>Death of Child(Case to be closed immediately)</fullName>
+                <default>false</default>
+                <label>Death of Child(Case to be closed immediately)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

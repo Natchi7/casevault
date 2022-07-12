@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_Goals_or_Plans_for_Education__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Future Goals or Plans for Education/Vocational Training : (Attend college?Type of program?Vocational Training?Military?)</inlineHelpText>
+    <label>Future Goals or Plans for Education</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

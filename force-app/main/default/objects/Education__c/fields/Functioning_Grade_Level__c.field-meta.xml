@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Functioning_Grade_Level__c</fullName>
+    <externalId>false</externalId>
+    <label>Functioning Grade Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Grade 1</fullName>
+                <default>true</default>
+                <label>Grade 1</label>
+            </value>
+            <value>
+                <fullName>Grade 2</fullName>
+                <default>false</default>
+                <label>Grade 2</label>
+            </value>
+            <value>
+                <fullName>Grade 3</fullName>
+                <default>false</default>
+                <label>Grade 3</label>
+            </value>
+            <value>
+                <fullName>Grade 4</fullName>
+                <default>false</default>
+                <label>Grade 4</label>
+            </value>
+            <value>
+                <fullName>Grade 5</fullName>
+                <default>false</default>
+                <label>Grade 5</label>
+            </value>
+            <value>
+                <fullName>Grade 6</fullName>
+                <default>false</default>
+                <label>Grade 6</label>
+            </value>
+            <value>
+                <fullName>Grade 7</fullName>
+                <default>false</default>
+                <label>Grade 7</label>
+            </value>
+            <value>
+                <fullName>Grade 8</fullName>
+                <default>false</default>
+                <label>Grade 8</label>
+            </value>
+            <value>
+                <fullName>Grade 9</fullName>
+                <default>false</default>
+                <label>Grade 9</label>
+            </value>
+            <value>
+                <fullName>Grade 10</fullName>
+                <default>false</default>
+                <label>Grade 10</label>
+            </value>
+            <value>
+                <fullName>College</fullName>
+                <default>false</default>
+                <label>College</label>
+            </value>
+            <value>
+                <fullName>Kindergarten</fullName>
+                <default>false</default>
+                <label>Kindergarten</label>
+            </value>
+            <value>
+                <fullName>Not in school</fullName>
+                <default>false</default>
+                <label>Not in school</label>
+            </value>
+            <value>
+                <fullName>Post Secondary Education or Training</fullName>
+                <default>false</default>
+                <label>Post Secondary Education or Training</label>
+            </value>
+            <value>
+                <fullName>Pre School / Head Start</fullName>
+                <default>false</default>
+                <label>Pre School / Head Start</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Above Level</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Above Level</label>
+            </value>
+            <value>
+                <fullName>Grade II</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Grade II</label>
+            </value>
+            <value>
+                <fullName>Not on Level</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not on Level</label>
+            </value>
+            <value>
+                <fullName>On Level</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On Level</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other (Specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

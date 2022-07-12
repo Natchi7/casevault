@@ -1,0 +1,88 @@
+<template>
+<div class="backgroundcolor">
+        <lightning-layout>
+            <lightning-layout-item size="4" class="slds-p-around_small">
+                <p class="slds-p-around_xxx-small">Case Number : {investRec.Name}</p>
+                <p class="slds-p-around_xxx-small">CPS-IR </p>
+                <p class="slds-p-around_xxx-small">Start Date & Time : <lightning-icon class="slds-p-right_xxx-small" size="small" icon-name="utility:date_time"></lightning-icon>{startDate}</p>
+                <p class="slds-p-around_xxx-small">Restrict/Unrestrict : <lightning-badge label={restrict} class="slds-theme_warning"></lightning-badge></p>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" class="slds-p-around_small">
+                <p class="slds-p-around_xxx-small">HOH : <lightning-icon class="slds-p-right_xxx-small" size="small" icon-name="utility:user"></lightning-icon>{hoh}</p>
+                <p class="slds-p-around_xxx-small">Responsibility :</p>
+                <p class="slds-p-around_xxx-small">Intake/Referral : {intakeNo}</p>
+                <p class="slds-p-around_xxx-small">Worker : <lightning-icon class="slds-p-right_xxx-small" size="small" icon-name="standard:person_name"></lightning-icon>{worker} </p>
+
+            </lightning-layout-item>
+            <lightning-layout-item size="3" class="slds-p-around_small">
+                <p class="slds-p-around_xxx-small">Reviewer : <lightning-icon class="slds-p-right_xxx-small" size="small" icon-name="utility:user_role"></lightning-icon>{reviewer}</p>
+                <p class="slds-p-around_xxx-small">Response Timer <lightning-icon icon-name="utility:info_alt" size="small" title="help" onclick={openModal}></lightning-icon> : <template if:false={showResponseTimerWarning}><lightning-formatted-date-time value={responseTimer} year="numeric" month="numeric" day="numeric" hour="numeric" minute="numeric" time-zone={timeZone} hour12="true"></lightning-formatted-date-time></template><template if:true={showResponseTimerWarning}><lightning-badge label={responseTimer} class="slds-theme_error"></lightning-badge></template></p>
+                <p class="slds-p-around_xxx-small">Casevault PID : {casevaultId}</p>
+                <p class="slds-p-around_xxx-small">Status / Decision : <template if:true={isClosed}><lightning-badge label={status} class="slds-theme_success"></lightning-badge></template><template if:false={isClosed}><lightning-badge label={status} class="slds-theme_warning"></lightning-badge></template>
+                </p>
+                <p class="slds-p-around_xxx-small">Due On: <lightning-formatted-date-time value={investRec.Due_On__c} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+                   </p>
+
+            </lightning-layout-item>
+            <lightning-layout-item size="2" class="slds-p-around_small">
+            
+                
+                <div class="slds-p-top_small "></div>
+                    <div class="slds-avatar slds-avatar_circle circle  " size="max-large">
+                      <p class="textSize30 "> {investRec.Number_of_days_created_date__c} </p>
+                      <p class="textSize10">Days</p>
+                    </div><br>
+                    <div class="slds-p-top_small slds-p-left_none"><b>TO GO</b></div>
+            </lightning-layout-item>
+        </lightning-layout>
+</div>
+
+<template if:true={showModal}>
+    <div class="slds-modal slds-fade-in-open slds-backdrop slds-modal_medium">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <lightning-button-icon icon-name="utility:close"
+                                onclick={closeModal}
+                                alternative-text="close"
+                                variant="bare-inverse"
+                                class="slds-modal__close"></lightning-button-icon>  
+                <h2><b>Response Timer Conditions</b></h2>  
+            </div>
+            <div class="slds-modal__content slds-p-around_medium">
+                <div class="slds-p-bottom_large">Response Timer Countdown will be stopped when contacts with the following conditions are added, in one or more contact(s).</div>
+                <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                    <thead>
+                        <tr>
+                            <th>Type of Contact</th>
+                            <th>Person Contacted</th>
+                            <th>Contact was Attempted/Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"Face To Face" OR "Initial face t face"</td>
+                            <td>Has role Alleged Victim</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>"Face To Face" OR "Initial face t face" OR "Phone/Electronic"</td>
+                            <td>Is Caregiver of Person with role Alleged Victim</td>
+                            <td>Attempted or Completed</td>
+                        </tr>
+                        <tr>
+                            <td>"Face To Face" OR "Initial face t face" OR "Phone/Electronic"</td>
+                            <td>ALL other children in case</td>
+                            <td>Attempted or Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slds-modal__footer">
+                <lightning-button label="Cancel" variant="destructive" title="Cancel" onclick={closeModal} class= "slds-var-p-around_x-small" icon-name="utility:close"></lightning-button>
+            </div>
+
+        </div> 
+    </div>
+
+</template>
+</template>

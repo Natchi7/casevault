@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="public" controller='ApprovalInboxController'>
+	<aura:attribute name="columns" type="List"/>
+    <aura:attribute name="assessmentList" type="List"/>
+    <aura:attribute name="processIns" type="ProcessInstance" default="{'sobjectType':'ProcessInstance'}"/>
+
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+	
+    <c:UtilityBaseCmp aura:id="utils" />    
+    <c:ApprovalFilliterCmp/>
+    
+    
+        <lightning:datatable
+                             keyField="id"
+                             data="{! v.assessmentList }"
+                             columns="{! v.columns }"
+                             hideCheckboxColumn="true"/>
+</aura:component>

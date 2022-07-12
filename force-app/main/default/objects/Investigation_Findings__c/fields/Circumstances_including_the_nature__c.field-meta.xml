@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Circumstances_including_the_nature__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Circumstances including the nature, extent, and location of the inquiry indicate that there was (describe either OR both using a bulleted format or short narrative)</inlineHelpText>
+    <label>Circumstances including the nature</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

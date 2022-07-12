@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placement_Structure__c</fullName>
+    <externalId>false</externalId>
+    <label>Placement Structure</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Regular Foster Care</fullName>
+                <default>false</default>
+                <label>Regular Foster Care</label>
+            </value>
+            <value>
+                <fullName>Guardianship Assistance Program</fullName>
+                <default>false</default>
+                <label>Guardianship Assistance Program</label>
+            </value>
+            <value>
+                <fullName>Emergency Shelter (Agency)</fullName>
+                <default>false</default>
+                <label>Emergency Shelter (Agency)</label>
+            </value>
+            <value>
+                <fullName>Independent Living Residential Program</fullName>
+                <default>false</default>
+                <label>Independent Living Residential Program</label>
+            </value>
+            <value>
+                <fullName>Formal Kinship Care</fullName>
+                <default>false</default>
+                <label>Formal Kinship Care</label>
+            </value>
+            <value>
+                <fullName>Restricted (Relative) Foster Care</fullName>
+                <default>false</default>
+                <label>Restricted (Relative) Foster Care</label>
+            </value>
+            <value>
+                <fullName>Intermediate Foster Care</fullName>
+                <default>false</default>
+                <label>Intermediate Foster Care</label>
+            </value>
+            <value>
+                <fullName>Treatment Foster Care</fullName>
+                <default>false</default>
+                <label>Treatment Foster Care</label>
+            </value>
+            <value>
+                <fullName>Emergency Foster Home Care</fullName>
+                <default>false</default>
+                <label>Emergency Foster Home Care</label>
+            </value>
+            <value>
+                <fullName>Residential Group Homes</fullName>
+                <default>false</default>
+                <label>Residential Group Homes</label>
+            </value>
+            <value>
+                <fullName>Emergency Group Shelter Care</fullName>
+                <default>false</default>
+                <label>Emergency Group Shelter Care</label>
+            </value>
+            <value>
+                <fullName>Emergency Foster Care Retainer</fullName>
+                <default>false</default>
+                <label>Emergency Foster Care Retainer</label>
+            </value>
+            <value>
+                <fullName>After care room and board</fullName>
+                <default>false</default>
+                <label>After care room and board</label>
+            </value>
+            <value>
+                <fullName>Alternative Living Units</fullName>
+                <default>false</default>
+                <label>Alternative Living Units</label>
+            </value>
+            <value>
+                <fullName>Teen Mother Programs</fullName>
+                <default>false</default>
+                <label>Teen Mother Programs</label>
+            </value>
+            <value>
+                <fullName>Residential Treatment Centers</fullName>
+                <default>false</default>
+                <label>Residential Treatment Centers</label>
+            </value>
+            <value>
+                <fullName>Refugee Child</fullName>
+                <default>false</default>
+                <label>Refugee Child</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Group Homes</fullName>
+                <default>false</default>
+                <label>Therapeutic Group Homes</label>
+            </value>
+            <value>
+                <fullName>Adoptive Home</fullName>
+                <default>false</default>
+                <label>Adoptive Home</label>
+            </value>
+            <value>
+                <fullName>Pre-Finalized Adoptive Home</fullName>
+                <default>false</default>
+                <label>Pre-Finalized Adoptive Home</label>
+            </value>
+            <value>
+                <fullName>Treatment Foster Care Level 1</fullName>
+                <default>false</default>
+                <label>Treatment Foster Care Level 1</label>
+            </value>
+            <value>
+                <fullName>Treatment Foster Care Level 2</fullName>
+                <default>false</default>
+                <label>Treatment Foster Care Level 2</label>
+            </value>
+            <value>
+                <fullName>Treatment Foster Care Level 3</fullName>
+                <default>false</default>
+                <label>Treatment Foster Care Level 3</label>
+            </value>
+            <value>
+                <fullName>Treatment Foster Care Level 4</fullName>
+                <default>false</default>
+                <label>Treatment Foster Care Level 4</label>
+            </value>
+            <value>
+                <fullName>Intermediate Foster Care Difficulty of Care</fullName>
+                <default>false</default>
+                <label>Intermediate Foster Care Difficulty of Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

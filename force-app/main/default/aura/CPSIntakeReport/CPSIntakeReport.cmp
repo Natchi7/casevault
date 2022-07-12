@@ -1,0 +1,113 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="public"  controller="CPSIntakeReportController">
+   
+   <aura:attribute name ="intakeReportRecord" type="Service_Case__c"/>
+   <aura:attribute name="recordId" type="String"/>
+    
+   <aura:handler name="init" value="{!this}" action ="{! c.getInitInfo }" />
+    <div class="slds-text-align_center"> <br>State of Maryland - Department of Human Service</br>
+         <b>Childern  Family Services Intake Worksheet</b>
+	</div>
+    
+    <lightning:card  class="slds-text-heading_small" title='RECORD OF CONTACT'>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p>Intake ID : {!v.intakeReportRecord.Intake__r.CaseNumber} </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <p> Type of Referral: {!v.intakeReportRecord.Intake__r.Origin} </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Type of Maltreatment: </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Office Location:  </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <p> Date/Time Received: </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Name of Screener: </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <p> Date/Time Recorded: </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Incident Location: </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <p> Screener Jurisdiction: {!v.intakeReportRecord.Intake__r.Jurisdiction__c} </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Screening Decision: </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <p> Communication: {!v.intakeReportRecord.Intake__r.Communication__c}</p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Overrides:  </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <p> Final screening Decision(after consideration ofoverrides):</p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='RECOMMENDED RESPONSE TIME'>
+        <div> <br><b>No immediate criteria exist and allegations include the following</b></br>
+            Physical abuse-response within 24 hours
+        </div>
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='HEAD OF HOUSEHOLD'>
+        
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='OTHER MEMBERS OF HOUSEHOLD'>
+        
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='PARTICIPANTS IN HOUSEHOLD'>
+        
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='ADDRESS AND CONTACT INFORMATION'>
+        
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='OTHER MEMBERS NOT IN HOUSEHOLD'>
+         
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='NARRATIVE'>
+         
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='HISTORY CLEARANCE INFORMATION'>
+         
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='ALLEGATIONS PERTAINING TO CHILD PROTECTIVE SERVICES (CPS)'>
+         
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='RECOMMENDATIONS AND OVERRIDES'>
+         
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='WORKER/SUPERVISOR APPROVALS'>
+         
+    </lightning:card>
+    <lightning:card  class="slds-text-heading_small" title='SOURCE OF REFERRAL'>
+         
+    </lightning:card>
+    
+</aura:component>

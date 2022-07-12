@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_s_Current_placement_if_not_foster__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>2.Child&apos;s Current placement (If not foster home) :</inlineHelpText>
+    <label>2.Child&apos;s Current placement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kin Home</fullName>
+                <default>true</default>
+                <label>Kin Home</label>
+            </value>
+            <value>
+                <fullName>Foster Home</fullName>
+                <default>false</default>
+                <label>Foster Home</label>
+            </value>
+            <value>
+                <fullName>Group Home</fullName>
+                <default>false</default>
+                <label>Group Home</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

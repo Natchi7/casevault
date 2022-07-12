@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alternative Living Unit</fullName>
+                <default>false</default>
+                <label>Alternative Living Unit</label>
+            </value>
+            <value>
+                <fullName>RCC: Large Group Home</fullName>
+                <default>false</default>
+                <label>RCC: Large Group Home</label>
+            </value>
+            <value>
+                <fullName>RCC : Medically Fragile</fullName>
+                <default>false</default>
+                <label>RCC : Medically Fragile</label>
+            </value>
+            <value>
+                <fullName>RCC  : Respite</fullName>
+                <default>false</default>
+                <label>RCC  : Respite</label>
+            </value>
+            <value>
+                <fullName>RCC : Shelter Home</fullName>
+                <default>false</default>
+                <label>RCC : Shelter Home</label>
+            </value>
+            <value>
+                <fullName>RCC : Small Group Home</fullName>
+                <default>false</default>
+                <label>RCC : Small Group Home</label>
+            </value>
+            <value>
+                <fullName>RCC : Teen Mother Program</fullName>
+                <default>false</default>
+                <label>RCC : Teen Mother Program</label>
+            </value>
+            <value>
+                <fullName>Residential Treatment Center</fullName>
+                <default>false</default>
+                <label>Residential Treatment Center</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Group Home</fullName>
+                <default>false</default>
+                <label>Therapeutic Group Home</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

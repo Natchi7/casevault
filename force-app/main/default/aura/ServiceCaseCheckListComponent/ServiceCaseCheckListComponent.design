@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="serviceCaseRecordId"/>
+    <design:attribute name="showApprovalBtn" label="Show Approval Button"></design:attribute>
+</design:component>

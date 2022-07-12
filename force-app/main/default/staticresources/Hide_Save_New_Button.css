@@ -1,0 +1,24 @@
+/*.slds-global-header__item--search{
+    display: none !important;
+ }*/
+ /*li.slds-button-group-item:nth-child(2){
+    display: none !important;
+ }*/
+ li.slds-button-group-item:nth-last-child(2):nth-child(even) {
+   display: none !important;
+ }
+/*.button-container-inner .slds-button:nth-child(2){
+   display: none !important;
+}*/
+.button-container-inner .slds-button:nth-last-child(2):nth-child(even){
+   display: none !important;
+}
+[app_flexipage-header_header-host] {
+  display: none !important;
+}
+/*.slds-button_destructive {
+   color : white !important;
+}
+.slds-button svg {
+   fill: white !important;
+}*/

@@ -1,0 +1,154 @@
+<template>
+        <div class="spinner">
+                <template if:true={loading}>
+                    <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+                </template>
+            </div>
+    <lightning-card title="DISCLOSURE CHECKLIST"></lightning-card>
+    <h5><b>Disclosure Details</b></h5>
+    <lightning-layout>
+        <lightning-layout-item size="4" class="slds-p-around_small">
+             <lightning-input date-style="short" type="date" label="Disclosure Creation Date" name="Disclosure_Creation_Date__c" value={disclosureChecklistRec.Disclosure_Creation_Date__c} required disabled={readOnly} onchange={handleChange}></lightning-input> 
+        </lightning-layout-item>
+        <lightning-layout-item size="8" class="slds-p-around_small">
+            <lightning-textarea  label="Person(s) information Disclosed To " name="Person_s_information_Disclosed_To__c" value={disclosureChecklistRec.Person_s_information_Disclosed_To__c} required disabled={readOnly} onchange={handleChange}></lightning-textarea> 
+        </lightning-layout-item>
+    </lightning-layout>
+    <h5><b>Disclosure Completed By</b></h5>
+    <lightning-layout>
+        <lightning-layout-item size="4" class="slds-p-around_small">
+             <lightning-input type="text" label="Worker" name="Worker__c" value={disclosureChecklistRec.Worker__c} required disabled={readOnly} onchange={handleChange}></lightning-input> 
+        </lightning-layout-item>
+        <lightning-layout-item size="4" class="slds-p-around_small">
+            <lightning-input type="text" label="Local Department" name="Local_department__c" value={disclosureChecklistRec.Local_department__c} disabled={readOnly} onchange={handleChange}></lightning-input> 
+        </lightning-layout-item>
+        <lightning-layout-item size="4" class="slds-p-around_small">
+            <lightning-input type="text" label="Non Staff Member" name="Non_staff_member__c" value={disclosureChecklistRec.Non_staff_member__c} disabled={readOnly} onchange={handleChange}></lightning-input> 
+        </lightning-layout-item>
+    </lightning-layout>
+    <h5><b>Disclosed Checklist Items</b></h5>
+    <div class="slds-p-left_small">
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Explain to the family that the child being placed may have undiagnosed mental,physical, or emotional problem</div>
+                <div><lightning-radio-group variant="label-hidden"  name="child_placed_undiagnosed_mental_physical__c" value={disclosureChecklistRec.child_placed_undiagnosed_mental_physical__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to know medication history of the child</div>
+                <div><lightning-radio-group variant="label-hidden"  name="medication_history_of_the_child__c" value={disclosureChecklistRec.medication_history_of_the_child__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provide written information to the family regarding any know physical abuse experiences in which the child was the victim</div>
+                <div><lightning-radio-group variant="label-hidden"  name="physical_abuse_experiences_child_victim__c" value={disclosureChecklistRec.physical_abuse_experiences_child_victim__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to other children born to the child's biological parents</div>
+                <div><lightning-radio-group variant="label-hidden"  name="children_born_to_child_biological_parent__c" value={disclosureChecklistRec.children_born_to_child_biological_parent__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to all known out-of-home placements</div>
+                <div><lightning-radio-group variant="label-hidden"  name="known_out_of_home_placements__c" value={disclosureChecklistRec.known_out_of_home_placements__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to why the child was unable to return to his/her family of origin</div>
+                <div><lightning-radio-group variant="label-hidden"  name="unable_to_return_his_her_family_origin__c" value={disclosureChecklistRec.unable_to_return_his_her_family_origin__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family regarding any known sexual abuse experiences in which the child was the victim</div>
+                <div><lightning-radio-group variant="label-hidden"  name="sexual_abuse_experience_child_was_victim__c" value={disclosureChecklistRec.sexual_abuse_experience_child_was_victim__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to child's relationship with his/her birth family</div>
+                <div><lightning-radio-group variant="label-hidden"  name="child_s_relationship_with_his_her_birth__c" value={disclosureChecklistRec.child_s_relationship_with_his_her_birth__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family regarding any known neglect experiences in which child was the victim</div>
+                <div><lightning-radio-group variant="label-hidden"  name="neglect_experiences_child_was_victim__c" value={disclosureChecklistRec.neglect_experiences_child_was_victim__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Discussed post adoptive search and reunion service with the faimly</div>
+                <div><lightning-radio-group variant="label-hidden"  name="adoptive_search_and_reunion_service__c" value={disclosureChecklistRec.adoptive_search_and_reunion_service__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family regarding any known physical abuse perpetrated by the child on others</div>
+                <div><lightning-radio-group variant="label-hidden"  name="physical_abuse_perpetrated_by_the_child__c" value={disclosureChecklistRec.physical_abuse_perpetrated_by_the_child__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provide available Lifebook information</div>
+                <div><lightning-radio-group variant="label-hidden"  name="Provide_available_Lifebook_information__c" value={disclosureChecklistRec.Provide_available_Lifebook_information__c} options={options} required onchange={handleChange} ></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to any known alcohol, drug addiction the child's birth parent may have had</div>
+                <div><lightning-radio-group variant="label-hidden"  name="alcohol_drug_addiction_child_s_parent__c" value={disclosureChecklistRec.alcohol_drug_addiction_child_s_parent__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family regarding any sexual abuse perpetrated by the child on others</div>
+                <div><lightning-radio-group variant="label-hidden"  name="sexual_abuse_perpetrated_by_child__c" value={disclosureChecklistRec.sexual_abuse_perpetrated_by_child__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to the child's schooling</div>
+                <div><lightning-radio-group variant="label-hidden"  name="family_pertaining_to_child_s_schooling__c" value={disclosureChecklistRec.family_pertaining_to_child_s_schooling__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Completed the application child assessment request form and upload the form in the file cabinet</div>
+                <div><lightning-radio-group variant="label-hidden"  name="Complete_child_assessment_request_form__c" value={disclosureChecklistRec.Complete_child_assessment_request_form__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided the family with all available non identifying information on the birth of the child (in writing)</div>
+                <div><lightning-radio-group variant="label-hidden"  name="non_identifying_information_on_child__c" value={disclosureChecklistRec.non_identifying_information_on_child__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided reasons and the date the child came into DDS custody</div>
+                <div><lightning-radio-group  variant="label-hidden"  name="reasons_and_date_child_came_DDS_custody__c" value={disclosureChecklistRec.reasons_and_date_child_came_DDS_custody__c}  options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to physical health, mental health, and hospitalization history of the child's biological family</div>
+                <div><lightning-radio-group variant="label-hidden"  name="physical_mental_health_hospitalization__c" value={disclosureChecklistRec.physical_mental_health_hospitalization__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+                
+                <div class="slds-p-top_small"><span class="slds-text-color_error slds-p-right_xxx-small">*</span>Provided written information to the family pertaining to physical health, mental health, and hospitalization history of the child</div>
+                <div><lightning-radio-group variant="label-hidden"  name="physical_mental_hospitalization_child__c" value={disclosureChecklistRec.physical_mental_hospitalization_child__c} options={options} required disabled={readOnly} onchange={handleChange}></lightning-radio-group></div>
+</div>
+        <lightning-layout>
+                <lightning-layout-item size="3" class="slds-p-around_small">
+                        <lightning-input type="number" label="Number of Siblings" name="Number_of_siblings__c" value={disclosureChecklistRec.Number_of_siblings__c} disabled={readOnly} onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="9" class="slds-p-around_small">
+                        <lightning-textarea label="Information(Name/AGE,..)" name="Information_Name_Age__c" value={disclosureChecklistRec.Information_Name_Age__c} disabled={readOnly} onchange={handleChange}></lightning-textarea>
+                </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-p-left_small">
+        <p><b>Please provide the list of documents pertaining to the Child and Biological Family uploaded to the File Cabinet</b></p>
+        <lightning-textarea class="slds-p-top_small" label="Write the file names(Use , for name separation" name="Write_the_file_names__c" value={disclosureChecklistRec.Write_the_file_names__c} disabled={readOnly} onchange={handleChange}></lightning-textarea>
+        </div>
+        <div class="slds-text-align_right">
+                <lightning-button label="SAVE" icon-name="utility:save" variant="brand" onclick={handleSave}></lightning-button>
+                <template if:false={showApprovalBtn}>
+                        <lightning-button label="Submit for Approval"  class="slds-p-left_small" variant="brand" onclick={submitforApproval} disabled={enableApprovalButton}></lightning-button>
+                </template>
+        </div>
+        <lightning-layout>
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                        <h2><b>Approval Status :{disclosureChecklistRec.Disclosure_Approval_Status__c} </b></h2>
+                </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                        <h2><b>Submitted by : {disclosureChecklistRec.Disclosure_Submitted_by__c}</b></h2>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                        <h2><b>Submitted on : <lightning-formatted-date-time value={disclosureChecklistRec.Disclosure_Submitted_Date__c} year="numeric" month="numeric" day="numeric" ></lightning-formatted-date-time></b></h2>
+                </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                        <h2><b>Approved by : {disclosureChecklistRec.Disclosure_Approved_by__c}</b></h2>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" class="slds-p-around_small">
+                        <h2><b>Approved on : <lightning-formatted-date-time value={disclosureChecklistRec.Disclosure_Approved_Date__c} year="numeric" month="numeric" day="numeric" ></lightning-formatted-date-time></b></h2>
+                </lightning-layout-item>
+        </lightning-layout>
+        <template if:true={showApprovalScreen}>
+                <div class="slds-modal slds-fade-in-open slds-backdrop">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__header">
+                            <lightning-button-icon icon-name="utility:close"
+                                            onclick={hideApprovalScreen}
+                                            alternative-text="close"
+                                            variant="bare-inverse"
+                                            class="slds-modal__close"></lightning-button-icon>  
+                            <h2>Submit for Approval</h2>  
+                        </div>
+                        <div class="slds-modal__content slds-p-around_medium">
+                            <c-custom-lookup-component iconname="standard:user" object-name="User" searchfield="Name" onselectedrec={handleSelectRec}>
+                            </c-custom-lookup-component>
+                        </div>
+                        <div class="slds-modal__footer">
+                            <lightning-button label="Submit for Approval" title="Submit for Approval" onclick={submitApproval} variant="brand" class= "slds-var-p-around_x-small" disabled={enableSubmit}></lightning-button>
+                            <lightning-button label="Cancel" variant="destructive" title="Cancel" onclick={hideApprovalScreen} class= "slds-var-p-around_x-small" icon-name="utility:close"></lightning-button>
+                        </div>
+        
+                    </div> 
+                </div>
+        
+        </template>
+</template>

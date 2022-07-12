@@ -1,0 +1,18 @@
+<apex:page renderAs="pdf" standardController="Case" extensions="PDFGeneratorController" showHeader="false" standardStylesheets="false" applyBodyTag="true" applyHtmlTag="true">
+  <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Current Intake record Id is : {!currentRecordId}" collapsible="false">
+            <apex:outputField value="{!caseIns.CaseNumber}"/><br/>
+            <apex:outputField value="{!caseIns.First_Name__c}"/><br/>
+            <apex:outputField value="{!caseIns.Middle_Name__c}"/><br/>
+            <apex:outputField value="{!caseIns.Last_Name__c}"/><br/>
+            <apex:outputField value="{!caseIns.Title__c}"/><br/>
+            <apex:outputField value="{!caseIns.Role__c}"/><br/>
+            <apex:outputField value="{!caseIns.SuppliedEmail}"/><br/>
+            <apex:outputField value="{!caseIns.City__c}"/><br/>
+            <apex:outputField value="{!caseIns.Address_1__c}"/><br/>
+            <apex:outputField value="{!caseIns.Address_2__c}"/><br/>
+        </apex:pageBlockSection>        
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

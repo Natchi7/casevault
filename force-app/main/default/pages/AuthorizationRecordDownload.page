@@ -1,0 +1,148 @@
+<apex:page controller="VendorService" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    
+    <html>
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    
+            <style> 
+                           
+                span.d {
+                    
+                    display:inline-block;
+                    width:200px;
+                    padding:12px;
+                }
+                u.uh {
+                    line-height:40px;
+                }
+                span.space4 {
+                
+                    display:inline-block;
+                    width:150px;     
+                }
+                span.space1 {
+                
+                    display:inline-block;
+                    width:140px;     
+                }
+                span.space2 {
+                
+                    display:inline-block;
+                    width:80px;     
+                }
+                span.space3 {
+                
+                    display:inline-block;
+                    width:260px;     
+                }
+                div,span {
+                
+                    font-size:14px;
+                }
+                </style>
+                 
+        </head>
+    
+
+    <body>
+        <apex:form id="form">
+        <img src="https://casevault-dev-ed--c.documentforce.com/file-asset/Final_case_vault_logo537_21?v=1&amp;width=200&amp;height=200&quot;" height="80px" width="80px"></img>
+        <div style="text-align:center;padding-bottom:10px;"> 
+               <b>FUNDING REQUEST FORM</b>
+        </div>
+        <div style="padding-bottom:3px;">
+            <span class="d"><b>Service Request ID:</b>{!authorizationRecord.Service__r.Name}</span>
+            <span class="d"><b>Authorization ID:</b>{!authorizationRecord.Name}</span>
+            <span class="d"><b>Service Request Date:</b></span>
+        </div>
+        
+        <hr style="width:100%;"></hr>
+        
+        <div style="padding-bottom:3px;"><b>SECTION I : <u>PROVIDER/VENDOR INFORMATION</u></b></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Provider ID</b></span><span class="space">: {!authorizationRecord.Service__r.Provider__r.Casevault_ProID__c }</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>SSN/Tax ID No.</b></span><span class="space">: {!authorizationRecord.Service__r.Provider__r.Tax_ID__c}</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Provider Name</b></span><span class="space">: {!authorizationRecord.Service__r.Provider__r.Name}</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Address</b></span><span class="space">: {!authorizationRecord.Service__r.Provider__r.BillingStreet}</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Phone</b></span><span class="space">: {!authorizationRecord.Service__r.Provider__r.Phone}</span></div>
+        
+        
+        <hr style="width:100%;"></hr>
+        
+        <div style="padding-bottom:3px;"><b>SECTION II : <u>LOCAL DEPARTMENT INFORMATION</u></b></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>LDSS</b></span><span class="space">:</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Address</b></span><span class="space">:</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Worker Name</b></span><span class="space">:</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Worker Phone</b></span><span class="space">:</span></div>
+        
+        <hr style="width:100%;"></hr>
+        
+        <div style="padding-bottom:3px;"><b>SECTION III : <u>CLIENT INFORMATION</u></b></div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Case Name</b></span><span class="space3">: </span>
+            <span class="space2"><b>Case ID</b></span><span class="space4">: {!authorizationRecord.Service__r.Client__r.Service_Case__r.Name}</span>
+        </div>        
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Client Name</b></span><span class="space3">: {!authorizationRecord.Service__r.Client__r.Name}</span>
+            <span class="space2"><b>Client ID</b></span><span class="space4">: {!authorizationRecord.Service__r.Client__r.Casevault_PID__c}</span>
+        </div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Requestor Name</b></span><span class="space">:</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Requestor Phone</b></span><span class="space">:</span></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Description of Service </b></span><span>: {!authorizationRecord.Service__r.Structure_Services__r.Structure_Service_Name__c}</span></div>
+        
+        <hr style="width:100%;"></hr>
+        
+        <div style="padding-bottom:3px;"><b>SECTION IV : <u>APPROVAL INFORMATION</u></b></div>
+        <div style="padding-bottom:3px;"><span class="space1"><b>Justification        </b></span><span class="space">: {!authorizationRecord.Justification__c}</span></div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Fiscal Category Code</b></span><span class="space3">: {!authorizationRecord.Fiscal_Category_Description__c}</span>
+            <span class="space2" id="startdate"><b>Start Date</b></span><span class="space4">:
+                <apex:outputText value="{0,date,dd'-'MM'-'yyyy}" >  
+                     <apex:param value="{!authorizationRecord.Start_Date__c}"/>  
+                 </apex:outputText> 
+             </span>
+        </div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Cost Not To Exceed</b></span><span class="space3">: {!authorizationRecord.Cost_not_be_exceed__c}</span>
+            <span class="space2" id="enddate"><b>End Date</b></span><span class="space4">:
+                 <apex:outputText value="{0,date,dd'-'MM'-'yyyy}" >  
+                      <apex:param value="{!authorizationRecord.End_Date__c}"/>  
+                 </apex:outputText>
+             </span>
+        </div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Voucher Requested </b></span><span class="space3">: {!authorizationRecord.Voucher_Requested__c}</span>
+            <span class="space2"><b>Payment ID</b></span><span class="space4">:</span>
+        </div>
+        
+        <hr style="width:100%;"></hr>
+
+        <div style="padding-bottom:3px;"><b>SECTION V : <u>SUPERVISORS</u></b></div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Supervisor</b></span><span class="space3">: {!authorizationRecord.Select_Approver__r.Name}</span>
+            <span class="space2"><b>Funding</b></span><span class="space4">:</span>
+        </div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Date</b></span><span class="space3">:</span>
+            <span class="space2"><b>Date</b></span><span class="space4">:</span>
+        </div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Director : N/A</b></span><span class="space3">:</span>
+            <span class="space2"><b>Payment</b></span><span class="space4">:</span>
+        </div>
+        <div style="padding-bottom:3px;">
+            <span class="space1"><b>Total Actual Cost</b>(Sales Receipt Attached)</span><span class="space3">:</span>
+            <span class="space2"><b>Date</b></span><span class="space4">:</span>
+        </div>
+        
+        <div style="padding-top:5px;">
+            <span><b>VENDOR PLEASE NOTE :</b></span>
+            <span><b>DO NOT REFUND CASH TO CLIENTS WHO HAVE PURCHASED WITH A VOUCHER This includes the client request to return merchandise for cash and/or if purchases are less than the authorized amount, do not refund the difference.</b></span>
+         </div>
+           
+        
+    </apex:form>
+    </body>
+    
+    </html>
+</apex:page>

@@ -1,0 +1,8 @@
+<design:component>
+	<design:attribute name="LegalCustodyEndDateCheck"/>
+    <design:attribute name="SAFECheck"/>
+    <design:attribute name="MFRACheck"/>
+    <design:attribute name="PersonConfirmedCheck"/>
+    <design:attribute name="removalandplacementCheck"/>
+    <design:attribute name="programAssignmentCheck"/>
+</design:component>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Screening_Decision__c</fullName>
+    <externalId>false</externalId>
+    <label>Final Screening Decision</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Screen out : No maltreatment type  is marked and no screen - in overrides apply</fullName>
+                <default>false</default>
+                <label>Screen out : No maltreatment type  is marked and no screen - in overrides apply</label>
+            </value>
+            <value>
+                <fullName>Screen in : At least one maltreatment type of screen</fullName>
+                <default>false</default>
+                <label>Screen in : At least one maltreatment type of screen - in overrides</label>
+            </value>
+            <value>
+                <fullName>Accept as Non- CPS : only Risk of Harm type is marked</fullName>
+                <default>false</default>
+                <label>Accept as Non- CPS : only Risk of Harm type is marked</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

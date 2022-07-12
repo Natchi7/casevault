@@ -1,0 +1,424 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="IntakeCustomController">
+
+    <ltng:require scripts="{!$Resource.momentForTime}" />
+    <!--<aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}" />-->
+
+    <aura:attribute name="intakeRecordIns" type="case" />
+    <aura:attribute name="communicationOptions" type="List" />
+    <aura:attribute name="originOptions" type="List" />
+    <aura:attribute name="jurisdictionOptions" type="List" />
+    <aura:attribute name="voluntaryPlacementTypeOptions" type="List" />
+    <aura:attribute name="isHomeService" type="Boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="isInformation" type="Boolean" default="false" />
+    <aura:attribute name="createddate" type="DateTime" />
+    <aura:attribute name="todayDateTime" type="datetime"/>
+    <c:UtilityBaseCmp aura:id="utils" />
+
+    <div>
+        <lightning:card title="Contact Detail">
+
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        Intake Number: {!v.intakeRecordIns.CaseNumber}
+                    </span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        Created Date: {!v.createddate}
+                    </span>
+                </lightning:layoutItem>
+                <!--<lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        Author: {!v.intakeRecordIns.Author__c}
+                    </span>
+                </lightning:layoutItem>-->
+            </lightning:layout>
+
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        Head of Household: {!v.intakeRecordIns.contact__r.Name}
+                    </span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        Restrict/UnRestrict: {!v.intakeRecordIns.Restrict_UnRestrict__c}
+                    </span>
+                </lightning:layoutItem>
+                <!--<lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        Agency: <ui:outputText value="{!v.intakeRecordIns.Agency__c}"/>
+                    </span>
+                </lightning:layoutItem>-->
+            </lightning:layout>
+
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        <lightning:combobox required="true" aura:id="requiredFields" name="Communication" label="Communication" value="{!v.intakeRecordIns.Communication__c}" placeholder="" options="{! v.communicationOptions }" onchange="{!c.onCommunicationChange}"/>
+                    </span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        <lightning:combobox required="true" aura:id="requiredFields" name="Purpose" label="Purpose" value="{!v.intakeRecordIns.Origin}" placeholder=""  options="{! v.originOptions }" onchange="{!c.onPurposeChange}"/>
+                    </span>
+                </lightning:layoutItem>
+
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        <lightning:combobox required="true" aura:id="requiredFields" name="Jurisdiction" label="Jurisdiction" value="{!v.intakeRecordIns.Jurisdiction__c}" placeholder="" options="{! v.jurisdictionOptions }" onchange="{!c.onJurisdictionChange}"/>
+                    </span>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <span>
+                        <lightning:input type="datetime" aura:id="requiredFields" dateStyle="short"
+                                         label="Received Date" required="true" 
+                                         value="{!v.intakeRecordIns.Received_Date__c}" max="{!v.todayDateTime}"
+                                         onchange="{!c.onSave}"/>
+
+                    </span>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:card>
+
+        <aura:if isTrue="{! or(v.intakeRecordIns.Origin == 'Information and Referral', v.intakeRecordIns.Origin == 'Request for services')}">
+            <aura:if isTrue="{!v.isHomeService}">
+                <lightning:card title="">
+
+                    <lightning:layout>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="homeService" type="checkbox" label="In Home Service" name="homeService" checked="{!v.intakeRecordIns.In_Home_Services__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="privateAdoption" type="checkbox" label="Private Adoption Subsidy" name="privateAdoption" checked="{!v.intakeRecordIns.Private_Adoption_Subsidy__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="icpc" type="checkbox" label="ICPC" name="icpc" checked="{!v.intakeRecordIns.ICPC__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                    <lightning:layout>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="cpsHistory" type="checkbox" label="CPS History Clearance" name="cpsHistory" checked="{!v.intakeRecordIns.CPS_History_Clearance__c}" onchange="{!c.onSave}"/>                       
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="ascrsAdoption" type="checkbox" label="ASCRS-Adoption Search Contact" name="ascrsAdoption" checked="{!v.intakeRecordIns.ASCRS_Adpotion_Search_Contact__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="icama" type="checkbox" label="ICAMA" name="icama" checked="{!v.intakeRecordIns.ICAMA__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                </lightning:card>
+            </aura:if>
+
+
+            <aura:if isTrue="{!v.intakeRecordIns.In_Home_Services__c}">
+                <lightning:card title="In Home Services">
+
+                    <lightning:layout>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="requestService" type="checkbox" label="Request of Other Agency" name="input2" checked="{!v.intakeRecordIns.Request_of_Other_Agency__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="serviceFamily" type="checkbox" label="Service to Family and Children" name="input2" checked="{!v.intakeRecordIns.Services_to_Family_and_Children__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="kinshipNavigator" type="checkbox" label="Kinship Navigator" name="input2" checked="{!v.intakeRecordIns.Kinship_Information__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                    <lightning:layout>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="interagencyFamily" type="checkbox" label="Interagency Family Perservation Service" name="input2" checked="{!v.intakeRecordIns.Interagency_Family_Preservation_Services__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="voluntaryPlacement" type="checkbox" label="Voluntary Placement" name="input2" checked="{!v.intakeRecordIns.Voluntary_Placement__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="independentLiving" type="checkbox" label="Independent Living After Care Services" name="input2" checked="{!v.intakeRecordIns.Independent_Living_After_Services__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                    <lightning:layout>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="consolidatedService" type="checkbox" label="Consolidated Services" name="input2" checked="{!v.intakeRecordIns.Consolidated_Services__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" padding="around-small">
+                            <span>
+                                <lightning:input aura:id="cinaPetition" type="checkbox" label="Request to file CINA Petition" name="input2" checked="{!v.intakeRecordIns.Request_to_file_a_CINA_Petition__c}" onchange="{!c.onSave}"/>
+                            </span>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+
+                </lightning:card>
+            </aura:if>
+
+            <aura:if isTrue="{!v.isInformation}">
+                <div class="slds-scrollable_y scrollableHeightWidth">
+                    <lightning:card title="">
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="jobSearch" type="checkbox" label="Job Search" name="input1" checked="{!v.intakeRecordIns.Job_Search__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="environmental" type="checkbox" label="Environmental Emergency Assistance" name="input1" checked="{!v.intakeRecordIns.Environmental_Emergency_Ass__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="environmentAged" type="checkbox" label="Environmental Emergency Assistance-Aged" name="input1" checked="{!v.intakeRecordIns.Environmental_Emergency_Assistance_Aged__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="parentalStress" type="checkbox" label="Parental Stress" name="input1" checked="{!v.intakeRecordIns.Parental_Stress__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="fosterCare" type="checkbox" label="Foster Care Provider Interest" name="input1" checked="{!v.intakeRecordIns.Foster_Care_Provider_Interest__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="other" type="checkbox" label="Other" name="input1" checked="{!v.intakeRecordIns.Other__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="irNonAged" type="checkbox" label="I R - Non-Aged" name="input1" checked="{!v.intakeRecordIns.I_R_Non_Aged__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="workerAssigned" type="checkbox" label="Worker Assigned" name="input1" checked="{!v.intakeRecordIns.Worker_Assigned__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="clothing" type="checkbox" label="Clothing" name="input1" checked="{!v.intakeRecordIns.Clothing__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="rentalAssistance" type="checkbox" label="Rental Assistance" name="input1" checked="{!v.intakeRecordIns.Rental_Assistance__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="sheller" type="checkbox" label="Sheller" name="input1" checked="{!v.intakeRecordIns.Shelter__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="custodyIssue" type="checkbox" label="Custody Issues" name="input1" checked="{!v.intakeRecordIns.Custody_Issuses__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="irAged" type="checkbox" label="I R - Aged" name="input1" checked="{!v.intakeRecordIns.I_R_Aged__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="legalissues" type="checkbox" label="Legal Issues" name="input1" checked="{!v.intakeRecordIns.Legal_Issues__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="environmentalNonAged" type="checkbox" label="Environmental Emergency Assistance - Non-Aged" name="input1" checked="{!v.intakeRecordIns.Environmental_Emergency_Ass__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="food" type="checkbox" label="Food" name="input1" checked="{!v.intakeRecordIns.Food__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="fip" type="checkbox" label="FIP - Family Investment Center" name="input1" checked="{!v.intakeRecordIns.FIP_Family_Investment_Center__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="volunteer" type="checkbox" label="To Be A Volunteer" name="input1" checked="{!v.intakeRecordIns.To_Be_A_Volunteer__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="uncontrollable" type="checkbox" label="Uncontrollable Child" name="input1" checked="{!v.intakeRecordIns.Uncontrollable_Child__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="kinshipInformation" type="checkbox" label="Kinship Information" name="input1" checked="{!v.intakeRecordIns.Kinship_Information__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="wic" type="checkbox" label="WIC" name="input1" checked="{!v.intakeRecordIns.WIC__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="caseIntervention" type="checkbox" label="Crisis Intervention" name="input1" checked="{!v.intakeRecordIns.Crisis_Intervention__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="childSupport" type="checkbox" label="Child Support" name="input1" checked="{!v.intakeRecordIns.Child_Support__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="housing" type="checkbox" label="Housing" name="input1" checked="{!v.intakeRecordIns.Housing__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:card>
+
+                    <lightning:card title="">
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="healthNeed" type="checkbox" label="Health Need" name="input1" checked="{!v.intakeRecordIns.Health_Need__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="substanceAbuse" type="checkbox" label="Substance Abuse" name="input1" checked="{!v.intakeRecordIns.Substance_Abuse__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="adoptionInterest" type="checkbox" label="Adaption Interest" name="input1" checked="{!v.intakeRecordIns.Adaption_Interst__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="dayCare" type="checkbox" label="Day Care" name="input1" checked="{!v.intakeRecordIns.Day_Care__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="irfamily" type="checkbox" label="I R - Family" name="input1" checked="{!v.intakeRecordIns.I_R_Family__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="meap" type="checkbox" label="MEAP" name="input1" checked="{!v.intakeRecordIns.MEAP__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="domesticViolence" type="checkbox" label="Domestic Violence" name="input1" checked="{!v.intakeRecordIns.Domestic_Volence__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="telephoneNumber" type="checkbox" label="Telephone Number" name="input1" checked="{!v.intakeRecordIns.Telephone_Number__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="environmentalEmergency" type="checkbox" label="Environmental Emergency Assistance - Family" name="input1" checked="{!v.intakeRecordIns.Enivronmental_Emergency_Assistance__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="adultProtective" type="checkbox" label="Adult Protective Services" name="input1" checked="{!v.intakeRecordIns.Adult_Protective_Service__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>
+                                    <lightning:input aura:id="mentalHealthNeed" type="checkbox" label="Mental Health Need" name="input1" checked="{!v.intakeRecordIns.Mental_Health_Need__c}" onchange="{!c.onSave}"/>
+                                </span>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <span>                           
+                                </span>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:card>
+                </div>
+
+            </aura:if>
+
+            <aura:if isTrue="{!and(v.intakeRecordIns.Voluntary_Placement__c, v.intakeRecordIns.In_Home_Services__c)}">
+                <lightning:card title="">
+                    <lightning:layout>
+                        <lightning:layoutItem size="3" padding="around-small">
+                            <span>
+                                <lightning:combobox aura:id="InputCasePlacementType" name="Voluntary Placement Type" label="Voluntary Placement Type" value="{!v.intakeRecordIns.Voluntary_Placement_Type__c}" placeholder="" options="{! v.voluntaryPlacementTypeOptions }" onchange="{!c.onPlacementType}"/>
+                            </span>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:card>
+            </aura:if>
+        </aura:if>
+    </div>
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removal_Date_not_same_as_SC_created_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>Removal_Date__c  =  DATEVALUE(Service_Case__r.CreatedDate  )</errorConditionFormula>
+    <errorDisplayField>Removal_Date__c</errorDisplayField>
+    <errorMessage>Removal date should not be equal to the Service Case&apos;s created date.</errorMessage>
+</ValidationRule>

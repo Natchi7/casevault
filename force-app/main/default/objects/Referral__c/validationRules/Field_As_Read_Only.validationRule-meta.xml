@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_As_Read_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Tax_Id_Type__c , &apos;FEIN&apos;) , OR(ISCHANGED( Co_Applicant_Prefix__c ), ISCHANGED( Co_Applicant_Suffix__c ) , ISCHANGED( Co_Applicant_First_Name__c ), ISCHANGED( Co_Applicant_Last_Name__c ), ISCHANGED( Co_Applicant_Middle_Name__c ), ISCHANGED( Co_Applicant_Age__c ), ISCHANGED( Co_Applicant_Date_of_Birth__c ) ))</errorConditionFormula>
+    <errorMessage>You are not allowed to edit co-applicat fields</errorMessage>
+</ValidationRule>

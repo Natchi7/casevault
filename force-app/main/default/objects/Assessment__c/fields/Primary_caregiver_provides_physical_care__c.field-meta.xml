@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_caregiver_provides_physical_care__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary caregiver provides physical care consistent with each child&apos;s needs</inlineHelpText>
+    <label>Primary caregiver provides physical care</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes (0)</fullName>
+                <default>true</default>
+                <label>Yes (0)</label>
+            </value>
+            <value>
+                <fullName>No (1)</fullName>
+                <default>false</default>
+                <label>No (1)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

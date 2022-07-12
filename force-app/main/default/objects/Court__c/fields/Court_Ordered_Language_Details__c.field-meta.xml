@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Court_Ordered_Language_Details__c</fullName>
+    <externalId>false</externalId>
+    <label>Court Ordered Language Details</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Continuation of the child in the child&apos;s home is not contrary to the child&apos;s welfare</fullName>
+                <default>false</default>
+                <label>Continuation of the child in the child&apos;s home is not contrary to the child&apos;s welfare</label>
+            </value>
+            <value>
+                <fullName>Continuation of the child in the child&apos;s home is contrary to the child&apos;s welfare</fullName>
+                <default>false</default>
+                <label>Continuation of the child in the child&apos;s home is contrary to the child&apos;s welfare</label>
+            </value>
+            <value>
+                <fullName>Due to emergency nature of the situation, reasonable efforts could not be made</fullName>
+                <default>false</default>
+                <label>Due to emergency nature of the situation, reasonable efforts could not be made</label>
+            </value>
+            <value>
+                <fullName>Reasonable efforts were made to prevent removal</fullName>
+                <default>false</default>
+                <label>Reasonable efforts were made to prevent removal</label>
+            </value>
+            <value>
+                <fullName>Reasonable efforts were not made to prevent removal</fullName>
+                <default>false</default>
+                <label>Reasonable efforts were not made to prevent removal</label>
+            </value>
+            <value>
+                <fullName>Court has waived reunification efforts</fullName>
+                <default>false</default>
+                <label>Court has waived reunification efforts</label>
+            </value>
+            <value>
+                <fullName>Reasonable efforts were made to finalize the child&apos;s permanency plan</fullName>
+                <default>false</default>
+                <label>Reasonable efforts were made to finalize the child&apos;s permanency plan</label>
+            </value>
+            <value>
+                <fullName>Reasonable efforts were not made to finalize the child&apos;s permanency plan</fullName>
+                <default>false</default>
+                <label>Reasonable efforts were not made to finalize the child&apos;s permanency plan</label>
+            </value>
+            <value>
+                <fullName>Permanency plan of reunification may be changed to another permanency plan</fullName>
+                <default>false</default>
+                <label>Permanency plan of reunification may be changed to another permanency plan</label>
+            </value>
+            <value>
+                <fullName>Voluntary placement is in the best interest of the child</fullName>
+                <default>false</default>
+                <label>Voluntary placement is in the best interest of the child</label>
+            </value>
+            <value>
+                <fullName>Voluntary placement is not in the best interest of the child</fullName>
+                <default>false</default>
+                <label>Voluntary placement is not in the best interest of the child</label>
+            </value>
+            <value>
+                <fullName>Reasonable efforts were unable to be determined</fullName>
+                <default>false</default>
+                <label>Reasonable efforts were unable to be determined</label>
+            </value>
+            <value>
+                <fullName>Court order specifies who the child was physically and/or legally removed from and the date the child last resided with the legal custodian</fullName>
+                <default>false</default>
+                <label>Court order specifies who the child was physically and/or legally removed from and the date the child last resided with the legal custodian</label>
+            </value>
+            <value>
+                <fullName>Court order delay removal</fullName>
+                <default>false</default>
+                <label>Court order delay removal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

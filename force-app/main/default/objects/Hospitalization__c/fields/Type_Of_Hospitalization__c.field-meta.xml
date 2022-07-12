@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Of_Hospitalization__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Of Hospitalization</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acute Care</fullName>
+                <default>false</default>
+                <label>Acute Care</label>
+            </value>
+            <value>
+                <fullName>Drug Rehabilitation</fullName>
+                <default>false</default>
+                <label>Drug Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Intensive Care</fullName>
+                <default>false</default>
+                <label>Intensive Care</label>
+            </value>
+            <value>
+                <fullName>Long Term Care</fullName>
+                <default>false</default>
+                <label>Long Term Care</label>
+            </value>
+            <value>
+                <fullName>Physical Rehabilitation</fullName>
+                <default>false</default>
+                <label>Physical Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Burn Unit</fullName>
+                <default>false</default>
+                <label>Burn Unit</label>
+            </value>
+            <value>
+                <fullName>Cardiac Problem (Specify)</fullName>
+                <default>false</default>
+                <label>Cardiac Problem (Specify)</label>
+            </value>
+            <value>
+                <fullName>Intensive Care (Specify)</fullName>
+                <default>false</default>
+                <label>Intensive Care (Specify)</label>
+            </value>
+            <value>
+                <fullName>Maternity</fullName>
+                <default>false</default>
+                <label>Maternity</label>
+            </value>
+            <value>
+                <fullName>Medical (Specify)</fullName>
+                <default>false</default>
+                <label>Medical (Specify)</label>
+            </value>
+            <value>
+                <fullName>Observation (Specify)</fullName>
+                <default>false</default>
+                <label>Observation (Specify)</label>
+            </value>
+            <value>
+                <fullName>Oncology (Specify)</fullName>
+                <default>false</default>
+                <label>Oncology (Specify)</label>
+            </value>
+            <value>
+                <fullName>Orthopedic (Specify)</fullName>
+                <default>false</default>
+                <label>Orthopedic (Specify)</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <label>Other (Specify)</label>
+            </value>
+            <value>
+                <fullName>Psychiatric (Specify)</fullName>
+                <default>false</default>
+                <label>Psychiatric (Specify)</label>
+            </value>
+            <value>
+                <fullName>Sleep Disorder Unit</fullName>
+                <default>false</default>
+                <label>Sleep Disorder Unit</label>
+            </value>
+            <value>
+                <fullName>Surgery (Specify)</fullName>
+                <default>false</default>
+                <label>Surgery (Specify)</label>
+            </value>
+            <value>
+                <fullName>Alcohol Rehabilitation</fullName>
+                <default>false</default>
+                <label>Alcohol Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+                <label>Hospice</label>
+            </value>
+            <value>
+                <fullName>Mental</fullName>
+                <default>false</default>
+                <label>Mental</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

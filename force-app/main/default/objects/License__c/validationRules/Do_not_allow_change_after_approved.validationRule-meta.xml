@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_not_allow_change_after_approved</fullName>
+    <active>true</active>
+    <description>Do not changes allow after this record is approved</description>
+    <errorConditionFormula>PRIORVALUE(LastModifiedDate)  &lt;&gt;  LastModifiedDate</errorConditionFormula>
+    <errorMessage>License Site is Approved so, We cannot change the referral</errorMessage>
+</ValidationRule>

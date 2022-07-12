@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Provider Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CPA Home</fullName>
+                <default>false</default>
+                <label>CPA Home</label>
+            </value>
+            <value>
+                <fullName>CPA Office</fullName>
+                <default>false</default>
+                <label>CPA Office</label>
+            </value>
+            <value>
+                <fullName>ICPC Home Study</fullName>
+                <default>false</default>
+                <label>ICPC Home Study</label>
+            </value>
+            <value>
+                <fullName>Local Department Home</fullName>
+                <default>false</default>
+                <label>Local Department Home</label>
+            </value>
+            <value>
+                <fullName>Private Organization</fullName>
+                <default>false</default>
+                <label>Private Organization</label>
+            </value>
+            <value>
+                <fullName>RCC Facility</fullName>
+                <default>false</default>
+                <label>RCC Facility</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

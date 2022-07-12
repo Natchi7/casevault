@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Plan_Record_Type</fullName>
+    <active>true</active>
+    <label>New Plan Record Type</label>
+    <picklistValues>
+        <picklist>A_voluntary_placement_agreement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Adoption_Planning_Stage__c</picklist>
+        <values>
+            <fullName>ADOPTION EFFORTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPLICABLE CHILD ASSESSMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISCLOSURE CHECKLIST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMOTIONAL TILES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NARRATIVE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Adoption_Planning__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreement_Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreement_Is_Child_receiving_TCA_Yes_No__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>All_medical_disability_requirements_SSI__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>An_involuntary_removal_in_accordance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Annual_Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Applicable_Child_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Break_Line_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Check_the_age_of_the_child__c</picklist>
+        <values>
+            <fullName>0-18 July 1%2C2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0-18 October 1%2C2017 - December 31%2C2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10-18 October 1%2C2012 - September 30%2C2013</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12-18 October 1%2C2011 - September 30%2C2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14-18 October 1%2C2010 - September 30%2C2011</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16-18 October 1%2C2009 - September 30%2C2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-18 January 1%2C2018 - June 30%2C2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-18 October 1%2C2016 - September 30%2C2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4-18 October 1%2C2015 - September 30%2C2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-18 October 1%2C2014 - September 30%2C2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8-18 October 1%2C2013 - September 30%2C2014</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None of the ages apply</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_Placed_By__c</picklist>
+        <values>
+            <fullName>Birth Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tribal Agency</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_Placed_From__c</picklist>
+        <values>
+            <fullName>Another Country</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Another LDSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Another State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Within State</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_currently_resides_with_guardian__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_has_a_mental_or_physical__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_is_currently_attending_school__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_is_enrolled_in_educational__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_is_participating_in_a_program__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_support_has_been_notified__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complete_child_assessment_request_form__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Concurrent_Permanency_Plan__c</picklist>
+        <values>
+            <fullName>APPLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption by a non-relative</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Adoption by a relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship by a non-relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship by a relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reunification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Adoption_has_been_ruled_out__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Age_Appropriate_Consultation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Annual_Reconsideration__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Assistance_will_Immediately__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Attachment_primary_guardian__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_Provider_is_Approved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_agreement_prior_to_the_award__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_authorization_mental_health__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_caseworker_discussed_require__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_child_be_under_18_year_of_age__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_committed_to_the_State__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_independent_mean_of_financial__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_orientation_meeting_or__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_participate_in_Guardianship__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_provide_aftercare_service__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_provide_safe_and_stable_home__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_services_will_be_closed_after__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disclosure_to_the_secondary_guardian__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Does_the_Provider_agree_permanency__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Description__c</picklist>
+        <values>
+            <fullName>Guardianship Agreement Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Annual Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Application Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Disclosure Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Suspension Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Guardian_is_legally_responsible_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Guardian_provides_financial_support__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Guardianship_Planing__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Has_notification_been_sent_to_TCA__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Has_the_child_been_in_care__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_instead_the_child_is_being_adopted_b__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Child_receiving_TCA__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_child_a_sibling_to_a_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_child_currently_SSI_eligibile__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_child_currently_Title_1V_E_foster__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_required_document_for_education__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>One_of_following_special_needs_factors__c</picklist>
+        <values>
+            <fullName>1%29 Child 6-17 Years of Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%29Physical%2C Mental Or Emotional Disability Or Disease %28 Documentation Required%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%29 Emotional Disturbance %28 Documentation Required%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%29 Membership in Sibling Group - List Sibling in Care Eligible For Adoption in Same Adoptive Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%29 Recognized High Risk of Physical or Mental Disability or Disease %28 Explanation Must Be Documented In Case Record%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%29 Race Or Ethnicity - Can Only Be In Combination with One of the Above Factors %28 1-5%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Permanency_Plan_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Guardian_Relationship__c</picklist>
+        <values>
+            <fullName>Adoptive Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoptive Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoptive Monther</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boyfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boyfriend-Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Center employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Home Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Therapeutic Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custodian%28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter in Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daycare child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father therapeutic Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father-In-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Girlfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Girlfriend-Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GodFather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GodMother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian%28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half  Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Husband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Husband-Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Cousin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Nephew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Niece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Step GrandChild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother Therapeutic Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother-In-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neighbor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Relation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Custodial Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great Aunty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great GuardParent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great Guardchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal GuardChild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal GuardParent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Nephew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Niece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Step Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal cousin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Putative Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Putative Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Putative Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative%28Other%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Facility Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Counselor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Significant Other%2FParent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son in Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse - Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Maternal Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step-Paternal  Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wife - EX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Permanency_Plan__c</picklist>
+        <values>
+            <fullName>APPLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption by a non-relative</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Adoption by a relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship by a non-relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship by a relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reunification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provide_a_field_to_indicate_that_form__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provide_available_Lifebook_information__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Recommendation__c</picklist>
+        <values>
+            <fullName>Abandoned Infant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental Injury- Abuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental injury- Neglect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neglect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent Convicted of Applicable Crime of violence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Abuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed 15 of last 22 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sexual Abuse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reasonable_but_unsuccessful_efforts__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reunification_and_Adoption_have_ruled__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Guardian_Relationship__c</picklist>
+        <values>
+            <fullName>Adoptive Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoptive Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoptive Monther</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biological Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boyfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boyfriend-Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Center employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Home Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Therapeutic Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custodian%28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter in Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daycare child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father therapeutic Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father-In-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foster Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Girlfriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Girlfriend-Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GodFather</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GodMother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian%28Legal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half  Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Husband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Husband-Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Cousin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Great Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Nephew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Niece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Step GrandChild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother Therapeutic Foster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother-In-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neighbor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Relation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Custodial Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great Aunty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great GuardParent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great Guardchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Great Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal GuardChild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal GuardParent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Nephew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Niece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Step Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal Uncle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternal cousin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Putative Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Putative Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Putative Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative%28Other%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Facility Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Counselor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Significant Other%2FParent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister-in-Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son in Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse - Ex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Grandchild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Maternal Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step-Paternal  Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wife - EX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subsidy_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Suspension_Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Suspension_Reason__c</picklist>
+        <values>
+            <fullName>Annual review materials not submitted by guardian</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Child Enter out of Home Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child physically not residing with guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death of Child%28Case to be closed immediately%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Voluntary_relinquishment__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Was_the_child_eligible_for_adoption__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Will_the_child_reach_18th_birthday__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>adopt_if_a_subsidy_is_paid__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>adoptive_search_and_reunion_service__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>alcohol_drug_addiction_child_s_parent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>child_be_returned_to_the_home_of_parent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>child_placed_undiagnosed_mental_physical__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>child_residing_in_a_foster_family_home__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>child_s_relationship_with_his_her_birth__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>children_born_to_child_biological_parent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>family_pertaining_to_child_s_schooling__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>known_out_of_home_placements__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>medical_or_disability_requirements__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>medication_history_of_the_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>neglect_experiences_child_was_victim__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>non_identifying_information_on_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>physical_abuse_experiences_child_victim__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>physical_abuse_perpetrated_by_the_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>physical_mental_health_hospitalization__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>physical_mental_hospitalization_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>reasons_and_date_child_came_DDS_custody__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sexual_abuse_experience_child_was_victim__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sexual_abuse_perpetrated_by_child__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>unable_to_return_his_her_family_origin__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

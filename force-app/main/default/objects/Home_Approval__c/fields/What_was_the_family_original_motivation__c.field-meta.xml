@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_was_the_family_original_motivation__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What was the family&apos;s original motivation to provider foster care or adoption? Expectations?</inlineHelpText>
+    <label>What was the family original motivation?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

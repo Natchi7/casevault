@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_of_following_special_needs_factors__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>One of the following special needs factors</inlineHelpText>
+    <label>One of following special needs factors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1) Child 6-17 Years of Age</fullName>
+                <default>false</default>
+                <label>1) Child 6-17 Years of Age</label>
+            </value>
+            <value>
+                <fullName>2)Physical, Mental Or Emotional Disability Or Disease ( Documentation Required)</fullName>
+                <default>false</default>
+                <label>2)Physical, Mental Or Emotional Disability Or Disease ( Documentation Required)</label>
+            </value>
+            <value>
+                <fullName>3) Emotional Disturbance ( Documentation Required)</fullName>
+                <default>false</default>
+                <label>3) Emotional Disturbance ( Documentation Required)</label>
+            </value>
+            <value>
+                <fullName>4) Membership in Sibling Group - List Sibling in Care Eligible For Adoption in Same Adoptive Placement</fullName>
+                <default>false</default>
+                <label>4) Membership in Sibling Group - List Sibling in Care Eligible For Adoption in Same Adoptive Placement</label>
+            </value>
+            <value>
+                <fullName>5) Recognized High Risk of Physical or Mental Disability or Disease ( Explanation Must Be Documented In Case Record)</fullName>
+                <default>false</default>
+                <label>5) Recognized High Risk of Physical or Mental Disability or Disease ( Explanation Must Be Documented In Case Record)</label>
+            </value>
+            <value>
+                <fullName>6) Race Or Ethnicity - Can Only Be In Combination with One of the Above Factors ( 1-5)</fullName>
+                <default>false</default>
+                <label>6) Race Or Ethnicity - Can Only Be In Combination with One of the Above Factors ( 1-5)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

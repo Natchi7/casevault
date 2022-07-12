@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Petition__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Petition</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoption</fullName>
+                <default>false</default>
+                <label>Adoption</label>
+            </value>
+            <value>
+                <fullName>Adult Services Petition not otherwise specified</fullName>
+                <default>false</default>
+                <label>Adult Services Petition not otherwise specified</label>
+            </value>
+            <value>
+                <fullName>Amendment of Petition</fullName>
+                <default>false</default>
+                <label>Amendment of Petition</label>
+            </value>
+            <value>
+                <fullName>Appointment of CASA</fullName>
+                <default>false</default>
+                <label>Appointment of CASA</label>
+            </value>
+            <value>
+                <fullName>Appointment of Conservator</fullName>
+                <default>false</default>
+                <label>Appointment of Conservator</label>
+            </value>
+            <value>
+                <fullName>Appointment of Guardian</fullName>
+                <default>false</default>
+                <label>Appointment of Guardian</label>
+            </value>
+            <value>
+                <fullName>Appointment of Guardian ad Litem for Child</fullName>
+                <default>false</default>
+                <label>Appointment of Guardian ad Litem for Child</label>
+            </value>
+            <value>
+                <fullName>Appointment of Guardian ad Litem for Client</fullName>
+                <default>false</default>
+                <label>Appointment of Guardian ad Litem for Client</label>
+            </value>
+            <value>
+                <fullName>Appointment of Guardian ad Litem for Parent</fullName>
+                <default>false</default>
+                <label>Appointment of Guardian ad Litem for Parent</label>
+            </value>
+            <value>
+                <fullName>Child Welfare Petition, Not Otherwise Specified</fullName>
+                <default>false</default>
+                <label>Child Welfare Petition, Not Otherwise Specified</label>
+            </value>
+            <value>
+                <fullName>CINA</fullName>
+                <default>false</default>
+                <label>CINA</label>
+            </value>
+            <value>
+                <fullName>Conservator Modication</fullName>
+                <default>false</default>
+                <label>Conservator Modication</label>
+            </value>
+            <value>
+                <fullName>Contempt</fullName>
+                <default>false</default>
+                <label>Contempt</label>
+            </value>
+            <value>
+                <fullName>Delinquency</fullName>
+                <default>false</default>
+                <label>Delinquency</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Discovery from DHHR</fullName>
+                <default>false</default>
+                <label>Discovery from DHHR</label>
+            </value>
+            <value>
+                <fullName>Discovery from Parents</fullName>
+                <default>false</default>
+                <label>Discovery from Parents</label>
+            </value>
+            <value>
+                <fullName>Domestic Violence</fullName>
+                <default>false</default>
+                <label>Domestic Violence</label>
+            </value>
+            <value>
+                <fullName>Entry of Order</fullName>
+                <default>false</default>
+                <label>Entry of Order</label>
+            </value>
+            <value>
+                <fullName>Grand Jury Review of DHHR Record</fullName>
+                <default>false</default>
+                <label>Grand Jury Review of DHHR Record</label>
+            </value>
+            <value>
+                <fullName>Guardian Modification</fullName>
+                <default>false</default>
+                <label>Guardian Modification</label>
+            </value>
+            <value>
+                <fullName>Guardianship/TPR</fullName>
+                <default>false</default>
+                <label>Guardianship/TPR</label>
+            </value>
+            <value>
+                <fullName>Immediate Custody</fullName>
+                <default>false</default>
+                <label>Immediate Custody</label>
+            </value>
+            <value>
+                <fullName>Injunctive Relief</fullName>
+                <default>false</default>
+                <label>Injunctive Relief</label>
+            </value>
+            <value>
+                <fullName>Judicial Review</fullName>
+                <default>false</default>
+                <label>Judicial Review</label>
+            </value>
+            <value>
+                <fullName>Longterm Foster Care Placement</fullName>
+                <default>false</default>
+                <label>Longterm Foster Care Placement</label>
+            </value>
+            <value>
+                <fullName>Medical Examination</fullName>
+                <default>false</default>
+                <label>Medical Examination</label>
+            </value>
+            <value>
+                <fullName>Medical Petiton</fullName>
+                <default>false</default>
+                <label>Medical Petiton</label>
+            </value>
+            <value>
+                <fullName>Mental Health Commitment</fullName>
+                <default>false</default>
+                <label>Mental Health Commitment</label>
+            </value>
+            <value>
+                <fullName>Mental Health Examination</fullName>
+                <default>false</default>
+                <label>Mental Health Examination</label>
+            </value>
+            <value>
+                <fullName>Modify Improvement Period</fullName>
+                <default>false</default>
+                <label>Modify Improvement Period</label>
+            </value>
+            <value>
+                <fullName>Motion of Continuance</fullName>
+                <default>false</default>
+                <label>Motion of Continuance</label>
+            </value>
+            <value>
+                <fullName>Motion to Quash Subpoena</fullName>
+                <default>false</default>
+                <label>Motion to Quash Subpoena</label>
+            </value>
+            <value>
+                <fullName>Motion to Quash Subpoenia</fullName>
+                <default>false</default>
+                <label>Motion to Quash Subpoenia</label>
+            </value>
+            <value>
+                <fullName>Non-Custodial Counseling</fullName>
+                <default>false</default>
+                <label>Non-Custodial Counseling</label>
+            </value>
+            <value>
+                <fullName>Order of Attachment</fullName>
+                <default>false</default>
+                <label>Order of Attachment</label>
+            </value>
+            <value>
+                <fullName>Payment of Services</fullName>
+                <default>false</default>
+                <label>Payment of Services</label>
+            </value>
+            <value>
+                <fullName>Petition to Detain Juvenile</fullName>
+                <default>false</default>
+                <label>Petition to Detain Juvenile</label>
+            </value>
+            <value>
+                <fullName>Ratification of Protective Custody</fullName>
+                <default>false</default>
+                <label>Ratification of Protective Custody</label>
+            </value>
+            <value>
+                <fullName>Recusal of Judge</fullName>
+                <default>false</default>
+                <label>Recusal of Judge</label>
+            </value>
+            <value>
+                <fullName>Release of Adoptive Record</fullName>
+                <default>false</default>
+                <label>Release of Adoptive Record</label>
+            </value>
+            <value>
+                <fullName>Release of Child Medical Records</fullName>
+                <default>false</default>
+                <label>Release of Child Medical Records</label>
+            </value>
+            <value>
+                <fullName>Release of Client Criminal Records</fullName>
+                <default>false</default>
+                <label>Release of Client Criminal Records</label>
+            </value>
+            <value>
+                <fullName>Release of Client Medical Records</fullName>
+                <default>false</default>
+                <label>Release of Client Medical Records</label>
+            </value>
+            <value>
+                <fullName>Release of DHHR Records</fullName>
+                <default>false</default>
+                <label>Release of DHHR Records</label>
+            </value>
+            <value>
+                <fullName>Release of Information</fullName>
+                <default>false</default>
+                <label>Release of Information</label>
+            </value>
+            <value>
+                <fullName>Release of Parent Criminal Records</fullName>
+                <default>false</default>
+                <label>Release of Parent Criminal Records</label>
+            </value>
+            <value>
+                <fullName>Release of Parent Medical Records</fullName>
+                <default>false</default>
+                <label>Release of Parent Medical Records</label>
+            </value>
+            <value>
+                <fullName>Restraining Order</fullName>
+                <default>false</default>
+                <label>Restraining Order</label>
+            </value>
+            <value>
+                <fullName>Review of Foster Care Arrangements</fullName>
+                <default>false</default>
+                <label>Review of Foster Care Arrangements</label>
+            </value>
+            <value>
+                <fullName>Separation of Siblings</fullName>
+                <default>false</default>
+                <label>Separation of Siblings</label>
+            </value>
+            <value>
+                <fullName>Shelter Care</fullName>
+                <default>false</default>
+                <label>Shelter Care</label>
+            </value>
+            <value>
+                <fullName>Terminate Improvement Period</fullName>
+                <default>false</default>
+                <label>Terminate Improvement Period</label>
+            </value>
+            <value>
+                <fullName>TPR</fullName>
+                <default>false</default>
+                <label>TPR</label>
+            </value>
+            <value>
+                <fullName>Transfer of Case to Another County</fullName>
+                <default>false</default>
+                <label>Transfer of Case to Another County</label>
+            </value>
+            <value>
+                <fullName>Transfer of Custody of Minor Children</fullName>
+                <default>false</default>
+                <label>Transfer of Custody of Minor Children</label>
+            </value>
+            <value>
+                <fullName>Transportation of Juvenile</fullName>
+                <default>false</default>
+                <label>Transportation of Juvenile</label>
+            </value>
+            <value>
+                <fullName>Voluntary Placement</fullName>
+                <default>false</default>
+                <label>Voluntary Placement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

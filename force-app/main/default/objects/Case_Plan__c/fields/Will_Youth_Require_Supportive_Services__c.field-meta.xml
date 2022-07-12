@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Will_Youth_Require_Supportive_Services__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Will the youth require supportive services to live independently after termination of out-of-home services?</inlineHelpText>
+    <label>Will Youth Require Supportive Services</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

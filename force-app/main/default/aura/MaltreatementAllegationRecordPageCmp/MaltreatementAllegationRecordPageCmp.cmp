@@ -1,0 +1,147 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public" controller="MaltreatmentAllegationController">
+
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:attribute name="childList" type="List" description="use for store and display allegated victim child list return from server" />
+    <aura:attribute name="maltreatmentList" type="List" description="use to store the maltreatment list records" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="childErrorMessage" type="boolean" default="false" />
+    <aura:attribute name="maltreatmentErrorMessage" type="boolean" default="false" />
+    <aura:attribute name="spinner" type="boolean" default="FALSE" />
+    <aura:attribute name="recordEditFormFields" type = "map" default="{'MaltreatmentObj':'Maltreatment_Allegation__c','recordId':'Id',
+                                                                      'MaltreatmentNotApplicable':'This_maltreatment_is_not_applicable__c',
+                                                                      'IncidentLocation':'Incident_Location__c','ProviderInvolved':'Provider_Involved_Maltreatment__c',
+                                                                      'IsAnotherJurisdiction':'Is_another_jurisdiction_assisting__c',
+                                                                      'DateIncident':'Date_of_Incident__c','InjuryCharComments':'Injury_Characteristics_Comments__c',
+                                                                      'EndDate':'End_Date__c','InjuryChar':'Injury_Characteristics__c',
+                                                                      'ApproxDate':'Approximate_Date__c','AreaInjury':'Area_of_injuries__c','MaltreatmentCharc':'Maltreatment_Characteristics__c',
+                                                                      'ContFactor':'Contributing_factor_in_the_fatality__c','MalCharComments':'Maltreatment_Characteristics_Comments__c'
+                                                                      }" />
+
+    <!--loading spinner start-->
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--medium slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+
+
+    <div class="slds-text-align_right">
+        <lightning:button variant="brand" label="Refresh" iconName="utility:refresh" title="Refresh" onclick="{! c.refreshPage }" />
+    </div>
+    <!-- ERROR MESSAGE IF NOT RECORDS FOUND-->
+    <aura:if isTrue="{!v.childErrorMessage}">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">No alleged victim child Record(s) Found.</h2>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.childList.length}">
+        <lightning:card title="">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="S.no">S.no</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Date of Birth">Date of Birth</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Gender">Gender</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Age">Age</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Role">Role</div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="slds-truncate" title="Action">Action</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <aura:iteration items="{!v.childList}" var="child" indexVar="count">
+                        <tr>
+                            <td>
+                                <div class="slds-truncate">{!count + 1}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{!child.Name}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate"><lightning:formattedDateTime value="{!child.Date_of_Birth__c}" year="numeric" month="numeric" day="numeric" timeZone="UTC"/></div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{!child.Gender__c}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{!child.Age__c}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{!child.Intake_Person_Role__c}</div>
+                            </td>
+                            <td>
+                                <lightning:button variant="brand" label="Maltreatment Record" value="{!child.Id}" title="Maltreatment Record" onclick="{! c.getMaltreatmentRec }" />
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </lightning:card>
+    </aura:if>
+
+    <aura:if isTrue="{!v.maltreatmentErrorMessage}">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">No SDM Maltreatment Record Found.</h2>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+
+    <c:MaltreatmentAllegationAccordionCmp maltreatmentList="{!v.maltreatmentList}"  recordEditFormFields="{!v.recordEditFormFields}" />
+    <!--<aura:if isTrue="{!v.maltreatmentList.length}">
+        <lightning:card title="">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="S.no">S.no</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    
+                    <aura:iteration items="{!v.maltreatmentList}" var="maltreatment" indexVar="count">
+                        <tr>
+                            <td>
+                                <div class="slds-truncate">{!count + 1}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{!maltreatment.Name}</div>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </lightning:card>
+    </aura:if> -->
+</aura:component>

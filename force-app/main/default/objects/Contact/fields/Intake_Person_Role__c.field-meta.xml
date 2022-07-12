@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Person_Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Person Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoptive Parent</fullName>
+                <default>false</default>
+                <label>Adoptive Parent</label>
+            </value>
+            <value>
+                <fullName>Advocate</fullName>
+                <default>false</default>
+                <label>Advocate</label>
+            </value>
+            <value>
+                <fullName>Alleged Maltreator</fullName>
+                <default>false</default>
+                <label>Alleged Maltreator</label>
+            </value>
+            <value>
+                <fullName>Alleged Victim</fullName>
+                <default>false</default>
+                <label>Alleged Victim</label>
+            </value>
+            <value>
+                <fullName>Biological Child</fullName>
+                <default>false</default>
+                <label>Biological Child</label>
+            </value>
+            <value>
+                <fullName>Biological Parent</fullName>
+                <default>false</default>
+                <label>Biological Parent</label>
+            </value>
+            <value>
+                <fullName>CASA Worker</fullName>
+                <default>false</default>
+                <label>CASA Worker</label>
+            </value>
+            <value>
+                <fullName>Casehead</fullName>
+                <default>false</default>
+                <label>Casehead</label>
+            </value>
+            <value>
+                <fullName>Child</fullName>
+                <default>false</default>
+                <label>Child</label>
+            </value>
+            <value>
+                <fullName>Child Day Care Provider</fullName>
+                <default>false</default>
+                <label>Child Day Care Provider</label>
+            </value>
+            <value>
+                <fullName>Conservator</fullName>
+                <default>false</default>
+                <label>Conservator</label>
+            </value>
+            <value>
+                <fullName>Court Therapist</fullName>
+                <default>false</default>
+                <label>Court Therapist</label>
+            </value>
+            <value>
+                <fullName>CPS Hist. Clrnc.- Requestor</fullName>
+                <default>false</default>
+                <label>CPS Hist. Clrnc.- Requestor</label>
+            </value>
+            <value>
+                <fullName>CPS Hist. Clrnc. - Subject</fullName>
+                <default>false</default>
+                <label>CPS Hist. Clrnc. - Subject</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Enhanced Aftercare Recipient</fullName>
+                <default>false</default>
+                <label>Enhanced Aftercare Recipient</label>
+            </value>
+            <value>
+                <fullName>Foster Parent</fullName>
+                <default>false</default>
+                <label>Foster Parent</label>
+            </value>
+            <value>
+                <fullName>Friend/Neighbor</fullName>
+                <default>false</default>
+                <label>Friend/Neighbor</label>
+            </value>
+            <value>
+                <fullName>I &amp; R Participant</fullName>
+                <default>false</default>
+                <label>I &amp; R Participant</label>
+            </value>
+            <value>
+                <fullName>Law Enforcement</fullName>
+                <default>false</default>
+                <label>Law Enforcement</label>
+            </value>
+            <value>
+                <fullName>Legal Guardian</fullName>
+                <default>false</default>
+                <label>Legal Guardian</label>
+            </value>
+            <value>
+                <fullName>Legal Representive</fullName>
+                <default>false</default>
+                <label>Legal Representive</label>
+            </value>
+            <value>
+                <fullName>Medical Professional</fullName>
+                <default>false</default>
+                <label>Medical Professional</label>
+            </value>
+            <value>
+                <fullName>Mental Health Professional</fullName>
+                <default>false</default>
+                <label>Mental Health Professional</label>
+            </value>
+            <value>
+                <fullName>Non-Victim Child</fullName>
+                <default>false</default>
+                <label>Non-Victim Child</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Adult</fullName>
+                <default>false</default>
+                <label>Other Adult</label>
+            </value>
+            <value>
+                <fullName>Other Adult (Not in Household)</fullName>
+                <default>false</default>
+                <label>Other Adult (Not in Household)</label>
+            </value>
+            <value>
+                <fullName>Other Child</fullName>
+                <default>false</default>
+                <label>Other Child</label>
+            </value>
+            <value>
+                <fullName>Other Child (Not in Household)</fullName>
+                <default>false</default>
+                <label>Other Child (Not in Household)</label>
+            </value>
+            <value>
+                <fullName>Potential Provider</fullName>
+                <default>false</default>
+                <label>Potential Provider</label>
+            </value>
+            <value>
+                <fullName>Private Adoptive Child</fullName>
+                <default>false</default>
+                <label>Private Adoptive Child</label>
+            </value>
+            <value>
+                <fullName>Provider</fullName>
+                <default>false</default>
+                <label>Provider</label>
+            </value>
+            <value>
+                <fullName>Relative</fullName>
+                <default>false</default>
+                <label>Relative</label>
+            </value>
+            <value>
+                <fullName>Reporter</fullName>
+                <default>false</default>
+                <label>Reporter</label>
+            </value>
+            <value>
+                <fullName>Requestor of Services - Adult Residential</fullName>
+                <default>false</default>
+                <label>Requestor of Services - Adult Residential</label>
+            </value>
+            <value>
+                <fullName>Residential Facility Staff</fullName>
+                <default>false</default>
+                <label>Residential Facility Staff</label>
+            </value>
+            <value>
+                <fullName>Self</fullName>
+                <default>false</default>
+                <label>Self</label>
+            </value>
+            <value>
+                <fullName>Teacher-Educational Staff</fullName>
+                <default>false</default>
+                <label>Teacher-Educational Staff</label>
+            </value>
+            <value>
+                <fullName>Child Attorney</fullName>
+                <default>false</default>
+                <label>Child Attorney</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

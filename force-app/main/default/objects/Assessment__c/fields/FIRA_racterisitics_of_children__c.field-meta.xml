@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIRA_racterisitics_of_children__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Characteristics of children in the household(Select all that apply)</inlineHelpText>
+    <label>Characterisitics of children</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medically fragile/failure to thrive</fullName>
+                <default>false</default>
+                <label>Medically fragile/failure to thrive</label>
+            </value>
+            <value>
+                <fullName>Positive toxicology screen at birth</fullName>
+                <default>false</default>
+                <label>Positive toxicology screen at birth</label>
+            </value>
+            <value>
+                <fullName>Physical disability</fullName>
+                <default>false</default>
+                <label>Physical disability</label>
+            </value>
+            <value>
+                <fullName>Developmental disability</fullName>
+                <default>false</default>
+                <label>Developmental disability</label>
+            </value>
+            <value>
+                <fullName>Delinquency history</fullName>
+                <default>false</default>
+                <label>Delinquency history</label>
+            </value>
+            <value>
+                <fullName>Mental health/behavior problems</fullName>
+                <default>false</default>
+                <label>Mental health/behavior problems</label>
+            </value>
+            <value>
+                <fullName>None of the above</fullName>
+                <default>false</default>
+                <label>None of the above</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discuss_each_checked_iteam__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Discuss each checked iteam including how the services help meet the needs of the child and provider,provides for the child&apos;s safety,and facilitate the achievement of a permanent placement for the child.</inlineHelpText>
+    <label>Discuss each checked iteam</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

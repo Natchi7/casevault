@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placement_Read_Only</fullName>
+    <active>true</active>
+    <label>Placement Read Only</label>
+    <picklistValues>
+        <picklist>COMAR_Rate_Category__c</picklist>
+        <values>
+            <fullName>Regular Foster Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exit_Type__c</picklist>
+        <values>
+            <fullName>Change in Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change in Placement Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanently Leaving Custody and Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Living_Arrangement_same_as_Placement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Placement_Reimbursible__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Placement_Structure__c</picklist>
+        <values>
+            <fullName>Adoptive Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>After care room and board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alternative Living Units</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Foster Care Retainer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Foster Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Group Shelter Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Shelter %28Agency%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Kinship Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Assistance Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent Living Residential Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intermediate Foster Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intermediate Foster Care Difficulty of Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Finalized Adoptive Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refugee Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Foster Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Group Homes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Treatment Centers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restricted %28Relative%29 Foster Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen Mother Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutic Group Homes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment Foster Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment Foster Care Level 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment Foster Care Level 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment Foster Care Level 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment Foster Care Level 4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Decline__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Exit__c</picklist>
+        <values>
+            <fullName>Adoption Disruption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoption Finalization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adoptive Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Behavior %28Property Destruction%2C Aggression to Others%2C Defiance%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Dissatisfaction with provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Needs have changed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Needs less Structured%2FRestricted Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Needs more Structured%2FRestricted Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Runaway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Sexual Aggression%2FActing Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Substance abuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Issue%3A Suicidal%2FSelf-Abusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court ordered return home against DSS recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court%3A Court Ordered Placement Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody Non-Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody%2FGuardianship - Non-Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custody%2FGuardianship - Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death of Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emancipation-Independence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emancipation-Marriage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emancipation-Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardianship Non-Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Step%3A Adoptive or pre-adoptive Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Step%3A Educational%2FVocational Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Step%3A Placement Closer to Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Step%3A Placement with Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Step%3A Placement with Siblings or Own Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanency Step%3A Trial Home Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Issue%3A Agency%2FProvider Non-Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Issue%3A Investigation %28CPS%2C APS%2C Criminal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Issue%3A Provider Incapacity%2FDeath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Issue%3A Provider Leaves%2FCloses Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Issue%3A Provider Non-Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Issue%3A Provider Rejects Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refused Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove GAP suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resource Issue%3A Insufficient Support for Foster Parents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resource Issue%3A Move from Short Term Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reunification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Runaway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer to Other Non-DHR Agency</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Response_Accepted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

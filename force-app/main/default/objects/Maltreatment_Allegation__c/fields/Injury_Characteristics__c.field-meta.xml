@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injury_Characteristics__c</fullName>
+    <externalId>false</externalId>
+    <label>Injury Characteristics</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abrasions-Lacerations</fullName>
+                <default>false</default>
+                <label>Abrasions-Lacerations</label>
+            </value>
+            <value>
+                <fullName>Bone Fracture (Not Skill)</fullName>
+                <default>false</default>
+                <label>Bone Fracture (Not Skill)</label>
+            </value>
+            <value>
+                <fullName>Brain Damage</fullName>
+                <default>false</default>
+                <label>Brain Damage</label>
+            </value>
+            <value>
+                <fullName>Bruises-Welts</fullName>
+                <default>false</default>
+                <label>Bruises-Welts</label>
+            </value>
+            <value>
+                <fullName>Burns</fullName>
+                <default>false</default>
+                <label>Burns</label>
+            </value>
+            <value>
+                <fullName>Child Born Drug Exposed</fullName>
+                <default>false</default>
+                <label>Child Born Drug Exposed</label>
+            </value>
+            <value>
+                <fullName>Cuts</fullName>
+                <default>false</default>
+                <label>Cuts</label>
+            </value>
+            <value>
+                <fullName>Gunshot</fullName>
+                <default>false</default>
+                <label>Gunshot</label>
+            </value>
+            <value>
+                <fullName>Pain</fullName>
+                <default>false</default>
+                <label>Pain</label>
+            </value>
+            <value>
+                <fullName>Scratches</fullName>
+                <default>false</default>
+                <label>Scratches</label>
+            </value>
+            <value>
+                <fullName>Self-mutilation</fullName>
+                <default>false</default>
+                <label>Self-mutilation</label>
+            </value>
+            <value>
+                <fullName>Stabbing</fullName>
+                <default>false</default>
+                <label>Stabbing</label>
+            </value>
+            <value>
+                <fullName>Slap and Scars</fullName>
+                <default>false</default>
+                <label>Slap and Scars</label>
+            </value>
+            <value>
+                <fullName>Death</fullName>
+                <default>false</default>
+                <label>Death</label>
+            </value>
+            <value>
+                <fullName>Dismemberment</fullName>
+                <default>false</default>
+                <label>Dismemberment</label>
+            </value>
+            <value>
+                <fullName>Exposure - Freezing-Heat</fullName>
+                <default>false</default>
+                <label>Exposure - Freezing-Heat</label>
+            </value>
+            <value>
+                <fullName>Failure to Thrive</fullName>
+                <default>false</default>
+                <label>Failure to Thrive</label>
+            </value>
+            <value>
+                <fullName>Fetal Alcohol Syndrome</fullName>
+                <default>false</default>
+                <label>Fetal Alcohol Syndrome</label>
+            </value>
+            <value>
+                <fullName>Head Trauma</fullName>
+                <default>false</default>
+                <label>Head Trauma</label>
+            </value>
+            <value>
+                <fullName>Internal Injuries</fullName>
+                <default>false</default>
+                <label>Internal Injuries</label>
+            </value>
+            <value>
+                <fullName>Malnutrition</fullName>
+                <default>false</default>
+                <label>Malnutrition</label>
+            </value>
+            <value>
+                <fullName>Mental Trauma</fullName>
+                <default>false</default>
+                <label>Mental Trauma</label>
+            </value>
+            <value>
+                <fullName>None Apparent</fullName>
+                <default>false</default>
+                <label>None Apparent</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Rectal Injury-Irregularities</fullName>
+                <default>false</default>
+                <label>Rectal Injury-Irregularities</label>
+            </value>
+            <value>
+                <fullName>Retinal Haemorrhage</fullName>
+                <default>false</default>
+                <label>Retinal Haemorrhage</label>
+            </value>
+            <value>
+                <fullName>Sexually Transmitted Diseases</fullName>
+                <default>false</default>
+                <label>Sexually Transmitted Diseases</label>
+            </value>
+            <value>
+                <fullName>Shaken Baby Syndrome</fullName>
+                <default>false</default>
+                <label>Shaken Baby Syndrome</label>
+            </value>
+            <value>
+                <fullName>Skull Fracture</fullName>
+                <default>false</default>
+                <label>Skull Fracture</label>
+            </value>
+            <value>
+                <fullName>Sprains-Dislocations</fullName>
+                <default>false</default>
+                <label>Sprains-Dislocations</label>
+            </value>
+            <value>
+                <fullName>Subdural Hematoma</fullName>
+                <default>false</default>
+                <label>Subdural Hematoma</label>
+            </value>
+            <value>
+                <fullName>Vaginal Injury-Irregularities</fullName>
+                <default>false</default>
+                <label>Vaginal Injury-Irregularities</label>
+            </value>
+            <value>
+                <fullName>Wounds-Cuts-Punctures</fullName>
+                <default>false</default>
+                <label>Wounds-Cuts-Punctures</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

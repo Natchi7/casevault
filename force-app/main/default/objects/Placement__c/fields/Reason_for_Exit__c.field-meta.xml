@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Exit__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Exit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Exit_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoption Disruption</fullName>
+                <default>false</default>
+                <label>Adoption Disruption</label>
+            </value>
+            <value>
+                <fullName>Adoption Finalization</fullName>
+                <default>false</default>
+                <label>Adoption Finalization</label>
+            </value>
+            <value>
+                <fullName>Adoptive Placement</fullName>
+                <default>false</default>
+                <label>Adoptive Placement</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Behavior (Property Destruction, Aggression to Others, Defiance)</fullName>
+                <default>false</default>
+                <label>Child Issue: Behavior (Property Destruction, Aggression to Others, Defiance)</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Dissatisfaction with provider</fullName>
+                <default>false</default>
+                <label>Child Issue: Dissatisfaction with provider</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Needs have changed</fullName>
+                <default>false</default>
+                <label>Child Issue: Needs have changed</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Needs less Structured/Restricted Environment</fullName>
+                <default>false</default>
+                <label>Child Issue: Needs less Structured/Restricted Environment</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Needs more Structured/Restricted Environment</fullName>
+                <default>false</default>
+                <label>Child Issue: Needs more Structured/Restricted Environment</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Runaway</fullName>
+                <default>false</default>
+                <label>Child Issue: Runaway</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Sexual Aggression/Acting Out</fullName>
+                <default>false</default>
+                <label>Child Issue: Sexual Aggression/Acting Out</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Substance abuse</fullName>
+                <default>false</default>
+                <label>Child Issue: Substance abuse</label>
+            </value>
+            <value>
+                <fullName>Child Issue: Suicidal/Self-Abusive</fullName>
+                <default>false</default>
+                <label>Child Issue: Suicidal/Self-Abusive</label>
+            </value>
+            <value>
+                <fullName>Court: Court Ordered Placement Change</fullName>
+                <default>false</default>
+                <label>Court: Court Ordered Placement Change</label>
+            </value>
+            <value>
+                <fullName>Court ordered return home against DSS recommendation</fullName>
+                <default>false</default>
+                <label>Court ordered return home against DSS recommendation</label>
+            </value>
+            <value>
+                <fullName>Custody/Guardianship - Non-Relative</fullName>
+                <default>false</default>
+                <label>Custody/Guardianship - Non-Relative</label>
+            </value>
+            <value>
+                <fullName>Custody/Guardianship - Relative</fullName>
+                <default>false</default>
+                <label>Custody/Guardianship - Relative</label>
+            </value>
+            <value>
+                <fullName>Custody Non-Relative</fullName>
+                <default>false</default>
+                <label>Custody Non-Relative</label>
+            </value>
+            <value>
+                <fullName>Death of Child</fullName>
+                <default>false</default>
+                <label>Death of Child</label>
+            </value>
+            <value>
+                <fullName>Emancipation-Independence</fullName>
+                <default>false</default>
+                <label>Emancipation-Independence</label>
+            </value>
+            <value>
+                <fullName>Emancipation-Marriage</fullName>
+                <default>false</default>
+                <label>Emancipation-Marriage</label>
+            </value>
+            <value>
+                <fullName>Emancipation-Military</fullName>
+                <default>false</default>
+                <label>Emancipation-Military</label>
+            </value>
+            <value>
+                <fullName>Guardianship Non-Relative</fullName>
+                <default>false</default>
+                <label>Guardianship Non-Relative</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Relative</fullName>
+                <default>false</default>
+                <label>Other Relative</label>
+            </value>
+            <value>
+                <fullName>Permanency Step: Adoptive or pre-adoptive Placement</fullName>
+                <default>false</default>
+                <label>Permanency Step: Adoptive or pre-adoptive Placement</label>
+            </value>
+            <value>
+                <fullName>Permanency Step: Educational/Vocational Placement</fullName>
+                <default>false</default>
+                <label>Permanency Step: Educational/Vocational Placement</label>
+            </value>
+            <value>
+                <fullName>Permanency Step: Placement Closer to Home</fullName>
+                <default>false</default>
+                <label>Permanency Step: Placement Closer to Home</label>
+            </value>
+            <value>
+                <fullName>Permanency Step: Placement with Relative</fullName>
+                <default>false</default>
+                <label>Permanency Step: Placement with Relative</label>
+            </value>
+            <value>
+                <fullName>Permanency Step: Placement with Siblings or Own Child</fullName>
+                <default>false</default>
+                <label>Permanency Step: Placement with Siblings or Own Child</label>
+            </value>
+            <value>
+                <fullName>Permanency Step: Trial Home Visit</fullName>
+                <default>false</default>
+                <label>Permanency Step: Trial Home Visit</label>
+            </value>
+            <value>
+                <fullName>Provider Issue: Agency/Provider Non-Compliance</fullName>
+                <default>false</default>
+                <label>Provider Issue: Agency/Provider Non-Compliance</label>
+            </value>
+            <value>
+                <fullName>Provider Issue: Investigation (CPS, APS, Criminal)</fullName>
+                <default>false</default>
+                <label>Provider Issue: Investigation (CPS, APS, Criminal)</label>
+            </value>
+            <value>
+                <fullName>Provider Issue: Provider Incapacity/Death</fullName>
+                <default>false</default>
+                <label>Provider Issue: Provider Incapacity/Death</label>
+            </value>
+            <value>
+                <fullName>Provider Issue: Provider Leaves/Closes Service</fullName>
+                <default>false</default>
+                <label>Provider Issue: Provider Leaves/Closes Service</label>
+            </value>
+            <value>
+                <fullName>Provider Issue: Provider Non-Compliance</fullName>
+                <default>false</default>
+                <label>Provider Issue: Provider Non-Compliance</label>
+            </value>
+            <value>
+                <fullName>Provider Issue: Provider Rejects Child</fullName>
+                <default>false</default>
+                <label>Provider Issue: Provider Rejects Child</label>
+            </value>
+            <value>
+                <fullName>Refused Service</fullName>
+                <default>false</default>
+                <label>Refused Service</label>
+            </value>
+            <value>
+                <fullName>Remove GAP suspension</fullName>
+                <default>false</default>
+                <label>Remove GAP suspension</label>
+            </value>
+            <value>
+                <fullName>Resource Issue: Insufficient Support for Foster Parents</fullName>
+                <default>false</default>
+                <label>Resource Issue: Insufficient Support for Foster Parents</label>
+            </value>
+            <value>
+                <fullName>Resource Issue: Move from Short Term Placement</fullName>
+                <default>false</default>
+                <label>Resource Issue: Move from Short Term Placement</label>
+            </value>
+            <value>
+                <fullName>Reunification</fullName>
+                <default>false</default>
+                <label>Reunification</label>
+            </value>
+            <value>
+                <fullName>Runaway</fullName>
+                <default>false</default>
+                <label>Runaway</label>
+            </value>
+            <value>
+                <fullName>Transfer to Other Non-DHR Agency</fullName>
+                <default>false</default>
+                <label>Transfer to Other Non-DHR Agency</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Adoption Disruption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Adoption Finalization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Adoptive Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Behavior (Property Destruction, Aggression to Others, Defiance)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Dissatisfaction with provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Needs have changed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Needs less Structured/Restricted Environment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Needs more Structured/Restricted Environment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Runaway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Sexual Aggression/Acting Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Substance abuse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Child Issue: Suicidal/Self-Abusive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Court: Court Ordered Placement Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Court ordered return home against DSS recommendation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Custody/Guardianship - Non-Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Custody/Guardianship - Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Custody Non-Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Death of Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Emancipation-Independence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Emancipation-Marriage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Emancipation-Military</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Guardianship Non-Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Other Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Permanency Step: Adoptive or pre-adoptive Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Permanency Step: Educational/Vocational Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Permanency Step: Placement Closer to Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Permanency Step: Placement with Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Permanency Step: Placement with Siblings or Own Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Permanency Step: Trial Home Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Provider Issue: Agency/Provider Non-Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Provider Issue: Investigation (CPS, APS, Criminal)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Provider Issue: Provider Incapacity/Death</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Provider Issue: Provider Leaves/Closes Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Provider Issue: Provider Non-Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Provider Issue: Provider Rejects Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Refused Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Remove GAP suspension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Resource Issue: Insufficient Support for Foster Parents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanently Leaving Custody and Care</controllingFieldValue>
+            <valueName>Resource Issue: Move from Short Term Placement</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

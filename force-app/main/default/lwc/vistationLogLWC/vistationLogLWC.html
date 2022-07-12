@@ -1,0 +1,129 @@
+<template>
+    <lightning-card title={visitationLogTitle}>
+        <lightning-button label="Add New" slot="actions" title="new" icon-name="utility:add" onclick={showNew} variant="brand"></lightning-button> 
+        <!--<div class="slds-text-align_right slds-p-bottom_medium">
+            <lightning-button label="Add New" title="new" icon-name="utility:add" onclick={showNew} variant="brand" ></lightning-button> 
+        </div>-->        
+        <lightning-datatable 
+                        key-field="id"
+                        data={visitionLogList}
+                        columns={columns} 
+                        onrowselection={handleRowSelection}
+                        hide-checkbox-column="true" show-row-number-column="true"
+                        onrowaction={handleRowAction}>
+        </lightning-datatable>
+    </lightning-card>
+
+<template if:true={showAddnew}> 
+    <div class="eventModal" if:true={showAddnew} >
+        <c-modal-component header ={header} modal-class ='slds-modal slds-fade-in-open slds-modal_large'>
+            <span slot="modalClose">
+                <lightning-button-icon icon-name="utility:close"
+                                          onclick={closeModal}
+                                          alternative-text="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"></lightning-button-icon>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Visitation Log</h2>
+            </span> 
+          <span slot="modalBody">
+            <lightning-card title="Visitation Log Details">
+                <lightning-layout>
+                    <lightning-layout-item size="3">
+                        <lightning-combobox name="Client__c" 
+                                        label="Client"
+                                        value={VistationLog.Client__c}
+                                        placeholder="-Select-"
+                                        options={clientPickOptions}
+                                        onchange={handleChange}
+                                        required>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <lightning-input class="slds-p-left_x-small" type="date" name="Visit_Date__c"  date-style="short"
+                                    value={VistationLog.Visit_Date__c} label="Visit Date" onchange={handleChange} required>
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <lightning-combobox name="Status__c" 
+                                        class="slds-p-left_x-small"
+                                        label="Status"
+                                        value={VistationLog.Status__c}
+                                        placeholder="-Select-"
+                                        options={statusPickOptions}
+                                        onchange={handleChange}
+                                        >
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <lightning-input class="slds-p-left_x-small" type="checkbox" name="Court_Ordered__c" 
+                                    checked={VistationLog.Court_Ordered__c} label="Court Order" onchange={handleChange}>
+                        </lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="6">
+                    <lightning-dual-listbox name="Persons_Involved__c"
+                                            label="Person Involved"
+                                            options={personPickOptions}
+                                            onchange={handleChange} size="4"
+                                            value={personInvolvedValues}>
+                    </lightning-dual-listbox> 
+                </lightning-layout-item>
+                <lightning-layout-item size="6">
+                    <lightning-dual-listbox name="Collateral_Visit_Participants__c"
+                                            label="Collateral Visit Participants"
+                                            options={collateralVisitParticipantsOptions}
+                                            onchange={handleChange} size="4"
+                                            value={collateralValues}>
+                    </lightning-dual-listbox> 
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-textarea label="Comments" name="Comments__c" onchange={handleChange} value={VistationLog.Comments__c}>
+                    </lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-textarea label="Location" name="Location__c" onchange={handleChange} value={VistationLog.Location__c}>
+                    </lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-textarea label="Specify any other participants that are not members of this case" name="Specify_any_other_participants_that_are__c" onchange={handleChange} value={VistationLog.Specify_any_other_participants_that_are__c}>
+                    </lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small"> 
+                    <lightning-radio-group
+                        name="Conditions__c"
+                        label="Conditions"
+                        options={conditionPicklist}
+                        value={VistationLog.Conditions__c}
+                        onchange={handleChange}
+                        >
+                    </lightning-radio-group>
+               </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-textarea label="Comments" name="Conditions_Comments__c" onchange={handleChange} value={VistationLog.Conditions_Comments__c}>
+                    </lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+            </lightning-card>
+          </span>
+
+         <span slot="modalFooter">
+            <div class="slds-text-align_right">
+                <lightning-button label="Cancel" variant="destructive" title="Cancel" icon-name="utility:close" onclick={closeModal} class= "slds-var-p-around_x-small"></lightning-button>
+                <lightning-button label="Save" title="SAVE" onclick={addVistionlog} icon-name="utility:save" variant="brand" class= "slds-var-p-around_x-small"></lightning-button>
+            </div>
+        </span>
+        </c-modal-component>
+    </div>
+</template>
+</template>

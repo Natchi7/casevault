@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hearing_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Hearing Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Concluded</fullName>
+                <default>false</default>
+                <label>Concluded</label>
+            </value>
+            <value>
+                <fullName>Continued - Hearing in Progress</fullName>
+                <default>false</default>
+                <label>Continued - Hearing in Progress</label>
+            </value>
+            <value>
+                <fullName>Continued - Without a Hearing</fullName>
+                <default>false</default>
+                <label>Continued - Without a Hearing</label>
+            </value>
+            <value>
+                <fullName>Evidentiary Hearing</fullName>
+                <default>false</default>
+                <label>Evidentiary Hearing</label>
+            </value>
+            <value>
+                <fullName>Contested Hearing</fullName>
+                <default>false</default>
+                <label>Contested Hearing</label>
+            </value>
+            <value>
+                <fullName>Uncontested Hearing</fullName>
+                <default>false</default>
+                <label>Uncontested Hearing</label>
+            </value>
+            <value>
+                <fullName>Proffer</fullName>
+                <default>false</default>
+                <label>Proffer</label>
+            </value>
+            <value>
+                <fullName>Stipulations</fullName>
+                <default>false</default>
+                <label>Stipulations</label>
+            </value>
+            <value>
+                <fullName>Paper Review</fullName>
+                <default>false</default>
+                <label>Paper Review</label>
+            </value>
+            <value>
+                <fullName>Sub-curia</fullName>
+                <default>false</default>
+                <label>Sub-curia</label>
+            </value>
+            <value>
+                <fullName>Postponed</fullName>
+                <default>false</default>
+                <label>Postponed</label>
+            </value>
+            <value>
+                <fullName>Waived</fullName>
+                <default>false</default>
+                <label>Waived</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

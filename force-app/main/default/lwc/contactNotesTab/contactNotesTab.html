@@ -1,0 +1,386 @@
+<template>
+    <div class="spinner">
+        <template if:true={loading}>
+             <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+        </template>
+    </div>
+    <div class="eventModal" if:true={showQuliatyModal}>
+        <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+            <span slot="modalClose">
+                        <lightning-button-icon icon-name="utility:close"
+                                                  onclick={closeQualityModal}
+                                                  alternative-text="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"></lightning-button-icon>
+                        <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Quality Of Care</h2>
+                    </span>
+    
+            <span slot="modalBody">
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                        Describe the quality of care being provided to the child
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                    <lightning-input-rich-text name="Describe_the_quality_of_care__c" value={qualityRec.Describe_the_quality_of_care__c} onchange={handleQualityChange}></lightning-input-rich-text>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                        Describe (a) the child's adjustment to school, (b) school performance and (c) 
+                        appropriateness of school placement
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                    <lightning-input-rich-text name="Describe_a_the_child_s_adjustment__c" value={qualityRec.Describe_a_the_child_s_adjustment__c} onchange={handleQualityChange}></lightning-input-rich-text>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                        Describe the child's adjustment to foster home, foster parents, and other persons in the home. N/A- Child is not of school age NOTE: For Section (3). (b) and/or (c). If the child may be educationally handicapped and is not receiving special educational services, the local educational agency must be notified promptly - in writing - to request a screening for these services.
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                    <lightning-input-rich-text name="Describe_child_s_adjustment_to_foster__c" value={qualityRec.Describe_child_s_adjustment_to_foster__c} onchange={handleQualityChange}></lightning-input-rich-text>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </span>
+            <span slot="modalFooter">
+                <div class="slds-text-align_right">
+                    <lightning-button class="slds-p-around_small" label="SAVE" icon-name="utility:save" variant="brand" onclick={hadleQualitySave}></lightning-button>
+                </div>
+            </span>
+        </c-modal-component>
+    </div>
+    <div class="eventModal" if:true={showNotesCommentModal}>
+        <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+            <span slot="modalClose">
+                        <lightning-button-icon icon-name="utility:close"
+                                                  onclick={closeNotesCommentModal}
+                                                  alternative-text="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"></lightning-button-icon>
+                        <h2 id="modal-heading-1" class="slds-text-heading_medium slds-hyphenate">Notes</h2>
+                    </span>
+    
+            <span slot="modalBody">
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                         Notes  <lightning-input-rich-text label="Notes" name="Notes__c" value={notesCommentVal} disabled></lightning-input-rich-text>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </span>
+            <span slot="modalFooter">
+                <div class="slds-text-align_right">
+                    <lightning-button class="slds-p-around_small" label="CANCEL" icon-name="utility:close" variant="destructive" onclick={closeNotesCommentModal}></lightning-button>
+                </div>
+            </span>
+        </c-modal-component>
+    </div>
+
+    <div class="eventModal" if:true={showNotesModal}>
+        <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+            <span slot="modalClose">
+                        <lightning-button-icon icon-name="utility:close"
+                                                  onclick={closeNotesModal}
+                                                  alternative-text="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"></lightning-button-icon>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Notes</h2>
+                    </span>
+    
+            <span slot="modalBody">
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                        <lightning-dual-listbox name="Contact_Purpose__c"
+                                                label="Contact Purpose"
+                                                options={contactPurposePick}
+                                                onchange={handleChange}
+                                                value={contactPurposeValues}
+                                                disabled={readOnly} size="4"
+                                                required>
+                        </lightning-dual-listbox> 
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-combobox label="Contact Type"
+                                name="Contact_Type__c" 
+                                options={contactTypePick}
+                                onchange={handleChange}
+                                value={notesRec.Contact_Type__c}
+                                disabled={readOnly}
+                                required>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-combobox label="Contact Location"
+                                name="Contact_Location__c" 
+                                options={contactLocationPick}
+                                onchange={handleChange}
+                                value={notesRec.Contact_Location__c}
+                                disabled={readOnly}>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-input label="Contact Date" type="date" name="Contact_Date__c" date-style="short"  onchange={handleChange} value={notesRec.Contact_Date__c} required disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-input type="time" name="Start_Time__c" label="Start Time" date-style="short"  onchange={handleChange} value={notesRec.Start_Time__c} disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-dual-listbox name="Involved_Persons__c"
+                                                label="Person Involved"
+                                                options={contactPersonsPick}
+                                                onchange={handleChange}
+                                                value={personInvolvedValues} size="4"
+                                                disabled={readOnly}
+                                                required>
+                        </lightning-dual-listbox> 
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-input type="time" name="End_Time__c" label="End Time" date-style="short"  onchange={handleChange} value={notesRec.End_Time__c} disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-input type="time" name="Contact_Duration__c" label="Contact Duration" date-style="short"  onchange={handleChange} value={notesRec.Contact_Duration__c} disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-input type="time" name="Travel_Duration__c" label="Travel Duration" date-style="short"  onchange={handleChange} value={notesRec.Travel_Duration__c} disabled={readOnly}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-combobox label="Contact Was Initiated/Recevied"
+                                name="Contact_was_initiated_received__c" 
+                                options={contactInitiatedPick}
+                                onchange={handleChange}
+                                value={notesRec.Contact_was_initiated_received__c}
+                                disabled={readOnly}
+                                required>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-around_medium">
+                        <lightning-combobox label="Contact Was Attempted/Completed"
+                                name="Contact_was_Attempted_Completed__c" 
+                                options={contactAttemptedPick}
+                                onchange={handleChange}
+                                value={notesRec.Contact_was_Attempted_Completed__c}
+                                disabled={readOnly}>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                        <h1>Source : {source} </h1>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12" class="slds-p-around_medium">
+                        <span class="slds-text-color_error">*</span> Notes  <lightning-input-rich-text label="Notes" name="Notes__c" onchange={handleChange} value={notesRec.Notes__c} disabled={readOnly} required ></lightning-input-rich-text>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <div><b>DOCUMENTS</b></div>
+                <lightning-layout>
+                    <lightning-datatable key-field={id} data={documentList} columns={documentColumn} hide-checkbox-column onrowaction={handleFileRowAction}></lightning-datatable>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-input type="file" 
+                            accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf, .jpeg" disabled={readOnly}
+                            label="Documents" onchange={openfileUpload} variant="label-hidden" name="insertFile" >
+                        </lightning-input>
+                        <template if:true={fileData}>
+                            <p class="slds-p-left_large slds-p-top_small">{fileData.filename}</p>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+            
+            </span>
+            <span slot="modalFooter">
+                <div class="slds-text-align_right">
+                    <lightning-button class="slds-p-around_small" label="Cancel" icon-name="utility:close" variant="destructive" onclick={closeNotesModal}></lightning-button>
+
+                    <lightning-button class="slds-p-around_small" label="Save" icon-name="utility:save" variant="brand" onclick={handleSave} disabled={readOnly}></lightning-button>
+                </div>
+            </span>
+        </c-modal-component>
+    </div>
+    <lightning-card title={notesTitle}>
+        <!--<div class="slds-text-align_right">-->
+            <lightning-button label="Add New" slot="actions" icon-name="utility:add" variant="brand" onclick={addNewNotes}></lightning-button>
+        
+            <lightning-datatable
+                key-field="id"
+                data={notesList}
+                columns={notesColumn} hide-checkbox-column="true" show-row-number-column="true"
+                onrowaction={handleRowAction}>
+        </lightning-datatable>
+        <!--</div>-->
+        <!--<br/><br/>-->
+        <!--<table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="wrapText" scope="col">
+                  <div>Contact Date & Time</div>
+                </th>
+                <th class="wrapText" scope="col">
+                  <div>Date of Entry</div>
+                  <div>Entered By</div>
+                </th>
+                <th class="wrapText" scope="col">
+                  <div>Contact Purpose</div>
+                </th>
+                <th class="wrapText" scope="col">
+                   <div>Contact Details</div>
+                </th>
+                <th class="wrapText" scope="col">
+                    <div>Person Contacted</div>
+                 </th>
+                 <th class="wrapText" scope="col">
+                    <div>Notes</div>
+                 </th>
+                 <th class="wrapText" scope="col">
+                    <div title="Annual Notice of Benefits">History</div>
+                 </th>
+                 <th class="wrapText" scope="col">
+                    <div>Actions</div>
+                 </th>
+              </tr>
+            </thead>
+            <template if:true={showTable}>
+            <tbody>
+                    <template for:each={notesList} for:index="index" for:item="row">  
+                        <tr key={row.Id}>
+                            <td class="wrapText">
+                                <div id={index}>Contact Date : {row.contactdate}</div>
+                                <div id={index}>Start Time : <lightning-formatted-time  month="2-digit"  day="2-digit" year="numeric" value={row.Start_Time__c}></lightning-formatted-time></div>
+                                <div id={index}>End Time : <lightning-formatted-time value={row.End_Time__c}></lightning-formatted-time></div>
+                                <div id={index}>Contact Duration : <lightning-formatted-time value={row.Contact_Duration__c}></lightning-formatted-time></div>
+                            </td>
+                            <td class="wrapText">
+                                <div id={index}>{row.createddateTxt}</div>
+                                <div id={index}>{row.Owner.Name}</div>
+                            </td>
+                            <td class="wrapText">
+                                <div id={index}>{row.Contact_Purpose__c}</div>
+                            </td>
+                            <td class="wrapText">
+                                <div id={index}>Type of Contact :  {row.Contact_Type__c}</div>
+                                <div id={index}>Contact Location : {row.Contact_Location__c}</div>
+                                <div id={index}>Contact : {row.Contact_was_Attempted_Completed__c}</div>
+                            </td>
+                            <td class="wrapText">
+                                <div id={index}>Type of Contact :{row.Involved_Persons__c}</div>
+                            </td>
+                            <td class="wrapText">
+                                <lightning-button-icon icon-name="utility:display_text" name={row}  alternative-text="History" title="Settings" onclick={showNotes}></lightning-button-icon>
+                            </td>
+                            <td class="wrapText">
+                                <lightning-button-icon icon-name="utility:refresh" name={row}  alternative-text="History" title="Settings" onclick={showHistory}></lightning-button-icon>
+                            </td>
+                            <td class="wrapText">
+                                <lightning-button-menu alternative-text="Show menu" menu-alignment="auto">
+                                    <lightning-menu-item value="" label="Preview" name={row} prefix-icon-name="utility:preview" onclick={handleViewModal}></lightning-menu-item>
+                                    <lightning-menu-item value="MenuItemTwo" name={row} label="Edit" prefix-icon-name="utility:edit" onclick={handleEditModal}></lightning-menu-item>
+                                    <lightning-menu-item name={row} label="Delete" prefix-icon-name="utility:delete" onclick={handleDeleteRec}></lightning-menu-item>
+                                    <lightning-menu-item value="" label="Quality Of Care" name={row} prefix-icon-name="action:user" onclick={handleQualityModal}></lightning-menu-item>
+                                    <lightning-menu-item label="History" prefix-icon-name="utility:refresh"  name={row} alternative-text="History"  onclick={showHistory}></lightning-menu-item>
+                                </lightning-button-menu>
+                            </td>
+                        </tr>
+                    </template>                
+            </tbody>
+        </template>
+        </table>-->
+
+            <div class="eventModal" if:true={showHistoryTable}>
+                <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+                    <span slot="modalClose">
+                                <lightning-button-icon icon-name="utility:close"
+                                                          onclick={closeHistoryModal}
+                                                          alternative-text="close"
+                                                          variant="bare-inverse"
+                                                          class="slds-modal__close"></lightning-button-icon>
+                                <h2 id="modal-heading-0" class="slds-text-heading_medium slds-hyphenate">Notes History</h2>
+                    </span>
+                    <span slot="modalBody">
+                        
+                        <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                <th class="wrapText" scope="col">
+                                  <div title="Modified Date">Modified By</div>
+                                </th>
+                                <th class="wrapText" scope="col">
+                                  <div title="Contact Purpose">Contact Purpose</div>
+                                </th>
+                                <th class="wrapText" scope="col">
+                                  <div title="Type of Contact"> Contact Details</div>
+                                </th>
+                                <th class="wrapText" scope="col">
+                                   <div title="Contact Location">Modified Date</div>
+                                </th>
+                                 <th class="wrapText" scope="col">
+                                    <div title="Modified Date">Person Contacted</div>
+                                 </th>
+                                 <th class="wrapText" scope="col">
+                                    <div title="Modified Date">Notes</div>
+                                 </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={notesHistoryList} for:index="index" for:item="row">  
+                                    <tr key={row.Id}>
+                                        <td class="wrapText">
+                                            <div id={index}> {row.Owner.Name}</div>
+                                            <div id={index}>Case Source : {row.Source__c}</div>
+                                            
+                                        </td>
+                                        <td class="wrapText">
+                                            <div id={index}>{row.Contact_Purpose__c}</div>
+                                        </td>                            
+                                        <td class="wrapText">
+                                            <div id={index}>Type of Contact :  {row.Contact_Type__c}</div>
+                                            <div id={index}>Contact Location : {row.Contact_Location__c}</div>
+                                            <div id={index}>Contact : {row.Contact_was_Attempted_Completed__c}</div>
+                                            <div id={index}> Source : {row.Source__c}</div>
+                                            <div id={index}> Travel Duration : {row.Travel_Duration__c}</div>
+                                        </td>
+                                        <td class="wrapText">
+                                            <div>{row.Modified_Date__c}</div>
+                                        </td>
+                                        <td class="wrapText">
+                                            <div id={index}>{row.Person_Contact__c}</div>
+                                        </td>
+                                        <td class="wrapText">
+                                           <lightning-formatted-rich-text value={row.Notes_Comments__c}></lightning-formatted-rich-text>
+                                        </td>
+                                  </tr>
+                                </template>                
+                        </tbody>
+                    </table>
+                    </span>
+                    <span slot="modalFooter">
+                        <div class="slds-text-align_right">
+                            <lightning-button class="slds-p-around_small" label="CANCEL" icon-name="utility:close" variant="destructive" onclick={closeHistoryModal}></lightning-button>
+                        </div>
+                    </span>
+                </c-modal-component>
+            </div>
+            
+        <template if:false={showTable}>
+            <div class="slds-text-align_center slds-p-top_large slds-text-heading_medium">
+                No Records Found.
+            </div>
+        </template>
+    </lightning-card>
+</template>

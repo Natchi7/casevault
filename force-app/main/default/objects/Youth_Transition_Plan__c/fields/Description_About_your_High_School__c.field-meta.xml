@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_About_your_High_School__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Description - About your High School Assessment?</inlineHelpText>
+    <label>Description - About your High School</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

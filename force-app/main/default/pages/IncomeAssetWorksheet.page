@@ -1,0 +1,194 @@
+<apex:page controller="EligibilityWorksheetCalculation" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    
+    <html>
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+            <style>
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                p {
+                    font-size:14px;
+                }
+            </style>
+            
+                 
+        </head>
+    
+
+    <body>
+        <apex:form id="form">
+        <h3>FOSTER CARE 1V-E/AFDC RELATEDNESS</h3>
+        <h5>INCOME AND RESOURCES/ASSETS CALCULATION WORKSHEET</h5>
+        <p><i>(Use to determine the contribution to an Assistance Unit when income is deemed to be available from a Step-Parent/Illegal Alien Parent)</i></p>
+        <p>CHILD NAME:{!titleIvERecord.Child_Removal__r.Child__r.Name}</p>
+        <p>CLIENT ID:{!titleIvERecord.Name}</p>
+        <p>COUNTRY OF JURISDICTION:{!titleIvERecord.Child_Removal__r.Child__r.JURISDICTION__c}</p>
+        <p>ELIGIBILITY MONTH(MM/YYYY):</p>
+        <p>{!inAuCount} OF PERSONS IN ASSISTANCE UNIT</p>
+        <table>
+            <tr>
+                <th>STEP I:</th>
+                <th>DETERMINE GROSS RESOURCES/ASSETS FOR THE ELIGIBILITY MONTH</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">A</td>
+                <td>Enter the market value of Resources/Asset(s) for the Removal Home</td>
+                <td>${!marketValue}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">B</td>
+                <td>Enter the Asset Allowance</td>
+                <td>${!assetAllowance}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">C</td>
+                <td>Compare the Assets to Asset Allowance. GO TO STEP II.</td>
+                <td>{!compareAsset} </td>
+            </tr>    
+        </table>
+        <div style="height:20px;"></div>
+        <table>
+            <tr>
+                <th>STEP II:</th>
+                <th>DETERMINE GROSS INCOME FOR ELIGIBILITY MONTH</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;" >A</td>
+                <td>Enter Earned Income</td>
+                <td>${!earnedAsset}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">B</td>
+                <td>Enter Unearned Income(SSA,SSDI,Deemed Income,child support,etc.)
+                (Disregard the first $50.00 of total child support payment to the assistance unit)</td> 
+                <td>${!unearnedAsset}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">C</td>
+                <td>Add Step II Lines A and B to determine Gross Income for Eligibility Month.</td>
+                <td>${!grossIncomeAsset}</td>
+            </tr>    
+        </table>
+        <div style="height:20px;"></div>
+        <table>
+            <tr>
+                <th>STEP III.</th>
+                <th>QUICK SCREEN-OVERSCALE INCOME TEST SCHEDULE H,COLUMN 1V</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">A</td>
+                <td>Enter Amount for number in "Assistance Unit"from Schedule H,Column 1V in Effect for
+                Eligibility Month</td>
+                <td>${!inAuAmountHIV}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">B</td>
+                <td>Enter Gross Income from Line IIC.</td>
+                <td>${!grossIncomeAsset}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">C</td>
+                <td>Compare Gross Income to 185% Gross Income if Step III Line B."Gross Income" is more than 
+                Step III Line A. STOP(Child is not eligible for IV-E) if Step III Line B."Gross Income" is less 
+                than Step III Line A. GO TO STEP IV</td> 
+                <td>{!compareStepIIIC}</td>
+            </tr>    
+        </table>
+        <div style="height:20px;"></div>
+        <table>
+            <tr>
+                <th>STEP IV.</th>
+                <th>QUICK SCREEN-INCOME LESS THAN STANDARD OF NEED AMOUNT SCHEDULE H.COLUMN III</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">A</td>
+                <td>Enter "Standard of Need" amount for the "Assistance Unit"from Schedule H, Col. III</td>
+                <td>${!inAuAmountHIII}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">B</td>
+                <td>Enter Gross Income from Step II Line C.</td>
+                <td>${!grossIncomeAsset}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">C</td>
+                <td>Compare Step IV Line A. and Step IV Line B if Step IV Line B."Gross Income" is less than 
+                Step IV Line A. STOP(Child is eligible for IV-E) if Step IV Line B."Gross Income" is more than
+                Step IV Line A. CONTINUE TO STEP V</td>
+                <td>{!compareStepIVC}</td>
+            </tr>    
+        </table>
+        <div style="height:100px;"></div>
+        <table>
+            <tr>
+                <th>STEP V.</th>
+                <th>APPLY DISREGARDS TO CASES THAT HAVE INCOME EQUAL TO OR LESS THAN 185% GROSS
+                INCOME TEST SCHEDULE H, COLUMN IV</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">A</td>
+                <td>Enter Gross Earned Income(Step II Line A.)</td>
+                <td>${!earnedAsset}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">B</td>
+                <td></td>
+                <td>${!stepVB}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">C</td>
+                <td></td>
+                <td>${!stepVC}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">D</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">E</td>
+                <td>Add "Unearned Income" (Step II Line.B)(This is Total Available Income)</td>
+                <td>${!totalAvailableIncome}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">F</td>
+                <td>Enter "Standard of Need" amount from Col. III Schedule H</td>
+                <td>${!inAuAmountHIII}</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">G</td>
+                <td>Compare "Available Income" to "Standard of Need" Amount If "Total Available Income" amount,Step V Line E
+                is more than "Standard of Need" amount,Step V Line F,Child is not 1V-E
+                eligible (PROCEED TO INITIAL ELIGIBILITY WORKSHEET) if "Availability Income" Step V Line E is less than
+                "Standard of Need" amount.Step V Line F,Child is IV-E eligible (PROCEED TO INITIAL ELIGIBILITY WORKSHEET)</td>
+                <td>{!compareStepVG}</td>
+            </tr>    
+        </table>
+        <div style="height:20px;"></div>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <p>PRINT NAME OF ELIGIBILITY REVIEWER</p>
+        <p>SIGNATURE</p>
+        <p>TITLE</p>
+        <p>DATE:</p>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <p>PRINT NAME OF SUPERVISOR</p>
+        <p>SIGNATURE</p>
+        <p>TITLE</p>
+        <p>DATE:</p>
+    </apex:form>
+    </body>
+    
+    </html>
+</apex:page>

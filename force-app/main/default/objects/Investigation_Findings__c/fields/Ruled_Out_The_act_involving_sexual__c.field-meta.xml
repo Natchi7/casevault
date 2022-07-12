@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruled_Out_The_act_involving_sexual__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The act involving sexual molestation or exploitation was by a parent, caregiver, authority figure, or by a household or family member (insert name and whether the person is a parent, OR caregiver OR authority figure, OR household, OR family member)</inlineHelpText>
+    <label>The act involving sexual molestation</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

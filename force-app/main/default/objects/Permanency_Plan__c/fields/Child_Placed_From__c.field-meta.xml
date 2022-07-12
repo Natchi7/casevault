@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Placed_From__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Child Placed From</inlineHelpText>
+    <label>Child Placed From</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Another Country</fullName>
+                <default>false</default>
+                <label>Another Country</label>
+            </value>
+            <value>
+                <fullName>Another LDSS</fullName>
+                <default>false</default>
+                <label>Another LDSS</label>
+            </value>
+            <value>
+                <fullName>Another State</fullName>
+                <default>false</default>
+                <label>Another State</label>
+            </value>
+            <value>
+                <fullName>Within State</fullName>
+                <default>false</default>
+                <label>Within State</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
