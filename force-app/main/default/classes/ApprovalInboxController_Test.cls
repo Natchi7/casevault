@@ -4,8 +4,7 @@ private class ApprovalInboxController_Test {
     @isTest static void TestallApprovedRecords() {
         
         Service_Case__c createCase = TestRecord.serviceCase('0000400');
-        insert createCase;
-        
+        insert createCase;  
         Investigation__c  createInvestigation = TestRecord.investigation();
         insert createInvestigation;
         
