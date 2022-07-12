@@ -1,0 +1,162 @@
+<template>
+    <template if:true={recordTypeName}>
+        <div class="slds-p-top_large slds-text-align_right">
+            <lightning-button  class="slds-p-left_small" label="Add Person" variant="brand" icon-name="standard:contact" onclick={handleNavigate}></lightning-button>
+        </div>
+    </template>
+    <template if:false={recordTypeName}>
+        <template if:false={HideSearchButton}>
+            <div class="slds-text-align_right"><lightning-button  label="Search" variant="brand" icon-name="utility:search" onclick={showSearchModal}></lightning-button></div>
+        </template>
+        <template if:true={HideSearchButton}>
+            <lightning-progress-indicator current-step={currentStep}>
+                <lightning-progress-step label="Profile Information" value="step1">
+                </lightning-progress-step>
+                <lightning-progress-step label="Search" value="step2">
+                </lightning-progress-step>
+            </lightning-progress-indicator>
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </template>
+            <template if:true={isStep1}>
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="firstName" label="First Name" onchange={handleChange} value={searchInput.firstName}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="number" name="ssn" label="SSN" onchange={handleChange} value={searchInput.ssn}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="Maiden Name" onchange={handleChange} value={searchInput}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="lastName" label="Last Name" onchange={handleChange} value={searchInput.lastName}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="stateId" label="State ID/Drivers License" onchange={handleChange} value={searchInput.stateId}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="Alias Name" onchange={handleChange} value={searchInput}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="date" name="dob" label="DOB" onchange={handleChange} value={searchInput.dob} date-style="short"></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="FEIN" onchange={handleChange} value={searchInput}> </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="Social Media Name" onchange={handleChange} value={searchInput} ></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="number" name="approxAge" label="Approx.Age" onchange={handleChange} value={searchInput.approxAge}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-combobox type="text" name="gender" label="Gender" onchange={handleChange} options={genderPickOpt} value={searchInput.gender}></lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="Complaint#" onchange={handleChange} value={searchInput}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="addLine1" label="Address Line 1" onchange={handleChange} value={searchInput.addLine1}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="addLine2" label="Address Line 2" onchange={handleChange} value={searchInput.addLine2}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="Email" onchange={handleChange} value={searchInput}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="casevaultPId" label="Casevault PID #" onchange={handleChange} value={searchInput.casevaultPId}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="" label="Old#'s" onchange={handleChange}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small" onchange={handleChange}>
+                        <lightning-input type="text" name="" label="Phone"></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small" onchange={handleChange}>
+                        <lightning-input type="text" name="" label="MDM ID #" value={searchInput}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small" onchange={handleChange}>
+                        <lightning-input type="text" name="zipCode" label="Zip Code" value={searchInput.zipCode}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small" onchange={handleChange}>
+                        <lightning-combobox type="text" name="state" label="State" onchange={handleChange} options={statePickOpt} value={searchInput.state}></lightning-combobox>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small" onchange={handleChange}>
+                        <lightning-input type="text" name="" label="Occupation"></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small" onchange={handleChange}>
+                        <lightning-input type="text" name="" label="Petition/Folder ID"></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-input type="text" name="city" label="City" onchange={handleChange}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        <lightning-combobox  name="country" label="County" onchange={handleChange} options={countryPickOpt}></lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                        
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" class="slds-p-around_small">
+                    </lightning-layout-item>
+                </lightning-layout>
+        
+                <div class="slds-p-top_large slds-text-align_right">
+                    <lightning-button class="slds-p-left_small" icon-name="utility:close" variant="destructive" label="Close" onclick={handleCloseSearch}></lightning-button>
+                    <lightning-button class="slds-p-left_small" icon-name="utility:clear" variant="bare" label="Clear" onclick={handleClearSearch}></lightning-button>
+                    <lightning-button class="slds-p-left_small" icon-name="utility:search" variant="brand" label="Search" onclick={searchPerson}></lightning-button>
+                </div>
+            </template>
+            <template if:true={isStep2}>
+                
+                <template if:true={showTable}>
+                    <lightning-datatable 
+                            key-field="Id" 
+                            data={visibleDataContact} 
+                            columns={columns} 
+                            max-row-selection="1" 
+                            onrowselection={handleRowAction1}>
+                    </lightning-datatable>
+                </template>
+                <template if:false={showTable}>
+                
+                    <h1 class="slds-text-align_center slds-p-top_large slds-text-heading_medium">NO RECORDS FOUND</h1>
+
+                </template>
+                <div class="slds-p-top_large slds-text-align_right">
+                    <lightning-button class="slds-p-left_small" icon-name="utility:chevronleft" variant="brand" label="Back to Person Search" onclick={backToSearch}></lightning-button>    
+                    <lightning-button class="slds-p-left_small" icon-name="utility:user" variant="brand" label="Select Person" onclick={selectPerson} disabled={disableButton}></lightning-button>
+                    <lightning-button  class="slds-p-left_small" label="Add Person" variant="brand" icon-name="standard:contact" onclick={handleNavigate}></lightning-button>
+                </div>
+                <div class="slds-p-top_small">
+                    <c-pagination-l-w-c total-list={personList} onupdate={paginationHandlerContact}></c-pagination-l-w-c>  
+                </div>
+            </template>
+        </template>
+    </template>
+</template>
