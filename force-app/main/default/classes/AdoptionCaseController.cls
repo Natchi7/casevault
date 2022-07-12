@@ -3,8 +3,7 @@ public with sharing class AdoptionCaseController {
     @AuraEnabled
     public static String getSubsidyAgreementIntiInfos(String adoptionCaseId) {
          
-         AdoptionCaseWraper adoptionWrap = new AdoptionCaseWraper();
-         
+         AdoptionCaseWraper adoptionWrap = new AdoptionCaseWraper();       
          adoptionWrap.adoptiveSubsidyIsPaidPicklist = Utility.getPicklistinfo('Case', 'adopt_if_a_subsidy_is_paid__c', false);
          adoptionWrap.childPlacedFromPicklist = Utility.getPicklistinfo('Case','Child_Placed_From__c', false);
          adoptionWrap.childPlacedByPicklist = Utility.getPicklistinfo('Case','Child_Placed_By__c', false);
